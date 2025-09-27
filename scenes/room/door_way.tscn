@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctlh3sbp6vb7v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
+size = Vector3(0.01, 2, 20)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rthi4"]
+points = PackedVector3Array(-0.005, -1, -10, 0.005, -1, -10, -0.005, -1, 10, -0.005, 1, -10, 0.005, 1, -10, 0.005, -1, 10, -0.005, 1, 10, 0.005, 1, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_26k11"]
+size = Vector3(0.01, 3, 8)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x5fp8"]
+points = PackedVector3Array(-0.005, -1.5, -4, 0.005, -1.5, -4, -0.005, -1.5, 4, -0.005, 1.5, -4, 0.005, 1.5, -4, 0.005, -1.5, 4, -0.005, 1.5, 4, 0.005, 1.5, 4)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5v0nr"]
+points = PackedVector3Array(-0.005, -1.5, -4, 0.005, -1.5, -4, -0.005, -1.5, 4, -0.005, 1.5, -4, 0.005, 1.5, -4, 0.005, -1.5, 4, -0.005, 1.5, 4, 0.005, 1.5, 4)
+
+[node name="DoorWay" type="StaticBody3D"]
+
+[node name="Mesh1" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ya4ey")
+
+[node name="Collision1" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_rthi4")
+
+[node name="Mesh2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 6)
+mesh = SubResource("BoxMesh_26k11")
+
+[node name="Collision2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, 6)
+shape = SubResource("ConvexPolygonShape3D_x5fp8")
+
+[node name="Mesh3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, -6)
+mesh = SubResource("BoxMesh_26k11")
+
+[node name="Collision3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.5, -6)
+shape = SubResource("ConvexPolygonShape3D_5v0nr")

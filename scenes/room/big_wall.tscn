@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ybya8f52fk2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_tipki"]
+size = Vector2(100, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_85g3d"]
+points = PackedVector3Array(50, 2.5, 0, 50, -2.5, 0, -50, 2.5, 0, -50, -2.5, 0)
+
+[node name="BigWall" type="StaticBody3D"]
+
+[node name="BigWallMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_tipki")
+
+[node name="BigWallCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_85g3d")
