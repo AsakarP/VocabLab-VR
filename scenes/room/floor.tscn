@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b723t40osiscq"]
+[gd_scene load_steps=7 format=3 uid="uid://b723t40osiscq"]
 
-[ext_resource type="Texture2D" uid="uid://cv0w8iyc3i037" path="res://textures/Carpet003_4K-JPG/Carpet003_4K-JPG_Color.jpg" id="1_wxhu3"]
+[ext_resource type="Texture2D" uid="uid://br3svenv2wtr7" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_Color.jpg" id="1_8w87y"]
+[ext_resource type="Texture2D" uid="uid://2pr3fdeh4a52" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_NormalDX.jpg" id="2_wxhu3"]
+[ext_resource type="Texture2D" uid="uid://qr17poh8fxg5" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_Roughness.jpg" id="3_rsmmi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxhu3"]
-albedo_texture = ExtResource("1_wxhu3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk7mm"]
+albedo_texture = ExtResource("1_8w87y")
 albedo_texture_force_srgb = true
+roughness_texture = ExtResource("3_rsmmi")
+normal_enabled = true
+normal_texture = ExtResource("2_wxhu3")
 uv1_triplanar = true
-texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_2df0x"]
 lightmap_size_hint = Vector2i(604, 506)
-material = SubResource("StandardMaterial3D_wxhu3")
+material = SubResource("StandardMaterial3D_tk7mm")
 add_uv2 = true
 size = Vector3(100, 0.01, 20)
 

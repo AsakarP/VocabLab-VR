@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ba7r0qua0ww4e"]
+[gd_scene load_steps=30 format=3 uid="uid://ba7r0qua0ww4e"]
 
 [ext_resource type="Script" uid="uid://bo1yf8tnuh8lt" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tbgi4"]
@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://skbokbolrgcq" path="res://scenes/room/roof.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://un4htm77fcl3" path="res://scenes/room/windowed_roof.tscn" id="15_jkv2x"]
 [ext_resource type="LightmapGIData" uid="uid://lmqw77hlrhxu" path="res://scenes/other/main.lmbake" id="16_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="20_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://byus8v8l5147v" path="res://assets/Stylized Nature MegaKit[Standard]/FBX/CommonTree_1.fbx" id="21_yc10j"]
+[ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="22_jscy8"]
+[ext_resource type="PackedScene" uid="uid://cb1tlxmhmtc18" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_A.fbx" id="23_pm3ni"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -137,3 +141,20 @@ supersampling = true
 directional = true
 interior = true
 light_data = ExtResource("16_jbj1t")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.209478, 4.5260863, -8.633005)
+shadow_enabled = true
+omni_range = 14.285
+
+[node name="armchair" parent="." instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.268174, 0.0050004423, -4.9776187)
+
+[node name="CommonTree_1" parent="." instance=ExtResource("21_yc10j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1049185, 0.24777238, -0.07181585)
+
+[node name="bed_double_A" parent="." instance=ExtResource("22_jscy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4000845, 0.005000055, -4.3983192)
+
+[node name="chair_A" parent="." instance=ExtResource("23_pm3ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.336603, 0.005000353, -4.3988724)
