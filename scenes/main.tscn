@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ba7r0qua0ww4e"]
+[gd_scene load_steps=41 format=3 uid="uid://ba7r0qua0ww4e"]
 
 [ext_resource type="Script" uid="uid://bo1yf8tnuh8lt" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tbgi4"]
@@ -6,10 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="4_tipki"]
 [ext_resource type="PackedScene" uid="uid://the6y7swe6j0" path="res://addons/godot-xr-tools/hands/animations/left/AnimationPlayer.tscn" id="5_eb6dy"]
 [ext_resource type="PackedScene" uid="uid://ds1t8vc0kxoeo" path="res://addons/godot-xr-tools/hands/model/hand_r.gltf" id="5_tipki"]
+[ext_resource type="PackedScene" uid="uid://fiul51tsyoop" path="res://addons/godot-xr-tools/functions/function_teleport.tscn" id="6_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://bxipj7hyjwy6f" path="res://addons/godot-xr-tools/hands/animations/right/AnimationPlayer.tscn" id="7_trceg"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://c2ybya8f52fk2" path="res://scenes/room/big_wall.tscn" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="9_j8jky"]
 [ext_resource type="Texture2D" uid="uid://b82f8ei3a7u4a" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Color.jpg" id="10_0ld40"]
 [ext_resource type="PackedScene" uid="uid://b723t40osiscq" path="res://scenes/room/floor.tscn" id="10_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://cglxxk755utq7" path="res://scenes/room/small_wall.tscn" id="10_ya4ey"]
@@ -20,9 +22,18 @@
 [ext_resource type="PackedScene" uid="uid://un4htm77fcl3" path="res://scenes/room/windowed_roof.tscn" id="15_jkv2x"]
 [ext_resource type="LightmapGIData" uid="uid://lmqw77hlrhxu" path="res://scenes/other/main.lmbake" id="16_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="20_gqmmt"]
-[ext_resource type="PackedScene" uid="uid://byus8v8l5147v" path="res://assets/Stylized Nature MegaKit[Standard]/FBX/CommonTree_1.fbx" id="21_yc10j"]
-[ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="22_jscy8"]
-[ext_resource type="PackedScene" uid="uid://cb1tlxmhmtc18" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_A.fbx" id="23_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://5euwa33ynt36" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair_pillows.fbx" id="21_qkpxi"]
+[ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="22_5q0nq"]
+[ext_resource type="PackedScene" uid="uid://bdejs1u3qo53o" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium_decorated.fbx" id="23_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="24_j8jky"]
+[ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="25_kmb1v"]
+[ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="26_fuf3a"]
+[ext_resource type="PackedScene" uid="uid://cbrnfgtmfa42u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_B.fbx" id="27_pibwh"]
+[ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="28_c6pm6"]
+[ext_resource type="PackedScene" uid="uid://ce2b2ujr183tx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch_pillows.fbx" id="29_5he1u"]
+[ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="30_5poiv"]
+[ext_resource type="PackedScene" uid="uid://b7o8edu2qk0th" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_oval_A.fbx" id="31_2cjbq"]
+[ext_resource type="PackedScene" uid="uid://qibtbfthsi22" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_low.fbx" id="32_chjal"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -80,6 +91,8 @@ tracker = &"left_hand"
 
 [node name="AnimationPlayer" parent="XROrigin3D/LeftHand/hand_l" instance=ExtResource("5_eb6dy")]
 
+[node name="FunctionTeleport" parent="XROrigin3D/LeftHand" instance=ExtResource("6_dgi5k")]
+
 [node name="RightHand" type="XRController3D" parent="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
 tracker = &"right_hand"
@@ -89,6 +102,8 @@ tracker = &"right_hand"
 [node name="FunctionPickup" parent="XROrigin3D/RightHand/hand_r" instance=ExtResource("4_tipki")]
 
 [node name="AnimationPlayer" parent="XROrigin3D/RightHand/hand_r" instance=ExtResource("7_trceg")]
+
+[node name="MovementDirect" parent="XROrigin3D/RightHand" instance=ExtResource("9_j8jky")]
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("6_tipki")]
 
@@ -142,19 +157,51 @@ directional = true
 interior = true
 light_data = ExtResource("16_jbj1t")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.209478, 4.5260863, -8.633005)
+[node name="Assets" type="Node3D" parent="."]
+
+[node name="armchair" parent="Assets" instance=ExtResource("20_gqmmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.5)
+
+[node name="armchair_pillows" parent="Assets" instance=ExtResource("21_qkpxi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.005, -8.5)
+
+[node name="armchair_pillows2" parent="Assets" instance=ExtResource("21_qkpxi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.005, -8.5)
+
+[node name="cabinet_medium" parent="Assets" instance=ExtResource("22_5q0nq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.005, -9)
+
+[node name="cabinet_medium_decorated" parent="Assets" instance=ExtResource("23_dgi5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.005, -9)
+
+[node name="cactus_medium_A" parent="Assets" instance=ExtResource("24_j8jky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8492002, 0.0050001144, 8.927196)
+
+[node name="cactus_medium_B" parent="Assets" instance=ExtResource("25_kmb1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.23751, 0.004999995, 8.969692)
+
+[node name="cactus_small_A" parent="Assets" instance=ExtResource("26_fuf3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.477626, 0.005000395, 8.160965)
+
+[node name="cactus_small_B" parent="Assets" instance=ExtResource("27_pibwh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5749326, 0.0050002756, 8.321424)
+
+[node name="chair_stool" parent="Assets" instance=ExtResource("28_c6pm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.585632, 0.0050000474, 9.045271)
+
+[node name="couch_pillows" parent="Assets" instance=ExtResource("29_5he1u")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.020201027, 0.0050000846, 8.698302)
+
+[node name="lamp_standing" parent="Assets" instance=ExtResource("30_5poiv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3130293, 0.005000174, 8.96052)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Assets/lamp_standing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.188979, 0)
 shadow_enabled = true
 omni_range = 14.285
 
-[node name="armchair" parent="." instance=ExtResource("20_gqmmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.268174, 0.0050004423, -4.9776187)
+[node name="rug_oval_A" parent="Assets" instance=ExtResource("31_2cjbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05156152, 0.0050002337, 6.5547786)
 
-[node name="CommonTree_1" parent="." instance=ExtResource("21_yc10j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1049185, 0.24777238, -0.07181585)
-
-[node name="bed_double_A" parent="." instance=ExtResource("22_jscy8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4000845, 0.005000055, -4.3983192)
-
-[node name="chair_A" parent="." instance=ExtResource("23_pm3ni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.336603, 0.005000353, -4.3988724)
+[node name="table_low" parent="Assets" instance=ExtResource("32_chjal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22758651, 0.0049999654, -6.107016)
