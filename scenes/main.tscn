@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://ba7r0qua0ww4e"]
+[gd_scene load_steps=34 format=3 uid="uid://ba7r0qua0ww4e"]
 
 [ext_resource type="Script" uid="uid://bo1yf8tnuh8lt" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tbgi4"]
@@ -21,19 +21,10 @@
 [ext_resource type="PackedScene" uid="uid://skbokbolrgcq" path="res://scenes/room/roof.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://un4htm77fcl3" path="res://scenes/room/windowed_roof.tscn" id="15_jkv2x"]
 [ext_resource type="LightmapGIData" uid="uid://lmqw77hlrhxu" path="res://scenes/other/main.lmbake" id="16_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="20_gqmmt"]
-[ext_resource type="PackedScene" uid="uid://5euwa33ynt36" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair_pillows.fbx" id="21_qkpxi"]
-[ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="22_5q0nq"]
-[ext_resource type="PackedScene" uid="uid://bdejs1u3qo53o" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium_decorated.fbx" id="23_dgi5k"]
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="24_j8jky"]
 [ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="25_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="26_fuf3a"]
 [ext_resource type="PackedScene" uid="uid://cbrnfgtmfa42u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_B.fbx" id="27_pibwh"]
-[ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="28_c6pm6"]
-[ext_resource type="PackedScene" uid="uid://ce2b2ujr183tx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch_pillows.fbx" id="29_5he1u"]
-[ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="30_5poiv"]
-[ext_resource type="PackedScene" uid="uid://b7o8edu2qk0th" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_oval_A.fbx" id="31_2cjbq"]
-[ext_resource type="PackedScene" uid="uid://qibtbfthsi22" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_low.fbx" id="32_chjal"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sgp6g"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -62,6 +53,16 @@ material = SubResource("StandardMaterial3D_jscy8")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ya4ey"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_og1vs"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_2wyq8"]
+material = SubResource("StandardMaterial3D_og1vs")
+add_uv2 = true
+text = "VR English Testing Lab"
+font_size = 100
+depth = 0.1
+
 [node name="Main" type="Node3D"]
 script = ExtResource("1_o5qli")
 
@@ -73,6 +74,12 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 shadow_bias = 0.0
 shadow_normal_bias = 5.0
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+supersampling = true
+directional = true
+interior = true
+light_data = ExtResource("16_jbj1t")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 
@@ -106,15 +113,6 @@ tracker = &"right_hand"
 [node name="MovementDirect" parent="XROrigin3D/RightHand" instance=ExtResource("9_j8jky")]
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("6_tipki")]
-
-[node name="PickableObject" parent="." instance=ExtResource("8_85g3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7147221, -1.976036)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="PickableObject"]
-mesh = SubResource("BoxMesh_choun")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject"]
-shape = SubResource("ConvexPolygonShape3D_ya4ey")
 
 [node name="Room" type="Node3D" parent="."]
 
@@ -151,25 +149,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 5, 0)
 [node name="WindowedRoof" parent="Room/RoomRoofs" instance=ExtResource("15_jkv2x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.852252, 3.6551142, -8.738132)
-
 [node name="Assets" type="Node3D" parent="."]
-
-[node name="armchair" parent="Assets" instance=ExtResource("20_gqmmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.5)
-
-[node name="armchair_pillows" parent="Assets" instance=ExtResource("21_qkpxi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.005, -8.5)
-
-[node name="armchair_pillows2" parent="Assets" instance=ExtResource("21_qkpxi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.005, -8.5)
-
-[node name="cabinet_medium" parent="Assets" instance=ExtResource("22_5q0nq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.005, -9)
-
-[node name="cabinet_medium_decorated" parent="Assets" instance=ExtResource("23_dgi5k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.005, -9)
 
 [node name="cactus_medium_A" parent="Assets" instance=ExtResource("24_j8jky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.8492002, 0.0050001144, 8.927196)
@@ -183,28 +163,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.477626, 0.005000395, 8.160
 [node name="cactus_small_B" parent="Assets" instance=ExtResource("27_pibwh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5749326, 0.0050002756, 8.321424)
 
-[node name="chair_stool" parent="Assets" instance=ExtResource("28_c6pm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.585632, 0.0050000474, 9.045271)
+[node name="Lobby" type="Node3D" parent="."]
 
-[node name="couch_pillows" parent="Assets" instance=ExtResource("29_5he1u")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.020201027, 0.0050000846, 8.698302)
+[node name="PickableWoodBlock" parent="Lobby" instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.726, 0.5, -8.421)
 
-[node name="lamp_standing" parent="Assets" instance=ExtResource("30_5poiv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3130293, 0.005000174, 8.96052)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lobby/PickableWoodBlock"]
+mesh = SubResource("BoxMesh_choun")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Assets/lamp_standing"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.188979, 0)
-shadow_enabled = true
-omni_range = 14.285
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/PickableWoodBlock"]
+shape = SubResource("ConvexPolygonShape3D_ya4ey")
 
-[node name="rug_oval_A" parent="Assets" instance=ExtResource("31_2cjbq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05156152, 0.0050002337, 6.5547786)
+[node name="NameBoard" type="MeshInstance3D" parent="Lobby"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.479, -9.9)
+mesh = SubResource("TextMesh_2wyq8")
 
-[node name="table_low" parent="Assets" instance=ExtResource("32_chjal")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22758651, 0.0049999654, -6.107016)
+[node name="SpotLight3D" type="SpotLight3D" parent="Lobby"]
+transform = Transform3D(0.9848077, 0.1386816, -0.104504086, 0, 0.60181504, 0.79863554, 0.17364818, -0.7865025, 0.5926721, -4, 4.9, -8.5)
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-supersampling = true
-directional = true
-interior = true
-light_data = ExtResource("16_jbj1t")
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lobby"]
+transform = Transform3D(1, 0, 0, 0, 0.60181504, 0.79863554, 0, -0.79863554, 0.60181504, 0, 4.9, -8.5)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Lobby"]
+transform = Transform3D(0.9848077, -0.1386816, 0.104504086, 0, 0.60181504, 0.79863554, -0.17364818, -0.7865025, 0.5926721, 4, 4.9, -8.5)
