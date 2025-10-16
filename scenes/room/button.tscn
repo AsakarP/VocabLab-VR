@@ -1,0 +1,106 @@
+[gd_scene load_steps=11 format=3 uid="uid://dhe5a0u24f7yb"]
+
+[ext_resource type="Script" uid="uid://4ruyo85ijikv" path="res://scenes/button.gd" id="1_rvff6"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_og1vs"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 1.0
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2wyq8"]
+points = PackedVector3Array(-0.2, -0.5, 0, -0.1990603, -0.5, -0.01961629, -0.1990603, -0.5, 0.01957713, -0.2, 0.5, 0, -0.19616288, -0.5, -0.03903681, -0.1990603, 0.5, -0.01961629, -0.19616288, -0.5, 0.03899765, -0.1990603, 0.5, 0.01957713, -0.19142522, -0.5, -0.058065787, -0.19616288, 0.5, -0.03903681, -0.19142522, -0.5, 0.058026627, -0.19616288, 0.5, 0.03899765, -0.18480815, -0.5, -0.0765466, -0.19142522, 0.5, -0.058065787, -0.18480815, -0.5, 0.076507434, -0.19142522, 0.5, 0.058026627, -0.17638998, -0.5, -0.094283484, -0.18480815, 0.5, -0.0765466, -0.17638998, -0.5, 0.094244316, -0.18480815, 0.5, 0.076507434, -0.16632733, -0.5, -0.111119814, -0.17638998, 0.5, -0.094283484, -0.16632733, -0.5, 0.11108066, -0.17638998, 0.5, 0.094244316, -0.1546202, -0.5, -0.12689899, -0.16632733, 0.5, -0.111119814, -0.1546202, -0.5, 0.12685983, -0.16632733, 0.5, 0.11108066, -0.14142522, -0.5, -0.14142522, -0.1546202, 0.5, -0.12689899, -0.14142522, -0.5, 0.14138605, -0.1546202, 0.5, 0.12685983, -0.12689899, -0.5, -0.1546202, -0.14142522, 0.5, -0.14142522, -0.12689899, -0.5, 0.15458106, -0.14142522, 0.5, 0.14138605, -0.111119814, -0.5, -0.16632733, -0.12689899, 0.5, -0.1546202, -0.111119814, -0.5, 0.16628815, -0.12689899, 0.5, 0.15458106, -0.094283484, -0.5, -0.17638998, -0.111119814, 0.5, -0.16632733, -0.094283484, -0.5, 0.17635082, -0.111119814, 0.5, 0.16628815, -0.0765466, -0.5, -0.18480815, -0.094283484, 0.5, -0.17638998, -0.0765466, -0.5, 0.18476899, -0.094283484, 0.5, 0.17635082, -0.058065787, -0.5, -0.19142522, -0.0765466, 0.5, -0.18480815, -0.058065787, -0.5, 0.19138606, -0.0765466, 0.5, 0.18476899, -0.03903681, -0.5, -0.19616288, -0.058065787, 0.5, -0.19142522, -0.03903681, -0.5, 0.1961237, -0.058065787, 0.5, 0.19138606, -0.01961629, -0.5, -0.1990603, -0.03903681, 0.5, -0.19616288, -0.01961629, -0.5, 0.19902115, -0.03903681, 0.5, 0.1961237, 0, -0.5, -0.2, -0.01961629, 0.5, -0.1990603, 0, -0.5, 0.2, -0.01961629, 0.5, 0.19902115, 0.01957713, -0.5, -0.1990603, 0, 0.5, -0.2, 0.01957713, -0.5, 0.19902115, 0, 0.5, 0.2, 0.03899765, -0.5, -0.19616288, 0.01957713, 0.5, -0.1990603, 0.03899765, -0.5, 0.1961237, 0.01957713, 0.5, 0.19902115, 0.058026627, -0.5, -0.19142522, 0.03899765, 0.5, -0.19616288, 0.058026627, -0.5, 0.19138606, 0.03899765, 0.5, 0.1961237, 0.076507434, -0.5, -0.18480815, 0.058026627, 0.5, -0.19142522, 0.076507434, -0.5, 0.18476899, 0.058026627, 0.5, 0.19138606, 0.094244316, -0.5, -0.17638998, 0.076507434, 0.5, -0.18480815, 0.094244316, -0.5, 0.17635082, 0.076507434, 0.5, 0.18476899, 0.11108066, -0.5, -0.16632733, 0.094244316, 0.5, -0.17638998, 0.11108066, -0.5, 0.16628815, 0.094244316, 0.5, 0.17635082, 0.12685983, -0.5, -0.1546202, 0.11108066, 0.5, -0.16632733, 0.12685983, -0.5, 0.15458106, 0.11108066, 0.5, 0.16628815, 0.14138605, -0.5, -0.14142522, 0.12685983, 0.5, -0.1546202, 0.14138605, -0.5, 0.14138605, 0.12685983, 0.5, 0.15458106, 0.15458106, -0.5, -0.12689899, 0.14138605, 0.5, -0.14142522, 0.15458106, -0.5, 0.12685983, 0.14138605, 0.5, 0.14138605, 0.16628815, -0.5, -0.111119814, 0.15458106, 0.5, -0.12689899, 0.16628815, -0.5, 0.11108066, 0.15458106, 0.5, 0.12685983, 0.17635082, -0.5, -0.094283484, 0.16628815, 0.5, -0.111119814, 0.17635082, -0.5, 0.094244316, 0.16628815, 0.5, 0.11108066, 0.18476899, -0.5, -0.0765466, 0.17635082, 0.5, -0.094283484, 0.18476899, -0.5, 0.076507434, 0.17635082, 0.5, 0.094244316, 0.19138606, -0.5, -0.058065787, 0.18476899, 0.5, -0.0765466, 0.19138606, -0.5, 0.058026627, 0.18476899, 0.5, 0.076507434, 0.1961237, -0.5, -0.03903681, 0.19138606, 0.5, -0.058065787, 0.1961237, -0.5, 0.03899765, 0.19138606, 0.5, 0.058026627, 0.19902115, -0.5, -0.01961629, 0.1961237, 0.5, -0.03903681, 0.19902115, -0.5, 0.01957713, 0.1961237, 0.5, 0.03899765, 0.2, -0.5, 0, 0.19902115, 0.5, -0.01961629, 0.19902115, 0.5, 0.01957713, 0.2, 0.5, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxglm"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2f3dj"]
+material = SubResource("StandardMaterial3D_vxglm")
+top_radius = 0.08
+bottom_radius = 0.08
+height = 0.06
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yq6so"]
+height = 0.07
+radius = 0.08
+
+[sub_resource type="Animation" id="Animation_tel4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.53, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fv21b"]
+resource_name = "pressdown"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20000002),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.53, 0), Vector3(0, 0.4903804, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qkpxi"]
+resource_name = "release"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ButtonMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.4903804, 0), Vector3(0, 0.53, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q0nq"]
+_data = {
+&"RESET": SubResource("Animation_tel4y"),
+&"pressdown": SubResource("Animation_fv21b"),
+&"release": SubResource("Animation_qkpxi")
+}
+
+[node name="Button" type="StaticBody3D"]
+script = ExtResource("1_rvff6")
+
+[node name="BaseMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_og1vs")
+skeleton = NodePath("../..")
+
+[node name="BaseCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_2wyq8")
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53, 0)
+mesh = SubResource("CylinderMesh_2f3dj")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_yq6so")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5q0nq")
+}
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
