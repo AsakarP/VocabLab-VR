@@ -2,9 +2,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nccm0"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_eiicq"]
+[sub_resource type="BoxMesh" id="BoxMesh_nccm0"]
+lightmap_size_hint = Vector2i(314, 216)
 material = SubResource("StandardMaterial3D_nccm0")
-size = Vector3(42, 0.01, 20)
+add_uv2 = true
+size = Vector3(42, 0.01, 20.01)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nccm0"]
 points = PackedVector3Array(-21, -0.005, -10, -21, 0.005, -10, 20.995892, -0.005, -10, -21, -0.005, 10, -21, 0.005, 10, 20.995892, 0.005, -10, 20.995892, -0.005, 10, 20.995892, 0.005, 10)
@@ -12,7 +14,7 @@ points = PackedVector3Array(-21, -0.005, -10, -21, 0.005, -10, 20.995892, -0.005
 [node name="Roof" type="StaticBody3D"]
 
 [node name="RoofMesh" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_eiicq")
+mesh = SubResource("BoxMesh_nccm0")
 
 [node name="RoofCollision" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_nccm0")

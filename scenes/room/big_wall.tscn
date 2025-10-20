@@ -8,7 +8,7 @@ material = SubResource("StandardMaterial3D_o7hut")
 add_uv2 = true
 size = Vector3(100, 5, 0.01)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o7hut"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_h4tll"]
 points = PackedVector3Array(50, 2.5, 0.005, 50, 2.5, -0.005, -50, 2.5, 0.005, 50, -2.5, 0.005, 50, -2.5, -0.005, -50, 2.5, -0.005, -50, -2.5, 0.005, -50, -2.5, -0.005)
 
 [node name="BigWall" type="StaticBody3D"]
@@ -17,4 +17,4 @@ points = PackedVector3Array(50, 2.5, 0.005, 50, 2.5, -0.005, -50, 2.5, 0.005, 50
 mesh = SubResource("BoxMesh_o7hut")
 
 [node name="BigWallCollision" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_o7hut")
+shape = SubResource("ConvexPolygonShape3D_h4tll")
