@@ -3,13 +3,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5u8ay"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5u8ay"]
-lightmap_size_hint = Vector2i(104, 156)
+lightmap_size_hint = Vector2i(104, 116)
 material = SubResource("StandardMaterial3D_5u8ay")
 add_uv2 = true
-size = Vector3(20, 5, 0.01)
+size = Vector3(20, 1, 0.01)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5u8ay"]
-points = PackedVector3Array(10, 2.5, 0.005, 10, 2.5, -0.005, -10, 2.5, 0.005, 10, -2.5, 0.005, 10, -2.5, -0.005, -10, 2.5, -0.005, -10, -2.5, 0.005, -10, -2.5, -0.005)
+points = PackedVector3Array(10, 0.5, 0.005, 10, 0.5, -0.005, -10, 0.5, 0.005, 10, -0.5, 0.005, 10, -0.5, -0.005, -10, 0.5, -0.005, -10, -0.5, 0.005, -10, -0.5, -0.005)
 
 [node name="SmallWall" type="StaticBody3D"]
 
@@ -17,6 +17,6 @@ points = PackedVector3Array(10, 2.5, 0.005, 10, 2.5, -0.005, -10, 2.5, 0.005, 10
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("BoxMesh_5u8ay")
 
-[node name="SmallWallCollision" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5u8ay")

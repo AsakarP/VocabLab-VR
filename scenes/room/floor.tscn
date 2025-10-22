@@ -11,12 +11,13 @@ roughness_texture = ExtResource("3_rsmmi")
 normal_enabled = true
 normal_texture = ExtResource("2_wxhu3")
 uv1_triplanar = true
+uv2_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2df0x"]
-lightmap_size_hint = Vector2i(603, 506)
+lightmap_size_hint = Vector2i(604, 506)
 material = SubResource("StandardMaterial3D_tk7mm")
 add_uv2 = true
-size = Vector3(100, 0.01, 19.99)
+size = Vector3(100, 0.01, 20.01)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tk7mm"]
 points = PackedVector3Array(-50, -0.005, -10, -50, 0.005, -10, 50, -0.005, -10, -50, -0.005, 10, -50, 0.005, 10, 50, 0.005, -10, 50, -0.005, 10, 50, 0.005, 10)

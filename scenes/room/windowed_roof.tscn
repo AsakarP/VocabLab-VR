@@ -17,7 +17,7 @@ points = PackedVector3Array(-3.5, -0.005, -3.5, -3.5, 0.005, -3.5, 3.5, -0.005, 
 lightmap_size_hint = Vector2i(116, 86)
 material = SubResource("StandardMaterial3D_fwdje")
 add_uv2 = true
-size = Vector3(16, 0.01, 6.5)
+size = Vector3(16, 0.01, 6.51)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_luo6a"]
 points = PackedVector3Array(-8, -0.005, -3.25, -8, 0.005, -3.25, 8, -0.005, -3.25, -8, -0.005, 3.2499995, -8, 0.005, 3.2499995, 8, 0.005, -3.25, 8, -0.005, 3.2499995, 8, 0.005, 3.2499995)

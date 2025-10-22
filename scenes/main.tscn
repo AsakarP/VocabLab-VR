@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ba7r0qua0ww4e"]
+[gd_scene load_steps=39 format=3 uid="uid://ba7r0qua0ww4e"]
 
 [ext_resource type="Script" uid="uid://bo1yf8tnuh8lt" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tbgi4"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://ctlh3sbp6vb7v" path="res://scenes/room/door_way.tscn" id="11_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bl0b4dfres4to" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Roughness.jpg" id="12_yc10j"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="13_fv21b"]
-[ext_resource type="PackedScene" uid="uid://skbokbolrgcq" path="res://scenes/room/roof.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://un4htm77fcl3" path="res://scenes/room/windowed_roof.tscn" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="24_j8jky"]
 [ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="25_kmb1v"]
@@ -83,6 +82,7 @@ shadow_enabled = true
 shadow_bias = 0.0
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.222619, 0)
 interior = true
 light_data = ExtResource("3_tel4y")
 
@@ -137,27 +137,21 @@ turn_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -10)
 
 [node name="SmallWall" parent="Room/RoomWalls" instance=ExtResource("10_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 2.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0.5, 0)
 
 [node name="BigWall2" parent="Room/RoomWalls" instance=ExtResource("9_choun")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2.5, 10)
 
 [node name="SmallWall2" parent="Room/RoomWalls" instance=ExtResource("10_ya4ey")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 50, 2.5, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 50, 0.5, 0)
 
 [node name="DoorWay" parent="Room/RoomWalls" instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.975, 4, 0)
 
 [node name="DoorWay2" parent="Room/RoomWalls" instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.975, 4, 0)
 
 [node name="RoomRoofs" type="Node3D" parent="Room"]
-
-[node name="Roof" parent="Room/RoomRoofs" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5, 0)
-
-[node name="Roof2" parent="Room/RoomRoofs" instance=ExtResource("13_trceg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 5, 0)
 
 [node name="WindowedRoof" parent="Room/RoomRoofs" instance=ExtResource("15_jkv2x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
