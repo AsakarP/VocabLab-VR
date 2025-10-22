@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://duwllbgarwp4y"]
+[gd_scene load_steps=8 format=3 uid="uid://duwllbgarwp4y"]
+
+[ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="2_hdcq0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_34rik"]
 size = Vector3(1, 2, 0.1)
@@ -13,14 +15,38 @@ albedo_color = Color(1, 0, 0, 1)
 material = SubResource("StandardMaterial3D_hdcq0")
 size = Vector3(0.5, 0.5, 0.1)
 
-[node name="WallButton" type="StaticBody3D"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hdcq0"]
+points = PackedVector3Array(0.25, 0.25, 0.05, 0.25, 0.25, -0.05, -0.25, 0.25, 0.05, 0.25, -0.25, 0.05, 0.25, -0.25, -0.05, -0.25, 0.25, -0.05, -0.25, -0.25, 0.05, -0.25, -0.25, -0.05)
 
-[node name="WallMesh" type="MeshInstance3D" parent="."]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pycji"]
+size = Vector3(0.5626831, 0.56949615, 0.1295166)
+
+[node name="WallButton" type="Node3D"]
+
+[node name="ButtonBase" type="StaticBody3D" parent="."]
+
+[node name="BaseMesh" type="MeshInstance3D" parent="ButtonBase"]
 mesh = SubResource("BoxMesh_34rik")
+skeleton = NodePath("../..")
 
-[node name="WallCollision" type="CollisionShape3D" parent="."]
+[node name="BaseCollision" type="CollisionShape3D" parent="ButtonBase"]
 shape = SubResource("ConvexPolygonShape3D_xaryk")
 
-[node name="ButtonMesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.521, 0.1)
+[node name="Button" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0.075)
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="Button"]
 mesh = SubResource("BoxMesh_pycji")
+skeleton = NodePath("../..")
+
+[node name="ButtonCollision" type="CollisionShape3D" parent="Button"]
+shape = SubResource("ConvexPolygonShape3D_hdcq0")
+
+[node name="InteractableAreaButton" parent="." instance=ExtResource("2_hdcq0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55, 0.03)
+button = NodePath("../Button")
+displacement = Vector3(0, 0, -0.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableAreaButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0058898926, 0.014614105, 0.08807373)
+shape = SubResource("BoxShape3D_pycji")

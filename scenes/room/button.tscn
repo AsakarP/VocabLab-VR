@@ -1,6 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dhe5a0u24f7yb"]
 
-[ext_resource type="Script" uid="uid://4ruyo85ijikv" path="res://scenes/button.gd" id="1_rvff6"]
+[ext_resource type="Script" uid="uid://ipnktu1aikds" path="res://scenes/room/button.gd" id="1_ddg1v"]
+[ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="1_rvff6"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_5f8g2"]
+[ext_resource type="PackedScene" uid="uid://yryqnxdf5l1j" path="res://scenes/room/pop_text.tscn" id="4_134nr"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_og1vs"]
 top_radius = 0.2
@@ -19,88 +22,48 @@ top_radius = 0.08
 bottom_radius = 0.08
 height = 0.06
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_yq6so"]
-height = 0.07
-radius = 0.08
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ddg1v"]
+points = PackedVector3Array(0, -0.03, -0.08, -0.007846519, -0.03, -0.07962412, 0, 0.030000003, -0.08, 0.007830851, -0.03, -0.07962412, -0.007846519, 0.030000003, -0.07962412, -0.015614726, -0.03, -0.07846515, 0.007830851, 0.030000003, -0.07962412, 0.015599057, -0.03, -0.07846515, -0.015614726, 0.030000003, -0.07846515, -0.023226313, -0.03, -0.076570086, 0.015599057, 0.030000003, -0.07846515, 0.023210645, -0.03, -0.076570086, -0.023226313, 0.030000003, -0.076570086, -0.030618638, -0.03, -0.07392326, 0.023210645, 0.030000003, -0.076570086, 0.03060297, -0.03, -0.07392326, -0.030618638, 0.030000003, -0.07392326, -0.03771339, -0.03, -0.07055599, 0.03060297, 0.030000003, -0.07392326, 0.037697725, -0.03, -0.07055599, -0.03771339, 0.030000003, -0.07055599, -0.044447925, -0.03, -0.06653093, 0.037697725, 0.030000003, -0.07055599, 0.04443226, -0.03, -0.06653093, -0.044447925, 0.030000003, -0.06653093, -0.05075959, -0.03, -0.06184808, 0.04443226, 0.030000003, -0.06653093, 0.050743923, -0.03, -0.06184808, -0.05075959, 0.030000003, -0.06184808, -0.056570087, -0.03, -0.056570087, 0.050743923, 0.030000003, -0.06184808, 0.05655442, -0.03, -0.056570087, -0.056570087, 0.030000003, -0.056570087, -0.06184808, -0.03, -0.05075959, 0.05655442, 0.030000003, -0.056570087, 0.061832413, -0.03, -0.05075959, -0.06184808, 0.030000003, -0.05075959, -0.06653093, -0.03, -0.044447925, 0.061832413, 0.030000003, -0.05075959, 0.06651527, -0.03, -0.044447925, -0.06653093, 0.030000003, -0.044447925, -0.07055599, -0.03, -0.03771339, 0.06651527, 0.030000003, -0.044447925, 0.070540324, -0.03, -0.03771339, -0.07055599, 0.030000003, -0.03771339, -0.07392326, -0.03, -0.030618638, 0.070540324, 0.030000003, -0.03771339, 0.073907584, -0.03, -0.030618638, -0.07392326, 0.030000003, -0.030618638, -0.076570086, -0.03, -0.023226313, 0.073907584, 0.030000003, -0.030618638, 0.07655442, -0.03, -0.023226313, -0.076570086, 0.030000003, -0.023226313, -0.07846515, -0.03, -0.015614726, 0.07655442, 0.030000003, -0.023226313, 0.07844949, -0.03, -0.015614726, -0.07846515, 0.030000003, -0.015614726, -0.07962412, -0.03, -0.007846519, 0.07844949, 0.030000003, -0.015614726, 0.079608455, -0.03, -0.007846519, -0.07962412, 0.030000003, -0.007846519, -0.08, -0.03, 0, 0.079608455, 0.030000003, -0.007846519, 0.08, -0.03, 0, -0.08, 0.030000003, 0, -0.07962412, -0.03, 0.007830851, 0.08, 0.030000003, 0, 0.079608455, -0.03, 0.007830851, -0.07962412, 0.030000003, 0.007830851, -0.07846515, -0.03, 0.015599057, 0.079608455, 0.030000003, 0.007830851, 0.07844949, -0.03, 0.015599057, -0.07846515, 0.030000003, 0.015599057, -0.076570086, -0.03, 0.023210645, 0.07844949, 0.030000003, 0.015599057, 0.07655442, -0.03, 0.023210645, -0.076570086, 0.030000003, 0.023210645, -0.07392326, -0.03, 0.03060297, 0.07655442, 0.030000003, 0.023210645, 0.073907584, -0.03, 0.03060297, -0.07392326, 0.030000003, 0.03060297, -0.07055599, -0.03, 0.037697725, 0.073907584, 0.030000003, 0.03060297, 0.070540324, -0.03, 0.037697725, -0.07055599, 0.030000003, 0.037697725, -0.06653093, -0.03, 0.04443226, 0.070540324, 0.030000003, 0.037697725, 0.06651527, -0.03, 0.04443226, -0.06653093, 0.030000003, 0.04443226, -0.06184808, -0.03, 0.050743923, 0.06651527, 0.030000003, 0.04443226, 0.061832413, -0.03, 0.050743923, -0.06184808, 0.030000003, 0.050743923, -0.056570087, -0.03, 0.05655442, 0.061832413, 0.030000003, 0.050743923, 0.05655442, -0.03, 0.05655442, -0.056570087, 0.030000003, 0.05655442, -0.05075959, -0.03, 0.061832413, 0.05655442, 0.030000003, 0.05655442, 0.050743923, -0.03, 0.061832413, -0.05075959, 0.030000003, 0.061832413, -0.044447925, -0.03, 0.06651527, 0.050743923, 0.030000003, 0.061832413, 0.04443226, -0.03, 0.06651527, -0.044447925, 0.030000003, 0.06651527, -0.03771339, -0.03, 0.070540324, 0.04443226, 0.030000003, 0.06651527, 0.037697725, -0.03, 0.070540324, -0.03771339, 0.030000003, 0.070540324, -0.030618638, -0.03, 0.073907584, 0.037697725, 0.030000003, 0.070540324, 0.03060297, -0.03, 0.073907584, -0.030618638, 0.030000003, 0.073907584, -0.023226313, -0.03, 0.07655442, 0.03060297, 0.030000003, 0.073907584, 0.023210645, -0.03, 0.07655442, -0.023226313, 0.030000003, 0.07655442, -0.015614726, -0.03, 0.07844949, 0.023210645, 0.030000003, 0.07655442, 0.015599057, -0.03, 0.07844949, -0.015614726, 0.030000003, 0.07844949, -0.007846519, -0.03, 0.079608455, 0.015599057, 0.030000003, 0.07844949, 0.007830851, -0.03, 0.079608455, -0.007846519, 0.030000003, 0.079608455, 0, -0.03, 0.08, 0.007830851, 0.030000003, 0.079608455, 0, 0.030000003, 0.08)
 
-[sub_resource type="Animation" id="Animation_tel4y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonMesh:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.53, 0)]
-}
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g7n30"]
+height = 0.11715698
+radius = 0.100097656
 
-[sub_resource type="Animation" id="Animation_fv21b"]
-resource_name = "pressdown"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonMesh:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.20000002),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.53, 0), Vector3(0, 0.4903804, 0)]
-}
+[node name="Button" type="Node3D"]
+script = ExtResource("1_ddg1v")
 
-[sub_resource type="Animation" id="Animation_qkpxi"]
-resource_name = "release"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ButtonMesh:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0.4903804, 0), Vector3(0, 0.53, 0)]
-}
+[node name="ButtonBase" type="StaticBody3D" parent="."]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q0nq"]
-_data = {
-&"RESET": SubResource("Animation_tel4y"),
-&"pressdown": SubResource("Animation_fv21b"),
-&"release": SubResource("Animation_qkpxi")
-}
-
-[node name="Button" type="StaticBody3D"]
-script = ExtResource("1_rvff6")
-
-[node name="BaseMesh" type="MeshInstance3D" parent="."]
+[node name="BaseMesh" type="MeshInstance3D" parent="ButtonBase"]
 mesh = SubResource("CylinderMesh_og1vs")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="BaseCollision" type="CollisionShape3D" parent="."]
+[node name="BaseCollision" type="CollisionShape3D" parent="ButtonBase"]
 shape = SubResource("ConvexPolygonShape3D_2wyq8")
 
-[node name="ButtonMesh" type="MeshInstance3D" parent="."]
+[node name="Button" type="StaticBody3D" parent="."]
+
+[node name="ButtonMesh" type="MeshInstance3D" parent="Button"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53, 0)
 mesh = SubResource("CylinderMesh_2f3dj")
+skeleton = NodePath("../..")
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.535, 0)
+[node name="ButtonCollision" type="CollisionShape3D" parent="Button"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53, 0)
+shape = SubResource("ConvexPolygonShape3D_ddg1v")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("CylinderShape3D_yq6so")
+[node name="InteractableAreaButton" parent="." instance=ExtResource("1_rvff6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52405006, 0)
+button = NodePath("../Button")
+displacement = Vector3(0, -0.05, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_5q0nq")
-}
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableAreaButton"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014602661, 0)
+shape = SubResource("CylinderShape3D_g7n30")
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[node name="Text" parent="." instance=ExtResource("3_5f8g2")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0610132, -0.29850322)
+scene = ExtResource("4_134nr")
+unshaded = true
+scene_properties_keys = PackedStringArray()
