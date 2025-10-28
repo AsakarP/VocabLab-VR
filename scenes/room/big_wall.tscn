@@ -3,13 +3,13 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o7hut"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o7hut"]
-lightmap_size_hint = Vector2i(84, 136)
+lightmap_size_hint = Vector2i(64, 86)
 material = SubResource("StandardMaterial3D_o7hut")
 add_uv2 = true
-size = Vector3(16, 5, 0.01)
+size = Vector3(12, 2, 0.01)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o7hut"]
-points = PackedVector3Array(8, 2.5, 0.005, 8, 2.5, -0.005, -8, 2.5, 0.005, 8, -2.5, 0.005, 8, -2.5, -0.005, -8, 2.5, -0.005, -8, -2.5, 0.005, -8, -2.5, -0.005)
+points = PackedVector3Array(6, 1, 0.005, 6, 1, -0.005, -6, 1, 0.005, 6, -1, 0.005, 6, -1, -0.005, -6, 1, -0.005, -6, -1, 0.005, -6, -1, -0.005)
 
 [node name="BigWall" type="StaticBody3D"]
 

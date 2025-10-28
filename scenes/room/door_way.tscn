@@ -1,6 +1,8 @@
 [gd_scene load_steps=4 format=4 uid="uid://ctlh3sbp6vb7v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rthi4"]
+ao_enabled = true
+ao_on_uv2 = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rthi4"]
 lightmap_size_hint = Vector2i(410, 214)
@@ -34,6 +36,7 @@ data = PackedVector3Array(-0.025, -2.5, -10, -0.025, -1.113733, -2.859, -0.025, 
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+ignore_occlusion_culling = true
 mesh = SubResource("ArrayMesh_rthi4")
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]

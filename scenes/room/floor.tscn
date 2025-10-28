@@ -1,26 +1,25 @@
 [gd_scene load_steps=7 format=3 uid="uid://b723t40osiscq"]
 
-[ext_resource type="Texture2D" uid="uid://br3svenv2wtr7" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_Color.jpg" id="1_8w87y"]
-[ext_resource type="Texture2D" uid="uid://2pr3fdeh4a52" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_NormalDX.jpg" id="2_wxhu3"]
-[ext_resource type="Texture2D" uid="uid://qr17poh8fxg5" path="res://textures/Carpet003_4K-JPG/Carpet014_4K-JPG_Roughness.jpg" id="3_rsmmi"]
+[ext_resource type="Texture2D" uid="uid://cf7wq6o7oewfv" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Color.jpg" id="1_8w87y"]
+[ext_resource type="Texture2D" uid="uid://ba8s33sudjp7j" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_NormalDX.jpg" id="2_wxhu3"]
+[ext_resource type="Texture2D" uid="uid://drv648ptuw5j4" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Roughness.jpg" id="3_rsmmi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tk7mm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmnci"]
 albedo_texture = ExtResource("1_8w87y")
 albedo_texture_force_srgb = true
 roughness_texture = ExtResource("3_rsmmi")
 normal_enabled = true
 normal_texture = ExtResource("2_wxhu3")
 uv1_triplanar = true
-uv2_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2df0x"]
-lightmap_size_hint = Vector2i(604, 506)
-material = SubResource("StandardMaterial3D_tk7mm")
+lightmap_size_hint = Vector2i(354, 256)
+material = SubResource("StandardMaterial3D_vmnci")
 add_uv2 = true
-size = Vector3(100, 0.01, 20.01)
+size = Vector3(50, 0.01, 20)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tk7mm"]
-points = PackedVector3Array(-50, -0.005, -10, -50, 0.005, -10, 50, -0.005, -10, -50, -0.005, 10, -50, 0.005, 10, 50, 0.005, -10, 50, -0.005, 10, 50, 0.005, 10)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8w87y"]
+points = PackedVector3Array(-25, -0.005, -10, -25, 0.005, -10, 25, -0.005, -10, -25, -0.005, 10, -25, 0.005, 10, 25, 0.005, -10, 25, -0.005, 10, 25, 0.005, 10)
 
 [node name="Floor" type="StaticBody3D"]
 
@@ -29,4 +28,4 @@ mesh = SubResource("BoxMesh_2df0x")
 skeleton = NodePath("../../..")
 
 [node name="FloorCollision" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_tk7mm")
+shape = SubResource("ConvexPolygonShape3D_8w87y")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ba7r0qua0ww4e"]
+[gd_scene load_steps=35 format=3 uid="uid://ba7r0qua0ww4e"]
 
 [ext_resource type="Script" uid="uid://bo1yf8tnuh8lt" path="res://scenes/main.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://l7ncg8tufj3a" path="res://assets/HDRIs/autumn_field_puresky_4k.exr" id="2_fv21b"]
@@ -9,19 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="8_85g3d"]
 [ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="8_tel4y"]
-[ext_resource type="PackedScene" uid="uid://c2ybya8f52fk2" path="res://scenes/room/big_wall.tscn" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="9_j8jky"]
 [ext_resource type="Texture2D" uid="uid://b82f8ei3a7u4a" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Color.jpg" id="10_0ld40"]
 [ext_resource type="PackedScene" uid="uid://b723t40osiscq" path="res://scenes/room/floor.tscn" id="10_a8y0u"]
-[ext_resource type="PackedScene" uid="uid://cglxxk755utq7" path="res://scenes/room/small_wall.tscn" id="10_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://cocwg4bvqifsk" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_NormalDX.jpg" id="11_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="11_qkpxi"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="11_vxglm"]
-[ext_resource type="PackedScene" uid="uid://ctlh3sbp6vb7v" path="res://scenes/room/door_way.tscn" id="11_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://bl0b4dfres4to" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Roughness.jpg" id="12_yc10j"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="13_fv21b"]
-[ext_resource type="PackedScene" uid="uid://un4htm77fcl3" path="res://scenes/room/windowed_roof.tscn" id="15_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://31pdu2rqnddk" path="res://scenes/room/small_long_wall.tscn" id="20_tel4y"]
 [ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="25_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="26_fuf3a"]
 [ext_resource type="PackedScene" uid="uid://dhe5a0u24f7yb" path="res://scenes/room/button.tscn" id="28_yq6so"]
@@ -43,13 +38,8 @@ sky_rotation = Vector3(0, 3.4225907, 0)
 tonemap_mode = 2
 ssao_enabled = true
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_2f3dj"]
-height = 0.81685543
-radius = 0.42919922
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_fv21b"]
-height = 0.54711914
-radius = 0.25585938
+[sub_resource type="BoxMesh" id="BoxMesh_pm3ni"]
+size = Vector3(12, 2, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_og1vs"]
 albedo_color = Color(0, 0, 0, 1)
@@ -60,6 +50,14 @@ add_uv2 = true
 text = "VR English Testing Lab"
 font_size = 100
 depth = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2f3dj"]
+height = 0.81685543
+radius = 0.42919922
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fv21b"]
+height = 0.54711914
+radius = 0.25585938
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jscy8"]
 albedo_texture = ExtResource("10_0ld40")
@@ -82,14 +80,12 @@ script = ExtResource("1_o5qli")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.9378889, -0.16819774, 0.30343676, 0, 0.8746197, 0.4848096, -0.34693566, 0.45469755, -0.82029617, 0, 10.648682, 0)
 shadow_enabled = true
-shadow_bias = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_tel4y")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.222619, 0)
-interior = true
 light_data = ExtResource("3_tel4y")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
@@ -130,90 +126,55 @@ collide_with_areas = true
 
 [node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("6_tipki")]
 
-[node name="Room" type="Node3D" parent="."]
-
-[node name="Floor" parent="Room" instance=ExtResource("10_a8y0u")]
-
-[node name="RoomWalls" type="Node3D" parent="Room"]
-
-[node name="BigWall" parent="Room/RoomWalls" instance=ExtResource("9_choun")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -10)
-
-[node name="SmallWall" parent="Room/RoomWalls" instance=ExtResource("10_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0.5, 0)
-
-[node name="BigWall2" parent="Room/RoomWalls" instance=ExtResource("9_choun")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2.5, 10)
-
-[node name="SmallWall2" parent="Room/RoomWalls" instance=ExtResource("10_ya4ey")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 50, 0.5, 0)
-
-[node name="DoorWay" parent="Room/RoomWalls" instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.975, 4, 0)
-
-[node name="DoorWay2" parent="Room/RoomWalls" instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.975, 4, 0)
-
-[node name="SmallLongWall" parent="Room/RoomWalls" instance=ExtResource("20_tel4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, -10)
-
-[node name="SmallLongWall2" parent="Room/RoomWalls" instance=ExtResource("20_tel4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, 10)
-
-[node name="SmallLongWall3" parent="Room/RoomWalls" instance=ExtResource("20_tel4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0.5, 10)
-
-[node name="SmallLongWall4" parent="Room/RoomWalls" instance=ExtResource("20_tel4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0.5, -10)
-
-[node name="RoomRoofs" type="Node3D" parent="Room"]
-
-[node name="WindowedRoof" parent="Room/RoomRoofs" instance=ExtResource("15_jkv2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
-
-[node name="Assets" type="Node3D" parent="."]
-
-[node name="CactusMedium" parent="Assets" instance=ExtResource("8_85g3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1469636, 0, 8.926548)
-
-[node name="cactus_medium_B" parent="Assets/CactusMedium" instance=ExtResource("25_kmb1v")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Assets/CactusMedium"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
-shape = SubResource("CylinderShape3D_2f3dj")
-
-[node name="CactusSmall" parent="Assets" instance=ExtResource("8_85g3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.117154, 0.005, 7.634)
-
-[node name="cactus_small_A" parent="Assets/CactusSmall" instance=ExtResource("26_fuf3a")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Assets/CactusSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
-shape = SubResource("CylinderShape3D_fv21b")
-
-[node name="CactusMedium2" parent="Assets" instance=ExtResource("8_85g3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7923536, 0, 9.305571)
-
-[node name="cactus_medium_B" parent="Assets/CactusMedium2" instance=ExtResource("25_kmb1v")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Assets/CactusMedium2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
-shape = SubResource("CylinderShape3D_2f3dj")
-
-[node name="CactusSmall2" parent="Assets" instance=ExtResource("8_85g3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3941407, 0.005, 8.118599)
-
-[node name="cactus_small_A" parent="Assets/CactusSmall2" instance=ExtResource("26_fuf3a")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Assets/CactusSmall2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
-shape = SubResource("CylinderShape3D_fv21b")
-
 [node name="Lobby" type="Node3D" parent="."]
 
-[node name="NameBoard" type="MeshInstance3D" parent="Lobby"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.479, -9.9)
+[node name="Floor" parent="Lobby" instance=ExtResource("10_a8y0u")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Lobby"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.005, 9.95)
+mesh = SubResource("BoxMesh_pm3ni")
+
+[node name="TextSign" type="MeshInstance3D" parent="Lobby"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1, 9.9)
 mesh = SubResource("TextMesh_2wyq8")
+
+[node name="Assets" type="Node3D" parent="Lobby"]
+
+[node name="CactusMedium" parent="Lobby/Assets" instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1469636, 0, 8.926548)
+
+[node name="cactus_medium_B" parent="Lobby/Assets/CactusMedium" instance=ExtResource("25_kmb1v")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/Assets/CactusMedium"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
+shape = SubResource("CylinderShape3D_2f3dj")
+
+[node name="CactusSmall" parent="Lobby/Assets" instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.117154, 0.005, 7.634)
+
+[node name="cactus_small_A" parent="Lobby/Assets/CactusSmall" instance=ExtResource("26_fuf3a")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/Assets/CactusSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
+shape = SubResource("CylinderShape3D_fv21b")
+
+[node name="CactusMedium2" parent="Lobby/Assets" instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7923536, 0, 9.305571)
+
+[node name="cactus_medium_B" parent="Lobby/Assets/CactusMedium2" instance=ExtResource("25_kmb1v")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/Assets/CactusMedium2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
+shape = SubResource("CylinderShape3D_2f3dj")
+
+[node name="CactusSmall2" parent="Lobby/Assets" instance=ExtResource("8_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3941407, 0.005, 8.118599)
+
+[node name="cactus_small_A" parent="Lobby/Assets/CactusSmall2" instance=ExtResource("26_fuf3a")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/Assets/CactusSmall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
+shape = SubResource("CylinderShape3D_fv21b")
 
 [node name="PickableWoodBlock" parent="Lobby" instance=ExtResource("8_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.726, 0.5, -8.421)
@@ -223,17 +184,6 @@ mesh = SubResource("BoxMesh_choun")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Lobby/PickableWoodBlock"]
 shape = SubResource("ConvexPolygonShape3D_ya4ey")
-
-[node name="SpotLights" type="Node3D" parent="Lobby"]
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Lobby/SpotLights"]
-transform = Transform3D(0.9848078, 0.1386816, -0.104504086, 0, 0.60181504, 0.79863554, 0.1736482, -0.7865025, 0.5926721, -4, 4.9, -8.5)
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="Lobby/SpotLights"]
-transform = Transform3D(1, 0, 0, 0, 0.60181504, 0.79863554, 0, -0.79863554, 0.60181504, 0, 4.9, -8.5)
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="Lobby/SpotLights"]
-transform = Transform3D(0.9848078, -0.1386816, 0.104504086, 0, 0.60181504, 0.79863554, -0.1736482, -0.7865025, 0.5926721, 4, 4.9, -8.5)
 
 [node name="Button" parent="Lobby" instance=ExtResource("28_yq6so")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.936)
