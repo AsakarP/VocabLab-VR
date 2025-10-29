@@ -1,0 +1,136 @@
+[gd_scene load_steps=23 format=4 uid="uid://d8cjn5wqihg0"]
+
+[ext_resource type="Script" uid="uid://c7mm3v27u4n11" path="res://scenes/room.gd" id="1_qtoah"]
+[ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="1_ybpoa"]
+[ext_resource type="Script" uid="uid://bik4bnb6soxq7" path="res://scenes/left_hand.gd" id="2_qtoah"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_eom3m"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_tk5fv"]
+[ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="5_w68ji"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_23wr2"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_3j2fx"]
+[ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="8_dynfe"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_vfrn5"]
+[ext_resource type="Texture2D" uid="uid://b82f8ei3a7u4a" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Color.jpg" id="11_w68ji"]
+[ext_resource type="Texture2D" uid="uid://cocwg4bvqifsk" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_NormalDX.jpg" id="12_3j2fx"]
+[ext_resource type="Texture2D" uid="uid://bl0b4dfres4to" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Roughness.jpg" id="12_23wr2"]
+[ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="13_3j2fx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybpoa"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_qtoah"]
+sky_material = SubResource("ProceduralSkyMaterial_ybpoa")
+
+[sub_resource type="Environment" id="Environment_eom3m"]
+background_mode = 2
+sky = SubResource("Sky_qtoah")
+tonemap_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_tk5fv"]
+size = Vector3(12, 5, 12)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w68ji"]
+size = Vector3(11.5, 4.5, 11.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
+albedo_texture = ExtResource("11_w68ji")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("12_23wr2")
+normal_enabled = true
+normal_texture = ExtResource("12_3j2fx")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vfrn5"]
+lightmap_size_hint = Vector2i(682, 722)
+_surfaces = [{
+"aabb": AABB(-6, -2.5, -6, 12, 5, 12),
+"attribute_data": PackedByteArray("AACAPwAAAD/QPz8/6fg5P6uqKj8AAAA/ZZLJPun4OT8AAIA/AAAAANA/Pz+wyF0/AAAAAAAAgD+MMcY8MDUtP6uqqj4AAAA/VFDBPvcEUT+rqqo+AACAP1RQwT4wNS0/q6oqPwAAgD8MMEA6kmKtPquqKj8AAAA/DDBAOuAkLD8AAIA/AAAAP1NNtT7gJCw/AAAAAAAAAD+MMcY89wRRP6uqKj8AAIA/DDBAOvNBqz6rqqo+AACAPwwwQDpIijU6q6oqPwAAAD9TTbU+80GrPgAAAAAAAAA/d901P5noOD8AAAAAAAAAAPLGWz+Z6Dg/q6qqPgAAAADyxls/BOrGPgAAgD8AAIA/U021PpJirT6rqio/AAAAP5JGWj8oryE9q6qqPgAAAD+SRlo/Ex2/PquqKj8AAAAAF100PyivIT2rqqo+AAAAP3fdNT8E6sY+q6oqPwAAAABlksk+sMhdP6uqqj4AAAA/U021PkiKNTqrqqo+AAAAABddND8THb8+AACAPwAAAD8RQkg//9hePwAAgD8AAAAAEUJIP53Sfz+rqio/AAAAP2aY4T7/2F4/AAAAAAAAgD/JJBM9RhVSP6uqqj4AAIA/VFDBPkYVUj+rqqo+AAAAP1RQwT7kDnM/q6oqPwAAgD/jjbc+5A6zPgAAgD8AAAA/zzwzP+AkLD+rqio/AAAAP888Mz/kDrM+AAAAAAAAAD/JJBM95A5zP6uqKj8AAIA/4423PhwYrj6rqio/AAAAP888Mz8cGK4+q6qqPgAAgD/jjbc+CdSNPAAAAAAAAAA/2mZbPy2Z6Dyrqqo+AAAAAJRPfj9vxLM+AAAAAAAAAACUT34/LZnoPAAAgD8AAIA/4423PuAkLD+rqio/AAAAP/TPfz8E6gY/q6oqPwAAAAA651w/BOoGP6uqqj4AAAA/9M9/P3KHWT+rqqo+AAAAP9pmWz9vxLM+q6oqPwAAAABmmOE+ndJ/P6uqqj4AAAA/zzwzPwnUjTyrqqo+AAAAADrnXD9yh1k/"),
+"format": 34359742519,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAwAJAAQACgALAAwADQAOAA8ABgAIABAAEQASABMADQAPABQAAgABABUADAALABYAEgAXABMAGAAZABoAGwAcAB0AHgAfACAAGwAdACEAIgAjACQAJQAmACcAHgAoAB8AKQAqACsAJQAsACYAGQAtABoAIwAuACQAKwAqAC8A"),
+"material": SubResource("StandardMaterial3D_dynfe"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AADAwAAAIMAAAMDAAADAQAAAIMAAAMDAAADAwAAAIEAAAMDAAADAwAAAIMAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIMAAAMDAAADAwAAAIMAAAMBAAADAQAAAIMAAAMBAAADAwAAAIEAAAMDAAADAwAAAIEAAAMDAAADAQAAAIEAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIEAAAMBAAADAQAAAIEAAAMBAAADAQAAAIMAAAMDAAADAQAAAIMAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIEAAAMBAAADAQAAAIEAAAMBAAAC4wAAAEMAAALjAAAC4wAAAEEAAALjAAAC4QAAAEMAAALjAAAC4wAAAEMAAALjAAAC4wAAAEMAAALhAAAC4wAAAEEAAALhAAAC4wAAAEMAAALjAAAC4QAAAEMAAALhAAAC4wAAAEMAAALhAAAC4wAAAEEAAALjAAAC4wAAAEEAAALjAAAC4wAAAEEAAALhAAAC4QAAAEEAAALjAAAC4wAAAEMAAALhAAAC4QAAAEEAAALhAAAC4wAAAEEAAALhAAAC4QAAAEMAAALjAAAC4QAAAEMAAALjAAAC4QAAAEEAAALjAAAC4QAAAEMAAALhAAAC4QAAAEMAAALhAAAC4QAAAEEAAALjAAAC4QAAAEEAAALhAAAC4QAAAEEAAALhA/////wAA/7//////AAD/v/////8AAP+/AAAAgP9//78AAACA/3//vwAAAID/f/+/AIAAAP///78AgAAA////vwCAAAD///+/AAAAgP9//78AgP//AAD/vwCA//8AAP+/AID//wAA/7//f/9/////v/9//3////+//3//f////78AgAAA////v///AID///////8AgP///////wCA//////9//3////+//////wAA/78AgP//AAD/v///AID//////3//fwAA/z//f/9/AAD/P/9//38AAP8///8AgP9//z///wCA/3//P///AID/f/8/AID//////z8AgP//////PwCA//////8///8AgP9//z8AgAAAAAD/PwCAAAAAAP8/AIAAAAAA/z//////////P/////////8//////////z8AgP//////PwAAAID//wAAAAAAgP//AAAAAACA//8AAP////////8//3//fwAA/z8AgAAAAAD/PwAAAID//wAA")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qtoah"]
+data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, -2.5, -6, -6, -2.5, 6, 6, -2.5, 6, -6, -2.5, -6, -6, 2.5, -6, -6, 2.5, 6, -6, 2.5, -6, 6, 2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, 2.5, 6, 6, 2.5, 6, -6, -2.5, -6, 6, -2.5, 6, 6, -2.5, -6, 6, -2.5, -6, 6, -2.5, 6, 6, 2.5, -6, -6, -2.5, 6, 6, 2.5, 6, 6, -2.5, 6, -6, 2.5, -6, 6, -2.5, -6, 6, 2.5, -6, -6, 2.5, 6, 6, 2.5, -6, 6, 2.5, 6, 6, -2.5, 6, 6, 2.5, 6, 6, 2.5, -6, -5.75, -2.25, -5.75, -5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, -2.25, -5.75, -5.75, -2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, -5.75, -2.25, -5.75, -5.75, 2.25, 5.75, -5.75, 2.25, -5.75, -5.75, 2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, -5.75, -5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, -5.75, 5.75, -2.25, 5.75, 5.75, -2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, 5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, 5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, 5.75, 2.25, -5.75, 5.75, 2.25, 5.75)
+
+[node name="Room" type="Node3D"]
+script = ExtResource("1_qtoah")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eom3m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("1_ybpoa")]
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+script = ExtResource("2_qtoah")
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" instance=ExtResource("3_eom3m")]
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" instance=ExtResource("4_tk5fv")]
+strafe = true
+
+[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" instance=ExtResource("5_w68ji")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" instance=ExtResource("3_eom3m")]
+action_button_action = "grip_click"
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" instance=ExtResource("6_23wr2")]
+turn_mode = 1
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" instance=ExtResource("7_3j2fx")]
+laser_length = 1
+collision_mask = 5242884
+collide_with_areas = true
+
+[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" instance=ExtResource("8_dynfe")]
+
+[node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("9_vfrn5")]
+
+[node name="Interior" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Interior/StaticBody3D"]
+visible = false
+mesh = SubResource("BoxMesh_tk5fv")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Interior/StaticBody3D/CSGMesh3D"]
+operation = 2
+mesh = SubResource("BoxMesh_w68ji")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Interior/StaticBody3D"]
+mesh = SubResource("ArrayMesh_vfrn5")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Interior/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qtoah")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Interior"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.3933773, 0)
+spot_range = 50.0
+spot_attenuation = 0.02
+
+[node name="bed_double_A" parent="." instance=ExtResource("13_3j2fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.029025674, -1.1920929e-07, -3.9325185)
