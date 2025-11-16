@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://d8cjn5wqihg0"]
+[gd_scene load_steps=28 format=4 uid="uid://d8cjn5wqihg0"]
 
 [ext_resource type="Script" uid="uid://c7mm3v27u4n11" path="res://scenes/room.gd" id="1_qtoah"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="1_ybpoa"]
@@ -12,8 +12,15 @@
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_vfrn5"]
 [ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="13_3j2fx"]
 [ext_resource type="PackedScene" uid="uid://bdejs1u3qo53o" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium_decorated.fbx" id="14_dynfe"]
+[ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="15_katsu"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="15_vfrn5"]
+[ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="16_jxwrd"]
 [ext_resource type="PackedScene" uid="uid://ciod2nj68mymo" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small_decorated.fbx" id="16_katsu"]
+[ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="17_spkk5"]
+[ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="18_katsu"]
+[ext_resource type="PackedScene" uid="uid://ckncxv78vvsya" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_medium_long.fbx" id="18_spkk5"]
+[ext_resource type="PackedScene" uid="uid://ce2b2ujr183tx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch_pillows.fbx" id="20_2ulci"]
+[ext_resource type="PackedScene" uid="uid://caixodf0p62gb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_C.fbx" id="20_yggoe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybpoa"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -110,10 +117,10 @@ mesh = SubResource("ArrayMesh_vfrn5")
 [node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room"]
 shape = SubResource("ConcavePolygonShape3D_qtoah")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Interior"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 4.3933773, 0)
-spot_range = 50.0
-spot_attenuation = 0.02
+[node name="CeilingLight" type="OmniLight3D" parent="Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
+shadow_enabled = true
+omni_range = 6.5
 
 [node name="Furnitures" type="Node3D" parent="."]
 
@@ -128,3 +135,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -5.2)
 
 [node name="cabinet_small_decorated" parent="Furnitures" instance=ExtResource("16_katsu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -5.2)
+
+[node name="cactus_medium_A" parent="Furnitures" instance=ExtResource("15_katsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9303555, 0, -4.981276)
+
+[node name="cactus_small_A" parent="Furnitures" instance=ExtResource("16_jxwrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3936515, 0, -3.9500961)
+
+[node name="lamp_standing" parent="Furnitures" instance=ExtResource("17_spkk5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4419847, 0, -5.1198235)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0916617, 0)
+light_energy = 0.5
+shadow_enabled = true
+shadow_blur = 10.0
+omni_range = 3.0
+
+[node name="lamp_table" parent="Furnitures" instance=ExtResource("18_katsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.9742148)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60944223, 0)
+light_energy = 0.5
+shadow_enabled = true
+shadow_blur = 10.0
+omni_range = 3.0
+
+[node name="table_medium_long" parent="Furnitures" instance=ExtResource("18_spkk5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9742148)
+
+[node name="couch_pillows" parent="Furnitures" instance=ExtResource("20_2ulci")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.9342294, 1.1920929e-07, -0.3195355)
+
+[node name="chair_C" parent="Furnitures" instance=ExtResource("20_yggoe")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4.3714414)
