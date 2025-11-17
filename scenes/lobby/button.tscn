@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://dhe5a0u24f7yb"]
 
-[ext_resource type="Script" uid="uid://ipnktu1aikds" path="res://scenes/room/button.gd" id="1_ddg1v"]
+[ext_resource type="Script" uid="uid://ipnktu1aikds" path="res://scenes/lobby/button.gd" id="1_ddg1v"]
 [ext_resource type="PackedScene" uid="uid://cme66uldrjl2i" path="res://addons/godot-xr-tools/interactables/interactable_area_button.tscn" id="1_rvff6"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="3_5f8g2"]
-[ext_resource type="PackedScene" uid="uid://yryqnxdf5l1j" path="res://scenes/room/pop_text.tscn" id="4_134nr"]
+[ext_resource type="PackedScene" uid="uid://yryqnxdf5l1j" path="res://scenes/lobby/pop_text.tscn" id="4_134nr"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_og1vs"]
 top_radius = 0.2

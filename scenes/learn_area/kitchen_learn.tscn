@@ -1,0 +1,223 @@
+[gd_scene load_steps=39 format=4 uid="uid://di1priudpnwgd"]
+
+[ext_resource type="Script" uid="uid://bhwvrhqux8ewr" path="res://scenes/learn_area/kitchen_learn.gd" id="1_epw0d"]
+[ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="1_qbllr"]
+[ext_resource type="Script" uid="uid://bik4bnb6soxq7" path="res://scenes/left_hand.gd" id="2_fogr1"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_aeks7"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_1obpw"]
+[ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="5_eoy7n"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_ug1no"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_w4ptr"]
+[ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="8_opaab"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_avmkp"]
+[ext_resource type="PackedScene" uid="uid://cf2ijkr5ne4lt" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet.fbx" id="10_1obpw"]
+[ext_resource type="PackedScene" uid="uid://bp4jjsu65f3wa" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_sink_backsplash.fbx" id="11_eoy7n"]
+[ext_resource type="PackedScene" uid="uid://cy7qng6118ajy" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_A_backsplash.fbx" id="12_ug1no"]
+[ext_resource type="PackedScene" uid="uid://dvyw4d6w06y5y" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_B_backsplash.fbx" id="13_ug1no"]
+[ext_resource type="PackedScene" uid="uid://bw1wtuiygbvex" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/fridge_A_decorated.fbx" id="14_w4ptr"]
+[ext_resource type="PackedScene" uid="uid://boyvoaskkdjmq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B.fbx" id="15_2ksy4"]
+[ext_resource type="PackedScene" uid="uid://b7w2qtvql08ba" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B_large.fbx" id="16_ohn8x"]
+[ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="17_7llx7"]
+[ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="18_bxnr2"]
+[ext_resource type="PackedScene" uid="uid://cdhu5mc6sjvpm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl.fbx" id="19_pdf8s"]
+[ext_resource type="PackedScene" uid="uid://cq8kue11nmn75" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl_small.fbx" id="20_55o7t"]
+[ext_resource type="PackedScene" uid="uid://bwutgghehanvg" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/cuttingboard.fbx" id="21_mxbrk"]
+[ext_resource type="PackedScene" uid="uid://ba0uinjwud8t2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/dishrack_plates.fbx" id="22_rah87"]
+[ext_resource type="PackedScene" uid="uid://bwtmnjop2r8sp" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/shelf_papertowel_decorated.fbx" id="23_77nod"]
+[ext_resource type="PackedScene" uid="uid://b66t7khmm1yoq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet_half.fbx" id="24_ilcgx"]
+[ext_resource type="PackedScene" uid="uid://8qyehb3lh2gk" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/papertowel.fbx" id="25_epw0d"]
+[ext_resource type="PackedScene" uid="uid://0frr5gu2ovnw" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate.fbx" id="26_svth4"]
+[ext_resource type="PackedScene" uid="uid://b4eqo56suopbn" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate_dirty.fbx" id="27_ovl6l"]
+[ext_resource type="PackedScene" uid="uid://cpwgav1r82j6x" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate_small.fbx" id="28_b6uep"]
+[ext_resource type="PackedScene" uid="uid://d3mrvrxgkuj2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/jar_A_large.fbx" id="29_ilcgx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2ksy4"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_qtoah"]
+sky_material = SubResource("ProceduralSkyMaterial_2ksy4")
+
+[sub_resource type="Environment" id="Environment_qbllr"]
+background_mode = 2
+sky = SubResource("Sky_qtoah")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7llx7"]
+lightmap_size_hint = Vector2i(682, 722)
+_surfaces = [{
+"aabb": AABB(-6, -2.5, -6, 12, 5, 12),
+"attribute_data": PackedByteArray("AACAPwAAAD/QPz8/6fg5P6uqKj8AAAA/ZZLJPun4OT8AAIA/AAAAANA/Pz+wyF0/AAAAAAAAgD+MMcY8MDUtP6uqqj4AAAA/VFDBPvcEUT+rqqo+AACAP1RQwT4wNS0/q6oqPwAAgD8MMEA6kmKtPquqKj8AAAA/DDBAOuAkLD8AAIA/AAAAP1NNtT7gJCw/AAAAAAAAAD+MMcY89wRRP6uqKj8AAIA/DDBAOvNBqz6rqqo+AACAPwwwQDpIijU6q6oqPwAAAD9TTbU+80GrPgAAAAAAAAA/d901P5noOD8AAAAAAAAAAPLGWz+Z6Dg/q6qqPgAAAADyxls/BOrGPgAAgD8AAIA/U021PpJirT6rqio/AAAAP5JGWj8oryE9q6qqPgAAAD+SRlo/Ex2/PquqKj8AAAAAF100PyivIT2rqqo+AAAAP3fdNT8E6sY+q6oqPwAAAABlksk+sMhdP6uqqj4AAAA/U021PkiKNTqrqqo+AAAAABddND8THb8+AACAPwAAAD8RQkg//9hePwAAgD8AAAAAEUJIP53Sfz+rqio/AAAAP2aY4T7/2F4/AAAAAAAAgD/JJBM9RhVSP6uqqj4AAIA/VFDBPkYVUj+rqqo+AAAAP1RQwT7kDnM/q6oqPwAAgD/jjbc+5A6zPgAAgD8AAAA/zzwzP+AkLD+rqio/AAAAP888Mz/kDrM+AAAAAAAAAD/JJBM95A5zP6uqKj8AAIA/4423PhwYrj6rqio/AAAAP888Mz8cGK4+q6qqPgAAgD/jjbc+CdSNPAAAAAAAAAA/2mZbPy2Z6Dyrqqo+AAAAAJRPfj9vxLM+AAAAAAAAAACUT34/LZnoPAAAgD8AAIA/4423PuAkLD+rqio/AAAAP/TPfz8E6gY/q6oqPwAAAAA651w/BOoGP6uqqj4AAAA/9M9/P3KHWT+rqqo+AAAAP9pmWz9vxLM+q6oqPwAAAABmmOE+ndJ/P6uqqj4AAAA/zzwzPwnUjTyrqqo+AAAAADrnXD9yh1k/"),
+"format": 34359742519,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAwAJAAQACgALAAwADQAOAA8ABgAIABAAEQASABMADQAPABQAAgABABUADAALABYAEgAXABMAGAAZABoAGwAcAB0AHgAfACAAGwAdACEAIgAjACQAJQAmACcAHgAoAB8AKQAqACsAJQAsACYAGQAtABoAIwAuACQAKwAqAC8A"),
+"material": SubResource("StandardMaterial3D_dynfe"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AADAwAAAIMAAAMDAAADAQAAAIMAAAMDAAADAwAAAIEAAAMDAAADAwAAAIMAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIMAAAMDAAADAwAAAIMAAAMBAAADAQAAAIMAAAMBAAADAwAAAIEAAAMDAAADAwAAAIEAAAMDAAADAQAAAIEAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIEAAAMBAAADAQAAAIEAAAMBAAADAQAAAIMAAAMDAAADAQAAAIMAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIEAAAMBAAADAQAAAIEAAAMBAAAC4wAAAEMAAALjAAAC4wAAAEEAAALjAAAC4QAAAEMAAALjAAAC4wAAAEMAAALjAAAC4wAAAEMAAALhAAAC4wAAAEEAAALhAAAC4wAAAEMAAALjAAAC4QAAAEMAAALhAAAC4wAAAEMAAALhAAAC4wAAAEEAAALjAAAC4wAAAEEAAALjAAAC4wAAAEEAAALhAAAC4QAAAEEAAALjAAAC4wAAAEMAAALhAAAC4QAAAEEAAALhAAAC4wAAAEEAAALhAAAC4QAAAEMAAALjAAAC4QAAAEMAAALjAAAC4QAAAEEAAALjAAAC4QAAAEMAAALhAAAC4QAAAEMAAALhAAAC4QAAAEEAAALjAAAC4QAAAEEAAALhAAAC4QAAAEEAAALhA/////wAA/7//////AAD/v/////8AAP+/AAAAgP9//78AAACA/3//vwAAAID/f/+/AIAAAP///78AgAAA////vwCAAAD///+/AAAAgP9//78AgP//AAD/vwCA//8AAP+/AID//wAA/7//f/9/////v/9//3////+//3//f////78AgAAA////v///AID///////8AgP///////wCA//////9//3////+//////wAA/78AgP//AAD/v///AID//////3//fwAA/z//f/9/AAD/P/9//38AAP8///8AgP9//z///wCA/3//P///AID/f/8/AID//////z8AgP//////PwCA//////8///8AgP9//z8AgAAAAAD/PwCAAAAAAP8/AIAAAAAA/z//////////P/////////8//////////z8AgP//////PwAAAID//wAAAAAAgP//AAAAAACA//8AAP////////8//3//fwAA/z8AgAAAAAD/PwAAAID//wAA")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bxnr2"]
+data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, -2.5, -6, -6, -2.5, 6, 6, -2.5, 6, -6, -2.5, -6, -6, 2.5, -6, -6, 2.5, 6, -6, 2.5, -6, 6, 2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, 2.5, 6, 6, 2.5, 6, -6, -2.5, -6, 6, -2.5, 6, 6, -2.5, -6, 6, -2.5, -6, 6, -2.5, 6, 6, 2.5, -6, -6, -2.5, 6, 6, 2.5, 6, 6, -2.5, 6, -6, 2.5, -6, 6, -2.5, -6, 6, 2.5, -6, -6, 2.5, 6, 6, 2.5, -6, 6, 2.5, 6, 6, -2.5, 6, 6, 2.5, 6, 6, 2.5, -6, -5.75, -2.25, -5.75, -5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, -2.25, -5.75, -5.75, -2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, -5.75, -2.25, -5.75, -5.75, 2.25, 5.75, -5.75, 2.25, -5.75, -5.75, 2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, -5.75, -5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, -5.75, 5.75, -2.25, 5.75, 5.75, -2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, 5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, 5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, 5.75, 2.25, -5.75, 5.75, 2.25, 5.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ksy4"]
+size = Vector3(8.005, 1, 1.822)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5swur"]
+size = Vector3(1.9986839, 0.40439844, 4.999031)
+
+[node name="KitchenLearn" type="Node3D"]
+script = ExtResource("1_epw0d")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qbllr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("1_qbllr")]
+
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+script = ExtResource("2_fogr1")
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" instance=ExtResource("3_aeks7")]
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" instance=ExtResource("4_1obpw")]
+strafe = true
+
+[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" instance=ExtResource("5_eoy7n")]
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" instance=ExtResource("3_aeks7")]
+action_button_action = "grip_click"
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" instance=ExtResource("6_ug1no")]
+turn_mode = 2
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" instance=ExtResource("7_w4ptr")]
+laser_length = 1
+collision_mask = 5242884
+collide_with_areas = true
+
+[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" instance=ExtResource("8_opaab")]
+
+[node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("9_avmkp")]
+
+[node name="Interior" type="Node3D" parent="."]
+
+[node name="Kitchen" type="StaticBody3D" parent="Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+
+[node name="KitchenMesh" type="MeshInstance3D" parent="Interior/Kitchen"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
+mesh = SubResource("ArrayMesh_7llx7")
+
+[node name="KitchenCollision" type="CollisionShape3D" parent="Interior/Kitchen"]
+shape = SubResource("ConcavePolygonShape3D_bxnr2")
+
+[node name="CeilingLight" type="OmniLight3D" parent="Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
+shadow_enabled = true
+omni_range = 6.5
+
+[node name="KitchenFurniture" type="Node3D" parent="."]
+
+[node name="kitchencabinet" parent="KitchenFurniture" instance=ExtResource("10_1obpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0.5, -5.75)
+
+[node name="KitchenCounter" type="Node3D" parent="KitchenFurniture"]
+
+[node name="KitchenCounterCollision" type="StaticBody3D" parent="KitchenFurniture/KitchenCounter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5048404, -4.6733828)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurniture/KitchenCounter/KitchenCounterCollision"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6977386, -0.001953125, 0.065709114)
+shape = SubResource("BoxShape3D_2ksy4")
+
+[node name="kitchencounter_sink_backsplash" parent="KitchenFurniture/KitchenCounter" instance=ExtResource("11_eoy7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0, -4.7)
+
+[node name="kitchencounter_straight_A_backsplash" parent="KitchenFurniture/KitchenCounter" instance=ExtResource("12_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -4.7)
+
+[node name="kitchencounter_straight_B_backsplash" parent="KitchenFurniture/KitchenCounter" instance=ExtResource("13_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -4.7)
+
+[node name="kitchencounter_straight_B_backsplash2" parent="KitchenFurniture/KitchenCounter" instance=ExtResource("13_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -4.7)
+
+[node name="fridge_A_decorated" parent="KitchenFurniture" instance=ExtResource("14_w4ptr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -4.7)
+
+[node name="KitchenTable" type="Node3D" parent="KitchenFurniture"]
+
+[node name="kitchentable_B" parent="KitchenFurniture/KitchenTable" instance=ExtResource("15_2ksy4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5, 0, 1)
+
+[node name="kitchentable_B_large" parent="KitchenFurniture/KitchenTable" instance=ExtResource("16_ohn8x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.5, 0, 3.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurniture/KitchenTable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.449, 1, 2.35)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurniture/KitchenTable/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051195145, -0.20196033, 0.14992905)
+shape = SubResource("BoxShape3D_5swur")
+
+[node name="table_round_A" parent="KitchenFurniture" instance=ExtResource("17_7llx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+
+[node name="chair_stool" parent="KitchenFurniture" instance=ExtResource("18_bxnr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+
+[node name="chair_stool2" parent="KitchenFurniture" instance=ExtResource("18_bxnr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+
+[node name="cuttingboard" parent="KitchenFurniture" instance=ExtResource("21_mxbrk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7761164, 1.0028872, -4.787037)
+
+[node name="dishrack_plates" parent="KitchenFurniture" instance=ExtResource("22_rah87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.8409915)
+
+[node name="shelf_papertowel_decorated" parent="KitchenFurniture" instance=ExtResource("23_77nod")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6294205, 2.6407204, -5.75)
+
+[node name="kitchencabinet_half" parent="KitchenFurniture" instance=ExtResource("24_ilcgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.5, -5.75)
+
+[node name="papertowel" parent="KitchenFurniture" instance=ExtResource("25_epw0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9236116, 1.0028874, -4.9960766)
+
+[node name="plate" parent="KitchenFurniture" instance=ExtResource("26_svth4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6604873, 1.0028877, -4.963593)
+
+[node name="plate_dirty" parent="KitchenFurniture" instance=ExtResource("27_ovl6l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8064617, 1.0028874, -4.8087177)
+
+[node name="plate_small" parent="KitchenFurniture" instance=ExtResource("28_b6uep")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1212168, 1.0028872, -4.1630573)
+
+[node name="bowl" parent="KitchenFurniture" instance=ExtResource("19_pdf8s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5620422, 1.0002389, 0.8107109)
+
+[node name="bowl_small" parent="KitchenFurniture" instance=ExtResource("20_55o7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0706155, 1.0002389, 1.7457589)
+
+[node name="jar_A_large" parent="KitchenFurniture" instance=ExtResource("29_ilcgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7978752, 1.000239, 2.2975955)

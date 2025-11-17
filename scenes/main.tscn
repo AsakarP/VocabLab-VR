@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="8_tel4y"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="9_j8jky"]
 [ext_resource type="Texture2D" uid="uid://b82f8ei3a7u4a" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_Color.jpg" id="10_0ld40"]
-[ext_resource type="PackedScene" uid="uid://b723t40osiscq" path="res://scenes/room/floor.tscn" id="10_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://b723t40osiscq" path="res://scenes/lobby/floor.tscn" id="10_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://cocwg4bvqifsk" path="res://textures/Wood092_4K-JPG/Wood092_4K-JPG_NormalDX.jpg" id="11_gqmmt"]
 [ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="11_qkpxi"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="11_vxglm"]
@@ -19,12 +19,12 @@
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="13_fv21b"]
 [ext_resource type="Script" uid="uid://brxsevo2grkcc" path="res://scenes/wood_block.gd" id="17_2wyq8"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="21_vxglm"]
-[ext_resource type="PackedScene" uid="uid://yryqnxdf5l1j" path="res://scenes/room/pop_text.tscn" id="22_2f3dj"]
+[ext_resource type="PackedScene" uid="uid://yryqnxdf5l1j" path="res://scenes/lobby/pop_text.tscn" id="22_2f3dj"]
 [ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="25_kmb1v"]
 [ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="26_fuf3a"]
-[ext_resource type="PackedScene" uid="uid://dhe5a0u24f7yb" path="res://scenes/room/button.tscn" id="28_yq6so"]
-[ext_resource type="PackedScene" uid="uid://duwllbgarwp4y" path="res://scenes/room/wall_button.tscn" id="29_fv21b"]
-[ext_resource type="PackedScene" uid="uid://bir462ikr6ja8" path="res://scenes/room/ui_buttons.tscn" id="30_fv21b"]
+[ext_resource type="PackedScene" uid="uid://dhe5a0u24f7yb" path="res://scenes/lobby/button.tscn" id="28_yq6so"]
+[ext_resource type="PackedScene" uid="uid://duwllbgarwp4y" path="res://scenes/lobby/wall_button.tscn" id="29_fv21b"]
+[ext_resource type="PackedScene" uid="uid://bir462ikr6ja8" path="res://scenes/lobby/ui_buttons.tscn" id="30_fv21b"]
 [ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="33_5q0nq"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tel4y"]
@@ -118,7 +118,7 @@ tracker = &"right_hand"
 action_button_action = "grip_click"
 
 [node name="MovementTurn" parent="XROrigin3D/RightHand" instance=ExtResource("11_vxglm")]
-turn_mode = 1
+turn_mode = 2
 
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" instance=ExtResource("13_fv21b")]
 laser_length = 1
