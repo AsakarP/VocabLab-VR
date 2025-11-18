@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="English Learning XR"
-run/main_scene="uid://ba7r0qua0ww4e"
+run/main_scene="uid://d0upy347c6awm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -2,8 +2,8 @@
 
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
-uid="uid://dadxfxvnlg3nx"
-path.bptc="res://.godot/imported/main.exr-2f67eb4238b400acd003bc62d02d0e98.bptc.ctexarray"
+uid="uid://mp5jmubepome"
+path.bptc="res://.godot/imported/lobby.exr-0ab1fc201080d0fa0b4c37be040ed011.bptc.ctexarray"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/main.exr"
-dest_files=["res://.godot/imported/main.exr-2f67eb4238b400acd003bc62d02d0e98.bptc.ctexarray"]
+source_file="res://scenes/lobby.exr"
+dest_files=["res://.godot/imported/lobby.exr-0ab1fc201080d0fa0b4c37be040ed011.bptc.ctexarray"]
 
 [params]
 

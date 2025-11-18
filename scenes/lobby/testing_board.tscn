@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm6daabpsku2u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8m8fn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3fokj"]
+material = SubResource("StandardMaterial3D_8m8fn")
+size = Vector3(20, 2, 0.1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b8nh0"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 6.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_og1vs"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_481a1"]
+material = SubResource("StandardMaterial3D_og1vs")
+add_uv2 = true
+text = "Testing"
+font_size = 100
+depth = 0.1
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_61o6k"]
+points = PackedVector3Array(6, 1, 0.05, 6, 1, -0.05, -6, 1, 0.05, 6, -1, 0.05, 6, -1, -0.05, -6, 1, -0.05, -6, -1, 0.05, -6, -1, -0.05)
+
+[node name="TestingBoard" type="StaticBody3D"]
+
+[node name="TextBoard" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_3fokj")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TextBoard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 0)
+mesh = SubResource("CylinderMesh_b8nh0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TextBoard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 0)
+mesh = SubResource("CylinderMesh_b8nh0")
+
+[node name="TextSign" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.004999995, -0.05000019)
+mesh = SubResource("TextMesh_481a1")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_61o6k")

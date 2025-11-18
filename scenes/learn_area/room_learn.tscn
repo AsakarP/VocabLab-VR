@@ -1,15 +1,6 @@
-[gd_scene load_steps=28 format=4 uid="uid://d8cjn5wqihg0"]
+[gd_scene load_steps=19 format=4 uid="uid://c4asqne3pfcp7"]
 
-[ext_resource type="Script" uid="uid://c7mm3v27u4n11" path="res://scenes/learn_area/room_learn.gd" id="1_hxnav"]
-[ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_g6duw"]
-[ext_resource type="Script" uid="uid://bik4bnb6soxq7" path="res://scenes/left_hand.gd" id="3_884qo"]
-[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="4_7m8me"]
-[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_eaxpl"]
-[ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="6_etg7n"]
-[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_aq4d0"]
-[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="8_yon3o"]
-[ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="9_ji7nu"]
-[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="10_1q66u"]
+[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_jeepl"]
 [ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="11_m66we"]
 [ext_resource type="PackedScene" uid="uid://bdejs1u3qo53o" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium_decorated.fbx" id="12_4l40x"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="13_0n3yl"]
@@ -22,14 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://ce2b2ujr183tx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch_pillows.fbx" id="20_g6mcy"]
 [ext_resource type="PackedScene" uid="uid://caixodf0p62gb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_C.fbx" id="21_g5edx"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ybpoa"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_acf2o"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 
 [sub_resource type="Sky" id="Sky_hxnav"]
-sky_material = SubResource("ProceduralSkyMaterial_ybpoa")
+sky_material = SubResource("ProceduralSkyMaterial_acf2o")
 
-[sub_resource type="Environment" id="Environment_eom3m"]
+[sub_resource type="Environment" id="Environment_lwoln"]
 background_mode = 2
 sky = SubResource("Sky_hxnav")
 tonemap_mode = 2
@@ -39,7 +30,7 @@ albedo_color = Color(0.82016253, 0.44306105, 0.28998363, 1)
 albedo_texture_force_srgb = true
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_g6duw"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_wk45s"]
 lightmap_size_hint = Vector2i(682, 722)
 _surfaces = [{
 "aabb": AABB(-6, -2.5, -6, 12, 5, 12),
@@ -54,119 +45,80 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AADAwAAAIMAAAMDAAADAQAAAIMAAAMDAAADAwAAAIEAAAMDAAADAwAAAIMAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIMAAAMDAAADAwAAAIMAAAMBAAADAQAAAIMAAAMBAAADAwAAAIEAAAMDAAADAwAAAIEAAAMDAAADAQAAAIEAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIEAAAMBAAADAQAAAIEAAAMBAAADAQAAAIMAAAMDAAADAQAAAIMAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIEAAAMBAAADAQAAAIEAAAMBAAAC4wAAAEMAAALjAAAC4wAAAEEAAALjAAAC4QAAAEMAAALjAAAC4wAAAEMAAALjAAAC4wAAAEMAAALhAAAC4wAAAEEAAALhAAAC4wAAAEMAAALjAAAC4QAAAEMAAALhAAAC4wAAAEMAAALhAAAC4wAAAEEAAALjAAAC4wAAAEEAAALjAAAC4wAAAEEAAALhAAAC4QAAAEEAAALjAAAC4wAAAEMAAALhAAAC4QAAAEEAAALhAAAC4wAAAEEAAALhAAAC4QAAAEMAAALjAAAC4QAAAEMAAALjAAAC4QAAAEEAAALjAAAC4QAAAEMAAALhAAAC4QAAAEMAAALhAAAC4QAAAEEAAALjAAAC4QAAAEEAAALhAAAC4QAAAEEAAALhA/////wAA/7//////AAD/v/////8AAP+/AAAAgP9//78AAACA/3//vwAAAID/f/+/AIAAAP///78AgAAA////vwCAAAD///+/AAAAgP9//78AgP//AAD/vwCA//8AAP+/AID//wAA/7//f/9/////v/9//3////+//3//f////78AgAAA////v///AID///////8AgP///////wCA//////9//3////+//////wAA/78AgP//AAD/v///AID//////3//fwAA/z//f/9/AAD/P/9//38AAP8///8AgP9//z///wCA/3//P///AID/f/8/AID//////z8AgP//////PwCA//////8///8AgP9//z8AgAAAAAD/PwCAAAAAAP8/AIAAAAAA/z//////////P/////////8//////////z8AgP//////PwAAAID//wAAAAAAgP//AAAAAACA//8AAP////////8//3//fwAA/z8AgAAAAAD/PwAAAID//wAA")
 }]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qtoah"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n20u5"]
 data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, -2.5, -6, -6, -2.5, 6, 6, -2.5, 6, -6, -2.5, -6, -6, 2.5, -6, -6, 2.5, 6, -6, 2.5, -6, 6, 2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, 2.5, 6, 6, 2.5, 6, -6, -2.5, -6, 6, -2.5, 6, 6, -2.5, -6, 6, -2.5, -6, 6, -2.5, 6, 6, 2.5, -6, -6, -2.5, 6, 6, 2.5, 6, 6, -2.5, 6, -6, 2.5, -6, 6, -2.5, -6, 6, 2.5, -6, -6, 2.5, 6, 6, 2.5, -6, 6, 2.5, 6, 6, -2.5, 6, 6, 2.5, 6, 6, 2.5, -6, -5.75, -2.25, -5.75, -5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, -2.25, -5.75, -5.75, -2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, -5.75, -2.25, -5.75, -5.75, 2.25, 5.75, -5.75, 2.25, -5.75, -5.75, 2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, -5.75, -5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, -5.75, 5.75, -2.25, 5.75, 5.75, -2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, 5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, 5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, 5.75, 2.25, -5.75, 5.75, 2.25, 5.75)
 
-[node name="RoomLearn" type="Node3D"]
-script = ExtResource("1_hxnav")
+[node name="RoomLearn" instance=ExtResource("1_jeepl")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_eom3m")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource("Environment_lwoln")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2"]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="XROrigin3D" type="XROrigin3D" parent="."]
+[node name="Interior" type="Node3D" parent="." index="3"]
 
-[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
-
-[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("2_g6duw")]
-
-[node name="LeftHand" type="XRController3D" parent="XROrigin3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
-tracker = &"left_hand"
-script = ExtResource("3_884qo")
-
-[node name="FunctionPickup" parent="XROrigin3D/LeftHand" instance=ExtResource("4_7m8me")]
-
-[node name="MovementDirect" parent="XROrigin3D/LeftHand" instance=ExtResource("5_eaxpl")]
-strafe = true
-
-[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" instance=ExtResource("6_etg7n")]
-
-[node name="RightHand" type="XRController3D" parent="XROrigin3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
-tracker = &"right_hand"
-
-[node name="FunctionPickup" parent="XROrigin3D/RightHand" instance=ExtResource("4_7m8me")]
-action_button_action = "grip_click"
-
-[node name="MovementTurn" parent="XROrigin3D/RightHand" instance=ExtResource("7_aq4d0")]
-turn_mode = 2
-
-[node name="FunctionPointer" parent="XROrigin3D/RightHand" instance=ExtResource("8_yon3o")]
-laser_length = 1
-collision_mask = 5242884
-collide_with_areas = true
-
-[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" instance=ExtResource("9_ji7nu")]
-
-[node name="PlayerBody" parent="XROrigin3D" instance=ExtResource("10_1q66u")]
-
-[node name="Interior" type="Node3D" parent="."]
-
-[node name="Room" type="StaticBody3D" parent="Interior"]
+[node name="Room" type="StaticBody3D" parent="Interior" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 
-[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room"]
+[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
-mesh = SubResource("ArrayMesh_g6duw")
+mesh = SubResource("ArrayMesh_wk45s")
 
-[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room"]
-shape = SubResource("ConcavePolygonShape3D_qtoah")
+[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room" index="1"]
+shape = SubResource("ConcavePolygonShape3D_n20u5")
 
-[node name="CeilingLight" type="OmniLight3D" parent="Interior"]
+[node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="Furnitures" type="Node3D" parent="."]
+[node name="Furnitures" type="Node3D" parent="." index="4"]
 
-[node name="bed_double_A" parent="Furnitures" instance=ExtResource("11_m66we")]
+[node name="bed_double_A" parent="Furnitures" index="0" instance=ExtResource("11_m66we")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.2)
 
-[node name="cabinet_medium_decorated" parent="Furnitures" instance=ExtResource("12_4l40x")]
+[node name="cabinet_medium_decorated" parent="Furnitures" index="1" instance=ExtResource("12_4l40x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5719986, 0, -5.2)
 
-[node name="cabinet_small" parent="Furnitures" instance=ExtResource("13_0n3yl")]
+[node name="cabinet_small" parent="Furnitures" index="2" instance=ExtResource("13_0n3yl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -5.2)
 
-[node name="cabinet_small_decorated" parent="Furnitures" instance=ExtResource("14_xrr5i")]
+[node name="cabinet_small_decorated" parent="Furnitures" index="3" instance=ExtResource("14_xrr5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 0, -5.2)
 
-[node name="cactus_medium_A" parent="Furnitures" instance=ExtResource("15_iwpn1")]
+[node name="cactus_medium_A" parent="Furnitures" index="4" instance=ExtResource("15_iwpn1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9303555, 0, -4.981276)
 
-[node name="cactus_small_A" parent="Furnitures" instance=ExtResource("16_bd4k6")]
+[node name="cactus_small_A" parent="Furnitures" index="5" instance=ExtResource("16_bd4k6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3936515, 0, -3.9500961)
 
-[node name="lamp_standing" parent="Furnitures" instance=ExtResource("17_ljqa2")]
+[node name="lamp_standing" parent="Furnitures" index="6" instance=ExtResource("17_ljqa2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4419847, 0, -5.1198235)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0916617, 0)
 light_energy = 0.5
 shadow_enabled = true
 shadow_blur = 10.0
 omni_range = 3.0
 
-[node name="lamp_table" parent="Furnitures" instance=ExtResource("18_al810")]
+[node name="lamp_table" parent="Furnitures" index="7" instance=ExtResource("18_al810")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2.9742148)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_table"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_table" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.60944223, 0)
 light_energy = 0.5
 shadow_enabled = true
 shadow_blur = 10.0
 omni_range = 3.0
 
-[node name="table_medium_long" parent="Furnitures" instance=ExtResource("19_0tpjx")]
+[node name="table_medium_long" parent="Furnitures" index="8" instance=ExtResource("19_0tpjx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9742148)
 
-[node name="couch_pillows" parent="Furnitures" instance=ExtResource("20_g6mcy")]
+[node name="couch_pillows" parent="Furnitures" index="9" instance=ExtResource("20_g6mcy")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.9342294, 1.1920929e-07, -0.3195355)
 
-[node name="chair_C" parent="Furnitures" instance=ExtResource("21_g5edx")]
+[node name="chair_C" parent="Furnitures" index="10" instance=ExtResource("21_g5edx")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4.3714414)

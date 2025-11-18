@@ -1,0 +1,38 @@
+[gd_scene load_steps=10 format=3 uid="uid://dnqhu0d47ltdw"]
+
+[ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_bdkev"]
+[ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tsn8l"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_vuhx1"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_doaw0"]
+[ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="5_yv0hm"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="6_0f4u5"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_67eko"]
+[ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="8_y7b8f"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_s5ncw"]
+
+[node name="ZoneBase" instance=ExtResource("1_bdkev")]
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" instance=ExtResource("2_tsn8l")]
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="0" instance=ExtResource("3_vuhx1")]
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" index="1" instance=ExtResource("4_doaw0")]
+strafe = true
+
+[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("5_yv0hm")]
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" index="0" instance=ExtResource("3_vuhx1")]
+
+[node name="MovementDirect" parent="XROrigin3D/RightHand" index="1" instance=ExtResource("4_doaw0")]
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" index="2" instance=ExtResource("6_0f4u5")]
+turn_mode = 2
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" instance=ExtResource("7_67eko")]
+laser_length = 1
+collision_mask = 5242884
+collide_with_areas = true
+
+[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" index="4" instance=ExtResource("8_y7b8f")]
+
+[node name="PlayerBody" parent="XROrigin3D" index="3" instance=ExtResource("9_s5ncw")]
