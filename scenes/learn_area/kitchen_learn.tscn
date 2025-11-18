@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://di1priudpnwgd"]
+[gd_scene load_steps=40 format=4 uid="uid://di1priudpnwgd"]
 
 [ext_resource type="Script" uid="uid://bhwvrhqux8ewr" path="res://scenes/learn_area/kitchen_learn.gd" id="1_epw0d"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="1_qbllr"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://b4eqo56suopbn" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate_dirty.fbx" id="27_ovl6l"]
 [ext_resource type="PackedScene" uid="uid://cpwgav1r82j6x" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate_small.fbx" id="28_b6uep"]
 [ext_resource type="PackedScene" uid="uid://d3mrvrxgkuj2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/jar_A_large.fbx" id="29_ilcgx"]
+[ext_resource type="PackedScene" uid="uid://be1kv558hi573" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl_dirty.fbx" id="30_svth4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_2ksy4"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -219,5 +220,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5620422, 1.0002389, 0.81071
 [node name="bowl_small" parent="KitchenFurniture" instance=ExtResource("20_55o7t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0706155, 1.0002389, 1.7457589)
 
+[node name="bowl_dirty" parent="KitchenFurniture" instance=ExtResource("30_svth4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7444701, 1.0002389, 2.4849472)
+
 [node name="jar_A_large" parent="KitchenFurniture" instance=ExtResource("29_ilcgx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7978752, 1.000239, 2.2975955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.060018, 1.000239, 4.4757977)

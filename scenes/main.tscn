@@ -199,14 +199,21 @@ scene = ExtResource("22_2f3dj")
 unshaded = true
 scene_properties_keys = PackedStringArray()
 
-[node name="Button" parent="Lobby" instance=ExtResource("28_yq6so")]
+[node name="ButtonTest" type="Node3D" parent="Lobby"]
+
+[node name="Button" parent="Lobby/ButtonTest" instance=ExtResource("28_yq6so")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.936)
 
-[node name="WallButton" parent="Lobby" instance=ExtResource("29_fv21b")]
+[node name="WallButton" parent="Lobby/ButtonTest" instance=ExtResource("29_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 1, -4)
 
-[node name="PushButton" parent="Lobby" instance=ExtResource("33_5q0nq")]
+[node name="PushButton" parent="Lobby/ButtonTest" instance=ExtResource("33_5q0nq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.460163, 1.1051195, -3.795994)
 
-[node name="UIButtons" parent="Lobby" instance=ExtResource("30_fv21b")]
+[node name="UIButtons" parent="Lobby/ButtonTest" instance=ExtResource("30_fv21b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.525459, 1.454325, -4.318652)
+
+[node name="LearnPortals" type="Node3D" parent="Lobby"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="TestPortals" type="Node3D" parent="Lobby"]
