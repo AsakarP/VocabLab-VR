@@ -4,7 +4,7 @@ extends Node3D
 @onready var text = $PickableObject/Label3D
 
 # Settings
-var fade_duration: float = 0.5
+var fade_duration: float = 1.0
 var respawn_time: float = 5.0
 
 # States
