@@ -263,7 +263,7 @@ shape = SubResource("CylinderShape3D_n53bi")
 
 [node name="Label3D" type="Label3D" parent="Pickable/TableLamp/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2410506, 0)
-text = "Table Lamp"
+text = "Luminary"
 
 [node name="PictureFrame" type="Node3D" parent="Pickable" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
@@ -279,7 +279,7 @@ shape = SubResource("BoxShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="Pickable/PictureFrame/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81020176, 0)
-text = "Picture Frame"
+text = "Portrait"
 
 [node name="Cactus" type="Node3D" parent="Pickable" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9303555, 0.0028970242, -4.981276)
@@ -295,7 +295,7 @@ shape = SubResource("CylinderShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="Pickable/Cactus/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0437199, 0)
-text = "Cactus"
+text = "Succulent"
 
 [node name="Pillow" type="Node3D" parent="Pickable" index="3"]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
@@ -311,7 +311,7 @@ shape = SubResource("BoxShape3D_krvcu")
 
 [node name="Label3D" type="Label3D" parent="Pickable/Pillow/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31624728, 0)
-text = "Pillow"
+text = "Cushion"
 
 [node name="Stool" type="Node3D" parent="Pickable" index="4"]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 5.2154075e-08, 3.037981)
@@ -327,4 +327,4 @@ shape = SubResource("BoxShape3D_f81wx")
 
 [node name="Label3D" type="Label3D" parent="Pickable/Stool/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7380316, 0)
-text = "Stool"
+text = "Footrest"

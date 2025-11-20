@@ -276,7 +276,7 @@ shape = SubResource("BoxShape3D_8mfpk")
 [node name="TableLamp" type="Node3D" parent="Pickable" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
 script = ExtResource("14_gf72i")
-item_name = "Table Lamp"
+item_name = "Luminary"
 
 [node name="PickableObject" parent="Pickable/TableLamp" index="0" instance=ExtResource("15_rofia")]
 
@@ -289,7 +289,7 @@ shape = SubResource("CylinderShape3D_n53bi")
 [node name="PictureFrame" type="Node3D" parent="Pickable" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
 script = ExtResource("14_gf72i")
-item_name = "Picture Frame"
+item_name = "Portrait"
 
 [node name="PickableObject" parent="Pickable/PictureFrame" index="0" instance=ExtResource("15_rofia")]
 
@@ -302,7 +302,7 @@ shape = SubResource("BoxShape3D_3m6p8")
 [node name="Cactus" type="Node3D" parent="Pickable" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9303555, 0.0028970242, -4.981276)
 script = ExtResource("14_gf72i")
-item_name = "Cactus"
+item_name = "Succulent"
 
 [node name="PickableObject" parent="Pickable/Cactus" index="0" instance=ExtResource("15_rofia")]
 
@@ -315,7 +315,7 @@ shape = SubResource("CylinderShape3D_3m6p8")
 [node name="Pillow" type="Node3D" parent="Pickable" index="3"]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
 script = ExtResource("14_gf72i")
-item_name = "Pillow"
+item_name = "Cushion"
 
 [node name="PickableObject" parent="Pickable/Pillow" index="0" instance=ExtResource("15_rofia")]
 
@@ -328,7 +328,7 @@ shape = SubResource("BoxShape3D_krvcu")
 [node name="Stool" type="Node3D" parent="Pickable" index="4"]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 0.0063424334, 3.037981)
 script = ExtResource("14_gf72i")
-item_name = "Stool"
+item_name = "Footrest"
 
 [node name="PickableObject" parent="Pickable/Stool" index="0" instance=ExtResource("15_rofia")]
 

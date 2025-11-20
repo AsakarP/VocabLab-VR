@@ -1,8 +1,9 @@
 extends Node3D
 
 @onready var label_3d = $Label3D
+@onready var mesh_instance_3d = $"../../DropZone/MeshInstance3D"
 
-@export var master_item_list: Array[String] = ["Table Lamp","Picture Frame","Cactus","Pillow","Stool"]
+@export var master_item_list: Array[String] = ["Luminary","Portrait","Succulent","Cushion","Footrest"]
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
@@ -42,6 +43,7 @@ func update_board_disp():
 	else:
 		label_3d.text = "All Tasks Done!\nFinal Score: %d\nFinal Time: %s" % [score, time_str]
 		label_3d.modulate = Color.GREEN
+		mesh_instance_3d.visible = false
 		
 func check_submission(submitted_item_name: String) -> bool:
 	if !game_active or current_idx >= current_queue.size():
