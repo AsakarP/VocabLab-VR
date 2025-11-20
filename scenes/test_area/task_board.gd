@@ -39,7 +39,6 @@ func update_board_disp():
 	if current_idx < current_queue.size():
 		var target = current_queue[current_idx]
 		label_3d.text = "Find: %s\nScore: %d\nTime: %s" % [target, score, time_str]
-		label_3d.modulate = Color.WHITE
 	else:
 		label_3d.text = "All Tasks Done!\nFinal Score: %d\nFinal Time: %s" % [score, time_str]
 		label_3d.modulate = Color.GREEN
@@ -48,10 +47,16 @@ func update_board_disp():
 func check_submission(submitted_item_name: String) -> bool:
 	if !game_active or current_idx >= current_queue.size():
 		return false
+		
+	var tween = create_tween()
 	
 	if submitted_item_name == current_queue[current_idx]:
+		# Correct object
 		score += 1
 		current_idx += 1
+		
+		label_3d.modulate = Color.GREEN
+		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
 		if current_idx >= current_queue.size():
 			end_game()
@@ -59,8 +64,16 @@ func check_submission(submitted_item_name: String) -> bool:
 			update_board_disp()
 			
 		return true
-	
-	return false
+	else:
+		# Incorrect object
+		score -= 1
+		
+		update_board_disp()
+		
+		label_3d.modulate = Color.RED
+		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
+		
+		return false
 
 # To stop timer
 func end_game():

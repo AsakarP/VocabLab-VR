@@ -21,7 +21,8 @@ func _on_body_entered(body):
 		if is_correct:
 			item_node.queue_free()
 		else:
-			pass
+			if item_node.has_method("reset_position"):
+				item_node.reset_position()
 
 func _on_interactable_area_button_button_pressed(_button):
 	mesh_instance_3d.visible = true

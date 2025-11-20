@@ -40,6 +40,13 @@ func start_respawn_timer():
 	respawn_tween.tween_callback(reset_position)
 	
 func reset_position():
+	# Prevent reset twice
+	if respawn_tween:
+		respawn_tween.kill()
+		
+	if pickable_object.is_picked_up():
+		pickable_object.drop()
+	
 	# Teleport back to start
 	pickable_object.global_transform = start_transform
 	
