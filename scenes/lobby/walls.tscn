@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=4 uid="uid://hdl6xjie0dax"]
+[gd_scene load_steps=8 format=4 uid="uid://hdl6xjie0dax"]
+
+[ext_resource type="Texture2D" uid="uid://c8xfhp5xqstgr" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_Color.jpg" id="1_li3ic"]
+[ext_resource type="Texture2D" uid="uid://lvt3c4ojtels" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_AmbientOcclusion.jpg" id="2_u6cc3"]
+[ext_resource type="Texture2D" uid="uid://x3vki6vpwkb3" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_NormalGL.jpg" id="3_g15d5"]
+[ext_resource type="Texture2D" uid="uid://vdrxjqqoxjl1" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_Roughness.jpg" id="4_timc8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_evdtm"]
+albedo_texture = ExtResource("1_li3ic")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("4_timc8")
+normal_enabled = true
+normal_texture = ExtResource("3_g15d5")
+ao_enabled = true
+ao_texture = ExtResource("2_u6cc3")
+ao_on_uv2 = true
+uv1_triplanar = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_o2i1r"]
 _surfaces = [{
 "aabb": AABB(-25, -0.35, -10, 50, 0.7, 20),
 "attribute_data": PackedByteArray("AACAPwAAAAAz16M7jxIDO1K4fj+PEgM7AACAPwAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAAABSuH4/jxIDOwAAgD8AAIA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAAAAAAAAADPXozuPEgM7AAAAAAAAAAAz16M77Xx/PzPXozuPEgM7AACAPwAAgD9SuH4/7Xx/PwAAAAAAAIA/AACAPwAAgD9SuH4/jxIDO1K4fj/tfH8/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD9SuH4/7Xx/PzPXozvtfH8/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAgD8z16M77Xx/PwAAAAAAAAAAAACAPwAAgD9SuH4/jxIDO1K4fj/tfH8/AACAPwAAgD9SuH4/7Xx/PwAAAAAAAIA/AAAAAAAAAAAAAAAAAACAPzPXozvtfH8/AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD9SuH4/7Xx/PzPXozvtfH8/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAgD8AAIA/AAAAAFK4fj+PEgM7AACAPwAAgD8AAAAAAAAAAAAAAAAAAIA/AACAPwAAAAAz16M7jxIDO1K4fj+PEgM7AAAAAAAAAAAz16M77Xx/PzPXozuPEgM7AACAPwAAAAAAAAAAAAAAADPXozuPEgM7AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAACAPwAAgD8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAAAIA/AACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAgD8AAAAAAACAPwAAAAAAAAAA"),
 "format": 34359738391,
+"material": SubResource("StandardMaterial3D_evdtm"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 96,

@@ -1,7 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4kmemqiritpk"]
+[gd_scene load_steps=10 format=3 uid="uid://d4kmemqiritpk"]
+
+[ext_resource type="Texture2D" uid="uid://c8xfhp5xqstgr" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_Color.jpg" id="1_lk211"]
+[ext_resource type="Texture2D" uid="uid://lvt3c4ojtels" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_AmbientOcclusion.jpg" id="2_pv7px"]
+[ext_resource type="Texture2D" uid="uid://x3vki6vpwkb3" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_NormalGL.jpg" id="3_7x8cx"]
+[ext_resource type="Texture2D" uid="uid://vdrxjqqoxjl1" path="res://textures/Bricks060_4K-JPG/Bricks060_4K-JPG_Roughness.jpg" id="4_edkhe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic5vd"]
+albedo_texture = ExtResource("1_lk211")
+albedo_texture_force_srgb = true
+roughness_texture = ExtResource("4_edkhe")
+normal_enabled = true
+normal_texture = ExtResource("3_7x8cx")
+ao_enabled = true
+ao_texture = ExtResource("2_pv7px")
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_78rk6"]
-size = Vector3(12, 2, 0.1)
+material = SubResource("StandardMaterial3D_ic5vd")
+size = Vector3(12, 2, 0.15)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lk211"]
+points = PackedVector3Array(6, 1, 0.075, 6, 1, -0.075, -6, 1, 0.075, 6, -1, 0.075, 6, -1, -0.075, -6, 1, -0.075, -6, -1, 0.075, -6, -1, -0.075)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_og1vs"]
 albedo_color = Color(0, 0, 0, 1)
@@ -13,19 +32,18 @@ text = "VR English Learning"
 font_size = 100
 depth = 0.1
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iulku"]
-points = PackedVector3Array(6, 1, 0.05, 6, 1, -0.05, -6, 1, 0.05, 6, -1, 0.05, 6, -1, -0.05, -6, 1, -0.05, -6, -1, 0.05, -6, -1, -0.05)
-
 [node name="SignBoard" type="StaticBody3D"]
 
 [node name="TextBoard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049247622)
 mesh = SubResource("BoxMesh_78rk6")
 skeleton = NodePath("../..")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049247622)
+shape = SubResource("ConvexPolygonShape3D_lk211")
+
 [node name="TextSign" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.004999995, -0.05000019)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.004999995, -0.038585782)
 mesh = SubResource("TextMesh_417c5")
 skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_iulku")

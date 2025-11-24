@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b723t40osiscq"]
 
 [ext_resource type="Texture2D" uid="uid://cf7wq6o7oewfv" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Color.jpg" id="1_8w87y"]
-[ext_resource type="Texture2D" uid="uid://ba8s33sudjp7j" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_NormalDX.jpg" id="2_wxhu3"]
+[ext_resource type="Texture2D" uid="uid://b186inedsvcg2" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_NormalGL.jpg" id="2_fu0no"]
 [ext_resource type="Texture2D" uid="uid://drv648ptuw5j4" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Roughness.jpg" id="3_rsmmi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmnci"]
@@ -9,7 +9,7 @@ albedo_texture = ExtResource("1_8w87y")
 albedo_texture_force_srgb = true
 roughness_texture = ExtResource("3_rsmmi")
 normal_enabled = true
-normal_texture = ExtResource("2_wxhu3")
+normal_texture = ExtResource("2_fu0no")
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2df0x"]

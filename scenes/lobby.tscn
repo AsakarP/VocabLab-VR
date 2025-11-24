@@ -69,7 +69,7 @@ radius = 0.25585938
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
-transform = Transform3D(-0.9378889, -0.16819774, 0.30343676, 0, 0.8746197, 0.4848096, -0.34693566, 0.45469755, -0.82029617, 0, 10.648682, 0)
+transform = Transform3D(-0.9378889, -0.16819775, 0.3034368, 0, 0.8746198, 0.48480958, -0.34693566, 0.45469758, -0.82029617, 0, 4.2104673, 0)
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
@@ -107,7 +107,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.707409e-05, 0, 9.703636e-0
 [node name="Signs" type="Node3D" parent="LobbyArea" index="2"]
 
 [node name="SignBoard" parent="LobbyArea/Signs" index="0" instance=ExtResource("6_0jb4q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 9.95)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 9.821603)
 
 [node name="LearningBoard" parent="LobbyArea/Signs" index="1" instance=ExtResource("7_vwf6o")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.856, 5, 0)
