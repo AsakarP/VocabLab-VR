@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://b723t40osiscq"]
+[gd_scene load_steps=8 format=3 uid="uid://b723t40osiscq"]
 
-[ext_resource type="Texture2D" uid="uid://cf7wq6o7oewfv" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Color.jpg" id="1_8w87y"]
-[ext_resource type="Texture2D" uid="uid://b186inedsvcg2" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_NormalGL.jpg" id="2_fu0no"]
-[ext_resource type="Texture2D" uid="uid://drv648ptuw5j4" path="res://textures/Marble021_4K-JPG/Marble021_4K-JPG_Roughness.jpg" id="3_rsmmi"]
+[ext_resource type="Texture2D" uid="uid://6loi3jw8frr1" path="res://textures/WoodFloor040_4K-JPG/WoodFloor040_4K-JPG_Color.jpg" id="1_wtp5k"]
+[ext_resource type="Texture2D" uid="uid://clur5mstyxt8d" path="res://textures/WoodFloor040_4K-JPG/WoodFloor040_4K-JPG_AmbientOcclusion.jpg" id="2_n52qu"]
+[ext_resource type="Texture2D" uid="uid://bscbjgudkpoix" path="res://textures/WoodFloor040_4K-JPG/WoodFloor040_4K-JPG_NormalGL.jpg" id="3_cl2o6"]
+[ext_resource type="Texture2D" uid="uid://43aonsb2tc86" path="res://textures/WoodFloor040_4K-JPG/WoodFloor040_4K-JPG_Roughness.jpg" id="4_8trdv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmnci"]
-albedo_texture = ExtResource("1_8w87y")
-albedo_texture_force_srgb = true
-roughness_texture = ExtResource("3_rsmmi")
+albedo_texture = ExtResource("1_wtp5k")
+roughness_texture = ExtResource("4_8trdv")
 normal_enabled = true
-normal_texture = ExtResource("2_fu0no")
+normal_texture = ExtResource("3_cl2o6")
+ao_enabled = true
+ao_texture = ExtResource("2_n52qu")
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2df0x"]

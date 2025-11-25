@@ -7,7 +7,6 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_evdtm"]
 albedo_texture = ExtResource("1_li3ic")
-albedo_texture_force_srgb = true
 roughness_texture = ExtResource("4_timc8")
 normal_enabled = true
 normal_texture = ExtResource("3_g15d5")

@@ -1,18 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm6daabpsku2u"]
+[gd_scene load_steps=15 format=3 uid="uid://bm6daabpsku2u"]
+
+[ext_resource type="Texture2D" uid="uid://c8df1nrgnk1g8" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_Color.jpg" id="1_eahei"]
+[ext_resource type="Texture2D" uid="uid://dj7lsss6rv4h7" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_AmbientOcclusion.jpg" id="2_j3qb7"]
+[ext_resource type="Texture2D" uid="uid://bg2dnrrjoy1e7" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_NormalGL.jpg" id="3_kmtpg"]
+[ext_resource type="Texture2D" uid="uid://xx7tc0lmtu76" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_Roughness.jpg" id="4_n6tcx"]
+[ext_resource type="Texture2D" uid="uid://c6h78v7feson6" path="res://textures/Plastic006_4K-JPG/Plastic006_4K-JPG_Color.jpg" id="5_n6tcx"]
+[ext_resource type="Texture2D" uid="uid://b7l4n6ox6ogeh" path="res://textures/Plastic006_4K-JPG/Plastic006_4K-JPG_NormalGL.jpg" id="6_g484i"]
+[ext_resource type="Texture2D" uid="uid://d11oxxwh345iq" path="res://textures/Plastic006_4K-JPG/Plastic006_4K-JPG_Roughness.jpg" id="7_mxk25"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8m8fn"]
+albedo_texture = ExtResource("1_eahei")
+roughness_texture = ExtResource("4_n6tcx")
+normal_enabled = true
+normal_texture = ExtResource("3_kmtpg")
+ao_enabled = true
+ao_texture = ExtResource("2_j3qb7")
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_3fokj"]
 material = SubResource("StandardMaterial3D_8m8fn")
 size = Vector3(20, 2, 0.1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1v0r"]
+albedo_texture = ExtResource("5_n6tcx")
+roughness_texture = ExtResource("7_mxk25")
+normal_enabled = true
+normal_texture = ExtResource("6_g484i")
+uv1_triplanar = true
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_b8nh0"]
+material = SubResource("StandardMaterial3D_g1v0r")
 top_radius = 0.1
 bottom_radius = 0.1
 height = 6.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_og1vs"]
-albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("5_n6tcx")
+roughness_texture = ExtResource("7_mxk25")
+normal_enabled = true
+normal_texture = ExtResource("6_g484i")
+uv1_triplanar = true
 
 [sub_resource type="TextMesh" id="TextMesh_481a1"]
 material = SubResource("StandardMaterial3D_og1vs")
@@ -30,11 +57,11 @@ points = PackedVector3Array(6, 1, 0.05, 6, 1, -0.05, -6, 1, 0.05, 6, -1, 0.05, 6
 mesh = SubResource("BoxMesh_3fokj")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TextBoard"]
+[node name="PoleMesh1" type="MeshInstance3D" parent="TextBoard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -2, 0)
 mesh = SubResource("CylinderMesh_b8nh0")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="TextBoard"]
+[node name="PoleMesh2" type="MeshInstance3D" parent="TextBoard"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 0)
 mesh = SubResource("CylinderMesh_b8nh0")
 

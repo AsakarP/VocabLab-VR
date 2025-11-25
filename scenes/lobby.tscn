@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bdbwonfjyxqo7"]
+[gd_scene load_steps=37 format=3 uid="uid://bdbwonfjyxqo7"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_o1atq"]
 [ext_resource type="Texture2D" uid="uid://l7ncg8tufj3a" path="res://assets/HDRIs/autumn_field_puresky_4k.exr" id="2_lqo1b"]
@@ -41,7 +41,13 @@ background_energy_multiplier = 0.5
 sky = SubResource("Sky_fv21b")
 sky_rotation = Vector3(0, 3.4225907, 0)
 tonemap_mode = 2
-ssao_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.8
+fog_depth_end = 260.9
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.4537617, 0.3148743, 0.42091787, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_iwi7x"]
 frequency = 0.0004
@@ -52,8 +58,6 @@ point_count = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1rib"]
 vertex_color_use_as_albedo = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gufxi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_50md7"]
 height = 0.81685543
@@ -92,10 +96,6 @@ terrain_material = SubResource("StandardMaterial3D_h1rib")
 enable_distant_terrain = false
 distant_terrain_update_during_gameplay = false
 metadata/_custom_type_script = "uid://ub1evibs3ccw"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InfiniteTerrain" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-shape = SubResource("BoxShape3D_gufxi")
 
 [node name="LobbyArea" type="Node3D" parent="." index="5"]
 
