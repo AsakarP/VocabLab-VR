@@ -72,6 +72,10 @@ radius = 0.25585938
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
+show_laser = 2
+show_target = true
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
 transform = Transform3D(-0.9378889, -0.16819775, 0.3034368, 0, 0.8746198, 0.48480958, -0.34693566, 0.45469758, -0.82029617, 0, 4.2104673, 0)
 shadow_enabled = true
@@ -210,109 +214,109 @@ billboard = 1
 modulate = Color(0, 1, 0, 1)
 text = "Easy"
 
-[node name="TerrainArea" type="Node3D" parent="." index="6"]
+[node name="TerrainAssets" type="Node3D" parent="." index="6"]
 
-[node name="CommonTree_1" parent="TerrainArea" index="0" instance=ExtResource("24_2630d")]
+[node name="CommonTree_1" parent="TerrainAssets" index="0" instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96767795, -0.3729408, -11.573222)
 
-[node name="CommonTree_2" parent="TerrainArea" index="1" instance=ExtResource("25_835bk")]
+[node name="CommonTree_2" parent="TerrainAssets" index="1" instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.966633, -0.30782384, -11.608002)
 
-[node name="CommonTree_3" parent="TerrainArea" index="2" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_3" parent="TerrainAssets" index="2" instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.059763, -0.15237719, -11.539058)
 
-[node name="CommonTree_4" parent="TerrainArea" index="3" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_4" parent="TerrainAssets" index="3" instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.31975, -0.16347891, -7.6207833)
 
-[node name="CommonTree_5" parent="TerrainArea" index="4" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_5" parent="TerrainAssets" index="4" instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.356108, -0.13598356, 3.2292385)
 
-[node name="CommonTree_6" parent="TerrainArea" index="5" instance=ExtResource("24_2630d")]
+[node name="CommonTree_6" parent="TerrainAssets" index="5" instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.515955, -0.06771016, 11.526155)
 
-[node name="CommonTree_7" parent="TerrainArea" index="6" instance=ExtResource("25_835bk")]
+[node name="CommonTree_7" parent="TerrainAssets" index="6" instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.886238, -0.2745964, 11.774186)
 
-[node name="CommonTree_8" parent="TerrainArea" index="7" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_8" parent="TerrainAssets" index="7" instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.513468, -0.54137397, 12.443601)
 
-[node name="CommonTree_9" parent="TerrainArea" index="8" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_9" parent="TerrainAssets" index="8" instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.61716, -1.1165966, 12.560263)
 
-[node name="CommonTree_10" parent="TerrainArea" index="9" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_10" parent="TerrainAssets" index="9" instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.51436, -1.2195514, 12.336765)
 
-[node name="CommonTree_11" parent="TerrainArea" index="10" instance=ExtResource("24_2630d")]
+[node name="CommonTree_11" parent="TerrainAssets" index="10" instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.204403, -1.0610797, 12.27686)
 
-[node name="CommonTree_12" parent="TerrainArea" index="11" instance=ExtResource("25_835bk")]
+[node name="CommonTree_12" parent="TerrainAssets" index="11" instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.969997, -1.0730532, 8.329966)
 
-[node name="CommonTree_13" parent="TerrainArea" index="12" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_13" parent="TerrainAssets" index="12" instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.314457, -1.1988989, 1.4242575)
 
-[node name="CommonTree_14" parent="TerrainArea" index="13" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_14" parent="TerrainAssets" index="13" instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.433386, -1.2437742, -7.179705)
 
-[node name="CommonTree_15" parent="TerrainArea" index="14" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_15" parent="TerrainAssets" index="14" instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.792482, -1.1528037, -12.404509)
 
-[node name="CommonTree_16" parent="TerrainArea" index="15" instance=ExtResource("24_2630d")]
+[node name="CommonTree_16" parent="TerrainAssets" index="15" instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.791906, -0.87474424, -12.160682)
 
-[node name="CommonTree_17" parent="TerrainArea" index="16" instance=ExtResource("25_835bk")]
+[node name="CommonTree_17" parent="TerrainAssets" index="16" instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.387477, -0.6250379, -11.584123)
 
-[node name="Fern_1" parent="TerrainArea" index="17" instance=ExtResource("29_jkgfa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.40232, -0.6539507, -13.092024)
+[node name="Fern_1" parent="TerrainAssets" index="17" instance=ExtResource("29_jkgfa")]
+transform = Transform3D(0.7416715, 0, 0.67076325, 0, 1, 0, -0.67076325, 0, 0.7416715, 7.812708, -0.6539507, -12.971988)
 
-[node name="Fern_2" parent="TerrainArea" index="18" instance=ExtResource("29_jkgfa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.072605, -1.0719554, -13.02032)
+[node name="Fern_2" parent="TerrainAssets" index="18" instance=ExtResource("29_jkgfa")]
+transform = Transform3D(0.8274336, 0, 0.56156355, 0, 1, 0, -0.56156355, 0, 0.8274336, -19.072605, -1.0719554, -13.02032)
 
-[node name="Fern_3" parent="TerrainArea" index="19" instance=ExtResource("29_jkgfa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.811712, -0.6568967, 13.628283)
+[node name="Fern_3" parent="TerrainAssets" index="19" instance=ExtResource("29_jkgfa")]
+transform = Transform3D(0.7770801, 0, 0.62940174, 0, 1, 0, -0.62940174, 0, 0.7770801, -13.1076355, -0.6568967, 13.028952)
 
-[node name="Fern_4" parent="TerrainArea" index="20" instance=ExtResource("29_jkgfa")]
+[node name="Fern_4" parent="TerrainAssets" index="20" instance=ExtResource("29_jkgfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.55024, -0.59069264, 14.484769)
 
-[node name="Fern_5" parent="TerrainArea" index="21" instance=ExtResource("29_jkgfa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.26482, -0.577963, -4.7209325)
+[node name="Fern_5" parent="TerrainAssets" index="21" instance=ExtResource("29_jkgfa")]
+transform = Transform3D(0.81207335, 0, 0.5835554, 0, 1, 0, -0.5835554, 0, 0.81207335, 28.26482, -0.577963, -4.177127)
 
-[node name="Flower_3_Group" parent="TerrainArea" index="22" instance=ExtResource("30_ph747")]
+[node name="Flower_3_Group" parent="TerrainAssets" index="22" instance=ExtResource("30_ph747")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.116908, -0.8958427, 11.191275)
 
-[node name="Flower_3_Single" parent="TerrainArea" index="23" instance=ExtResource("31_ixomp")]
+[node name="Flower_3_Single" parent="TerrainAssets" index="23" instance=ExtResource("31_ixomp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0940895, -1.2868756, 12.086855)
 
-[node name="Flower_4_Group" parent="TerrainArea" index="24" instance=ExtResource("32_8kv63")]
+[node name="Flower_4_Group" parent="TerrainAssets" index="24" instance=ExtResource("32_8kv63")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1196074, -1.2905021, 11.590329)
 
-[node name="Flower_4_Single" parent="TerrainArea" index="25" instance=ExtResource("33_y8bta")]
+[node name="Flower_4_Single" parent="TerrainAssets" index="25" instance=ExtResource("33_y8bta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.55222, -0.8317992, 10.510718)
 
-[node name="TwistedTree_1" parent="TerrainArea" index="26" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_1" parent="TerrainAssets" index="26" instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.311424, -1.1398096, -13.005354)
 
-[node name="TwistedTree_2" parent="TerrainArea" index="27" instance=ExtResource("49_sy4be")]
+[node name="TwistedTree_2" parent="TerrainAssets" index="27" instance=ExtResource("49_sy4be")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.495289, -0.6564041, 13.584216)
 
-[node name="TwistedTree_3" parent="TerrainArea" index="28" instance=ExtResource("50_0nf8f")]
+[node name="TwistedTree_3" parent="TerrainAssets" index="28" instance=ExtResource("50_0nf8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.510635, -0.9666395, 19.433836)
 
-[node name="TwistedTree_4" parent="TerrainArea" index="29" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_4" parent="TerrainAssets" index="29" instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.586296, -0.31886315, 19.07972)
 
-[node name="TwistedTree_5" parent="TerrainArea" index="30" instance=ExtResource("50_0nf8f")]
+[node name="TwistedTree_5" parent="TerrainAssets" index="30" instance=ExtResource("50_0nf8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.97124, -0.10334036, -0.07763947)
 
-[node name="TwistedTree_6" parent="TerrainArea" index="31" instance=ExtResource("51_rox41")]
+[node name="TwistedTree_6" parent="TerrainAssets" index="31" instance=ExtResource("51_rox41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.702297, 0.14414617, 16.793526)
 
-[node name="TwistedTree_7" parent="TerrainArea" index="32" instance=ExtResource("52_f1hfh")]
+[node name="TwistedTree_7" parent="TerrainAssets" index="32" instance=ExtResource("52_f1hfh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.416014, -0.53019726, -12.180214)
 
-[node name="TwistedTree_8" parent="TerrainArea" index="33" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_8" parent="TerrainAssets" index="33" instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.357648, -0.10978237, -13.990777)
 
-[node name="TwistedTree_11" parent="TerrainArea" index="34" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_11" parent="TerrainAssets" index="34" instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.13841, -0.5797865, -16.775738)
