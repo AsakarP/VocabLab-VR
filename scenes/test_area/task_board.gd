@@ -1,21 +1,26 @@
 extends Node3D
 
 @onready var label_3d = $Label3D
-@onready var mesh_instance_3d = $"../../DropZone/MeshInstance3D"
 
 @export var master_item_list: Array[String] = ["Luminary","Portrait","Succulent","Cushion","Footrest"]
+@export var current_student_id: String = "Subject_001"
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
 var score: int = 0
 var game_active: bool = false
 var time: float = 0.0
+var time_limit: float = 600.0
 
 # Runs every single frame
 func _process(delta):
 	if game_active:
-		time += delta
-		update_board_disp()
+		time -= delta
+		if time <= 0:
+			time = 0
+			end_game_timeout()
+		else:
+			update_board_disp()
 
 # Starts new round
 func start_new_round():
@@ -28,22 +33,40 @@ func start_new_round():
 	score = 0
 	current_idx = 0
 	
-	time = 0.0
+	time = time_limit
 	game_active = true
 	
 	update_board_disp()
 	
 func update_board_disp():
-	var time_str = get_formatted_time()
+	var time_str = format_seconds(time)
 	
 	if current_idx < current_queue.size():
 		var target = current_queue[current_idx]
-		label_3d.text = "Find: %s\nScore: %d\nTime: %s" % [target, score, time_str]
-	else:
-		label_3d.text = "All Tasks Done!\nFinal Score: %d\nFinal Time: %s" % [score, time_str]
-		label_3d.modulate = Color.GREEN
-		mesh_instance_3d.visible = false
-		
+		label_3d.text = "Find: %s\nScore: %d\nTime Left: %s" % [target, score, time_str]
+
+func end_game_timeout():
+	game_active = false
+	
+	label_3d.text = "Time's Up!\nFinal Score: %d" % score
+	label_3d.modulate = Color.RED
+
+func end_game_win():
+	game_active = false
+	
+	# Capture visible time as a number
+	var visible_time_left_sec = int(time)
+	
+	# Time taken
+	var time_taken_seconds = time_limit - visible_time_left_sec
+	
+	# Format strings
+	var time_taken_str = format_seconds(time_taken_seconds)
+	var time_left_str = format_seconds(visible_time_left_sec)
+	
+	label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\nTime Left: %s" % [score, time_taken_str, time_left_str]
+	label_3d.modulate = Color.GREEN
+
 func check_submission(submitted_item_name: String) -> bool:
 	if !game_active or current_idx >= current_queue.size():
 		return false
@@ -59,7 +82,7 @@ func check_submission(submitted_item_name: String) -> bool:
 		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
 		if current_idx >= current_queue.size():
-			end_game()
+			end_game_win()
 		else:
 			update_board_disp()
 			
@@ -67,7 +90,6 @@ func check_submission(submitted_item_name: String) -> bool:
 	else:
 		# Incorrect object
 		score -= 1
-		
 		update_board_disp()
 		
 		label_3d.modulate = Color.RED
@@ -75,14 +97,10 @@ func check_submission(submitted_item_name: String) -> bool:
 		
 		return false
 
-# To stop timer
-func end_game():
-	game_active = false
-	update_board_disp()
-	
-func get_formatted_time() -> String:
-	var minutes = int(time/60)
-	var seconds = int(time)%60
+func format_seconds(amount: float) -> String:
+	var clean_time = max(0.0, amount)
+	var minutes = int(clean_time / 60)
+	var seconds = int(clean_time) % 60
 	
 	return "%02d:%02d" % [minutes,seconds]
 

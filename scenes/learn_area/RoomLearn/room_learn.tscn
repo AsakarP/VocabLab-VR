@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="13_mffb7"]
 [ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/learn_area/RoomLearn/learn_item.gd" id="14_3m6p8"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="14_6ii33"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/learn_area/RoomLearn/pickable_object.gd" id="15_f81wx"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/other_scripts/pickable_object.gd" id="15_f81wx"]
 [ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="15_k61xs"]
 [ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="16_iufs7"]
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="17_36re6"]
@@ -105,6 +105,9 @@ size = Vector3(0.628, 0.2, 0.493)
 size = Vector3(0.75372314, 0.5, 0.7529999)
 
 [node name="RoomLearn" instance=ExtResource("1_tinnk")]
+
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="0"]
+ranged_distance = 15.0
 
 [node name="FunctionPickup" parent="XROrigin3D/RightHand" index="0"]
 ranged_distance = 15.0

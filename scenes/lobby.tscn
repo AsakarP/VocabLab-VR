@@ -72,9 +72,17 @@ radius = 0.25585938
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="0"]
+ranged_distance = 15.0
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" index="0"]
+ranged_distance = 15.0
+
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
+distance = 20.0
 show_laser = 2
 show_target = true
+suppress_radius = 0.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
 transform = Transform3D(-0.9378889, -0.16819775, 0.3034368, 0, 0.8746198, 0.48480958, -0.34693566, 0.45469758, -0.82029617, 0, 4.2104673, 0)
