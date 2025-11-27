@@ -1,0 +1,509 @@
+[gd_scene load_steps=51 format=4 uid="uid://4d3kqfc73gxm"]
+
+[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_i55lj"]
+[ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_38s4e"]
+[ext_resource type="PackedScene" uid="uid://cf2ijkr5ne4lt" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet.fbx" id="10_1obpw"]
+[ext_resource type="PackedScene" uid="uid://bp4jjsu65f3wa" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_sink_backsplash.fbx" id="11_eoy7n"]
+[ext_resource type="PackedScene" uid="uid://cy7qng6118ajy" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_A_backsplash.fbx" id="12_ug1no"]
+[ext_resource type="PackedScene" uid="uid://dvyw4d6w06y5y" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_B_backsplash.fbx" id="13_ug1no"]
+[ext_resource type="PackedScene" uid="uid://bw1wtuiygbvex" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/fridge_A_decorated.fbx" id="14_w4ptr"]
+[ext_resource type="PackedScene" uid="uid://boyvoaskkdjmq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B.fbx" id="15_2ksy4"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="16_8utx5"]
+[ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/learn_area/learn_item.gd" id="16_mkssq"]
+[ext_resource type="PackedScene" uid="uid://b7w2qtvql08ba" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B_large.fbx" id="16_ohn8x"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="16_xcbso"]
+[ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="17_7llx7"]
+[ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="18_bxnr2"]
+[ext_resource type="PackedScene" uid="uid://cdhu5mc6sjvpm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl.fbx" id="19_pdf8s"]
+[ext_resource type="PackedScene" uid="uid://dl7vq67mty82t" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/lid_A.fbx" id="20_38s4e"]
+[ext_resource type="PackedScene" uid="uid://bwutgghehanvg" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/cuttingboard.fbx" id="21_mxbrk"]
+[ext_resource type="PackedScene" uid="uid://ba0uinjwud8t2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/dishrack_plates.fbx" id="22_rah87"]
+[ext_resource type="PackedScene" uid="uid://b66t7khmm1yoq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet_half.fbx" id="24_ilcgx"]
+[ext_resource type="PackedScene" uid="uid://bds75h20b4gbd" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/pan_B.fbx" id="24_unexx"]
+[ext_resource type="PackedScene" uid="uid://d1hl7bs4iuvr8" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/pot_B.fbx" id="25_8utx5"]
+[ext_resource type="PackedScene" uid="uid://8qyehb3lh2gk" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/papertowel.fbx" id="25_epw0d"]
+[ext_resource type="PackedScene" uid="uid://bk3yikcwgu6kh" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/knife.fbx" id="25_unexx"]
+[ext_resource type="PackedScene" uid="uid://tgsu80xp2uim" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/extractorhood.fbx" id="26_8utx5"]
+[ext_resource type="PackedScene" uid="uid://byfjawv2pk238" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_single.fbx" id="26_mkssq"]
+[ext_resource type="PackedScene" uid="uid://0frr5gu2ovnw" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate.fbx" id="26_svth4"]
+[ext_resource type="PackedScene" uid="uid://crpyt38vdchqm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_multi.fbx" id="27_xcbso"]
+[ext_resource type="PackedScene" uid="uid://d3mrvrxgkuj2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/jar_A_large.fbx" id="29_ilcgx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pdf8s"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_qtoah"]
+sky_material = SubResource("ProceduralSkyMaterial_pdf8s")
+
+[sub_resource type="Environment" id="Environment_55o7t"]
+background_mode = 2
+sky = SubResource("Sky_qtoah")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
+albedo_texture_force_srgb = true
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mxbrk"]
+lightmap_size_hint = Vector2i(682, 722)
+_surfaces = [{
+"aabb": AABB(-6, -2.5, -6, 12, 5, 12),
+"attribute_data": PackedByteArray("AACAPwAAAD/QPz8/6fg5P6uqKj8AAAA/ZZLJPun4OT8AAIA/AAAAANA/Pz+wyF0/AAAAAAAAgD+MMcY8MDUtP6uqqj4AAAA/VFDBPvcEUT+rqqo+AACAP1RQwT4wNS0/q6oqPwAAgD8MMEA6kmKtPquqKj8AAAA/DDBAOuAkLD8AAIA/AAAAP1NNtT7gJCw/AAAAAAAAAD+MMcY89wRRP6uqKj8AAIA/DDBAOvNBqz6rqqo+AACAPwwwQDpIijU6q6oqPwAAAD9TTbU+80GrPgAAAAAAAAA/d901P5noOD8AAAAAAAAAAPLGWz+Z6Dg/q6qqPgAAAADyxls/BOrGPgAAgD8AAIA/U021PpJirT6rqio/AAAAP5JGWj8oryE9q6qqPgAAAD+SRlo/Ex2/PquqKj8AAAAAF100PyivIT2rqqo+AAAAP3fdNT8E6sY+q6oqPwAAAABlksk+sMhdP6uqqj4AAAA/U021PkiKNTqrqqo+AAAAABddND8THb8+AACAPwAAAD8RQkg//9hePwAAgD8AAAAAEUJIP53Sfz+rqio/AAAAP2aY4T7/2F4/AAAAAAAAgD/JJBM9RhVSP6uqqj4AAIA/VFDBPkYVUj+rqqo+AAAAP1RQwT7kDnM/q6oqPwAAgD/jjbc+5A6zPgAAgD8AAAA/zzwzP+AkLD+rqio/AAAAP888Mz/kDrM+AAAAAAAAAD/JJBM95A5zP6uqKj8AAIA/4423PhwYrj6rqio/AAAAP888Mz8cGK4+q6qqPgAAgD/jjbc+CdSNPAAAAAAAAAA/2mZbPy2Z6Dyrqqo+AAAAAJRPfj9vxLM+AAAAAAAAAACUT34/LZnoPAAAgD8AAIA/4423PuAkLD+rqio/AAAAP/TPfz8E6gY/q6oqPwAAAAA651w/BOoGP6uqqj4AAAA/9M9/P3KHWT+rqqo+AAAAP9pmWz9vxLM+q6oqPwAAAABmmOE+ndJ/P6uqqj4AAAA/zzwzPwnUjTyrqqo+AAAAADrnXD9yh1k/"),
+"format": 34359742519,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAwAJAAQACgALAAwADQAOAA8ABgAIABAAEQASABMADQAPABQAAgABABUADAALABYAEgAXABMAGAAZABoAGwAcAB0AHgAfACAAGwAdACEAIgAjACQAJQAmACcAHgAoAB8AKQAqACsAJQAsACYAGQAtABoAIwAuACQAKwAqAC8A"),
+"material": SubResource("StandardMaterial3D_dynfe"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AADAwAAAIMAAAMDAAADAQAAAIMAAAMDAAADAwAAAIEAAAMDAAADAwAAAIMAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIMAAAMDAAADAwAAAIMAAAMBAAADAQAAAIMAAAMBAAADAwAAAIEAAAMDAAADAwAAAIEAAAMDAAADAQAAAIEAAAMDAAADAwAAAIEAAAMBAAADAwAAAIMAAAMBAAADAwAAAIEAAAMBAAADAQAAAIEAAAMBAAADAQAAAIMAAAMDAAADAQAAAIMAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIMAAAMBAAADAQAAAIEAAAMDAAADAQAAAIEAAAMBAAADAQAAAIEAAAMBAAAC4wAAAEMAAALjAAAC4wAAAEEAAALjAAAC4QAAAEMAAALjAAAC4wAAAEMAAALjAAAC4wAAAEMAAALhAAAC4wAAAEEAAALhAAAC4wAAAEMAAALjAAAC4QAAAEMAAALhAAAC4wAAAEMAAALhAAAC4wAAAEEAAALjAAAC4wAAAEEAAALjAAAC4wAAAEEAAALhAAAC4QAAAEEAAALjAAAC4wAAAEMAAALhAAAC4QAAAEEAAALhAAAC4wAAAEEAAALhAAAC4QAAAEMAAALjAAAC4QAAAEMAAALjAAAC4QAAAEEAAALjAAAC4QAAAEMAAALhAAAC4QAAAEMAAALhAAAC4QAAAEEAAALjAAAC4QAAAEEAAALhAAAC4QAAAEEAAALhA/////wAA/7//////AAD/v/////8AAP+/AAAAgP9//78AAACA/3//vwAAAID/f/+/AIAAAP///78AgAAA////vwCAAAD///+/AAAAgP9//78AgP//AAD/vwCA//8AAP+/AID//wAA/7//f/9/////v/9//3////+//3//f////78AgAAA////v///AID///////8AgP///////wCA//////9//3////+//////wAA/78AgP//AAD/v///AID//////3//fwAA/z//f/9/AAD/P/9//38AAP8///8AgP9//z///wCA/3//P///AID/f/8/AID//////z8AgP//////PwCA//////8///8AgP9//z8AgAAAAAD/PwCAAAAAAP8/AIAAAAAA/z//////////P/////////8//////////z8AgP//////PwAAAID//wAAAAAAgP//AAAAAACA//8AAP////////8//3//fwAA/z8AgAAAAAD/PwAAAID//wAA")
+}]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rah87"]
+data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, -2.5, -6, -6, -2.5, 6, 6, -2.5, 6, -6, -2.5, -6, -6, 2.5, -6, -6, 2.5, 6, -6, 2.5, -6, 6, 2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, 2.5, 6, 6, 2.5, 6, -6, -2.5, -6, 6, -2.5, 6, 6, -2.5, -6, 6, -2.5, -6, 6, -2.5, 6, 6, 2.5, -6, -6, -2.5, 6, 6, 2.5, 6, 6, -2.5, 6, -6, 2.5, -6, 6, -2.5, -6, 6, 2.5, -6, -6, 2.5, 6, 6, 2.5, -6, 6, 2.5, 6, 6, -2.5, 6, 6, 2.5, 6, 6, 2.5, -6, -5.75, -2.25, -5.75, -5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, -2.25, -5.75, -5.75, -2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, -5.75, -2.25, -5.75, -5.75, 2.25, 5.75, -5.75, 2.25, -5.75, -5.75, 2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, -5.75, -5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, -5.75, 5.75, -2.25, 5.75, 5.75, -2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, 5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, 5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, 5.75, 2.25, -5.75, 5.75, 2.25, 5.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbiir"]
+size = Vector3(8.005, 1, 1.822)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ht0ak"]
+size = Vector3(2.0098267, 2.499504, 2.0106888)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q48sp"]
+size = Vector3(1.9986839, 0.8936055, 6.998659)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4ojfb"]
+height = 0.2010498
+radius = 1.4863281
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1jvlq"]
+height = 0.4977417
+radius = 0.3803711
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6klfm"]
+size = Vector3(4.041018, 1.6434326, 2.1888409)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xcbso"]
+size = Vector3(1.2103882, 1.0287819, 1.1923828)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xcbso"]
+height = 0.10119629
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lg2gp"]
+size = Vector3(1.5010986, 0.14736938, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lg2gp"]
+height = 0.9012146
+radius = 0.24707031
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hxe04"]
+height = 0.2874756
+radius = 0.46484375
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6klfm"]
+height = 0.20153809
+radius = 0.50439453
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8a40l"]
+height = 0.2522583
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tyw4g"]
+height = 0.5032959
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fenkw"]
+height = 0.7482605
+radius = 0.24560547
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hxe04"]
+size = Vector3(0.24414063, 0.068992615, 1.1272583)
+
+[node name="KitchenLearn" instance=ExtResource("1_i55lj")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource("Environment_55o7t")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2"]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Interior" type="Node3D" parent="." index="3"]
+
+[node name="Kitchen" type="StaticBody3D" parent="Interior" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+
+[node name="KitchenMesh" type="MeshInstance3D" parent="Interior/Kitchen" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
+mesh = SubResource("ArrayMesh_mxbrk")
+
+[node name="KitchenCollision" type="CollisionShape3D" parent="Interior/Kitchen" index="1"]
+shape = SubResource("ConcavePolygonShape3D_rah87")
+
+[node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
+shadow_enabled = true
+omni_range = 6.5
+
+[node name="TeleportArea" parent="Interior" index="2" instance=ExtResource("2_38s4e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1277323, 4.7683716e-07, 5.125559)
+collision_mask = 524289
+target_scene = "uid://bdbwonfjyxqo7"
+
+[node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+billboard = 1
+text = "Lobby"
+font_size = 64
+
+[node name="KitchenFurnitures" type="Node3D" parent="." index="4"]
+
+[node name="kitchencabinet" parent="KitchenFurnitures" index="0" instance=ExtResource("10_1obpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0.5, -5.75)
+
+[node name="kitchencabinet2" parent="KitchenFurnitures" index="1" instance=ExtResource("10_1obpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6991335, 0.5, -5.75)
+
+[node name="KitchenCounter" type="Node3D" parent="KitchenFurnitures" index="2"]
+
+[node name="KitchenCounterCollision" type="StaticBody3D" parent="KitchenFurnitures/KitchenCounter" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5048404, -4.6733828)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/KitchenCounter/KitchenCounterCollision" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6977386, -0.001953125, 0.065709114)
+shape = SubResource("BoxShape3D_tbiir")
+
+[node name="kitchencounter_sink_backsplash" parent="KitchenFurnitures/KitchenCounter" index="1" instance=ExtResource("11_eoy7n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0, -4.7)
+
+[node name="kitchencounter_straight_A_backsplash" parent="KitchenFurnitures/KitchenCounter" index="2" instance=ExtResource("12_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -4.7)
+
+[node name="kitchencounter_straight_B_backsplash" parent="KitchenFurnitures/KitchenCounter" index="3" instance=ExtResource("13_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -4.7)
+
+[node name="kitchencounter_straight_B_backsplash2" parent="KitchenFurnitures/KitchenCounter" index="4" instance=ExtResource("13_ug1no")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -4.7)
+
+[node name="fridge_A_decorated" parent="KitchenFurnitures" index="3" instance=ExtResource("14_w4ptr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -4.7)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/fridge_A_decorated" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/fridge_A_decorated/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0039367676, 1.2551003, 0.002040863)
+shape = SubResource("BoxShape3D_ht0ak")
+
+[node name="KitchenTables" type="Node3D" parent="KitchenFurnitures" index="4"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7030196, 0, -1.0143993)
+
+[node name="kitchentable_B" parent="KitchenFurnitures/KitchenTables" index="0" instance=ExtResource("15_2ksy4")]
+
+[node name="kitchentable_B2" parent="KitchenFurnitures/KitchenTables" index="1" instance=ExtResource("15_2ksy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="kitchentable_B_large" parent="KitchenFurnitures/KitchenTables" index="2" instance=ExtResource("16_ohn8x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.3841858e-07)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/KitchenTables" index="3"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.35, 1, -0.05100012)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/KitchenTables/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051195145, -0.44656384, 1.1497431)
+shape = SubResource("BoxShape3D_q48sp")
+
+[node name="table_round_A" parent="KitchenFurnitures" index="5" instance=ExtResource("17_7llx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10692835, 0, 3.7591357)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/table_round_A" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/table_round_A/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8994751, 0)
+shape = SubResource("CylinderShape3D_4ojfb")
+
+[node name="chair_stool" parent="KitchenFurnitures" index="6" instance=ExtResource("18_bxnr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9432867, 0, 3.709125)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25357056, 0)
+shape = SubResource("CylinderShape3D_1jvlq")
+
+[node name="kitchencabinet_half" parent="KitchenFurnitures" index="7" instance=ExtResource("24_ilcgx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.5, -5.75)
+
+[node name="Stoves" type="Node3D" parent="KitchenFurnitures" index="8"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.708, 0, 0.598914)
+
+[node name="stove_multi" parent="KitchenFurnitures/Stoves" index="0" instance=ExtResource("27_xcbso")]
+
+[node name="stove_single" parent="KitchenFurnitures/Stoves" index="1" instance=ExtResource("26_mkssq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0336735, 1.227856e-07, 1.1920929e-05)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/Stoves" index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/Stoves/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0138233, 0.3217163, 0.09065151)
+shape = SubResource("BoxShape3D_6klfm")
+
+[node name="extractorhood" parent="KitchenFurnitures" index="9" instance=ExtResource("26_8utx5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, -0.38511062)
+
+[node name="PickableObject" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
+script = ExtResource("16_xcbso")
+spawn_points_container = NodePath("SpawnPoints")
+objects_container = NodePath("Objects")
+
+[node name="SpawnPoints" type="Node3D" parent="PickableObject" index="0"]
+
+[node name="Marker3D" type="Marker3D" parent="PickableObject/SpawnPoints" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.6054363)
+
+[node name="Marker3D2" type="Marker3D" parent="PickableObject/SpawnPoints" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2525635, 1.0028877, -4.6193376)
+
+[node name="Marker3D3" type="Marker3D" parent="PickableObject/SpawnPoints" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26033175, 1.0028872, -4.611438)
+
+[node name="Marker3D4" type="Marker3D" parent="PickableObject/SpawnPoints" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7472098, 1.0028874, -4.5731997)
+
+[node name="Marker3D5" type="Marker3D" parent="PickableObject/SpawnPoints" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7495623, 1.0002389, -1.4013436)
+
+[node name="Marker3D6" type="Marker3D" parent="PickableObject/SpawnPoints" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.567761, 1.000239, -0.08293831)
+
+[node name="Marker3D7" type="Marker3D" parent="PickableObject/SpawnPoints" index="6"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5792155, 1.0002389, 1.5425646)
+
+[node name="Marker3D8" type="Marker3D" parent="PickableObject/SpawnPoints" index="7"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7615776, 1.0002389, 3.6432176)
+
+[node name="Marker3D9" type="Marker3D" parent="PickableObject/SpawnPoints" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54875755, 1, 3.7703629)
+
+[node name="Marker3D10" type="Marker3D" parent="PickableObject/SpawnPoints" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
+
+[node name="Objects" type="Node3D" parent="PickableObject" index="1"]
+
+[node name="Drainer" type="Node3D" parent="PickableObject/Objects" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.6054363)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Drainer" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="dishrack_plates" parent="PickableObject/Objects/Drainer/PickableObject" index="1" instance=ExtResource("22_rah87")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Drainer/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2945863, 0)
+billboard = 1
+text = "Drainer"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Drainer/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Drainer/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012512207, 0.51236916, -0.0014648438)
+shape = SubResource("BoxShape3D_xcbso")
+
+[node name="Trencher" type="Node3D" parent="PickableObject/Objects" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2525635, 1.0028877, -4.6193376)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Trencher" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="plate" parent="PickableObject/Objects/Trencher/PickableObject" index="1" instance=ExtResource("26_svth4")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Trencher/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6803107, 0)
+billboard = 1
+text = "Trencher"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Trencher/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Trencher/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05218506, 0)
+shape = SubResource("CylinderShape3D_xcbso")
+
+[node name="Butcher Block" type="Node3D" parent="PickableObject/Objects" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26033175, 1.0028872, -4.611438)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Butcher Block" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="cuttingboard" parent="PickableObject/Objects/Butcher Block/PickableObject" index="1" instance=ExtResource("21_mxbrk")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6804521, 0)
+billboard = 1
+text = "Butcher Block"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1035156e-05, 0.07267761, 0)
+shape = SubResource("BoxShape3D_lg2gp")
+
+[node name="Absorbent Sheet" type="Node3D" parent="PickableObject/Objects" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7472098, 1.0028874, -4.5731997)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Absorbent Sheet" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="papertowel" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="1" instance=ExtResource("25_epw0d")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2410506, 0)
+billboard = 1
+text = "Absorbent Sheet"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45051575, 0)
+shape = SubResource("CylinderShape3D_lg2gp")
+
+[node name="Basin" type="Node3D" parent="PickableObject/Objects" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7495623, 1.0002389, -1.4013436)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Basin" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="bowl" parent="PickableObject/Objects/Basin/PickableObject" index="1" instance=ExtResource("19_pdf8s")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Basin/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7941196, 0)
+billboard = 1
+text = "Basin"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Basin/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Basin/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15533447, 0)
+shape = SubResource("CylinderShape3D_hxe04")
+
+[node name="Cover" type="Node3D" parent="PickableObject/Objects" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.567761, 1.000239, -0.08293831)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Cover" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="lid_A" parent="PickableObject/Objects/Cover/PickableObject" index="1" instance=ExtResource("20_38s4e")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Cover/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6831497, 0)
+billboard = 1
+text = "Cover"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cover/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Cover/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101867676, 0)
+shape = SubResource("CylinderShape3D_6klfm")
+
+[node name="Skillet" type="Node3D" parent="PickableObject/Objects" index="6"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5792155, 1.0002389, 1.5425646)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Skillet" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="pan_B" parent="PickableObject/Objects/Skillet/PickableObject" index="1" instance=ExtResource("24_unexx")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Skillet/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6935687, 0)
+billboard = 1
+text = "Skillet"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Skillet/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Skillet/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12509155, 0)
+shape = SubResource("CylinderShape3D_8a40l")
+
+[node name="Cauldron" type="Node3D" parent="PickableObject/Objects" index="7"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7615776, 1.0002389, 3.6432176)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Cauldron" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="pot_B" parent="PickableObject/Objects/Cauldron/PickableObject" index="1" instance=ExtResource("25_8utx5")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.92960334, 0)
+billboard = 1
+text = "Cauldron"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24932861, 0)
+shape = SubResource("CylinderShape3D_tyw4g")
+
+[node name="Canister" type="Node3D" parent="PickableObject/Objects" index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54875755, 1, 3.7703629)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Canister" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="jar_A_large" parent="PickableObject/Objects/Canister/PickableObject" index="1" instance=ExtResource("29_ilcgx")]
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Canister/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0534713, 0)
+billboard = 1
+text = "Canister"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Canister/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Canister/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37586975, 0)
+shape = SubResource("CylinderShape3D_fenkw")
+
+[node name="Blade" type="Node3D" parent="PickableObject/Objects" index="9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
+script = ExtResource("16_mkssq")
+
+[node name="PickableObject" parent="PickableObject/Objects/Blade" index="0" instance=ExtResource("16_8utx5")]
+
+[node name="knife" parent="PickableObject/Objects/Blade/PickableObject" index="1" instance=ExtResource("25_unexx")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.059999943, 0)
+
+[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Blade/PickableObject" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59562826, 0)
+billboard = 1
+text = "Blade"
+
+[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Blade/PickableObject" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.8
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Blade/PickableObject" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075683594, 0.056545258, -0.36044312)
+shape = SubResource("BoxShape3D_hxe04")

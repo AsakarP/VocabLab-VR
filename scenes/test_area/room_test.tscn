@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6ub8i"]
 [ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="2_7diqi"]
-[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/test_area/task_board.gd" id="2_i6qwn"]
+[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_i6qwn"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="3_iurof"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="3_m6e51"]
 [ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="4_uka4f"]
@@ -15,12 +15,12 @@
 [ext_resource type="PackedScene" uid="uid://c4rg6fpw3w75k" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_big.fbx" id="11_voaw8"]
 [ext_resource type="PackedScene" uid="uid://ckndyjtsicxbs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_small.fbx" id="12_s5etu"]
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="13_dik1j"]
-[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/test_area/test_item.gd" id="14_gf72i"]
-[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/lobby/push_button.tscn" id="15_jx7oo"]
+[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="14_gf72i"]
+[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="15_jx7oo"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="15_rofia"]
 [ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="16_1qfaj"]
 [ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="17_f206w"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/other_scripts/pickable_object.gd" id="17_gap2k"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="17_gap2k"]
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="18_gwj6w"]
 [ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="19_mfx57"]
 [ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="20_8gy4o"]
@@ -112,16 +112,7 @@ size = Vector3(0.75372314, 0.5, 0.7529999)
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="0"]
-ranged_distance = 15.0
-
-[node name="FunctionPickup" parent="XROrigin3D/RightHand" index="0"]
-ranged_distance = 15.0
-
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
-distance = 20.0
-show_laser = 2
-show_target = true
 suppress_radius = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
