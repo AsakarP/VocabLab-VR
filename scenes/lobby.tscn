@@ -213,6 +213,22 @@ billboard = 1
 modulate = Color(0, 1, 0, 1)
 text = "Easy"
 
+[node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" instance=ExtResource("18_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+collision_mask = 524288
+
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+billboard = 1
+text = "Kitchen"
+font_size = 64
+
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
+billboard = 1
+modulate = Color(1, 1, 0, 1)
+text = "Medium"
+
 [node name="TerrainAssets" type="Node3D" parent="." index="6"]
 
 [node name="CommonTree_1" parent="TerrainAssets" index="0" instance=ExtResource("24_2630d")]

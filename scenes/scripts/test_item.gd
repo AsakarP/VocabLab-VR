@@ -36,7 +36,7 @@ func _on_picked_up(_pickable):
 		var is_correct = task_board.check_submission(item_name)
 		
 		if is_correct:
-			# Delete object if correct
+			# Hide object if correct
 			queue_free()
 		
 		else:
@@ -53,7 +53,24 @@ func _on_highlight_updated(_pickable, enable: bool):
 	else:
 		if not pickable_object.is_picked_up():
 			if highlight_light: highlight_light.visible = false
+
+func collect_success():
+	if pickable_object.has_method("drop") and pickable_object.is_picked_up():
+		pickable_object.drop()
 	
+	if highlight_light: highlight_light.visible = false
+	
+	visible = false
+	
+	process_mode = Node.PROCESS_MODE_DISABLED
+
+func reset_item():
+	process_mode = Node.PROCESS_MODE_INHERIT
+	
+	visible = true
+	
+	reset_position()
+
 func start_respawn_timer():
 	# Kill existing timer if one is running
 	if respawn_tween:

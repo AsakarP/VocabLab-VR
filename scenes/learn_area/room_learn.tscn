@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://ckndyjtsicxbs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_small.fbx" id="13_xrr5i"]
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="14_iwpn1"]
 [ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="15_bd4k6"]
-[ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/learn_area/learn_item.gd" id="16_ljqa2"]
+[ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/scripts/learn_item.gd" id="16_ljqa2"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="17_al810"]
 [ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="18_0tpjx"]
 [ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="19_g6mcy"]

@@ -2,8 +2,9 @@ extends Node3D
 
 @onready var label_3d = $Label3D
 
-@export var master_item_list: Array[String] = ["Luminary","Portrait","Succulent","Cushion","Footrest"]
+@export var master_item_list: Array[String] = []
 @export var current_student_id: String = "Subject_001"
+@export var item_container: Node3D
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
@@ -26,6 +27,17 @@ func _process(delta):
 func start_new_round():
 	if game_active:
 		return
+		
+	if master_item_list.is_empty():
+		printerr("Master List is Empty!")
+		label_3d.text = "List is Empty!"
+		label_3d.modulate = Color.RED
+		return
+		
+	if item_container:
+		for item in item_container.get_children():
+			if item.has_method("reset_item"):
+				item.reset_item()
 	
 	current_queue = master_item_list.duplicate()
 	current_queue.shuffle()
