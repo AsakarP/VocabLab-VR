@@ -156,9 +156,11 @@ billboard = 1
 text = "Lobby"
 font_size = 64
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="3"]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("item_container")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2.7426205, 5.7508745)
 script = ExtResource("3_yvw6u")
+master_item_list = Array[String](["Drainer", "Trencher", "Butcher Block", "Absorbent Sheet", "Basin", "Cover", "Skillet", "Cauldron", "Canister", "Blade"])
+item_container = NodePath("../../PickableObject/Objects")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 
@@ -488,5 +490,7 @@ omni_range = 0.8
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Blade/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075683594, 0.056545258, -0.36044312)
 shape = SubResource("BoxShape3D_hxe04")
+
+[connection signal="button_pressed" from="Interior/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
 [editable path="Interior/PushButton"]

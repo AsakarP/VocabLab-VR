@@ -216,6 +216,7 @@ text = "Easy"
 [node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 collision_mask = 524288
+target_scene = "uid://cpm173umy42e2"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)

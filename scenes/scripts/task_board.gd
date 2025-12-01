@@ -3,7 +3,6 @@ extends Node3D
 @onready var label_3d = $Label3D
 
 @export var master_item_list: Array[String] = []
-@export var current_student_id: String = "Subject_001"
 @export var item_container: Node3D
 
 var current_queue: Array[String] = []
@@ -12,6 +11,8 @@ var score: int = 0
 var game_active: bool = false
 var time: float = 0.0
 var time_limit: float = 600.0
+
+var error_log: String = ""
 
 # Runs every single frame
 func _process(delta):
@@ -39,11 +40,17 @@ func start_new_round():
 			if item.has_method("reset_item"):
 				item.reset_item()
 	
+	var tween = create_tween()
+	tween.kill()
+	
+	label_3d.modulate = Color.WHITE
+	
 	current_queue = master_item_list.duplicate()
 	current_queue.shuffle()
 	
 	score = 0
 	current_idx = 0
+	error_log = ""
 	
 	time = time_limit
 	game_active = true
@@ -66,6 +73,10 @@ func end_game_timeout():
 func end_game_win():
 	game_active = false
 	
+	# Stop any lingering tween
+	var tween = create_tween()
+	tween.kill()
+	
 	# Capture visible time as a number
 	var visible_time_left_sec = int(time)
 	
@@ -76,14 +87,27 @@ func end_game_win():
 	var time_taken_str = format_seconds(time_taken_seconds)
 	var time_left_str = format_seconds(visible_time_left_sec)
 	
-	label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\nTime Left: %s" % [score, time_taken_str, time_left_str]
-	label_3d.modulate = Color.GREEN
+	if error_log == "":
+		label_3d.modulate = Color.GREEN
+		label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\n \
+		Time Left: %s\nNo Mistakes, Great Job!" % [score, time_taken_str, time_left_str]
+		
+		print("*** Summary ***")
+		print("Final Score: ",score)
+		print("Time Taken: ",format_seconds(time_limit - time))
+	else:
+		label_3d.modulate = Color.ORANGE
+		label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\n \
+		Time Left: %s\nMistakes:\n%s" % [score, time_taken_str, time_left_str, error_log]
+		
+		print("*** Mistakes ***")
+		print(error_log)
 
 func check_submission(submitted_item_name: String) -> bool:
 	if !game_active or current_idx >= current_queue.size():
 		return false
-		
-	var tween = create_tween()
+	
+	var current_target = current_queue[current_idx]
 	
 	if submitted_item_name == current_queue[current_idx]:
 		# Correct object
@@ -91,20 +115,27 @@ func check_submission(submitted_item_name: String) -> bool:
 		current_idx += 1
 		
 		label_3d.modulate = Color.GREEN
-		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
 		if current_idx >= current_queue.size():
 			end_game_win()
 		else:
+			var tween = create_tween()
+			tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 			update_board_disp()
 			
 		return true
 	else:
 		# Incorrect object
 		score -= 1
+		
+		var mistake_text = "Target: %s | Player Picked: %s" % [current_target, submitted_item_name]
+		error_log += mistake_text + "\n"
+		print(mistake_text)
+		
 		update_board_disp()
 		
 		label_3d.modulate = Color.RED
+		var tween = create_tween()
 		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
 		return false

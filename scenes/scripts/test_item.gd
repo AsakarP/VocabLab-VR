@@ -37,7 +37,7 @@ func _on_picked_up(_pickable):
 		
 		if is_correct:
 			# Hide object if correct
-			queue_free()
+			collect_success()
 		
 		else:
 			# Reset position if wrong
