@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://cpm173umy42e2"]
+[gd_scene load_steps=54 format=4 uid="uid://cpm173umy42e2"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6pqdt"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_abqhv"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="11_r7m56"]
 [ext_resource type="PackedScene" uid="uid://b66t7khmm1yoq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet_half.fbx" id="12_1gb3k"]
 [ext_resource type="PackedScene" uid="uid://crpyt38vdchqm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_multi.fbx" id="13_ar14s"]
-[ext_resource type="PackedScene" uid="uid://byfjawv2pk238" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_single.fbx" id="14_nxscr"]
 [ext_resource type="PackedScene" uid="uid://tgsu80xp2uim" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/extractorhood.fbx" id="15_vldck"]
 [ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="16_x0c57"]
 [ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="17_bl2fp"]
@@ -43,11 +42,9 @@ background_mode = 2
 sky = SubResource("Sky_qtoah")
 tonemap_mode = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
-albedo_texture_force_srgb = true
-uv1_scale = Vector3(0.1, 0.1, 0.1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cyipg"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_mxbrk"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_cyipg"]
 lightmap_size_hint = Vector2i(682, 722)
 _surfaces = [{
 "aabb": AABB(-6, -2.5, -6, 12, 5, 12),
@@ -55,7 +52,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 72,
 "index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAwAJAAQACgALAAwADQAOAA8ABgAIABAAEQASABMADQAPABQAAgABABUADAALABYAEgAXABMAGAAZABoAGwAcAB0AHgAfACAAGwAdACEAIgAjACQAJQAmACcAHgAoAB8AKQAqACsAJQAsACYAGQAtABoAIwAuACQAKwAqAC8A"),
-"material": SubResource("StandardMaterial3D_dynfe"),
+"material": SubResource("StandardMaterial3D_cyipg"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 48,
@@ -64,6 +61,14 @@ _surfaces = [{
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rah87"]
 data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, -2.5, -6, -6, -2.5, 6, 6, -2.5, 6, -6, -2.5, -6, -6, 2.5, -6, -6, 2.5, 6, -6, 2.5, -6, 6, 2.5, -6, -6, 2.5, 6, -6, -2.5, 6, -6, 2.5, 6, 6, 2.5, 6, -6, -2.5, -6, 6, -2.5, 6, 6, -2.5, -6, 6, -2.5, -6, 6, -2.5, 6, 6, 2.5, -6, -6, -2.5, 6, 6, 2.5, 6, 6, -2.5, 6, -6, 2.5, -6, 6, -2.5, -6, 6, 2.5, -6, -6, 2.5, 6, 6, 2.5, -6, 6, 2.5, 6, 6, -2.5, 6, 6, 2.5, 6, 6, 2.5, -6, -5.75, -2.25, -5.75, -5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, -2.25, -5.75, -5.75, -2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, -5.75, -2.25, -5.75, -5.75, 2.25, 5.75, -5.75, 2.25, -5.75, -5.75, 2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, -5.75, -5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, 5.75, -5.75, -2.25, -5.75, 5.75, -2.25, -5.75, 5.75, -2.25, 5.75, 5.75, -2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, -5.75, -2.25, 5.75, 5.75, -2.25, 5.75, 5.75, 2.25, 5.75, -5.75, 2.25, -5.75, 5.75, 2.25, -5.75, 5.75, -2.25, -5.75, -5.75, 2.25, 5.75, 5.75, 2.25, 5.75, 5.75, 2.25, -5.75, 5.75, -2.25, 5.75, 5.75, 2.25, -5.75, 5.75, 2.25, 5.75)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_yvw6u"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 1.4
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yq1sa"]
+points = PackedVector3Array(-0.1, -0.7, 0, -0.09953015, -0.7, -0.009808145, -0.09953015, -0.7, 0.009788565, -0.1, 0.699863, 0, -0.09808144, -0.7, -0.019518405, -0.09953015, 0.699863, -0.009808145, -0.09808144, -0.7, 0.019498825, -0.09953015, 0.699863, 0.009788565, -0.09571261, -0.7, -0.029032893, -0.09808144, 0.699863, -0.019518405, -0.09571261, -0.7, 0.029013313, -0.09808144, 0.699863, 0.019498825, -0.092404075, -0.7, -0.0382733, -0.09571261, 0.699863, -0.029032893, -0.092404075, -0.7, 0.038253717, -0.09571261, 0.699863, 0.029013313, -0.08819499, -0.7, -0.047141742, -0.092404075, 0.699863, -0.0382733, -0.08819499, -0.7, 0.047122158, -0.092404075, 0.699863, 0.038253717, -0.083163664, -0.7, -0.055559907, -0.08819499, 0.699863, -0.047141742, -0.083163664, -0.7, 0.05554033, -0.08819499, 0.699863, 0.047122158, -0.0773101, -0.7, -0.063449495, -0.083163664, 0.699863, -0.055559907, -0.0773101, -0.7, 0.063429914, -0.083163664, 0.699863, 0.05554033, -0.07071261, -0.7, -0.07071261, -0.0773101, 0.699863, -0.063449495, -0.07071261, -0.7, 0.07069302, -0.0773101, 0.699863, 0.063429914, -0.063449495, -0.7, -0.0773101, -0.07071261, 0.699863, -0.07071261, -0.063449495, -0.7, 0.07729053, -0.07071261, 0.699863, 0.07069302, -0.055559907, -0.7, -0.083163664, -0.063449495, 0.699863, -0.0773101, -0.055559907, -0.7, 0.083144076, -0.063449495, 0.699863, 0.07729053, -0.047141742, -0.7, -0.08819499, -0.055559907, 0.699863, -0.083163664, -0.047141742, -0.7, 0.08817541, -0.055559907, 0.699863, 0.083144076, -0.0382733, -0.7, -0.092404075, -0.047141742, 0.699863, -0.08819499, -0.0382733, -0.7, 0.092384495, -0.047141742, 0.699863, 0.08817541, -0.029032893, -0.7, -0.09571261, -0.0382733, 0.699863, -0.092404075, -0.029032893, -0.7, 0.09569303, -0.0382733, 0.699863, 0.092384495, -0.019518405, -0.7, -0.09808144, -0.029032893, 0.699863, -0.09571261, -0.019518405, -0.7, 0.09806185, -0.029032893, 0.699863, 0.09569303, -0.009808145, -0.7, -0.09953015, -0.019518405, 0.699863, -0.09808144, -0.009808145, -0.7, 0.09951057, -0.019518405, 0.699863, 0.09806185, 0, -0.7, -0.1, -0.009808145, 0.699863, -0.09953015, 0, -0.7, 0.1, -0.009808145, 0.699863, 0.09951057, 0.009788565, -0.7, -0.09953015, 0, 0.699863, -0.1, 0.009788565, -0.7, 0.09951057, 0, 0.699863, 0.1, 0.019498825, -0.7, -0.09808144, 0.009788565, 0.699863, -0.09953015, 0.019498825, -0.7, 0.09806185, 0.009788565, 0.699863, 0.09951057, 0.029013313, -0.7, -0.09571261, 0.019498825, 0.699863, -0.09808144, 0.029013313, -0.7, 0.09569303, 0.019498825, 0.699863, 0.09806185, 0.038253717, -0.7, -0.092404075, 0.029013313, 0.699863, -0.09571261, 0.038253717, -0.7, 0.092384495, 0.029013313, 0.699863, 0.09569303, 0.047122158, -0.7, -0.08819499, 0.038253717, 0.699863, -0.092404075, 0.047122158, -0.7, 0.08817541, 0.038253717, 0.699863, 0.092384495, 0.05554033, -0.7, -0.083163664, 0.047122158, 0.699863, -0.08819499, 0.05554033, -0.7, 0.083144076, 0.047122158, 0.699863, 0.08817541, 0.063429914, -0.7, -0.0773101, 0.05554033, 0.699863, -0.083163664, 0.063429914, -0.7, 0.07729053, 0.05554033, 0.699863, 0.083144076, 0.07069302, -0.7, -0.07071261, 0.063429914, 0.699863, -0.0773101, 0.07069302, -0.7, 0.07069302, 0.063429914, 0.699863, 0.07729053, 0.07729053, -0.7, -0.063449495, 0.07069302, 0.699863, -0.07071261, 0.07729053, -0.7, 0.063429914, 0.07069302, 0.699863, 0.07069302, 0.083144076, -0.7, -0.055559907, 0.07729053, 0.699863, -0.063449495, 0.083144076, -0.7, 0.05554033, 0.07729053, 0.699863, 0.063429914, 0.08817541, -0.7, -0.047141742, 0.083144076, 0.699863, -0.055559907, 0.08817541, -0.7, 0.047122158, 0.083144076, 0.699863, 0.05554033, 0.092384495, -0.7, -0.0382733, 0.08817541, 0.699863, -0.047141742, 0.092384495, -0.7, 0.038253717, 0.08817541, 0.699863, 0.047122158, 0.09569303, -0.7, -0.029032893, 0.092384495, 0.699863, -0.0382733, 0.09569303, -0.7, 0.029013313, 0.092384495, 0.699863, 0.038253717, 0.09806185, -0.7, -0.019518405, 0.09569303, 0.699863, -0.029032893, 0.09806185, -0.7, 0.019498825, 0.09569303, 0.699863, 0.029013313, 0.09951057, -0.7, -0.009808145, 0.09806185, 0.699863, -0.019518405, 0.09951057, -0.7, 0.009788565, 0.09806185, 0.699863, 0.019498825, 0.1, -0.7, 0, 0.09951057, 0.699863, -0.009808145, 0.09951057, 0.699863, 0.009788565, 0.1, 0.699863, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbiir"]
 size = Vector3(8.005, 1, 1.822)
@@ -83,7 +88,7 @@ height = 0.4977417
 radius = 0.3803711
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6klfm"]
-size = Vector3(4.041018, 1.6434326, 2.1888409)
+size = Vector3(2.0122075, 1.6434326, 2.1888409)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcbso"]
 size = Vector3(1.2103882, 1.0287819, 1.1923828)
@@ -135,13 +140,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 
 [node name="KitchenMesh" type="MeshInstance3D" parent="Interior/Kitchen" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
-mesh = SubResource("ArrayMesh_mxbrk")
+mesh = SubResource("ArrayMesh_cyipg")
 
 [node name="KitchenCollision" type="CollisionShape3D" parent="Interior/Kitchen" index="1"]
 shape = SubResource("ConcavePolygonShape3D_rah87")
 
 [node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.48, 0)
+light_energy = 1.5
 shadow_enabled = true
 omni_range = 6.5
 
@@ -157,15 +163,26 @@ text = "Lobby"
 font_size = 64
 
 [node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("item_container")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2.7426205, 5.7508745)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.072, 2.743, -3.991)
 script = ExtResource("3_yvw6u")
 master_item_list = Array[String](["Drainer", "Trencher", "Butcher Block", "Absorbent Sheet", "Basin", "Cover", "Skillet", "Cauldron", "Canister", "Blade"])
 item_container = NodePath("../../PickableObject/Objects")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
+billboard = 1
+text = "Press The Button!"
 
-[node name="PushButton" parent="Interior" index="4" instance=ExtResource("4_yq1sa")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.4274536, 1.4050229, 5.7287846)
+[node name="PushButton" parent="Interior/TaskBoard" index="1" instance=ExtResource("4_yq1sa")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.324, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Interior/TaskBoard/PushButton" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72503334, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="0"]
+mesh = SubResource("CylinderMesh_yvw6u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_yq1sa")
 
 [node name="KitchenFurnitures" type="Node3D" parent="." index="4"]
 
@@ -197,7 +214,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -4.7)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -4.7)
 
 [node name="fridge_A_decorated" parent="KitchenFurnitures" index="3" instance=ExtResource("7_8wcu7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -4.7)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6592355, 0, -1.6044894)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/fridge_A_decorated" index="1"]
 
@@ -244,22 +261,17 @@ shape = SubResource("CylinderShape3D_1jvlq")
 [node name="kitchencabinet_half" parent="KitchenFurnitures" index="7" instance=ExtResource("12_1gb3k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.5, -5.75)
 
-[node name="Stoves" type="Node3D" parent="KitchenFurnitures" index="8"]
+[node name="stove_multi" parent="KitchenFurnitures" index="8" instance=ExtResource("13_ar14s")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.708, 0, 0.598914)
 
-[node name="stove_multi" parent="KitchenFurnitures/Stoves" index="0" instance=ExtResource("13_ar14s")]
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/stove_multi" index="1"]
 
-[node name="stove_single" parent="KitchenFurnitures/Stoves" index="1" instance=ExtResource("14_nxscr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0336735, 1.227856e-07, 1.1920929e-05)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/Stoves" index="2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/Stoves/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0138233, 0.3217163, 0.09065151)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/stove_multi/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00058197975, 0.3217163, 0.09065151)
 shape = SubResource("BoxShape3D_6klfm")
 
 [node name="extractorhood" parent="KitchenFurnitures" index="9" instance=ExtResource("15_vldck")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, -0.38511062)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, 0.59863985)
 
 [node name="PickableObject" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("16_x0c57")
@@ -491,6 +503,6 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075683594, 0.056545258, -0.36044312)
 shape = SubResource("BoxShape3D_hxe04")
 
-[connection signal="button_pressed" from="Interior/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
+[connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
-[editable path="Interior/PushButton"]
+[editable path="Interior/TaskBoard/PushButton"]
