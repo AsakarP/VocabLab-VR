@@ -38,7 +38,7 @@ sky = SubResource("Sky_hxnav")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
-albedo_color = Color(0.7526572, 0.89044684, 0.9952881, 1)
+albedo_color = Color(0.75686276, 0.8, 0.7490196, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_m6e51"]
 lightmap_size_hint = Vector2i(682, 722)

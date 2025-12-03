@@ -126,6 +126,9 @@ size = Vector3(0.24414063, 0.068992615, 1.1272583)
 
 [node name="KitchenLearn" instance=ExtResource("1_6pqdt")]
 
+[node name="XROrigin3D" parent="." index="0"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 environment = SubResource("Environment_55o7t")
 
