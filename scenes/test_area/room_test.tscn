@@ -145,11 +145,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="2" node_paths=PackedStringArray("item_container")]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="2" node_paths=PackedStringArray("objectsNode")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
 script = ExtResource("2_i6qwn")
 master_item_list = Array[String](["Luminary", "Portrait", "Succulent", "Cushion", "Footrest"])
-item_container = NodePath("../../PickableObjects/Objects")
+objectsNode = NodePath("../../PickableObjects/Objects")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00013303757, 0, -0.00034618378)

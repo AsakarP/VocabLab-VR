@@ -165,11 +165,11 @@ billboard = 1
 text = "Lobby"
 font_size = 64
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("item_container")]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("objectsNode")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.072, 2.743, -3.991)
 script = ExtResource("3_yvw6u")
 master_item_list = Array[String](["Drainer", "Trencher", "Butcher Block", "Absorbent Sheet", "Basin", "Cover", "Skillet", "Cauldron", "Canister", "Blade"])
-item_container = NodePath("../../PickableObject/Objects")
+objectsNode = NodePath("../../PickableObject/Objects")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 billboard = 1

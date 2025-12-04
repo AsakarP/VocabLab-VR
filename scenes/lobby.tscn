@@ -247,6 +247,23 @@ billboard = 1
 modulate = Color(1, 1, 0, 1)
 text = "Medium"
 
+[node name="ClassLearnTeleporter2" parent="LobbyArea/TestPortals" index="2" instance=ExtResource("18_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+collision_mask = 524288
+target_scene = "uid://do3bcd5mh1v2e"
+
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+billboard = 1
+text = "Class"
+font_size = 64
+
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2/Label3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
+billboard = 1
+modulate = Color(1, 0, 0, 1)
+text = "Level 3"
+
 [node name="TerrainAssets" type="Node3D" parent="." index="6"]
 
 [node name="CommonTree_1" parent="TerrainAssets" index="0" instance=ExtResource("24_2630d")]

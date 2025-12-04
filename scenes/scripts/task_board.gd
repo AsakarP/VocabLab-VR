@@ -3,7 +3,7 @@ extends Node3D
 @onready var label_3d = $Label3D
 
 @export var master_item_list: Array[String] = []
-@export var item_container: Node3D
+@export var objectsNode: Node3D
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
@@ -35,8 +35,8 @@ func start_new_round():
 		label_3d.modulate = Color.RED
 		return
 		
-	if item_container:
-		for item in item_container.get_children():
+	if objectsNode:
+		for item in objectsNode.get_children():
 			if item.has_method("reset_item"):
 				item.reset_item()
 	

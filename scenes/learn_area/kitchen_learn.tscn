@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://4d3kqfc73gxm"]
+[gd_scene load_steps=50 format=4 uid="uid://4d3kqfc73gxm"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_i55lj"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_38s4e"]
@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://8qyehb3lh2gk" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/papertowel.fbx" id="25_epw0d"]
 [ext_resource type="PackedScene" uid="uid://bk3yikcwgu6kh" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/knife.fbx" id="25_unexx"]
 [ext_resource type="PackedScene" uid="uid://tgsu80xp2uim" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/extractorhood.fbx" id="26_8utx5"]
-[ext_resource type="PackedScene" uid="uid://byfjawv2pk238" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_single.fbx" id="26_mkssq"]
 [ext_resource type="PackedScene" uid="uid://0frr5gu2ovnw" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/plate.fbx" id="26_svth4"]
 [ext_resource type="PackedScene" uid="uid://crpyt38vdchqm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/stove_multi.fbx" id="27_xcbso"]
 [ext_resource type="PackedScene" uid="uid://d3mrvrxgkuj2" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/jar_A_large.fbx" id="29_ilcgx"]
@@ -66,9 +65,6 @@ data = PackedVector3Array(-6, -2.5, -6, 6, -2.5, -6, -6, 2.5, -6, -6, -2.5, -6, 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbiir"]
 size = Vector3(8.005, 1, 1.822)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ht0ak"]
-size = Vector3(2.0098267, 2.499504, 2.0106888)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_q48sp"]
 size = Vector3(1.9986839, 0.8936055, 6.998659)
 
@@ -80,8 +76,11 @@ radius = 1.4863281
 height = 0.4977417
 radius = 0.3803711
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6klfm"]
-size = Vector3(4.041018, 1.6434326, 2.1888409)
+[sub_resource type="BoxShape3D" id="BoxShape3D_77nod"]
+size = Vector3(2.0098267, 2.499504, 2.0106888)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilcgx"]
+size = Vector3(2.0122075, 1.6434326, 2.1888409)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xcbso"]
 size = Vector3(1.2103882, 1.0287819, 1.1923828)
@@ -118,6 +117,9 @@ radius = 0.24560547
 size = Vector3(0.24414063, 0.068992615, 1.1272583)
 
 [node name="KitchenLearn" instance=ExtResource("1_i55lj")]
+
+[node name="XROrigin3D" parent="." index="0"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
 environment = SubResource("Environment_55o7t")
@@ -183,16 +185,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -4.7)
 [node name="kitchencounter_straight_B_backsplash2" parent="KitchenFurnitures/KitchenCounter" index="4" instance=ExtResource("13_ug1no")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -4.7)
 
-[node name="fridge_A_decorated" parent="KitchenFurnitures" index="3" instance=ExtResource("14_w4ptr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -4.7)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/fridge_A_decorated" index="1"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/fridge_A_decorated/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0039367676, 1.2551003, 0.002040863)
-shape = SubResource("BoxShape3D_ht0ak")
-
-[node name="KitchenTables" type="Node3D" parent="KitchenFurnitures" index="4"]
+[node name="KitchenTables" type="Node3D" parent="KitchenFurnitures" index="3"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7030196, 0, -1.0143993)
 
 [node name="kitchentable_B" parent="KitchenFurnitures/KitchenTables" index="0" instance=ExtResource("15_2ksy4")]
@@ -210,7 +203,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051195145, -0.44656384, 1.1497431)
 shape = SubResource("BoxShape3D_q48sp")
 
-[node name="table_round_A" parent="KitchenFurnitures" index="5" instance=ExtResource("17_7llx7")]
+[node name="table_round_A" parent="KitchenFurnitures" index="4" instance=ExtResource("17_7llx7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10692835, 0, 3.7591357)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/table_round_A" index="1"]
@@ -219,7 +212,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10692835, 0, 3.7591357)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8994751, 0)
 shape = SubResource("CylinderShape3D_4ojfb")
 
-[node name="chair_stool" parent="KitchenFurnitures" index="6" instance=ExtResource("18_bxnr2")]
+[node name="chair_stool" parent="KitchenFurnitures" index="5" instance=ExtResource("18_bxnr2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9432867, 0, 3.709125)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/chair_stool" index="1"]
@@ -228,25 +221,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9432867, 0, 3.709125)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25357056, 0)
 shape = SubResource("CylinderShape3D_1jvlq")
 
-[node name="kitchencabinet_half" parent="KitchenFurnitures" index="7" instance=ExtResource("24_ilcgx")]
+[node name="kitchencabinet_half" parent="KitchenFurnitures" index="6" instance=ExtResource("24_ilcgx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.5, -5.75)
 
-[node name="Stoves" type="Node3D" parent="KitchenFurnitures" index="8"]
+[node name="fridge_A_decorated" parent="KitchenFurnitures" index="7" instance=ExtResource("14_w4ptr")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6592355, 0, -1.6044894)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/fridge_A_decorated" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/fridge_A_decorated/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0039367676, 1.2551003, 0.002040863)
+shape = SubResource("BoxShape3D_77nod")
+
+[node name="stove_multi" parent="KitchenFurnitures" index="8" instance=ExtResource("27_xcbso")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.708, 0, 0.598914)
 
-[node name="stove_multi" parent="KitchenFurnitures/Stoves" index="0" instance=ExtResource("27_xcbso")]
+[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/stove_multi" index="1"]
 
-[node name="stove_single" parent="KitchenFurnitures/Stoves" index="1" instance=ExtResource("26_mkssq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0336735, 1.227856e-07, 1.1920929e-05)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/Stoves" index="2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/Stoves/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0138233, 0.3217163, 0.09065151)
-shape = SubResource("BoxShape3D_6klfm")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/stove_multi/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00058197975, 0.3217163, 0.09065151)
+shape = SubResource("BoxShape3D_ilcgx")
 
 [node name="extractorhood" parent="KitchenFurnitures" index="9" instance=ExtResource("26_8utx5")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, -0.38511062)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, 0.59863985)
 
 [node name="PickableObject" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("16_xcbso")

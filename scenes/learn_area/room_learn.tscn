@@ -36,7 +36,7 @@ sky = SubResource("Sky_hxnav")
 tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dynfe"]
-albedo_color = Color(0.82016253, 0.44306105, 0.28998363, 1)
+albedo_color = Color(0.75686276, 0.8, 0.7490196, 1)
 uv1_scale = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wk45s"]
@@ -105,6 +105,9 @@ size = Vector3(0.628, 0.2, 0.493)
 size = Vector3(0.75372314, 0.5, 0.7529999)
 
 [node name="RoomLearn" instance=ExtResource("1_g6duw")]
+
+[node name="XROrigin3D" parent="." index="0"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
 suppress_radius = 0.0
@@ -264,7 +267,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.959, 1.039, -5.158)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.222, 1.011, -5.13)
 
 [node name="Marker3D3" type="Marker3D" parent="PickableObject/SpawnPoints" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.93, 0.003, -4.981)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.003, -2.291)
 
 [node name="Marker3D4" type="Marker3D" parent="PickableObject/SpawnPoints" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.605, -0.768)
@@ -321,7 +324,7 @@ light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
 [node name="Succulent" type="Node3D" parent="PickableObject/Objects" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9303555, 0.0028970242, -4.981276)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.003, -2.291)
 script = ExtResource("16_ljqa2")
 
 [node name="PickableObject" parent="PickableObject/Objects/Succulent" index="0" instance=ExtResource("17_al810")]
