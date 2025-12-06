@@ -59,18 +59,15 @@ This project is built on the hypothesis that **VR creates a safe space for learn
 
 | Learning Room | Testing Room |
 |:---:|:---:|
-| *[Insert Screenshot of Learning Room]* | *[Insert Screenshot of Task Board]* |
+| *[Screenshot of Learning Room]* | *[Screenshot of Task Board]* |
 
-> *Visuals showing the player grabbing a 'Tome' or 'Luminary'.*
+> *Visuals of the player grabbing a 'Tome' or 'Luminary'.*
 
 ---
 
 ## 🚀 Installation & Setup
 
 1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/username/english-learning-godot-vr.git](https://github.com/username/english-learning-godot-vr.git)
-    ```
 2.  **Import into Godot:**
     * Open Godot Engine v4.x.
     * Click `Import` and select the `project.godot` file from the cloned folder.
