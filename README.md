@@ -67,7 +67,7 @@ This project is built on the hypothesis that **VR creates a safe space for learn
 
 ## 🚀 Installation & Setup
 
-1.  **Clone the Repository:**
+1.  **Clone the Repository.**
 2.  **Import into Godot:**
     * Open Godot Engine v4.x.
     * Click `Import` and select the `project.godot` file from the cloned folder.
