@@ -51,7 +51,11 @@ This project is built on the hypothesis that **VR creates a safe space for learn
 * **XR Framework:** [Godot XR Tools](https://github.com/GodotVR/godot-xr-tools)
 * **Language:** GDScript
 * **Hardware Tested:** Meta Quest 3.
-* **Assets:** KayKit : Furniture Bits, KayKit : Restaurant Bits, Stylized Nature MEGAKIT.
+* **Assets:**
+   * KayKit : Furniture Bits
+   * KayKit : Restaurant Bits
+   * Stylized Nature MEGAKIT
+   * Styloo Classroom Asset Pack
 
 ---
 
