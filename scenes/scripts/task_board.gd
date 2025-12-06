@@ -62,12 +62,12 @@ func update_board_disp():
 	
 	if current_idx < current_queue.size():
 		var target = current_queue[current_idx]
-		label_3d.text = "Find: %s\nScore: %d\nTime Left: %s" % [target, score, time_str]
+		label_3d.text = "Cari: %s\nPoin: %d\nSisa Waktu: %s" % [target, score, time_str]
 
 func end_game_timeout():
 	game_active = false
 	
-	label_3d.text = "Time's Up!\nFinal Score: %d" % score
+	label_3d.text = "Waktu Habis!\nPoin Akhir: %d" % score
 	label_3d.modulate = Color.RED
 
 func end_game_win():
@@ -89,16 +89,16 @@ func end_game_win():
 	
 	if error_log == "":
 		label_3d.modulate = Color.GREEN
-		label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\n \
-		Time Left: %s\nNo Mistakes, Great Job!" % [score, time_taken_str, time_left_str]
+		label_3d.text = "Semua Barang Ditemukan!\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
+		Sisa Waktu: %s\nTidak ada Kesalahan, Hebat!" % [score, time_taken_str, time_left_str]
 		
 		print("*** Summary ***")
-		print("Final Score: ",score)
+		print("Poin Akhir: ",score)
 		print("Time Taken: ",format_seconds(time_limit - time))
 	else:
 		label_3d.modulate = Color.ORANGE
-		label_3d.text = "All Tasks Done!\nFinal Score: %d\nCompleted In: %s\n \
-		Time Left: %s\nMistakes:\n%s" % [score, time_taken_str, time_left_str, error_log]
+		label_3d.text = "Semua Barang Ditemukan!\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
+		Sisa Waktu: %s\nKesalahan:\n%s" % [score, time_taken_str, time_left_str, error_log]
 		
 		print("*** Mistakes ***")
 		print(error_log)
@@ -128,7 +128,7 @@ func check_submission(submitted_item_name: String) -> bool:
 		# Incorrect object
 		score -= 1
 		
-		var mistake_text = "Target: %s | Player Picked: %s" % [current_target, submitted_item_name]
+		var mistake_text = "Target: %s | Player memilih: %s" % [current_target, submitted_item_name]
 		error_log += mistake_text + "\n"
 		print(mistake_text)
 		

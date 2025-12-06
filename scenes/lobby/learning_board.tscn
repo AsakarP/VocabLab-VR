@@ -44,7 +44,7 @@ uv1_triplanar = true
 [sub_resource type="TextMesh" id="TextMesh_na8d1"]
 material = SubResource("StandardMaterial3D_og1vs")
 add_uv2 = true
-text = "Learning"
+text = "Belajar"
 font_size = 100
 depth = 0.1
 

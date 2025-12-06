@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bdbwonfjyxqo7"]
+[gd_scene load_steps=43 format=3 uid="uid://bdbwonfjyxqo7"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_o1atq"]
 [ext_resource type="Texture2D" uid="uid://l7ncg8tufj3a" path="res://assets/HDRIs/autumn_field_puresky_4k.exr" id="2_lqo1b"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="6_dfnwm"]
 [ext_resource type="PackedScene" uid="uid://iwqxdm2u4pr1" path="res://scenes/lobby/learning_board.tscn" id="7_vwf6o"]
 [ext_resource type="PackedScene" uid="uid://bm6daabpsku2u" path="res://scenes/lobby/testing_board.tscn" id="8_iwi7x"]
+[ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="13_f2bte"]
+[ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="14_iwv4c"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="18_o2i1r"]
 [ext_resource type="PackedScene" uid="uid://byus8v8l5147v" path="res://assets/Stylized Nature MegaKit[Standard]/FBX/CommonTree_1.fbx" id="24_2630d"]
 [ext_resource type="PackedScene" uid="uid://duolouphoxeqh" path="res://assets/Stylized Nature MegaKit[Standard]/FBX/CommonTree_2.fbx" id="25_835bk"]
@@ -67,6 +69,21 @@ radius = 0.42919922
 height = 0.54711914
 radius = 0.25585938
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iwv4c"]
+points = PackedVector3Array(9.313226e-10, 0.0150000015, 0.009799334, 9.313226e-10, 0.0150000015, 0.008199882, -0.003885082, 0.014486101, 0.009799334, -0.0038322238, 0.014292288, 0.01, 9.313226e-10, 0.014797377, 0.01, 0.0038292883, 0.014292288, 0.01, 0.0038821464, 0.014486101, 0.009799334, 0.0038821464, 0.014486101, 0.008199882, 0.0016679717, 0.008398592, -5.9604643e-10, -0.0016738446, 0.008398592, -5.9604643e-10, -0.003885082, 0.014486101, 0.008199882, -0.0075029363, 0.012988451, 0.009799334, -0.007400156, 0.012815193, 0.01, 0.0073972205, 0.012815193, 0.01, 0.007500001, 0.012988451, 0.009799334, 0.007500001, 0.012988451, 0.008199882, 0.004757245, 0.0071182465, -5.9604643e-10, -0.0047601797, 0.0071182465, -5.9604643e-10, -0.0075029363, 0.012988451, 0.008199882, -0.010606891, 0.010603956, 0.009799334, -0.010465935, 0.010463, 0.01, 0.010463, 0.010463, 0.01, 0.010603956, 0.010603956, 0.009799334, 0.010603956, 0.010603956, 0.008199882, 0.0071182465, 0.004757245, -5.9604643e-10, -0.0071241185, 0.004757245, -5.9604643e-10, -0.010606891, 0.010603956, 0.008199882, -0.012991386, 0.007500001, 0.009799334, -0.012818128, 0.0073972205, 0.01, 0.012815193, 0.0073972205, 0.01, 0.012988451, 0.007500001, 0.009799334, 0.012988451, 0.007500001, 0.008199882, 0.008398592, 0.0016679717, -5.9604643e-10, -0.008401526, 0.0016679717, -5.9604643e-10, -0.014489036, 0.0038821464, 0.008199882, -0.012991386, 0.007500001, 0.008199882, -0.014489036, 0.0038821464, 0.009799334, -0.014295223, 0.0038292883, 0.01, 0.014292288, 0.0038292883, 0.01, 0.014486101, 0.0038821464, 0.009799334, 0.014486101, 0.0038821464, 0.008199882, 0.0150000015, -2.93646e-06, 0.008199882, 0.008398592, -0.0016709082, -5.9604643e-10, -0.008401526, -0.0016709082, -5.9604643e-10, -0.015, 9.313226e-10, 0.008199882, -0.015, 9.313226e-10, 0.009799334, -0.014800313, 9.313226e-10, 0.01, 0.014797377, -2.93646e-06, 0.01, 0.0150000015, -2.93646e-06, 0.009799334, 0.014486101, -0.003885082, 0.008199882, 0.012988451, -0.0075029363, 0.008199882, 0.0071182465, -0.0047601797, -5.9604643e-10, -0.014489036, -0.003885082, 0.008199882, -0.0071241185, -0.0047601797, -5.9604643e-10, -0.014489036, -0.003885082, 0.009799334, -0.014295223, -0.0038322238, 0.01, 0.014292288, -0.0038322238, 0.01, 0.014486101, -0.003885082, 0.009799334, 0.012988451, -0.0075029363, 0.009799334, 0.010603956, -0.010606891, 0.008199882, 0.004757245, -0.007121182, -5.9604643e-10, -0.012991386, -0.0074999994, 0.008199882, -0.0047601797, -0.007121182, -5.9604643e-10, -0.010606891, -0.010606891, 0.008199882, -0.012991386, -0.0074999994, 0.009799334, -0.012818128, -0.007400156, 0.01, 0.012815193, -0.007400156, 0.01, 0.010463, -0.010465935, 0.01, 0.010603956, -0.010606891, 0.009799334, 0.007500001, -0.012991386, 0.008199882, 0.0016679717, -0.008401526, -5.9604643e-10, -0.0016738446, -0.008401526, -5.9604643e-10, -0.0074999994, -0.012991386, 0.008199882, -0.010606891, -0.010606891, 0.009799334, -0.010465935, -0.010465935, 0.01, 0.0073972205, -0.012818128, 0.01, 0.007500001, -0.012991386, 0.009799334, 0.0038821464, -0.014489036, 0.008199882, -2.93646e-06, -0.015, 0.008199882, -0.003885082, -0.014489036, 0.008199882, -0.0074999994, -0.012991386, 0.009799334, -0.007400156, -0.012818128, 0.01, 0.0038292883, -0.014295223, 0.01, 0.0038821464, -0.014489036, 0.009799334, -2.93646e-06, -0.015, 0.009799334, -0.003885082, -0.014489036, 0.009799334, -0.0038322238, -0.014295223, 0.01, -2.93646e-06, -0.014800313, 0.01)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wpcbs"]
+points = PackedVector3Array(0.00074588973, 0.00375, 0.0044998038, 0.00071578985, 0.0036002349, 0.0048531713, 0.0020394488, 0.0030518302, 0.0048531713, 0.002123875, 0.003178837, 0.0044998038, 0.00074588973, 0.00375, 0.0026996867, -0.0007466222, 0.00375, 0.0044998038, 0.0006438438, 0.0032397707, 0.005, 0.0018353569, 0.0027464267, 0.005, -0.00071652234, 0.0036002349, 0.0048531713, 0.0030518314, 0.0020394477, 0.0048531713, 0.0031788382, 0.002123874, 0.0044998038, 0.002123875, 0.003178837, 0.0026996867, 0.00079287495, 0.0019153773, 0, -0.0007466222, 0.00375, 0.0026996867, -0.0021246076, 0.003178837, 0.0044998038, -0.0020401813, 0.0030518302, 0.0048531713, -0.00064457627, 0.0032397707, 0.005, 0.002746428, 0.0018353558, 0.005, -0.0018360897, 0.0027464267, 0.005, 0.003600236, 0.0007157887, 0.0048531713, 0.003750001, 0.00074588857, 0.0044998038, 0.0031788382, 0.002123874, 0.0026996867, 0.0019153785, 0.0007928738, 0, -0.0007943413, 0.0019153773, 0, -0.0021246076, 0.003178837, 0.0026996867, -0.0031795704, 0.002123874, 0.0044998038, -0.0030525639, 0.0020394477, 0.0048531713, 0.0032397718, 0.0006438426, 0.005, -0.0027471604, 0.0018353558, 0.005, 0.003600236, -0.0007165235, 0.0048531713, 0.003750001, -0.0007466234, 0.0044998038, 0.003750001, 0.00074588857, 0.0026996867, 0.0019153785, -0.0007936084, 0, -0.0019161112, 0.0007928738, 0, -0.0031795704, 0.002123874, 0.0026996867, -0.0037499992, 0.00074588857, 0.0044998038, -0.0036009683, 0.0007157887, 0.0048531713, 0.0032397718, -0.00064457743, 0.005, -0.0032405043, 0.0006438426, 0.005, 0.002746428, -0.0018360908, 0.005, 0.0030518314, -0.0020401825, 0.0048531713, 0.003750001, -0.0007466234, 0.0026996867, 0.0031788382, -0.002124609, 0.0044998038, 0.0031788382, -0.002124609, 0.0026996867, 0.00079287495, -0.0019161124, 0, -0.0019161112, -0.0007936084, 0, -0.0037499992, 0.00074588857, 0.0026996867, -0.0037499992, -0.0007466234, 0.0044998038, -0.0036009683, -0.0007165235, 0.0048531713, -0.0032405043, -0.00064457743, 0.005, 0.0018353569, -0.0027471618, 0.005, 0.0020394488, -0.003052565, 0.0048531713, 0.002123875, -0.0031795716, 0.0044998038, 0.002123875, -0.0031795716, 0.0026996867, 0.00074588973, -0.0037500004, 0.0026996867, -0.0007943413, -0.0019161124, 0, -0.0031795704, -0.002124609, 0.0026996867, -0.0037499992, -0.0007466234, 0.0026996867, -0.0031795704, -0.002124609, 0.0044998038, -0.0030525639, -0.0020401825, 0.0048531713, -0.0027471604, -0.0018360908, 0.005, 0.0006438438, -0.0032405055, 0.005, 0.00071578985, -0.0036009694, 0.0048531713, 0.00074588973, -0.0037500004, 0.0044998038, -0.0007466222, -0.0037500004, 0.0026996867, -0.0021246076, -0.0031795716, 0.0026996867, -0.0021246076, -0.0031795716, 0.0044998038, -0.0020401813, -0.003052565, 0.0048531713, -0.0018360897, -0.0027471618, 0.005, -0.00064457627, -0.0032405055, 0.005, -0.00071652234, -0.0036009694, 0.0048531713, -0.0007466222, -0.0037500004, 0.0044998038)
+
+[sub_resource type="Gradient" id="Gradient_iwv4c"]
+colors = PackedColorArray(0.14117648, 0.14117648, 0.14117648, 0.9607843, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wpcbs"]
+gradient = SubResource("Gradient_iwv4c")
+width = 700
+height = 100
+fill_from = Vector2(1, 0)
+
 [node name="Lobby" instance=ExtResource("1_o1atq")]
 
 [node name="XROrigin3D" parent="." index="0"]
@@ -120,54 +137,390 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.8
 
 [node name="Assets" type="Node3D" parent="LobbyArea" index="3"]
 
-[node name="CactusMedium" parent="LobbyArea/Assets" index="0" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1469636, 0, 8.926548)
+[node name="Cactuses" type="Node3D" parent="LobbyArea/Assets" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.567829)
 
-[node name="cactus_medium_B" parent="LobbyArea/Assets/CactusMedium" index="1" instance=ExtResource("5_iulku")]
+[node name="CactusMedium" parent="LobbyArea/Assets/Cactuses" index="0" instance=ExtResource("4_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1469636, 0, 0.35871887)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/CactusMedium" index="2"]
+[node name="cactus_medium_B" parent="LobbyArea/Assets/Cactuses/CactusMedium" index="1" instance=ExtResource("5_iulku")]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusMedium" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
 shape = SubResource("CylinderShape3D_50md7")
 
-[node name="CactusSmall" parent="LobbyArea/Assets" index="1" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.117154, 0.005, 7.634)
+[node name="CactusSmall" parent="LobbyArea/Assets/Cactuses" index="1" instance=ExtResource("4_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.117154, 0.005, -0.9338293)
 
-[node name="cactus_small_A" parent="LobbyArea/Assets/CactusSmall" index="1" instance=ExtResource("6_dfnwm")]
+[node name="cactus_small_A" parent="LobbyArea/Assets/Cactuses/CactusSmall" index="1" instance=ExtResource("6_dfnwm")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/CactusSmall" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusSmall" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
 shape = SubResource("CylinderShape3D_6mek4")
 
-[node name="CactusMedium2" parent="LobbyArea/Assets" index="2" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7923536, 0, 9.305571)
+[node name="CactusMedium2" parent="LobbyArea/Assets/Cactuses" index="2" instance=ExtResource("4_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7923536, 0, 0.7377415)
 
-[node name="cactus_medium_B" parent="LobbyArea/Assets/CactusMedium2" index="1" instance=ExtResource("5_iulku")]
+[node name="cactus_medium_B" parent="LobbyArea/Assets/Cactuses/CactusMedium2" index="1" instance=ExtResource("5_iulku")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/CactusMedium2" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusMedium2" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
 shape = SubResource("CylinderShape3D_50md7")
 
-[node name="CactusSmall2" parent="LobbyArea/Assets" index="3" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3941407, 0.005, 8.118599)
+[node name="CactusSmall2" parent="LobbyArea/Assets/Cactuses" index="3" instance=ExtResource("4_o2i1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3941407, 0.005, -0.4492302)
 
-[node name="cactus_small_A" parent="LobbyArea/Assets/CactusSmall2" index="1" instance=ExtResource("6_dfnwm")]
+[node name="cactus_small_A" parent="LobbyArea/Assets/Cactuses/CactusSmall2" index="1" instance=ExtResource("6_dfnwm")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/CactusSmall2" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusSmall2" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
 shape = SubResource("CylinderShape3D_6mek4")
+
+[node name="Tables" type="Node3D" parent="LobbyArea/Assets" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="table_round_A" parent="LobbyArea/Assets/Tables" index="0" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables" index="1" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A2" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A2" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="table_round_A3" parent="LobbyArea/Assets/Tables" index="2" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A3" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A3" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A3" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A3" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="Tables2" type="Node3D" parent="LobbyArea/Assets" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="table_round_A" parent="LobbyArea/Assets/Tables2" index="0" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables2" index="1" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A2" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A2" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="table_round_A3" parent="LobbyArea/Assets/Tables2" index="2" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A3" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A3" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A3" index="4" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A3" index="5" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="Tables3" type="Node3D" parent="LobbyArea/Assets" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="table_round_A" parent="LobbyArea/Assets/Tables3" index="0" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables3" index="1" instance=ExtResource("13_f2bte")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_iwv4c")
+
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
+
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4" index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
 [node name="LearnPortals" type="Node3D" parent="LobbyArea" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 
 [node name="RoomLearnTeleporter" parent="LobbyArea/LearnPortals" index="0" instance=ExtResource("18_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
 target_scene = "uid://c4asqne3pfcp7"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Room"
+text = "Kamar"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter/Label3D" index="0"]
@@ -184,7 +537,7 @@ target_scene = "uid://4d3kqfc73gxm"
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Kitchen"
+text = "Dapur"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter/Label3D" index="0"]
@@ -194,14 +547,14 @@ modulate = Color(1, 1, 0, 1)
 text = "Level 2"
 
 [node name="ClassLearnTeleporter" parent="LobbyArea/LearnPortals" index="2" instance=ExtResource("18_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
 target_scene = "uid://dptqarjxqbrhv"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Class"
+text = "Kelas"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter/Label3D" index="0"]
@@ -214,21 +567,21 @@ text = "Level 3"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
 [node name="RoomTestTeleporter" parent="LobbyArea/TestPortals" index="0" instance=ExtResource("18_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
 target_scene = "uid://blai5di7hgds8"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Room"
+text = "Kamar"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter/Label3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(0, 1, 0, 1)
-text = "Easy"
+text = "Level 1"
 
 [node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
@@ -238,24 +591,24 @@ target_scene = "uid://cpm173umy42e2"
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Kitchen"
+text = "Dapur"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 1, 0, 1)
-text = "Medium"
+text = "Level 2"
 
 [node name="ClassLearnTeleporter2" parent="LobbyArea/TestPortals" index="2" instance=ExtResource("18_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
 target_scene = "uid://do3bcd5mh1v2e"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Class"
+text = "Kelas"
 font_size = 64
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2/Label3D" index="0"]
@@ -263,6 +616,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 0, 0, 1)
 text = "Level 3"
+
+[node name="Guide" type="Node3D" parent="LobbyArea" index="6"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 3)
+
+[node name="Sprite3D" type="Sprite3D" parent="LobbyArea/Guide" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.05)
+cast_shadow = 0
+visibility_range_begin = 0.1
+visibility_range_end = 6.0
+texture = SubResource("GradientTexture2D_wpcbs")
+
+[node name="Label3D" type="Label3D" parent="LobbyArea/Guide/Sprite3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049999952)
+visibility_range_begin = 0.1
+visibility_range_end = 6.0
+text = "Selamat datang di Game VR English Learning!
+Masuki Portal di sebelah kiri untuk menguji kemampuan anda terlebih dahulu.
+Kalau sudah, masuki Portal di sebelah kanan untuk mempelajari
+kata-kata yang muncul pada level pengujian."
 
 [node name="TerrainAssets" type="Node3D" parent="." index="6"]
 

@@ -173,7 +173,7 @@ objectsNode = NodePath("../../PickableObject/Objects")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 billboard = 1
-text = "Press The Button!"
+text = "Pencet Tombol untuk Memulai!"
 
 [node name="PushButton" parent="Interior/TaskBoard" index="1" instance=ExtResource("4_yq1sa")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.324, 0)
