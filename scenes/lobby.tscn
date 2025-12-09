@@ -1,15 +1,12 @@
-[gd_scene load_steps=43 format=3 uid="uid://bdbwonfjyxqo7"]
+[gd_scene load_steps=38 format=3 uid="uid://bdbwonfjyxqo7"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_o1atq"]
 [ext_resource type="Texture2D" uid="uid://l7ncg8tufj3a" path="res://assets/HDRIs/autumn_field_puresky_4k.exr" id="2_lqo1b"]
 [ext_resource type="PackedScene" uid="uid://b723t40osiscq" path="res://scenes/lobby/floor.tscn" id="3_0gjkf"]
 [ext_resource type="LightmapGIData" uid="uid://dj36umplsvd7i" path="res://scenes/lobby.lmbake" id="3_o2i1r"]
 [ext_resource type="Script" uid="uid://ub1evibs3ccw" path="res://addons/infinite_heightmap_terrain/infinite_terrain.gd" id="4_iwi7x"]
-[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="4_o2i1r"]
 [ext_resource type="PackedScene" uid="uid://hdl6xjie0dax" path="res://scenes/lobby/walls.tscn" id="5_dfnwm"]
-[ext_resource type="PackedScene" uid="uid://0twit5tqtfxv" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_B.fbx" id="5_iulku"]
 [ext_resource type="PackedScene" uid="uid://d4kmemqiritpk" path="res://scenes/lobby/sign_board.tscn" id="6_0jb4q"]
-[ext_resource type="PackedScene" uid="uid://bbrbxwqyg6s5u" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_small_A.fbx" id="6_dfnwm"]
 [ext_resource type="PackedScene" uid="uid://iwqxdm2u4pr1" path="res://scenes/lobby/learning_board.tscn" id="7_vwf6o"]
 [ext_resource type="PackedScene" uid="uid://bm6daabpsku2u" path="res://scenes/lobby/testing_board.tscn" id="8_iwi7x"]
 [ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="13_f2bte"]
@@ -61,14 +58,6 @@ point_count = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1rib"]
 vertex_color_use_as_albedo = true
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_50md7"]
-height = 0.81685543
-radius = 0.42919922
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_6mek4"]
-height = 0.54711914
-radius = 0.25585938
-
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iwv4c"]
 points = PackedVector3Array(9.313226e-10, 0.0150000015, 0.009799334, 9.313226e-10, 0.0150000015, 0.008199882, -0.003885082, 0.014486101, 0.009799334, -0.0038322238, 0.014292288, 0.01, 9.313226e-10, 0.014797377, 0.01, 0.0038292883, 0.014292288, 0.01, 0.0038821464, 0.014486101, 0.009799334, 0.0038821464, 0.014486101, 0.008199882, 0.0016679717, 0.008398592, -5.9604643e-10, -0.0016738446, 0.008398592, -5.9604643e-10, -0.003885082, 0.014486101, 0.008199882, -0.0075029363, 0.012988451, 0.009799334, -0.007400156, 0.012815193, 0.01, 0.0073972205, 0.012815193, 0.01, 0.007500001, 0.012988451, 0.009799334, 0.007500001, 0.012988451, 0.008199882, 0.004757245, 0.0071182465, -5.9604643e-10, -0.0047601797, 0.0071182465, -5.9604643e-10, -0.0075029363, 0.012988451, 0.008199882, -0.010606891, 0.010603956, 0.009799334, -0.010465935, 0.010463, 0.01, 0.010463, 0.010463, 0.01, 0.010603956, 0.010603956, 0.009799334, 0.010603956, 0.010603956, 0.008199882, 0.0071182465, 0.004757245, -5.9604643e-10, -0.0071241185, 0.004757245, -5.9604643e-10, -0.010606891, 0.010603956, 0.008199882, -0.012991386, 0.007500001, 0.009799334, -0.012818128, 0.0073972205, 0.01, 0.012815193, 0.0073972205, 0.01, 0.012988451, 0.007500001, 0.009799334, 0.012988451, 0.007500001, 0.008199882, 0.008398592, 0.0016679717, -5.9604643e-10, -0.008401526, 0.0016679717, -5.9604643e-10, -0.014489036, 0.0038821464, 0.008199882, -0.012991386, 0.007500001, 0.008199882, -0.014489036, 0.0038821464, 0.009799334, -0.014295223, 0.0038292883, 0.01, 0.014292288, 0.0038292883, 0.01, 0.014486101, 0.0038821464, 0.009799334, 0.014486101, 0.0038821464, 0.008199882, 0.0150000015, -2.93646e-06, 0.008199882, 0.008398592, -0.0016709082, -5.9604643e-10, -0.008401526, -0.0016709082, -5.9604643e-10, -0.015, 9.313226e-10, 0.008199882, -0.015, 9.313226e-10, 0.009799334, -0.014800313, 9.313226e-10, 0.01, 0.014797377, -2.93646e-06, 0.01, 0.0150000015, -2.93646e-06, 0.009799334, 0.014486101, -0.003885082, 0.008199882, 0.012988451, -0.0075029363, 0.008199882, 0.0071182465, -0.0047601797, -5.9604643e-10, -0.014489036, -0.003885082, 0.008199882, -0.0071241185, -0.0047601797, -5.9604643e-10, -0.014489036, -0.003885082, 0.009799334, -0.014295223, -0.0038322238, 0.01, 0.014292288, -0.0038322238, 0.01, 0.014486101, -0.003885082, 0.009799334, 0.012988451, -0.0075029363, 0.009799334, 0.010603956, -0.010606891, 0.008199882, 0.004757245, -0.007121182, -5.9604643e-10, -0.012991386, -0.0074999994, 0.008199882, -0.0047601797, -0.007121182, -5.9604643e-10, -0.010606891, -0.010606891, 0.008199882, -0.012991386, -0.0074999994, 0.009799334, -0.012818128, -0.007400156, 0.01, 0.012815193, -0.007400156, 0.01, 0.010463, -0.010465935, 0.01, 0.010603956, -0.010606891, 0.009799334, 0.007500001, -0.012991386, 0.008199882, 0.0016679717, -0.008401526, -5.9604643e-10, -0.0016738446, -0.008401526, -5.9604643e-10, -0.0074999994, -0.012991386, 0.008199882, -0.010606891, -0.010606891, 0.009799334, -0.010465935, -0.010465935, 0.01, 0.0073972205, -0.012818128, 0.01, 0.007500001, -0.012991386, 0.009799334, 0.0038821464, -0.014489036, 0.008199882, -2.93646e-06, -0.015, 0.008199882, -0.003885082, -0.014489036, 0.008199882, -0.0074999994, -0.012991386, 0.009799334, -0.007400156, -0.012818128, 0.01, 0.0038292883, -0.014295223, 0.01, 0.0038821464, -0.014489036, 0.009799334, -2.93646e-06, -0.015, 0.009799334, -0.003885082, -0.014489036, 0.009799334, -0.0038322238, -0.014295223, 0.01, -2.93646e-06, -0.014800313, 0.01)
 
@@ -80,8 +69,8 @@ colors = PackedColorArray(0.14117648, 0.14117648, 0.14117648, 0.9607843, 1, 1, 1
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wpcbs"]
 gradient = SubResource("Gradient_iwv4c")
-width = 700
-height = 100
+width = 650
+height = 120
 fill_from = Vector2(1, 0)
 
 [node name="Lobby" instance=ExtResource("1_o1atq")]
@@ -137,46 +126,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.8
 
 [node name="Assets" type="Node3D" parent="LobbyArea" index="3"]
 
-[node name="Cactuses" type="Node3D" parent="LobbyArea/Assets" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.567829)
-
-[node name="CactusMedium" parent="LobbyArea/Assets/Cactuses" index="0" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1469636, 0, 0.35871887)
-
-[node name="cactus_medium_B" parent="LobbyArea/Assets/Cactuses/CactusMedium" index="1" instance=ExtResource("5_iulku")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusMedium" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
-shape = SubResource("CylinderShape3D_50md7")
-
-[node name="CactusSmall" parent="LobbyArea/Assets/Cactuses" index="1" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.117154, 0.005, -0.9338293)
-
-[node name="cactus_small_A" parent="LobbyArea/Assets/Cactuses/CactusSmall" index="1" instance=ExtResource("6_dfnwm")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusSmall" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
-shape = SubResource("CylinderShape3D_6mek4")
-
-[node name="CactusMedium2" parent="LobbyArea/Assets/Cactuses" index="2" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7923536, 0, 0.7377415)
-
-[node name="cactus_medium_B" parent="LobbyArea/Assets/Cactuses/CactusMedium2" index="1" instance=ExtResource("5_iulku")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusMedium2" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41933715, 0)
-shape = SubResource("CylinderShape3D_50md7")
-
-[node name="CactusSmall2" parent="LobbyArea/Assets/Cactuses" index="3" instance=ExtResource("4_o2i1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3941407, 0.005, -0.4492302)
-
-[node name="cactus_small_A" parent="LobbyArea/Assets/Cactuses/CactusSmall2" index="1" instance=ExtResource("6_dfnwm")]
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LobbyArea/Assets/Cactuses/CactusSmall2" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.27355957, 0)
-shape = SubResource("CylinderShape3D_6mek4")
-
-[node name="Tables" type="Node3D" parent="LobbyArea/Assets" index="1"]
+[node name="Tables" type="Node3D" parent="LobbyArea/Assets" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 
 [node name="table_round_A" parent="LobbyArea/Assets/Tables" index="0" instance=ExtResource("13_f2bte")]
@@ -314,7 +264,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="Tables2" type="Node3D" parent="LobbyArea/Assets" index="2"]
+[node name="Tables2" type="Node3D" parent="LobbyArea/Assets" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
 
 [node name="table_round_A" parent="LobbyArea/Assets/Tables2" index="0" instance=ExtResource("13_f2bte")]
@@ -452,7 +402,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="Tables3" type="Node3D" parent="LobbyArea/Assets" index="3"]
+[node name="Tables3" type="Node3D" parent="LobbyArea/Assets" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 
 [node name="table_round_A" parent="LobbyArea/Assets/Tables3" index="0" instance=ExtResource("13_f2bte")]
@@ -634,7 +584,8 @@ visibility_range_end = 6.0
 text = "Selamat datang di Game VR English Learning!
 Masuki Portal di sebelah kiri untuk menguji kemampuan anda terlebih dahulu.
 Kalau sudah, masuki Portal di sebelah kanan untuk mempelajari
-kata-kata yang muncul pada level pengujian."
+kata-kata yang muncul pada level pengujian.
+Kalau sudah siap, kembali lagi ke Portal ke di sebelah kiri untuk pengujian."
 
 [node name="TerrainAssets" type="Node3D" parent="." index="6"]
 

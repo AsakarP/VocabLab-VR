@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://do3bcd5mh1v2e"]
+[gd_scene load_steps=56 format=4 uid="uid://do3bcd5mh1v2e"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_hblbk"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_c87tt"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://vx7r3uyed1m1" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/blackboardbig.fbx" id="3_temky"]
 [ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="4_rbmxe"]
 [ext_resource type="PackedScene" uid="uid://bxdcet85ohius" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/table.fbx" id="4_rtwf4"]
+[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="4_u46a0"]
 [ext_resource type="PackedScene" uid="uid://bf4mn2x1a27st" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chair.fbx" id="5_68t4e"]
+[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="5_gxh74"]
 [ext_resource type="PackedScene" uid="uid://k7ejodtr2fq4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelf.fbx" id="6_ijgj4"]
 [ext_resource type="PackedScene" uid="uid://b3f1iovvuu5q7" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelfwithwheels.fbx" id="7_5cefg"]
 [ext_resource type="PackedScene" uid="uid://dgwu0djraaec2" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/desk.fbx" id="8_dk0f3"]
@@ -167,6 +169,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.53
 script = ExtResource("3_ctbgb")
 master_item_list = Array[String](["Tome", "Expunger", "Stylus", "Etui", "Chronometer", "Applicator", "Mixing Slab", "Portfolio", "Standish", "Receiver", "Tin", "Salver", "Orb"])
 objectsNode = NodePath("../../PickableObject/Objects")
+sound_correct = ExtResource("4_u46a0")
+sound_incorrect = ExtResource("5_gxh74")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00013303757, 0, -0.00034618378)
@@ -184,6 +188,10 @@ mesh = SubResource("CylinderMesh_etw7x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="1"]
 shape = SubResource("ConvexPolygonShape3D_u46a0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Interior/TaskBoard" index="2"]
+volume_db = -40.0
+unit_size = 20.0
 
 [node name="Furnitures" type="Node3D" parent="." index="4"]
 

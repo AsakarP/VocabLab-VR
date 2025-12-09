@@ -1,9 +1,12 @@
 extends Node3D
 
 @onready var label_3d = $Label3D
+@onready var sound_player = $AudioStreamPlayer3D
 
 @export var master_item_list: Array[String] = []
 @export var objectsNode: Node3D
+@export var sound_correct: AudioStream
+@export var sound_incorrect: AudioStream
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
@@ -94,12 +97,17 @@ func end_game_win():
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
-		print("Time Taken: ",format_seconds(time_limit - time))
+		print("Time Taken: ",time_taken_str)
+		print("Time Left: ",time_left_str)
 	else:
 		label_3d.modulate = Color.ORANGE
 		label_3d.text = "Semua Barang Ditemukan!\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
 		Sisa Waktu: %s\nKesalahan:\n%s" % [score, time_taken_str, time_left_str, error_log]
 		
+		print("*** Summary ***")
+		print("Poin Akhir: ",score)
+		print("Time Taken: ",time_taken_str)
+		print("Time Left: ",time_left_str)
 		print("*** Mistakes ***")
 		print(error_log)
 
@@ -113,6 +121,7 @@ func check_submission(submitted_item_name: String) -> bool:
 		# Correct object
 		score += 1
 		current_idx += 1
+		play_sfx(sound_correct)
 		
 		label_3d.modulate = Color.GREEN
 		
@@ -127,10 +136,10 @@ func check_submission(submitted_item_name: String) -> bool:
 	else:
 		# Incorrect object
 		score -= 1
+		play_sfx(sound_incorrect)
 		
 		var mistake_text = "Target: %s | Player memilih: %s" % [current_target, submitted_item_name]
 		error_log += mistake_text + "\n"
-		print(mistake_text)
 		
 		update_board_disp()
 		
@@ -139,6 +148,11 @@ func check_submission(submitted_item_name: String) -> bool:
 		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
 		return false
+
+func play_sfx(stream: AudioStream):
+	if sound_player and stream:
+		sound_player.stream = stream
+		sound_player.play()
 
 func format_seconds(amount: float) -> String:
 	var clean_time = max(0.0, amount)

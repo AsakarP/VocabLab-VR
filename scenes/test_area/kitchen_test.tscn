@@ -1,12 +1,14 @@
-[gd_scene load_steps=54 format=4 uid="uid://cpm173umy42e2"]
+[gd_scene load_steps=56 format=4 uid="uid://cpm173umy42e2"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6pqdt"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_abqhv"]
 [ext_resource type="PackedScene" uid="uid://cf2ijkr5ne4lt" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet.fbx" id="3_ye0jd"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="3_yvw6u"]
+[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="4_5i8e8"]
 [ext_resource type="PackedScene" uid="uid://bp4jjsu65f3wa" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_sink_backsplash.fbx" id="4_ned1h"]
 [ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="4_yq1sa"]
 [ext_resource type="PackedScene" uid="uid://cy7qng6118ajy" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_A_backsplash.fbx" id="5_bv6pp"]
+[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="5_qwpxf"]
 [ext_resource type="PackedScene" uid="uid://dvyw4d6w06y5y" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencounter_straight_B_backsplash.fbx" id="6_uuccr"]
 [ext_resource type="PackedScene" uid="uid://bw1wtuiygbvex" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/fridge_A_decorated.fbx" id="7_8wcu7"]
 [ext_resource type="PackedScene" uid="uid://boyvoaskkdjmq" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B.fbx" id="8_mnhwp"]
@@ -170,6 +172,8 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.07
 script = ExtResource("3_yvw6u")
 master_item_list = Array[String](["Drainer", "Trencher", "Butcher Block", "Absorbent Sheet", "Basin", "Cover", "Skillet", "Cauldron", "Canister", "Blade"])
 objectsNode = NodePath("../../PickableObject/Objects")
+sound_correct = ExtResource("4_5i8e8")
+sound_incorrect = ExtResource("5_qwpxf")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 billboard = 1
@@ -186,6 +190,10 @@ mesh = SubResource("CylinderMesh_yvw6u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="1"]
 shape = SubResource("ConvexPolygonShape3D_yq1sa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Interior/TaskBoard" index="2"]
+volume_db = -40.0
+unit_size = 20.0
 
 [node name="KitchenFurnitures" type="Node3D" parent="." index="4"]
 

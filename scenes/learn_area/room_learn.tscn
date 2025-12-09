@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://c4asqne3pfcp7"]
+[gd_scene load_steps=45 format=4 uid="uid://c4asqne3pfcp7"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_g6duw"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_884qo"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="14_iwpn1"]
 [ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="15_bd4k6"]
 [ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/scripts/learn_item.gd" id="16_ljqa2"]
+[ext_resource type="AudioStream" uid="uid://c4k5lp3ojpsjk" path="res://audio/Pop.mp3" id="17_884qo"]
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="17_al810"]
 [ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="18_0tpjx"]
 [ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="19_g6mcy"]
@@ -280,6 +281,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 [node name="Luminary" type="Node3D" parent="PickableObject/Objects" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
 script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
 
 [node name="PickableObject" parent="PickableObject/Objects/Luminary" index="0" instance=ExtResource("17_al810")]
 collision_layer = 1048580
@@ -300,9 +302,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Luminary" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Portrait" type="Node3D" parent="PickableObject/Objects" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
 script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
 
 [node name="PickableObject" parent="PickableObject/Objects/Portrait" index="0" instance=ExtResource("17_al810")]
 collision_layer = 1048580
@@ -323,9 +330,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Portrait" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Succulent" type="Node3D" parent="PickableObject/Objects" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.003, -2.291)
 script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
 
 [node name="PickableObject" parent="PickableObject/Objects/Succulent" index="0" instance=ExtResource("17_al810")]
 collision_layer = 1048580
@@ -346,9 +358,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Succulent" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Cushion" type="Node3D" parent="PickableObject/Objects" index="3"]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
 script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
 
 [node name="PickableObject" parent="PickableObject/Objects/Cushion" index="0" instance=ExtResource("17_al810")]
 collision_layer = 1048580
@@ -369,9 +386,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Cushion" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Footrest" type="Node3D" parent="PickableObject/Objects" index="4"]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 5.2154075e-08, 3.037981)
 script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
 
 [node name="PickableObject" parent="PickableObject/Objects/Footrest" index="0" instance=ExtResource("17_al810")]
 collision_layer = 1048580
@@ -391,3 +413,7 @@ text = "Footrest"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Footrest" index="1"]
+volume_db = -40.0
+unit_size = 15.0

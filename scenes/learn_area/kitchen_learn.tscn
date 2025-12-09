@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://4d3kqfc73gxm"]
+[gd_scene load_steps=51 format=4 uid="uid://4d3kqfc73gxm"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_i55lj"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_38s4e"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b7w2qtvql08ba" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B_large.fbx" id="16_ohn8x"]
 [ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="16_xcbso"]
 [ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="17_7llx7"]
+[ext_resource type="AudioStream" uid="uid://c4k5lp3ojpsjk" path="res://audio/Pop.mp3" id="17_77nod"]
 [ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="18_bxnr2"]
 [ext_resource type="PackedScene" uid="uid://cdhu5mc6sjvpm" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/bowl.fbx" id="19_pdf8s"]
 [ext_resource type="PackedScene" uid="uid://dl7vq67mty82t" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/lid_A.fbx" id="20_38s4e"]
@@ -287,6 +288,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
 [node name="Drainer" type="Node3D" parent="PickableObject/Objects" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.6054363)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Drainer" index="0" instance=ExtResource("16_8utx5")]
 
@@ -306,9 +308,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0012512207, 0.51236916, -0.0014648438)
 shape = SubResource("BoxShape3D_xcbso")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Drainer" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Trencher" type="Node3D" parent="PickableObject/Objects" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2525635, 1.0028877, -4.6193376)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Trencher" index="0" instance=ExtResource("16_8utx5")]
 
@@ -328,9 +335,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05218506, 0)
 shape = SubResource("CylinderShape3D_xcbso")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Trencher" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Butcher Block" type="Node3D" parent="PickableObject/Objects" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26033175, 1.0028872, -4.611438)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Butcher Block" index="0" instance=ExtResource("16_8utx5")]
 
@@ -350,9 +362,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1035156e-05, 0.07267761, 0)
 shape = SubResource("BoxShape3D_lg2gp")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Butcher Block" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Absorbent Sheet" type="Node3D" parent="PickableObject/Objects" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7472098, 1.0028874, -4.5731997)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Absorbent Sheet" index="0" instance=ExtResource("16_8utx5")]
 
@@ -372,9 +389,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45051575, 0)
 shape = SubResource("CylinderShape3D_lg2gp")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Absorbent Sheet" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Basin" type="Node3D" parent="PickableObject/Objects" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7495623, 1.0002389, -1.4013436)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Basin" index="0" instance=ExtResource("16_8utx5")]
 
@@ -394,9 +416,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15533447, 0)
 shape = SubResource("CylinderShape3D_hxe04")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Basin" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Cover" type="Node3D" parent="PickableObject/Objects" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.567761, 1.000239, -0.08293831)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Cover" index="0" instance=ExtResource("16_8utx5")]
 
@@ -416,9 +443,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.101867676, 0)
 shape = SubResource("CylinderShape3D_6klfm")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Cover" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Skillet" type="Node3D" parent="PickableObject/Objects" index="6"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5792155, 1.0002389, 1.5425646)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Skillet" index="0" instance=ExtResource("16_8utx5")]
 
@@ -438,9 +470,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12509155, 0)
 shape = SubResource("CylinderShape3D_8a40l")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Skillet" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Cauldron" type="Node3D" parent="PickableObject/Objects" index="7"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7615776, 1.0002389, 3.6432176)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Cauldron" index="0" instance=ExtResource("16_8utx5")]
 
@@ -460,9 +497,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24932861, 0)
 shape = SubResource("CylinderShape3D_tyw4g")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Cauldron" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Canister" type="Node3D" parent="PickableObject/Objects" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54875755, 1, 3.7703629)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Canister" index="0" instance=ExtResource("16_8utx5")]
 
@@ -482,9 +524,14 @@ omni_range = 0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37586975, 0)
 shape = SubResource("CylinderShape3D_fenkw")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Canister" index="1"]
+volume_db = -40.0
+unit_size = 15.0
+
 [node name="Blade" type="Node3D" parent="PickableObject/Objects" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
 script = ExtResource("16_mkssq")
+sound_pickup = ExtResource("17_77nod")
 
 [node name="PickableObject" parent="PickableObject/Objects/Blade" index="0" instance=ExtResource("16_8utx5")]
 
@@ -504,3 +551,7 @@ omni_range = 0.8
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Blade/PickableObject" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.075683594, 0.056545258, -0.36044312)
 shape = SubResource("BoxShape3D_hxe04")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Blade" index="1"]
+volume_db = -40.0
+unit_size = 15.0

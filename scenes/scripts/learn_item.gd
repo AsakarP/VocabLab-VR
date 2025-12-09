@@ -3,6 +3,9 @@ extends Node3D
 @onready var pickable_object = $PickableObject
 @onready var text = $PickableObject/Label3D
 @onready var highlight_light: OmniLight3D = $PickableObject/HighlightLight
+@onready var sound_player = $AudioStreamPlayer3D
+
+@export var sound_pickup: AudioStream
 
 # Settings
 var fade_duration: float = 1.0
@@ -37,6 +40,7 @@ func _on_picked_up(_pickable):
 		respawn_tween.kill()
 	# Fade in
 	animate_text(true)
+	play_sfx(sound_pickup)
 
 func _on_dropped(_pickable):
 	# Fade out
@@ -44,6 +48,11 @@ func _on_dropped(_pickable):
 	
 	# Start countdown to respawn
 	start_respawn_timer()
+	
+func play_sfx(stream: AudioStream):
+	if sound_player and stream:
+		sound_player.stream = stream
+		sound_player.play()
 
 func _on_highlight_updated(_pickable, enable: bool):
 	if enable:

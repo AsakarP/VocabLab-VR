@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1tx0u5trg1xs"]
+
+[ext_resource type="AudioStream" uid="uid://cu4qnv5iwmqhw" path="res://audio/Lukrembo - Bored (freetouse.com).mp3" id="1_q5y64"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_q5y64")
+volume_db = -50.0
+autoplay = true
+parameters/looping = true
