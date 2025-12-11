@@ -157,6 +157,12 @@ billboard = 1
 text = "Lobby"
 font_size = 64
 
+[node name="Guide" type="Label3D" parent="Interior" index="3"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2, 0)
+text = "Arahkan tangan anda ke pada objek di ruangan, 
+kalau objek menjadi terang artinya objek dapat di angkat. 
+Objek yang terangkat dapat terlihat namanya dalam Bahasa Inggris."
+
 [node name="KitchenFurnitures" type="Node3D" parent="." index="4"]
 
 [node name="kitchencabinet" parent="KitchenFurnitures" index="0" instance=ExtResource("10_1obpw")]

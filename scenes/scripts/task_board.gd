@@ -7,6 +7,7 @@ extends Node3D
 @export var objectsNode: Node3D
 @export var sound_correct: AudioStream
 @export var sound_incorrect: AudioStream
+@export var room_manager: Node3D
 
 var current_queue: Array[String] = []
 var current_idx: int = 0
@@ -37,6 +38,9 @@ func start_new_round():
 		label_3d.text = "List is Empty!"
 		label_3d.modulate = Color.RED
 		return
+		
+	if room_manager and room_manager.has_method("shuffle_objects_to_points"):
+		room_manager.shuffle_objects_to_points()
 		
 	if objectsNode:
 		for item in objectsNode.get_children():

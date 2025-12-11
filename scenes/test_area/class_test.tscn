@@ -164,18 +164,25 @@ billboard = 1
 text = "Lobby"
 font_size = 64
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("objectsNode")]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5302567, 2.743, -4.406764)
 script = ExtResource("3_ctbgb")
 master_item_list = Array[String](["Tome", "Expunger", "Stylus", "Etui", "Chronometer", "Applicator", "Mixing Slab", "Portfolio", "Standish", "Receiver", "Tin", "Salver", "Orb"])
 objectsNode = NodePath("../../PickableObject/Objects")
 sound_correct = ExtResource("4_u46a0")
 sound_incorrect = ExtResource("5_gxh74")
+room_manager = NodePath("../../PickableObject")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00013303757, 0, -0.00034618378)
 billboard = 1
-text = "Pencet Tombol untuk Memulai!"
+text = "Tunjuk dan pilihlah objek
+yang sesuai dengan nama yang di cari,
+jika benar maka akan +1 poin,
+jika salah maka akan -1 poin,
+waktu hanya 10 menit.
+
+Tekan Tombol untuk Memulai!"
 
 [node name="PushButton" parent="Interior/TaskBoard" index="1" instance=ExtResource("4_rbmxe")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -1.3242062, 0)
@@ -686,7 +693,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.983, 0.821, -2.665)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12, 0.821, 3.295)
 
 [node name="Marker3D8" type="Marker3D" parent="PickableObject/SpawnPoints" index="7"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.249, 0.821, -0.823)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.249, 0.842, -0.823)
 
 [node name="Marker3D9" type="Marker3D" parent="PickableObject/SpawnPoints" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.297, 0.821, -0.7)
@@ -860,7 +867,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00019526482, 0.00020056963,
 shape = SubResource("BoxShape3D_dvohe")
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Portfolio/PickableObject" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13103753, 0.03977406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335204, 0.03977406)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 

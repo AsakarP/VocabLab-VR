@@ -167,17 +167,24 @@ billboard = 1
 text = "Lobby"
 font_size = 64
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("objectsNode")]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="3" node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.072, 2.743, -3.991)
 script = ExtResource("3_yvw6u")
 master_item_list = Array[String](["Drainer", "Trencher", "Butcher Block", "Absorbent Sheet", "Basin", "Cover", "Skillet", "Cauldron", "Canister", "Blade"])
 objectsNode = NodePath("../../PickableObject/Objects")
 sound_correct = ExtResource("4_5i8e8")
 sound_incorrect = ExtResource("5_qwpxf")
+room_manager = NodePath("../../PickableObject")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 billboard = 1
-text = "Pencet Tombol untuk Memulai!"
+text = "Tunjuk dan pilihlah objek
+yang sesuai dengan nama yang di cari,
+jika benar maka akan +1 poin,
+jika salah maka akan -1 poin,
+waktu hanya 10 menit.
+
+Tekan Tombol untuk Memulai!"
 
 [node name="PushButton" parent="Interior/TaskBoard" index="1" instance=ExtResource("4_yq1sa")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.324, 0)
