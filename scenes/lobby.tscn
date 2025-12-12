@@ -581,7 +581,7 @@ texture = SubResource("GradientTexture2D_wpcbs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049999952)
 visibility_range_begin = 0.1
 visibility_range_end = 6.0
-text = "Selamat datang di Game VR English Learning!
+text = "Selamat datang di Game VocabLab VR!
 Masuki Portal di sebelah kiri untuk menguji kemampuan anda terlebih dahulu.
 Kalau sudah, masuki Portal di sebelah kanan untuk mempelajari
 kata-kata yang muncul pada level pengujian.

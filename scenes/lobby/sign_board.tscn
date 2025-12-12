@@ -34,7 +34,7 @@ uv1_triplanar = true
 [sub_resource type="TextMesh" id="TextMesh_417c5"]
 material = SubResource("StandardMaterial3D_og1vs")
 add_uv2 = true
-text = "VR English Learning"
+text = "VocabLab VR"
 font_size = 100
 depth = 0.1
 
