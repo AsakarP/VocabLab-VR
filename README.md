@@ -1,4 +1,4 @@
-# 🥽 English Learning Godot VR
+# 🥽 VocabLab VR
 
 ![Godot Engine](https://img.shields.io/badge/Godot-v4.x-478cbf?logo=godot-engine&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-VR%20%2F%20XR-orange)
@@ -11,7 +11,7 @@
 
 ## 📖 About The Project
 
-**English Learning Godot VR** is a serious game developed to test the effectiveness of Virtual Reality in language learning. Unlike traditional methods (Paper & Pen, Classroom), this project places the learner in a 3D environment where they must physically interact with objects to learn their names.
+**VocabLab VR** is a serious game developed to test the effectiveness of Virtual Reality in language learning. Unlike traditional methods (Paper & Pen, Classroom), this project places the learner in a 3D environment where they must physically interact with objects to learn their names.
 
 The core philosophy of this project addresses two major hurdles in language learning:
 1.  **Motivation:** By turning learning into a "treasure hunt" game mechanic.
