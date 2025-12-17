@@ -22,7 +22,8 @@ func shuffle_objects_to_points():
 		var point = available_points[i]
 		
 		# Move object to the marker's position
-		object.global_transform = point.global_transform
+		object.global_position = point.global_position
+		object.global_rotation = point.global_rotation
 		
 		# Update the "Home" position for your reset mechanic
 		if "start_transform" in object:

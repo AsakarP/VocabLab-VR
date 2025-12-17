@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0upy347c6awm"]
 
 [ext_resource type="PackedScene" uid="uid://bnqnnnet4dw12" path="res://addons/godot-xr-tools/staging/staging.tscn" id="1_vok4l"]
-[ext_resource type="Texture2D" uid="uid://cnp8kmmx1oee7" path="res://VLVR.png" id="2_k1qkh"]
+[ext_resource type="Texture2D" uid="uid://cqotd4d3v610j" path="res://images/VocabLabVR.png" id="2_k1qkh"]
 
 [node name="MainStaging" instance=ExtResource("1_vok4l")]
 main_scene = "uid://bdbwonfjyxqo7"

@@ -325,7 +325,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 [node name="Objects" type="Node3D" parent="PickableObjects" index="1"]
 
 [node name="Luminary" type="Node3D" parent="PickableObjects/Objects" index="0" node_paths=PackedStringArray("task_board")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -2.95941, 1.0391959, -5.158051)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Luminary"
