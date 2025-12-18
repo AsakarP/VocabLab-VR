@@ -18,4 +18,3 @@ func _on_body_entered(_body):
 	
 	# Start loading the target scene
 	scene_base.load_scene(target_scene)
-	
