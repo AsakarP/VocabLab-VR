@@ -57,6 +57,7 @@ func reset_item():
 	reset_position()
 	
 func reset_position():
+	# Safeguard in case object sticks to hand
 	if pickable_object.is_picked_up():
 		pickable_object.drop()
 	

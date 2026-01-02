@@ -45,7 +45,6 @@ func _on_picked_up(_pickable):
 func _on_dropped(_pickable):
 	# Fade out
 	animate_text(false)
-	
 	# Start countdown to respawn
 	start_respawn_timer()
 	
@@ -65,7 +64,7 @@ func start_respawn_timer():
 	# Kill existing timer if one is running
 	if respawn_tween:
 		respawn_tween.kill()
-	
+		
 	respawn_tween = create_tween()
 	# Wait for respawn_time seconds
 	respawn_tween.tween_interval(respawn_time)
@@ -73,6 +72,9 @@ func start_respawn_timer():
 	respawn_tween.tween_callback(reset_position)
 	
 func reset_position():
+	if pickable_object.is_picked_up():
+		pickable_object.drop()
+		
 	# Teleport back to start
 	pickable_object.global_transform = start_transform
 	
