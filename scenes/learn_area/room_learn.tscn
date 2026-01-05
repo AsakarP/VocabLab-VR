@@ -322,18 +322,19 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="pictureframe_standing_A" parent="PickableObject/Objects/Portrait/PickableObject" index="1" instance=ExtResource("19_g6mcy")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Portrait/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30682206, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.21472454, 0)
 shape = SubResource("BoxShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="PickableObject/Objects/Portrait/PickableObject" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81020176, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5762874, 0)
 billboard = 1
 text = "Portrait"
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Portrait/PickableObject" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20707905, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -350,13 +351,14 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="cactus_medium_A" parent="PickableObject/Objects/Succulent/PickableObject" index="1" instance=ExtResource("20_g5edx")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Succulent/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39108643, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.27697816, 0)
 shape = SubResource("CylinderShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="PickableObject/Objects/Succulent/PickableObject" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0437199, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71156394, 0)
 billboard = 1
 text = "Succulent"
 
@@ -378,18 +380,19 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="pillow_A" parent="PickableObject/Objects/Cushion/PickableObject" index="1" instance=ExtResource("21_m3ior")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Cushion/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032980442, 0.004047394, -0.0014641285)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.0032980442, 0.004047394, -0.0014641285)
 shape = SubResource("BoxShape3D_krvcu")
 
 [node name="Label3D" type="Label3D" parent="PickableObject/Objects/Cushion/PickableObject" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31624728, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21504098, 0)
 billboard = 1
 text = "Cushion"
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cushion/PickableObject" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07867062, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -406,18 +409,19 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="chair_stool" parent="PickableObject/Objects/Footrest/PickableObject" index="1" instance=ExtResource("22_6whty")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Footrest/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00088500977, 0.25024414, 0.0008985996)
+transform = Transform3D(0.70000017, 0, 0, 0, 0.7, 0, 0, 0, 0.70000017, 0.00088489056, 0.17327002, 0.0008983612)
 shape = SubResource("BoxShape3D_f81wx")
 
 [node name="Label3D" type="Label3D" parent="PickableObject/Objects/Footrest/PickableObject" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7380316, 0)
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.54029435, 0)
 billboard = 1
 text = "Footrest"
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Footrest/PickableObject" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.36916503, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 

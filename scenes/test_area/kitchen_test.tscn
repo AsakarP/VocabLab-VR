@@ -341,7 +341,7 @@ item_name = "Drainer"
 [node name="dishrack_plates" parent="PickableObject/Objects/Drainer/PickableObject" index="1" instance=ExtResource("19_88t0r")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Drainer/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31907952, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -360,7 +360,7 @@ item_name = "Trencher"
 [node name="plate" parent="PickableObject/Objects/Trencher/PickableObject" index="1" instance=ExtResource("20_pxx2m")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Trencher/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03022027, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -379,7 +379,7 @@ item_name = "Butcher Block"
 [node name="cuttingboard" parent="PickableObject/Objects/Butcher Block/PickableObject" index="1" instance=ExtResource("21_oktwn")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16852951, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -398,7 +398,7 @@ item_name = "Absorbent Sheet"
 [node name="papertowel" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="1" instance=ExtResource("22_v1je3")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1269244, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -417,7 +417,7 @@ item_name = "Basin"
 [node name="bowl" parent="PickableObject/Objects/Basin/PickableObject" index="1" instance=ExtResource("23_fv2or")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Basin/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03944826, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -436,7 +436,7 @@ item_name = "Cover"
 [node name="lid_A" parent="PickableObject/Objects/Cover/PickableObject" index="1" instance=ExtResource("24_u8m4t")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cover/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16996908, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -455,7 +455,7 @@ item_name = "Skillet"
 [node name="pan_B" parent="PickableObject/Objects/Skillet/PickableObject" index="1" instance=ExtResource("25_yo62c")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Skillet/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06320989, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -474,7 +474,7 @@ item_name = "Cauldron"
 [node name="pot_B" parent="PickableObject/Objects/Cauldron/PickableObject" index="1" instance=ExtResource("26_00px1")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054712415, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -493,7 +493,7 @@ item_name = "Canister"
 [node name="jar_A_large" parent="PickableObject/Objects/Canister/PickableObject" index="1" instance=ExtResource("27_wah01")]
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Canister/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13087332, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
@@ -513,7 +513,7 @@ item_name = "Blade"
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.059999943, 0)
 
 [node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Blade/PickableObject" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061753035, 0.08416498, -0.43746686)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
