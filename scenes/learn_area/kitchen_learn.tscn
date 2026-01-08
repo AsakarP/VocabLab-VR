@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="16_8utx5"]
 [ext_resource type="Script" uid="uid://fw67l6rqmo5h" path="res://scenes/scripts/learn_item.gd" id="16_mkssq"]
 [ext_resource type="PackedScene" uid="uid://b7w2qtvql08ba" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchentable_B_large.fbx" id="16_ohn8x"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="16_xcbso"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="16_xcbso"]
 [ext_resource type="PackedScene" uid="uid://bo78x6484t6yj" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/table_round_A.fbx" id="17_7llx7"]
 [ext_resource type="AudioStream" uid="uid://c4k5lp3ojpsjk" path="res://audio/Pop.mp3" id="17_77nod"]
 [ext_resource type="PackedScene" uid="uid://bnen6h5fwspyu" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="18_bxnr2"]
@@ -163,410 +163,410 @@ text = "Arahkan tangan anda ke pada objek di ruangan,
 kalau objek menjadi terang artinya objek dapat di angkat. 
 Objek yang terangkat dapat terlihat namanya dalam Bahasa Inggris."
 
-[node name="KitchenFurnitures" type="Node3D" parent="." index="4"]
+[node name="Furnitures" type="Node3D" parent="." index="4"]
 
-[node name="kitchencabinet" parent="KitchenFurnitures" index="0" instance=ExtResource("10_1obpw")]
+[node name="kitchencabinet" parent="Furnitures" index="0" instance=ExtResource("10_1obpw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0.5, -5.75)
 
-[node name="kitchencabinet2" parent="KitchenFurnitures" index="1" instance=ExtResource("10_1obpw")]
+[node name="kitchencabinet2" parent="Furnitures" index="1" instance=ExtResource("10_1obpw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6991335, 0.5, -5.75)
 
-[node name="KitchenCounter" type="Node3D" parent="KitchenFurnitures" index="2"]
+[node name="KitchenCounter" type="Node3D" parent="Furnitures" index="2"]
 
-[node name="KitchenCounterCollision" type="StaticBody3D" parent="KitchenFurnitures/KitchenCounter" index="0"]
+[node name="KitchenCounterCollision" type="StaticBody3D" parent="Furnitures/KitchenCounter" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5048404, -4.6733828)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/KitchenCounter/KitchenCounterCollision" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/KitchenCounter/KitchenCounterCollision" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6977386, -0.001953125, 0.065709114)
 shape = SubResource("BoxShape3D_tbiir")
 
-[node name="kitchencounter_sink_backsplash" parent="KitchenFurnitures/KitchenCounter" index="1" instance=ExtResource("11_eoy7n")]
+[node name="kitchencounter_sink_backsplash" parent="Furnitures/KitchenCounter" index="1" instance=ExtResource("11_eoy7n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7, 0, -4.7)
 
-[node name="kitchencounter_straight_A_backsplash" parent="KitchenFurnitures/KitchenCounter" index="2" instance=ExtResource("12_ug1no")]
+[node name="kitchencounter_straight_A_backsplash" parent="Furnitures/KitchenCounter" index="2" instance=ExtResource("12_ug1no")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -4.7)
 
-[node name="kitchencounter_straight_B_backsplash" parent="KitchenFurnitures/KitchenCounter" index="3" instance=ExtResource("13_ug1no")]
+[node name="kitchencounter_straight_B_backsplash" parent="Furnitures/KitchenCounter" index="3" instance=ExtResource("13_ug1no")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, -4.7)
 
-[node name="kitchencounter_straight_B_backsplash2" parent="KitchenFurnitures/KitchenCounter" index="4" instance=ExtResource("13_ug1no")]
+[node name="kitchencounter_straight_B_backsplash2" parent="Furnitures/KitchenCounter" index="4" instance=ExtResource("13_ug1no")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -4.7)
 
-[node name="KitchenTables" type="Node3D" parent="KitchenFurnitures" index="3"]
+[node name="KitchenTables" type="Node3D" parent="Furnitures" index="3"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7030196, 0, -1.0143993)
 
-[node name="kitchentable_B" parent="KitchenFurnitures/KitchenTables" index="0" instance=ExtResource("15_2ksy4")]
+[node name="kitchentable_B" parent="Furnitures/KitchenTables" index="0" instance=ExtResource("15_2ksy4")]
 
-[node name="kitchentable_B2" parent="KitchenFurnitures/KitchenTables" index="1" instance=ExtResource("15_2ksy4")]
+[node name="kitchentable_B2" parent="Furnitures/KitchenTables" index="1" instance=ExtResource("15_2ksy4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
-[node name="kitchentable_B_large" parent="KitchenFurnitures/KitchenTables" index="2" instance=ExtResource("16_ohn8x")]
+[node name="kitchentable_B_large" parent="Furnitures/KitchenTables" index="2" instance=ExtResource("16_ohn8x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.3841858e-07)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/KitchenTables" index="3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/KitchenTables" index="3"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.35, 1, -0.05100012)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/KitchenTables/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/KitchenTables/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051195145, -0.44656384, 1.1497431)
 shape = SubResource("BoxShape3D_q48sp")
 
-[node name="table_round_A" parent="KitchenFurnitures" index="4" instance=ExtResource("17_7llx7")]
+[node name="table_round_A" parent="Furnitures" index="4" instance=ExtResource("17_7llx7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10692835, 0, 3.7591357)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/table_round_A" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/table_round_A" index="1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/table_round_A/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/table_round_A/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8994751, 0)
 shape = SubResource("CylinderShape3D_4ojfb")
 
-[node name="chair_stool" parent="KitchenFurnitures" index="5" instance=ExtResource("18_bxnr2")]
+[node name="chair_stool" parent="Furnitures" index="5" instance=ExtResource("18_bxnr2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9432867, 0, 3.709125)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/chair_stool" index="1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/chair_stool/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25357056, 0)
 shape = SubResource("CylinderShape3D_1jvlq")
 
-[node name="kitchencabinet_half" parent="KitchenFurnitures" index="6" instance=ExtResource("24_ilcgx")]
+[node name="kitchencabinet_half" parent="Furnitures" index="6" instance=ExtResource("24_ilcgx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0.5, -5.75)
 
-[node name="fridge_A_decorated" parent="KitchenFurnitures" index="7" instance=ExtResource("14_w4ptr")]
+[node name="fridge_A_decorated" parent="Furnitures" index="7" instance=ExtResource("14_w4ptr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.6592355, 0, -1.6044894)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/fridge_A_decorated" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/fridge_A_decorated" index="1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/fridge_A_decorated/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/fridge_A_decorated/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0039367676, 1.2551003, 0.002040863)
 shape = SubResource("BoxShape3D_77nod")
 
-[node name="stove_multi" parent="KitchenFurnitures" index="8" instance=ExtResource("27_xcbso")]
+[node name="stove_multi" parent="Furnitures" index="8" instance=ExtResource("27_xcbso")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.708, 0, 0.598914)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="KitchenFurnitures/stove_multi" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/stove_multi" index="1"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="KitchenFurnitures/stove_multi/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/stove_multi/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00058197975, 0.3217163, 0.09065151)
 shape = SubResource("BoxShape3D_ilcgx")
 
-[node name="extractorhood" parent="KitchenFurnitures" index="9" instance=ExtResource("26_8utx5")]
+[node name="extractorhood" parent="Furnitures" index="9" instance=ExtResource("26_8utx5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.6932755, 1.0460948, 0.59863985)
 
-[node name="PickableObject" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
+[node name="RoomManager" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("16_xcbso")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
-[node name="SpawnPoints" type="Node3D" parent="PickableObject" index="0"]
+[node name="SpawnPoints" type="Node3D" parent="RoomManager" index="0"]
 
-[node name="Marker3D" type="Marker3D" parent="PickableObject/SpawnPoints" index="0"]
+[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.6054363)
 
-[node name="Marker3D2" type="Marker3D" parent="PickableObject/SpawnPoints" index="1"]
+[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2525635, 1.0028877, -4.6193376)
 
-[node name="Marker3D3" type="Marker3D" parent="PickableObject/SpawnPoints" index="2"]
+[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26033175, 1.0028872, -4.611438)
 
-[node name="Marker3D4" type="Marker3D" parent="PickableObject/SpawnPoints" index="3"]
+[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7472098, 1.0028874, -4.5731997)
 
-[node name="Marker3D5" type="Marker3D" parent="PickableObject/SpawnPoints" index="4"]
+[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7495623, 1.0002389, -1.4013436)
 
-[node name="Marker3D6" type="Marker3D" parent="PickableObject/SpawnPoints" index="5"]
+[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.567761, 1.000239, -0.08293831)
 
-[node name="Marker3D7" type="Marker3D" parent="PickableObject/SpawnPoints" index="6"]
+[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5792155, 1.0002389, 1.5425646)
 
-[node name="Marker3D8" type="Marker3D" parent="PickableObject/SpawnPoints" index="7"]
+[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7615776, 1.0002389, 3.6432176)
 
-[node name="Marker3D9" type="Marker3D" parent="PickableObject/SpawnPoints" index="8"]
+[node name="Marker3D9" type="Marker3D" parent="RoomManager/SpawnPoints" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54875755, 1, 3.7703629)
 
-[node name="Marker3D10" type="Marker3D" parent="PickableObject/SpawnPoints" index="9"]
+[node name="Marker3D10" type="Marker3D" parent="RoomManager/SpawnPoints" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
 
-[node name="Objects" type="Node3D" parent="PickableObject" index="1"]
+[node name="Objects" type="Node3D" parent="RoomManager" index="1"]
 
-[node name="Drainer" type="Node3D" parent="PickableObject/Objects" index="0"]
+[node name="Drainer" type="Node3D" parent="RoomManager/Objects" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.047471, 1.0028874, -4.6054363)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Drainer" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Drainer" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="dishrack_plates" parent="PickableObject/Objects/Drainer/PickableObject" index="1" instance=ExtResource("22_rah87")]
+[node name="dishrack_plates" parent="RoomManager/Objects/Drainer/PickableObject" index="1" instance=ExtResource("22_rah87")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Drainer/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Drainer/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9840728, 0)
 billboard = 1
 text = "Drainer"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Drainer/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Drainer/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29125345, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Drainer/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Drainer/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.0012512207, 0.35931492, -0.0014648438)
 shape = SubResource("BoxShape3D_xcbso")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Drainer" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Drainer" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Trencher" type="Node3D" parent="PickableObject/Objects" index="1"]
+[node name="Trencher" type="Node3D" parent="RoomManager/Objects" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2525635, 1.0028877, -4.6193376)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Trencher" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Trencher" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="plate" parent="PickableObject/Objects/Trencher/PickableObject" index="1" instance=ExtResource("26_svth4")]
+[node name="plate" parent="RoomManager/Objects/Trencher/PickableObject" index="1" instance=ExtResource("26_svth4")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Trencher/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Trencher/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35298598, 0)
 billboard = 1
 text = "Trencher"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Trencher/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Trencher/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0866555, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Trencher/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Trencher/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.038986087, 0)
 shape = SubResource("CylinderShape3D_xcbso")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Trencher" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Trencher" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Butcher Block" type="Node3D" parent="PickableObject/Objects" index="2"]
+[node name="Butcher Block" type="Node3D" parent="RoomManager/Objects" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26033175, 1.0028872, -4.611438)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Butcher Block" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Butcher Block" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="cuttingboard" parent="PickableObject/Objects/Butcher Block/PickableObject" index="1" instance=ExtResource("21_mxbrk")]
+[node name="cuttingboard" parent="RoomManager/Objects/Butcher Block/PickableObject" index="1" instance=ExtResource("21_mxbrk")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Butcher Block/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4089663, 0)
 billboard = 1
 text = "Butcher Block"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Butcher Block/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12840688, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="PickableObject/Objects/Butcher Block/PickableObject" index="4"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RoomManager/Objects/Butcher Block/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.053, 0)
 shape = SubResource("BoxShape3D_lg2gp")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Butcher Block" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Butcher Block" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Absorbent Sheet" type="Node3D" parent="PickableObject/Objects" index="3"]
+[node name="Absorbent Sheet" type="Node3D" parent="RoomManager/Objects" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7472098, 1.0028874, -4.5731997)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Absorbent Sheet" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Absorbent Sheet" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="papertowel" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="1" instance=ExtResource("25_epw0d")]
+[node name="papertowel" parent="RoomManager/Objects/Absorbent Sheet/PickableObject" index="1" instance=ExtResource("25_epw0d")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Absorbent Sheet/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.871307, 0)
 billboard = 1
 text = "Absorbent Sheet"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Absorbent Sheet/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16317868, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Absorbent Sheet/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Absorbent Sheet/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.31591928, 0)
 shape = SubResource("CylinderShape3D_lg2gp")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Absorbent Sheet" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Absorbent Sheet" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Basin" type="Node3D" parent="PickableObject/Objects" index="4"]
+[node name="Basin" type="Node3D" parent="RoomManager/Objects" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7495623, 1.0002389, -1.4013436)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Basin" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Basin" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="bowl" parent="PickableObject/Objects/Basin/PickableObject" index="1" instance=ExtResource("19_pdf8s")]
+[node name="bowl" parent="RoomManager/Objects/Basin/PickableObject" index="1" instance=ExtResource("19_pdf8s")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Basin/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Basin/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41383362, 0)
 billboard = 1
 text = "Basin"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Basin/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Basin/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030992389, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Basin/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Basin/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.1087147, 0)
 shape = SubResource("CylinderShape3D_hxe04")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Basin" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Basin" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Cover" type="Node3D" parent="PickableObject/Objects" index="5"]
+[node name="Cover" type="Node3D" parent="RoomManager/Objects" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.567761, 1.000239, -0.08293831)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Cover" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Cover" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="lid_A" parent="PickableObject/Objects/Cover/PickableObject" index="1" instance=ExtResource("20_38s4e")]
+[node name="lid_A" parent="RoomManager/Objects/Cover/PickableObject" index="1" instance=ExtResource("20_38s4e")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Cover/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Cover/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35996366, 0)
 billboard = 1
 text = "Cover"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cover/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cover/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13522232, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Cover/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cover/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.068848014, 0)
 shape = SubResource("CylinderShape3D_6klfm")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Cover" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Cover" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Skillet" type="Node3D" parent="PickableObject/Objects" index="6"]
+[node name="Skillet" type="Node3D" parent="RoomManager/Objects" index="6"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5792155, 1.0002389, 1.5425646)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Skillet" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Skillet" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="pan_B" parent="PickableObject/Objects/Skillet/PickableObject" index="1" instance=ExtResource("24_unexx")]
+[node name="pan_B" parent="RoomManager/Objects/Skillet/PickableObject" index="1" instance=ExtResource("24_unexx")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Skillet/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Skillet/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36110353, 0)
 billboard = 1
 text = "Skillet"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Skillet/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Skillet/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.041809678, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Skillet/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Skillet/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.087020874, 0)
 shape = SubResource("CylinderShape3D_8a40l")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Skillet" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Skillet" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Cauldron" type="Node3D" parent="PickableObject/Objects" index="7"]
+[node name="Cauldron" type="Node3D" parent="RoomManager/Objects" index="7"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.7615776, 1.0002389, 3.6432176)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Cauldron" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Cauldron" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="pot_B" parent="PickableObject/Objects/Cauldron/PickableObject" index="1" instance=ExtResource("25_8utx5")]
+[node name="pot_B" parent="RoomManager/Objects/Cauldron/PickableObject" index="1" instance=ExtResource("25_8utx5")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Cauldron/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54100275, 0)
 billboard = 1
 text = "Cauldron"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cauldron/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04927504, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Cauldron/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cauldron/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.17133987, 0)
 shape = SubResource("CylinderShape3D_tyw4g")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Cauldron" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Cauldron" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Canister" type="Node3D" parent="PickableObject/Objects" index="8"]
+[node name="Canister" type="Node3D" parent="RoomManager/Objects" index="8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.54875755, 1, 3.7703629)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Canister" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Canister" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="jar_A_large" parent="PickableObject/Objects/Canister/PickableObject" index="1" instance=ExtResource("29_ilcgx")]
+[node name="jar_A_large" parent="RoomManager/Objects/Canister/PickableObject" index="1" instance=ExtResource("29_ilcgx")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Canister/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Canister/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7275946, 0)
 billboard = 1
 text = "Canister"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Canister/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Canister/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.059830904, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Canister/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Canister/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.26120293, 0)
 shape = SubResource("CylinderShape3D_fenkw")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Canister" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Canister" index="1"]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Blade" type="Node3D" parent="PickableObject/Objects" index="9"]
+[node name="Blade" type="Node3D" parent="RoomManager/Objects" index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72524494, 1, 3.775)
 script = ExtResource("16_mkssq")
 sound_pickup = ExtResource("17_77nod")
 
-[node name="PickableObject" parent="PickableObject/Objects/Blade" index="0" instance=ExtResource("16_8utx5")]
+[node name="PickableObject" parent="RoomManager/Objects/Blade" index="0" instance=ExtResource("16_8utx5")]
 
-[node name="knife" parent="PickableObject/Objects/Blade/PickableObject" index="1" instance=ExtResource("25_unexx")]
+[node name="knife" parent="RoomManager/Objects/Blade/PickableObject" index="1" instance=ExtResource("25_unexx")]
 transform = Transform3D(0.7, 0, 0, 0, -3.059797e-08, 0.7, 0, -0.7, -3.059797e-08, 0, 0.059999943, 0)
 
-[node name="Label3D" type="Label3D" parent="PickableObject/Objects/Blade/PickableObject" index="2"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Blade/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2828989, -0.24002004)
 billboard = 1
 text = "Blade"
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObject/Objects/Blade/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Blade/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07169759, -0.23744106)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObject/Objects/Blade/PickableObject" index="4"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Blade/PickableObject" index="4"]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.04705435, 0.05617261, -0.25021935)
 shape = SubResource("BoxShape3D_hxe04")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="PickableObject/Objects/Blade" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Blade" index="1"]
 volume_db = -40.0
 unit_size = 15.0

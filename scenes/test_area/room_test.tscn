@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="15_rofia"]
 [ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="16_1qfaj"]
 [ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="17_f206w"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/pickable_object.gd" id="17_gap2k"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="17_gap2k"]
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="18_gwj6w"]
 [ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="19_mfx57"]
 [ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="20_8gy4o"]
@@ -151,10 +151,10 @@ omni_range = 6.5
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
 script = ExtResource("2_i6qwn")
 master_item_list = Array[String](["Luminary", "Portrait", "Succulent", "Cushion", "Footrest"])
-objectsNode = NodePath("../../PickableObjects/Objects")
+objectsNode = NodePath("../../RoomManager/Objects")
 sound_correct = ExtResource("3_8mfpk")
 sound_incorrect = ExtResource("4_ct6pl")
-room_manager = NodePath("../../PickableObjects")
+room_manager = NodePath("../../RoomManager")
 
 [node name="Label3D" type="Label3D" parent="Interior/TaskBoard" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00013303757, 0, -0.00034618378)
@@ -300,126 +300,126 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2895832e-05, 0, 0.052963257)
 shape = SubResource("BoxShape3D_8mfpk")
 
-[node name="PickableObjects" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
+[node name="RoomManager" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("17_gap2k")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
-[node name="SpawnPoints" type="Node3D" parent="PickableObjects" index="0"]
+[node name="SpawnPoints" type="Node3D" parent="RoomManager" index="0"]
 
-[node name="Marker3D" type="Marker3D" parent="PickableObjects/SpawnPoints" index="0"]
+[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.959, 1.039, -5.158)
 
-[node name="Marker3D2" type="Marker3D" parent="PickableObjects/SpawnPoints" index="1"]
+[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.222, 1.011, -5.13)
 
-[node name="Marker3D3" type="Marker3D" parent="PickableObjects/SpawnPoints" index="2"]
+[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.003, -2.291)
 
-[node name="Marker3D4" type="Marker3D" parent="PickableObjects/SpawnPoints" index="3"]
+[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.605, -0.768)
 
-[node name="Marker3D5" type="Marker3D" parent="PickableObjects/SpawnPoints" index="4"]
+[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 
-[node name="Objects" type="Node3D" parent="PickableObjects" index="1"]
+[node name="Objects" type="Node3D" parent="RoomManager" index="1"]
 
-[node name="Luminary" type="Node3D" parent="PickableObjects/Objects" index="0" node_paths=PackedStringArray("task_board")]
+[node name="Luminary" type="Node3D" parent="RoomManager/Objects" index="0" node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Luminary"
 
-[node name="PickableObject" parent="PickableObjects/Objects/Luminary" index="0" instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Luminary" index="0" instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="lamp_table" parent="PickableObjects/Objects/Luminary/PickableObject" index="0" instance=ExtResource("16_1qfaj")]
+[node name="lamp_table" parent="RoomManager/Objects/Luminary/PickableObject" index="0" instance=ExtResource("16_1qfaj")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObjects/Objects/Luminary/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Luminary/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5063404, 0)
 shape = SubResource("CylinderShape3D_n53bi")
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObjects/Objects/Luminary/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Luminary/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="Portrait" type="Node3D" parent="PickableObjects/Objects" index="1" node_paths=PackedStringArray("task_board")]
+[node name="Portrait" type="Node3D" parent="RoomManager/Objects" index="1" node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Portrait"
 
-[node name="PickableObject" parent="PickableObjects/Objects/Portrait" index="0" instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Portrait" index="0" instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="pictureframe_standing_A" parent="PickableObjects/Objects/Portrait/PickableObject" index="1" instance=ExtResource("17_f206w")]
+[node name="pictureframe_standing_A" parent="RoomManager/Objects/Portrait/PickableObject" index="1" instance=ExtResource("17_f206w")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObjects/Objects/Portrait/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portrait/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30682206, 0)
 shape = SubResource("BoxShape3D_3m6p8")
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObjects/Objects/Portrait/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Portrait/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09244919, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="Succulent" type="Node3D" parent="PickableObjects/Objects" index="2" node_paths=PackedStringArray("task_board")]
+[node name="Succulent" type="Node3D" parent="RoomManager/Objects" index="2" node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063334, 0.0028970242, -2.291012)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Succulent"
 
-[node name="PickableObject" parent="PickableObjects/Objects/Succulent" index="0" instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Succulent" index="0" instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="cactus_medium_A" parent="PickableObjects/Objects/Succulent/PickableObject" index="1" instance=ExtResource("18_gwj6w")]
+[node name="cactus_medium_A" parent="RoomManager/Objects/Succulent/PickableObject" index="1" instance=ExtResource("18_gwj6w")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObjects/Objects/Succulent/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Succulent/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39108643, 0)
 shape = SubResource("CylinderShape3D_gap2k")
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObjects/Objects/Succulent/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Succulent/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06970227, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="Cushion" type="Node3D" parent="PickableObjects/Objects" index="3" node_paths=PackedStringArray("task_board")]
+[node name="Cushion" type="Node3D" parent="RoomManager/Objects" index="3" node_paths=PackedStringArray("task_board")]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cushion"
 
-[node name="PickableObject" parent="PickableObjects/Objects/Cushion" index="0" instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Cushion" index="0" instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="pillow_A" parent="PickableObjects/Objects/Cushion/PickableObject" index="1" instance=ExtResource("19_mfx57")]
+[node name="pillow_A" parent="RoomManager/Objects/Cushion/PickableObject" index="1" instance=ExtResource("19_mfx57")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObjects/Objects/Cushion/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cushion/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032980442, 0.004047394, -0.0014641285)
 shape = SubResource("BoxShape3D_krvcu")
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObjects/Objects/Cushion/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cushion/PickableObject" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.046720266, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="Footrest" type="Node3D" parent="PickableObjects/Objects" index="4" node_paths=PackedStringArray("task_board")]
+[node name="Footrest" type="Node3D" parent="RoomManager/Objects" index="4" node_paths=PackedStringArray("task_board")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 0.0063424334, 3.037981)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Footrest"
 
-[node name="PickableObject" parent="PickableObjects/Objects/Footrest" index="0" instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Footrest" index="0" instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="chair_stool" parent="PickableObjects/Objects/Footrest/PickableObject" index="1" instance=ExtResource("20_8gy4o")]
+[node name="chair_stool" parent="RoomManager/Objects/Footrest/PickableObject" index="1" instance=ExtResource("20_8gy4o")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="PickableObjects/Objects/Footrest/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Footrest/PickableObject" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00088500977, 0.25024414, 0.0008985996)
 shape = SubResource("BoxShape3D_f81wx")
 
-[node name="HighlightLight" type="OmniLight3D" parent="PickableObjects/Objects/Footrest/PickableObject" index="3"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Footrest/PickableObject" index="3"]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.37451923, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
