@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
-**An immersive XR application built with Godot 4 designed to enhance English vocabulary acquisition through contextual interaction and gamification.**
+**An immersive VR application built with Godot 4 designed to enhance English vocabulary acquisition through contextual interaction and gamification.**
 
 ---
 
