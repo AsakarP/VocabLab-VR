@@ -8,17 +8,22 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="English Learning XR"
+config/name="VocabLab VR"
+config/tags=PackedStringArray("object_finding_game", "vr")
 run/main_scene="uid://d0upy347c6awm"
-config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="uid://cqotd4d3v610j"
 
 [autoload]
 
-XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
-XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+XRToolsUserSettings="*uid://d0p6q2nhwi5e1"
+XRToolsRumbleManager="*uid://dklgvbkg3m0j0"
 Bgm="*res://scenes/bgm.tscn"
 
 [editor_plugins]

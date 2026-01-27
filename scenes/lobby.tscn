@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bdbwonfjyxqo7"]
+[gd_scene format=3 uid="uid://bdbwonfjyxqo7"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_o1atq"]
 [ext_resource type="Texture2D" uid="uid://l7ncg8tufj3a" path="res://assets/HDRIs/autumn_field_puresky_4k.exr" id="2_lqo1b"]
@@ -69,29 +69,29 @@ colors = PackedColorArray(0.14117648, 0.14117648, 0.14117648, 0.9607843, 1, 1, 1
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wpcbs"]
 gradient = SubResource("Gradient_iwv4c")
-width = 650
-height = 120
+width = 600
+height = 150
 fill_from = Vector2(1, 0)
 
-[node name="Lobby" instance=ExtResource("1_o1atq")]
+[node name="Lobby" unique_id=1245540180 instance=ExtResource("1_o1atq")]
 
 [node name="XROrigin3D" parent="." index="0"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -4.9578)
 
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
 suppress_radius = 0.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1" unique_id=104259210]
 transform = Transform3D(-0.9378889, -0.16819775, 0.3034368, 0, 0.8746198, 0.48480958, -0.34693566, 0.45469758, -0.82029617, 0, 4.2104673, 0)
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2" unique_id=178770209]
 environment = SubResource("Environment_ierb3")
 
-[node name="LightmapGI" type="LightmapGI" parent="." index="3"]
+[node name="LightmapGI" type="LightmapGI" parent="." index="3" unique_id=1649147948]
 light_data = ExtResource("3_o2i1r")
 
-[node name="InfiniteTerrain" type="StaticBody3D" parent="." index="4" node_paths=PackedStringArray("player")]
+[node name="InfiniteTerrain" type="StaticBody3D" parent="." index="4" unique_id=707570678 node_paths=PackedStringArray("player")]
 script = ExtResource("4_iwi7x")
 player = NodePath("../XROrigin3D")
 generate_new_chunks = false
@@ -106,590 +106,616 @@ enable_distant_terrain = false
 distant_terrain_update_during_gameplay = false
 metadata/_custom_type_script = "uid://ub1evibs3ccw"
 
-[node name="LobbyArea" type="Node3D" parent="." index="5"]
+[node name="LobbyArea" type="Node3D" parent="." index="5" unique_id=1687258869]
 
-[node name="Floor" parent="LobbyArea" index="0" instance=ExtResource("3_0gjkf")]
+[node name="Floor" parent="LobbyArea" index="0" unique_id=1749315709 instance=ExtResource("3_0gjkf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.707409e-05, 0, 9.703636e-05)
 
-[node name="Walls" parent="LobbyArea" index="1" instance=ExtResource("5_dfnwm")]
+[node name="Walls" parent="LobbyArea" index="1" unique_id=1069918401 instance=ExtResource("5_dfnwm")]
 
-[node name="Signs" type="Node3D" parent="LobbyArea" index="2"]
+[node name="Signs" type="Node3D" parent="LobbyArea" index="2" unique_id=1085155886]
 
-[node name="SignBoard" parent="LobbyArea/Signs" index="0" instance=ExtResource("6_0jb4q")]
+[node name="SignBoard" parent="LobbyArea/Signs" index="0" unique_id=1535223460 instance=ExtResource("6_0jb4q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 9.821603)
 
-[node name="LearningBoard" parent="LobbyArea/Signs" index="1" instance=ExtResource("7_vwf6o")]
+[node name="LearningBoard" parent="LobbyArea/Signs" index="1" unique_id=1090110197 instance=ExtResource("7_vwf6o")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.856, 5, 0)
 
-[node name="TestingBoard" parent="LobbyArea/Signs" index="2" instance=ExtResource("8_iwi7x")]
+[node name="TestingBoard" parent="LobbyArea/Signs" index="2" unique_id=2014958347 instance=ExtResource("8_iwi7x")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11.856, 5, 0)
 
-[node name="Assets" type="Node3D" parent="LobbyArea" index="3"]
+[node name="Assets" type="Node3D" parent="LobbyArea" index="3" unique_id=366967065]
 
-[node name="Tables" type="Node3D" parent="LobbyArea/Assets" index="0"]
+[node name="Tables" type="Node3D" parent="LobbyArea/Assets" index="0" unique_id=109484045]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 
-[node name="table_round_A" parent="LobbyArea/Assets/Tables" index="0" instance=ExtResource("13_f2bte")]
+[node name="table_round_A" parent="LobbyArea/Assets/Tables" index="0" unique_id=1070474289 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A" index="1" unique_id=1564068944]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/StaticBody3D" index="0" unique_id=2048636796]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A" index="2" unique_id=1212331177 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool" index="1" unique_id=1544928031]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool/StaticBody3D" index="0" unique_id=1225852786]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A" index="3" unique_id=872565053 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2" index="1" unique_id=1325748120]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool2/StaticBody3D" index="0" unique_id=57089380]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A" index="4" unique_id=1385181488 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3" index="1" unique_id=29381200]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool3/StaticBody3D" index="0" unique_id=1812106047]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A" index="5" unique_id=591845966 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4" index="1" unique_id=1583743564]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A/chair_stool4/StaticBody3D" index="0" unique_id=126367778]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="table_round_A2" parent="LobbyArea/Assets/Tables" index="1" instance=ExtResource("13_f2bte")]
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables" index="1" unique_id=709920711 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2" index="1" unique_id=60004508]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/StaticBody3D" index="0" unique_id=1272159767]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A2" index="2" unique_id=254040852 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool" index="1" unique_id=496204218]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool/StaticBody3D" index="0" unique_id=1561047510]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A2" index="3" unique_id=1219236479 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2" index="1" unique_id=2079615041]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool2/StaticBody3D" index="0" unique_id=1883926429]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A2" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A2" index="4" unique_id=552918103 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3" index="1" unique_id=1041387906]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool3/StaticBody3D" index="0" unique_id=284659830]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A2" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A2" index="5" unique_id=39895169 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4" index="1" unique_id=1867754730]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A2/chair_stool4/StaticBody3D" index="0" unique_id=516017039]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="table_round_A3" parent="LobbyArea/Assets/Tables" index="2" instance=ExtResource("13_f2bte")]
+[node name="table_round_A3" parent="LobbyArea/Assets/Tables" index="2" unique_id=793129969 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3" index="1" unique_id=872942639]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/StaticBody3D" index="0" unique_id=959819718]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A3" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables/table_round_A3" index="2" unique_id=1775706984 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool" index="1" unique_id=228380206]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool/StaticBody3D" index="0" unique_id=1496894912]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A3" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables/table_round_A3" index="3" unique_id=1761890608 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2" index="1" unique_id=1485719839]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool2/StaticBody3D" index="0" unique_id=232546880]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A3" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables/table_round_A3" index="4" unique_id=1458849392 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3" index="1" unique_id=728868760]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool3/StaticBody3D" index="0" unique_id=1924403650]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A3" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables/table_round_A3" index="5" unique_id=1685712557 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4" index="1" unique_id=1467547510]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables/table_round_A3/chair_stool4/StaticBody3D" index="0" unique_id=335461866]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="Tables2" type="Node3D" parent="LobbyArea/Assets" index="1"]
+[node name="Tables2" type="Node3D" parent="LobbyArea/Assets" index="1" unique_id=262118153]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
 
-[node name="table_round_A" parent="LobbyArea/Assets/Tables2" index="0" instance=ExtResource("13_f2bte")]
+[node name="table_round_A" parent="LobbyArea/Assets/Tables2" index="0" unique_id=1556984868 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A" index="1" unique_id=180149210]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/StaticBody3D" index="0" unique_id=1123189718]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A" index="2" unique_id=1442718731 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool" index="1" unique_id=564444883]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool/StaticBody3D" index="0" unique_id=731183077]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A" index="3" unique_id=1467193956 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2" index="1" unique_id=558052793]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool2/StaticBody3D" index="0" unique_id=1651838023]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A" index="4" unique_id=936800751 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3" index="1" unique_id=612395523]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool3/StaticBody3D" index="0" unique_id=712888054]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A" index="5" unique_id=627138030 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4" index="1" unique_id=1687295677]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A/chair_stool4/StaticBody3D" index="0" unique_id=1172320232]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="table_round_A2" parent="LobbyArea/Assets/Tables2" index="1" instance=ExtResource("13_f2bte")]
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables2" index="1" unique_id=655277144 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2" index="1" unique_id=2040283737]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/StaticBody3D" index="0" unique_id=238970960]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A2" index="2" unique_id=1265109891 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool" index="1" unique_id=967426552]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool/StaticBody3D" index="0" unique_id=1444215426]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A2" index="3" unique_id=183880368 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2" index="1" unique_id=1774164863]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool2/StaticBody3D" index="0" unique_id=18039810]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A2" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A2" index="4" unique_id=61792271 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3" index="1" unique_id=915051159]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool3/StaticBody3D" index="0" unique_id=1470304649]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A2" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A2" index="5" unique_id=365044266 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4" index="1" unique_id=129755508]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A2/chair_stool4/StaticBody3D" index="0" unique_id=1448067333]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="table_round_A3" parent="LobbyArea/Assets/Tables2" index="2" instance=ExtResource("13_f2bte")]
+[node name="table_round_A3" parent="LobbyArea/Assets/Tables2" index="2" unique_id=2125443468 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3" index="1" unique_id=1903984318]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/StaticBody3D" index="0" unique_id=179020884]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A3" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool" parent="LobbyArea/Assets/Tables2/table_round_A3" index="2" unique_id=246459890 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool" index="1" unique_id=1775456813]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool/StaticBody3D" index="0" unique_id=1392296108]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A3" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool2" parent="LobbyArea/Assets/Tables2/table_round_A3" index="3" unique_id=699697673 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2" index="1" unique_id=841760195]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool2/StaticBody3D" index="0" unique_id=510793193]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A3" index="4" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables2/table_round_A3" index="4" unique_id=1282726329 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3" index="1" unique_id=1896949608]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool3/StaticBody3D" index="0" unique_id=136123820]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A3" index="5" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables2/table_round_A3" index="5" unique_id=1082205476 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4" index="1" unique_id=712605510]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables2/table_round_A3/chair_stool4/StaticBody3D" index="0" unique_id=389420775]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="Tables3" type="Node3D" parent="LobbyArea/Assets" index="2"]
+[node name="Tables3" type="Node3D" parent="LobbyArea/Assets" index="2" unique_id=226738623]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
 
-[node name="table_round_A" parent="LobbyArea/Assets/Tables3" index="0" instance=ExtResource("13_f2bte")]
+[node name="table_round_A" parent="LobbyArea/Assets/Tables3" index="0" unique_id=1819997131 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A" index="1" unique_id=550521426]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/StaticBody3D" index="0" unique_id=78949758]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A" index="2" unique_id=495066027 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3" index="1" unique_id=76825956]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool3/StaticBody3D" index="0" unique_id=1959587786]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A" index="3" unique_id=691380540 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4" index="1" unique_id=1519358575]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A/chair_stool4/StaticBody3D" index="0" unique_id=672868766]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="table_round_A2" parent="LobbyArea/Assets/Tables3" index="1" instance=ExtResource("13_f2bte")]
+[node name="table_round_A2" parent="LobbyArea/Assets/Tables3" index="1" unique_id=2119185753 instance=ExtResource("13_f2bte")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2" index="1" unique_id=1940011759]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/StaticBody3D" index="0" unique_id=1414529434]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_iwv4c")
 
-[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A2" index="2" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool3" parent="LobbyArea/Assets/Tables3/table_round_A2" index="2" unique_id=1104789752 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3" index="1" unique_id=446176537]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool3/StaticBody3D" index="0" unique_id=2060585706]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A2" index="3" instance=ExtResource("14_iwv4c")]
+[node name="chair_stool4" parent="LobbyArea/Assets/Tables3/table_round_A2" index="3" unique_id=1598390892 instance=ExtResource("14_iwv4c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4" index="1" unique_id=673765863]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LobbyArea/Assets/Tables3/table_round_A2/chair_stool4/StaticBody3D" index="0" unique_id=700733041]
 transform = Transform3D(100, 0, 0, 0, -1.1920929e-05, 99.99999, 0, -99.99999, -1.1920929e-05, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_wpcbs")
 
-[node name="LearnPortals" type="Node3D" parent="LobbyArea" index="4"]
+[node name="LearnPortals" type="Node3D" parent="LobbyArea" index="4" unique_id=1878537733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
 
-[node name="RoomLearnTeleporter" parent="LobbyArea/LearnPortals" index="0" instance=ExtResource("18_o2i1r")]
+[node name="RoomLearnTeleporter" parent="LobbyArea/LearnPortals" index="0" unique_id=1721961604 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
 target_scene = "uid://c4asqne3pfcp7"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter" index="3" unique_id=1294389578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08, 0)
 billboard = 1
 text = "Kamar"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter/Label3D" index="0" unique_id=1462243560]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(0, 1, 0, 1)
 text = "Level 1"
 
-[node name="KitchenLearnTeleporter" parent="LobbyArea/LearnPortals" index="1" instance=ExtResource("18_o2i1r")]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter/Label3D/Label3D" index="0" unique_id=1402703266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "5 Objek"
+
+[node name="KitchenLearnTeleporter" parent="LobbyArea/LearnPortals" index="1" unique_id=890329117 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
 collision_mask = 524288
 target_scene = "uid://4d3kqfc73gxm"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter" index="3" unique_id=514947345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08, 0)
 billboard = 1
 text = "Dapur"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter/Label3D" index="0" unique_id=131275887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 1, 0, 1)
 text = "Level 2"
 
-[node name="ClassLearnTeleporter" parent="LobbyArea/LearnPortals" index="2" instance=ExtResource("18_o2i1r")]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter/Label3D/Label3D" index="0" unique_id=595866842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "10 Objek"
+
+[node name="ClassLearnTeleporter" parent="LobbyArea/LearnPortals" index="2" unique_id=1581185617 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
 target_scene = "uid://dptqarjxqbrhv"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter" index="3" unique_id=336939092]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.08, 0)
 billboard = 1
 text = "Kelas"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter/Label3D" index="0" unique_id=99300624]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 0, 0, 1)
 text = "Level 3"
 
-[node name="TestPortals" type="Node3D" parent="LobbyArea" index="5"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter/Label3D/Label3D" index="0" unique_id=193786696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "13 Objek"
+
+[node name="TestPortals" type="Node3D" parent="LobbyArea" index="5" unique_id=1281844185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
-[node name="RoomTestTeleporter" parent="LobbyArea/TestPortals" index="0" instance=ExtResource("18_o2i1r")]
+[node name="RoomTestTeleporter" parent="LobbyArea/TestPortals" index="0" unique_id=1430380932 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
 target_scene = "uid://blai5di7hgds8"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter" index="3" unique_id=1599874531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
 billboard = 1
 text = "Kamar"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter/Label3D" index="0" unique_id=621245649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(0, 1, 0, 1)
 text = "Level 1"
 
-[node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" instance=ExtResource("18_o2i1r")]
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter/Label3D/Label3D" index="0" unique_id=1323156921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "5 Objek"
+
+[node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" unique_id=1944524922 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 collision_mask = 524288
 target_scene = "uid://cpm173umy42e2"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3" unique_id=327115139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
 billboard = 1
 text = "Dapur"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D" index="0" unique_id=2014494785]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 1, 0, 1)
 text = "Level 2"
 
-[node name="ClassLearnTeleporter2" parent="LobbyArea/TestPortals" index="2" instance=ExtResource("18_o2i1r")]
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D/Label3D" index="0" unique_id=727179894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "10 Objek"
+
+[node name="ClassTestTeleporter" parent="LobbyArea/TestPortals" index="2" unique_id=1548683105 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
 target_scene = "uid://do3bcd5mh1v2e"
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter" index="3" unique_id=626017041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
 billboard = 1
 text = "Kelas"
 font_size = 64
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassLearnTeleporter2/Label3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter/Label3D" index="0" unique_id=1602069006]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.37, 0)
 billboard = 1
 modulate = Color(1, 0, 0, 1)
 text = "Level 3"
 
-[node name="Guide" type="Node3D" parent="LobbyArea" index="6"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 3)
+[node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter/Label3D/Label3D" index="0" unique_id=1576317870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
+billboard = 1
+text = "13 Objek"
 
-[node name="Sprite3D" type="Sprite3D" parent="LobbyArea/Guide" index="0"]
+[node name="Guide" type="Node3D" parent="LobbyArea" index="6" unique_id=2096924341]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -2.5006783)
+
+[node name="Sprite3D" type="Sprite3D" parent="LobbyArea/Guide" index="0" unique_id=279799597]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.05)
 cast_shadow = 0
 visibility_range_begin = 0.1
 visibility_range_end = 6.0
 texture = SubResource("GradientTexture2D_wpcbs")
 
-[node name="Label3D" type="Label3D" parent="LobbyArea/Guide/Sprite3D" index="0"]
+[node name="Label3D" type="Label3D" parent="LobbyArea/Guide/Sprite3D" index="0" unique_id=190922457]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049999952)
 visibility_range_begin = 0.1
 visibility_range_end = 6.0
-text = "Selamat datang di Game VocabLab VR!
-Masuki Portal di sebelah kiri untuk menguji kemampuan anda terlebih dahulu.
-Kalau sudah, masuki Portal di sebelah kanan untuk mempelajari
-kata-kata yang muncul pada level pengujian.
-Kalau sudah siap, kembali lagi ke Portal ke di sebelah kiri untuk pengujian."
+text = "Freemode"
 
-[node name="TerrainAssets" type="Node3D" parent="." index="6"]
+[node name="TerrainAssets" type="Node3D" parent="." index="6" unique_id=653591596]
 
-[node name="CommonTree_1" parent="TerrainAssets" index="0" instance=ExtResource("24_2630d")]
+[node name="CommonTree_1" parent="TerrainAssets" index="0" unique_id=167774635 instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.96767795, -0.3729408, -11.573222)
 
-[node name="CommonTree_2" parent="TerrainAssets" index="1" instance=ExtResource("25_835bk")]
+[node name="CommonTree_2" parent="TerrainAssets" index="1" unique_id=697161044 instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.966633, -0.30782384, -11.608002)
 
-[node name="CommonTree_3" parent="TerrainAssets" index="2" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_3" parent="TerrainAssets" index="2" unique_id=2031481693 instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.059763, -0.15237719, -11.539058)
 
-[node name="CommonTree_4" parent="TerrainAssets" index="3" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_4" parent="TerrainAssets" index="3" unique_id=56917395 instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.31975, -0.16347891, -7.6207833)
 
-[node name="CommonTree_5" parent="TerrainAssets" index="4" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_5" parent="TerrainAssets" index="4" unique_id=2040291522 instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.356108, -0.13598356, 3.2292385)
 
-[node name="CommonTree_6" parent="TerrainAssets" index="5" instance=ExtResource("24_2630d")]
+[node name="CommonTree_6" parent="TerrainAssets" index="5" unique_id=1471261777 instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.515955, -0.06771016, 11.526155)
 
-[node name="CommonTree_7" parent="TerrainAssets" index="6" instance=ExtResource("25_835bk")]
+[node name="CommonTree_7" parent="TerrainAssets" index="6" unique_id=2116442447 instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.886238, -0.2745964, 11.774186)
 
-[node name="CommonTree_8" parent="TerrainAssets" index="7" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_8" parent="TerrainAssets" index="7" unique_id=625542527 instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.513468, -0.54137397, 12.443601)
 
-[node name="CommonTree_9" parent="TerrainAssets" index="8" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_9" parent="TerrainAssets" index="8" unique_id=2146835923 instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.61716, -1.1165966, 12.560263)
 
-[node name="CommonTree_10" parent="TerrainAssets" index="9" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_10" parent="TerrainAssets" index="9" unique_id=1918878460 instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.51436, -1.2195514, 12.336765)
 
-[node name="CommonTree_11" parent="TerrainAssets" index="10" instance=ExtResource("24_2630d")]
+[node name="CommonTree_11" parent="TerrainAssets" index="10" unique_id=1286748052 instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.204403, -1.0610797, 12.27686)
 
-[node name="CommonTree_12" parent="TerrainAssets" index="11" instance=ExtResource("25_835bk")]
+[node name="CommonTree_12" parent="TerrainAssets" index="11" unique_id=1417744514 instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.969997, -1.0730532, 8.329966)
 
-[node name="CommonTree_13" parent="TerrainAssets" index="12" instance=ExtResource("26_ucbax")]
+[node name="CommonTree_13" parent="TerrainAssets" index="12" unique_id=783219654 instance=ExtResource("26_ucbax")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.314457, -1.1988989, 1.4242575)
 
-[node name="CommonTree_14" parent="TerrainAssets" index="13" instance=ExtResource("27_1x1aw")]
+[node name="CommonTree_14" parent="TerrainAssets" index="13" unique_id=1607906120 instance=ExtResource("27_1x1aw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.433386, -1.2437742, -7.179705)
 
-[node name="CommonTree_15" parent="TerrainAssets" index="14" instance=ExtResource("28_twy5w")]
+[node name="CommonTree_15" parent="TerrainAssets" index="14" unique_id=1797929642 instance=ExtResource("28_twy5w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.792482, -1.1528037, -12.404509)
 
-[node name="CommonTree_16" parent="TerrainAssets" index="15" instance=ExtResource("24_2630d")]
+[node name="CommonTree_16" parent="TerrainAssets" index="15" unique_id=2049901488 instance=ExtResource("24_2630d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.791906, -0.87474424, -12.160682)
 
-[node name="CommonTree_17" parent="TerrainAssets" index="16" instance=ExtResource("25_835bk")]
+[node name="CommonTree_17" parent="TerrainAssets" index="16" unique_id=627737396 instance=ExtResource("25_835bk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.387477, -0.6250379, -11.584123)
 
-[node name="Fern_1" parent="TerrainAssets" index="17" instance=ExtResource("29_jkgfa")]
+[node name="Fern_1" parent="TerrainAssets" index="17" unique_id=1945193468 instance=ExtResource("29_jkgfa")]
 transform = Transform3D(0.7416715, 0, 0.67076325, 0, 1, 0, -0.67076325, 0, 0.7416715, 7.812708, -0.6539507, -12.971988)
 
-[node name="Fern_2" parent="TerrainAssets" index="18" instance=ExtResource("29_jkgfa")]
+[node name="Fern_2" parent="TerrainAssets" index="18" unique_id=196458631 instance=ExtResource("29_jkgfa")]
 transform = Transform3D(0.8274336, 0, 0.56156355, 0, 1, 0, -0.56156355, 0, 0.8274336, -19.072605, -1.0719554, -13.02032)
 
-[node name="Fern_3" parent="TerrainAssets" index="19" instance=ExtResource("29_jkgfa")]
+[node name="Fern_3" parent="TerrainAssets" index="19" unique_id=2027581059 instance=ExtResource("29_jkgfa")]
 transform = Transform3D(0.7770801, 0, 0.62940174, 0, 1, 0, -0.62940174, 0, 0.7770801, -13.1076355, -0.6568967, 13.028952)
 
-[node name="Fern_4" parent="TerrainAssets" index="20" instance=ExtResource("29_jkgfa")]
+[node name="Fern_4" parent="TerrainAssets" index="20" unique_id=2039310761 instance=ExtResource("29_jkgfa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.55024, -0.59069264, 14.484769)
 
-[node name="Fern_5" parent="TerrainAssets" index="21" instance=ExtResource("29_jkgfa")]
+[node name="Fern_5" parent="TerrainAssets" index="21" unique_id=41539469 instance=ExtResource("29_jkgfa")]
 transform = Transform3D(0.81207335, 0, 0.5835554, 0, 1, 0, -0.5835554, 0, 0.81207335, 28.26482, -0.577963, -4.177127)
 
-[node name="Flower_3_Group" parent="TerrainAssets" index="22" instance=ExtResource("30_ph747")]
+[node name="Flower_3_Group" parent="TerrainAssets" index="22" unique_id=1102911089 instance=ExtResource("30_ph747")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.116908, -0.8958427, 11.191275)
 
-[node name="Flower_3_Single" parent="TerrainAssets" index="23" instance=ExtResource("31_ixomp")]
+[node name="Flower_3_Single" parent="TerrainAssets" index="23" unique_id=654525294 instance=ExtResource("31_ixomp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0940895, -1.2868756, 12.086855)
 
-[node name="Flower_4_Group" parent="TerrainAssets" index="24" instance=ExtResource("32_8kv63")]
+[node name="Flower_4_Group" parent="TerrainAssets" index="24" unique_id=1163919521 instance=ExtResource("32_8kv63")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1196074, -1.2905021, 11.590329)
 
-[node name="Flower_4_Single" parent="TerrainAssets" index="25" instance=ExtResource("33_y8bta")]
+[node name="Flower_4_Single" parent="TerrainAssets" index="25" unique_id=915824466 instance=ExtResource("33_y8bta")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.55222, -0.8317992, 10.510718)
 
-[node name="TwistedTree_1" parent="TerrainAssets" index="26" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_1" parent="TerrainAssets" index="26" unique_id=549723582 instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.311424, -1.1398096, -13.005354)
 
-[node name="TwistedTree_2" parent="TerrainAssets" index="27" instance=ExtResource("49_sy4be")]
+[node name="TwistedTree_2" parent="TerrainAssets" index="27" unique_id=966460444 instance=ExtResource("49_sy4be")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.495289, -0.6564041, 13.584216)
 
-[node name="TwistedTree_3" parent="TerrainAssets" index="28" instance=ExtResource("50_0nf8f")]
+[node name="TwistedTree_3" parent="TerrainAssets" index="28" unique_id=207988741 instance=ExtResource("50_0nf8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.510635, -0.9666395, 19.433836)
 
-[node name="TwistedTree_4" parent="TerrainAssets" index="29" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_4" parent="TerrainAssets" index="29" unique_id=34312171 instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.586296, -0.31886315, 19.07972)
 
-[node name="TwistedTree_5" parent="TerrainAssets" index="30" instance=ExtResource("50_0nf8f")]
+[node name="TwistedTree_5" parent="TerrainAssets" index="30" unique_id=1767006121 instance=ExtResource("50_0nf8f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.97124, -0.10334036, -0.07763947)
 
-[node name="TwistedTree_6" parent="TerrainAssets" index="31" instance=ExtResource("51_rox41")]
+[node name="TwistedTree_6" parent="TerrainAssets" index="31" unique_id=112474244 instance=ExtResource("51_rox41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.702297, 0.14414617, 16.793526)
 
-[node name="TwistedTree_7" parent="TerrainAssets" index="32" instance=ExtResource("52_f1hfh")]
+[node name="TwistedTree_7" parent="TerrainAssets" index="32" unique_id=1646170949 instance=ExtResource("52_f1hfh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.416014, -0.53019726, -12.180214)
 
-[node name="TwistedTree_8" parent="TerrainAssets" index="33" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_8" parent="TerrainAssets" index="33" unique_id=1812317447 instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.357648, -0.10978237, -13.990777)
 
-[node name="TwistedTree_11" parent="TerrainAssets" index="34" instance=ExtResource("48_v63ud")]
+[node name="TwistedTree_11" parent="TerrainAssets" index="34" unique_id=230994277 instance=ExtResource("48_v63ud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.13841, -0.5797865, -16.775738)
