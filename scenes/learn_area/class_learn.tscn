@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://dptqarjxqbrhv"]
+[gd_scene format=4 uid="uid://dptqarjxqbrhv"]
 
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_a33qc"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_7hmym"]
@@ -116,917 +116,921 @@ size = Vector3(0.6497754, 0.031113282, 0.45108888)
 [sub_resource type="BoxShape3D" id="BoxShape3D_prs8s"]
 size = Vector3(0.205, 0.36475587, 0.215)
 
-[node name="ClassLearn" instance=ExtResource("1_a33qc")]
+[node name="ClassLearn" unique_id=1887387421 instance=ExtResource("1_a33qc")]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1" unique_id=2082329398]
 environment = SubResource("Environment_tefuc")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2" unique_id=1783141110]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Interior" type="Node3D" parent="." index="3"]
+[node name="Interior" type="Node3D" parent="." index="3" unique_id=174364957]
 
-[node name="Room" type="StaticBody3D" parent="Interior" index="0"]
+[node name="Room" type="StaticBody3D" parent="Interior" index="0" unique_id=2042413269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 
-[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room" index="0"]
+[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room" index="0" unique_id=886824310]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
 mesh = SubResource("ArrayMesh_n5gqg")
 
-[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room" index="1"]
+[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room" index="1" unique_id=1898664947]
 shape = SubResource("ConcavePolygonShape3D_8dat1")
 
-[node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1"]
+[node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1" unique_id=1645099925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="TeleportArea" parent="Interior" index="2" instance=ExtResource("2_7hmym")]
+[node name="TeleportArea" parent="Interior" index="2" unique_id=842567914 instance=ExtResource("2_7hmym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.115514)
 collision_mask = 524288
-target_scene = "uid://bdbwonfjyxqo7"
+target_scene = "uid://bhpacxjspcacg"
 
-[node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3"]
+[node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=1589992874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Lobby"
+text = "Kamar"
 font_size = 64
 
-[node name="Guide" type="Label3D" parent="Interior" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, -5.6)
-text = "Arahkan tangan anda ke pada objek di ruangan, 
-kalau objek menjadi terang artinya objek dapat di angkat. 
-Objek yang terangkat dapat terlihat namanya dalam Bahasa Inggris."
+[node name="Guide" type="Label3D" parent="Interior" index="3" unique_id=179855133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1922765, -5.6)
+text = "Arahkan tanganmu ke objek yang ingin dipelajari, lalu tekan tombol Grip (genggam).
+Objek akan otomatis berpindah ke tanganmu dan nama Bahasa Inggrisnya akan muncul di atasnya.
+-
+Ada 13 Objek di level ini.
+-
+Pelajari objek sebanyak yang kamu butuhkan.
+Jika sudah merasa cukup dan siap, silakan masuk ke portal di sudut ruangan untuk melanjutkan."
 
-[node name="Furnitures" type="Node3D" parent="." index="4"]
+[node name="Furnitures" type="Node3D" parent="." index="4" unique_id=2008615291]
 
-[node name="blackboardbig" parent="Furnitures" index="0" instance=ExtResource("3_dggy5")]
+[node name="blackboardbig" parent="Furnitures" index="0" unique_id=89871104 instance=ExtResource("3_dggy5")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.169, 1.8663328, -5.7)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/blackboardbig" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/blackboardbig" index="1" unique_id=1191474832]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/blackboardbig/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/blackboardbig/StaticBody3D" index="0" unique_id=905229373]
 shape = SubResource("ConvexPolygonShape3D_v2xd4")
 
-[node name="Tables&Chairs" type="Node3D" parent="Furnitures" index="1"]
+[node name="Tables&Chairs" type="Node3D" parent="Furnitures" index="1" unique_id=1478871532]
 
-[node name="Row" type="Node3D" parent="Furnitures/Tables&Chairs" index="0"]
+[node name="Row" type="Node3D" parent="Furnitures/Tables&Chairs" index="0" unique_id=211211729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row" index="0" instance=ExtResource("4_8vhcd")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row" index="0" unique_id=2064441954 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table" index="1" unique_id=2094190199 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table" index="2" unique_id=1804973289]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table/StaticBody3D" index="0" unique_id=1250597998]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table/StaticBody3D" index="1" unique_id=1844788432]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row" index="1" instance=ExtResource("4_8vhcd")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row" index="1" unique_id=1455163390 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table5" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table5" index="1" unique_id=1983800174 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table5" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table5" index="2" unique_id=586831761]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table5/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table5/StaticBody3D" index="0" unique_id=1443388083]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table5/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table5/StaticBody3D" index="1" unique_id=814230994]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row" index="2" instance=ExtResource("4_8vhcd")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row" index="2" unique_id=1846199434 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table6" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table6" index="1" unique_id=1977686199 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table6" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table6" index="2" unique_id=985777227]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table6/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table6/StaticBody3D" index="0" unique_id=793071906]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table6/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table6/StaticBody3D" index="1" unique_id=1768521971]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row" index="3" instance=ExtResource("4_8vhcd")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row" index="3" unique_id=1042926847 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table2" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table2" index="1" unique_id=2002161176 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table2" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table2" index="2" unique_id=1520293351]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table2/StaticBody3D" index="0" unique_id=1764720532]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table2/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table2/StaticBody3D" index="1" unique_id=1146502290]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row" index="4" instance=ExtResource("4_8vhcd")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row" index="4" unique_id=2045859187 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table3" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table3" index="1" unique_id=751847180 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table3" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table3" index="2" unique_id=1383826764]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table3/StaticBody3D" index="0" unique_id=1715976083]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table3/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table3/StaticBody3D" index="1" unique_id=2139269576]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row" index="5" instance=ExtResource("4_8vhcd")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row" index="5" unique_id=92204741 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table4" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table4" index="1" unique_id=1455835011 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table4" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table4" index="2" unique_id=838846555]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table4/StaticBody3D" index="0" unique_id=1205609974]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table4/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row/table4/StaticBody3D" index="1" unique_id=1954897904]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="Row2" type="Node3D" parent="Furnitures/Tables&Chairs" index="1"]
+[node name="Row2" type="Node3D" parent="Furnitures/Tables&Chairs" index="1" unique_id=526102149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.7)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row2" index="0" instance=ExtResource("4_8vhcd")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row2" index="0" unique_id=1032868235 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table" index="1" unique_id=320184234 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table" index="2" unique_id=1730759020]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table/StaticBody3D" index="0" unique_id=767144346]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table/StaticBody3D" index="1" unique_id=1053950343]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row2" index="1" instance=ExtResource("4_8vhcd")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row2" index="1" unique_id=860113765 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table5" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table5" index="1" unique_id=442041519 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table5" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table5" index="2" unique_id=477181389]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table5/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table5/StaticBody3D" index="0" unique_id=1348619499]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table5/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table5/StaticBody3D" index="1" unique_id=552009663]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row2" index="2" instance=ExtResource("4_8vhcd")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row2" index="2" unique_id=1558934415 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table6" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table6" index="1" unique_id=1528707214 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table6" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table6" index="2" unique_id=1707039167]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table6/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table6/StaticBody3D" index="0" unique_id=1100096582]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table6/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table6/StaticBody3D" index="1" unique_id=892486366]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row2" index="3" instance=ExtResource("4_8vhcd")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row2" index="3" unique_id=1930611443 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table2" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table2" index="1" unique_id=933194173 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table2" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table2" index="2" unique_id=1134550815]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table2/StaticBody3D" index="0" unique_id=896059880]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table2/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table2/StaticBody3D" index="1" unique_id=1774398465]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row2" index="4" instance=ExtResource("4_8vhcd")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row2" index="4" unique_id=122301090 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table3" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table3" index="1" unique_id=1410968694 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table3" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table3" index="2" unique_id=1730483639]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table3/StaticBody3D" index="0" unique_id=395685854]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table3/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table3/StaticBody3D" index="1" unique_id=891641344]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row2" index="5" instance=ExtResource("4_8vhcd")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row2" index="5" unique_id=1914278125 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table4" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table4" index="1" unique_id=2060964565 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table4" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table4" index="2" unique_id=144084031]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table4/StaticBody3D" index="0" unique_id=1322035157]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table4/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row2/table4/StaticBody3D" index="1" unique_id=380650630]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="Row3" type="Node3D" parent="Furnitures/Tables&Chairs" index="2"]
+[node name="Row3" type="Node3D" parent="Furnitures/Tables&Chairs" index="2" unique_id=811748580]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row3" index="0" instance=ExtResource("4_8vhcd")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row3" index="0" unique_id=874858601 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table" index="1" unique_id=446084212 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table" index="2" unique_id=177341421]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table/StaticBody3D" index="0" unique_id=633878667]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table/StaticBody3D" index="1" unique_id=2091172643]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row3" index="1" instance=ExtResource("4_8vhcd")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row3" index="1" unique_id=1603774368 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table5" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table5" index="1" unique_id=435117480 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table5" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table5" index="2" unique_id=1047636027]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table5/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table5/StaticBody3D" index="0" unique_id=548810768]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table5/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table5/StaticBody3D" index="1" unique_id=1378763834]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row3" index="2" instance=ExtResource("4_8vhcd")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row3" index="2" unique_id=431380051 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table6" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table6" index="1" unique_id=2054671160 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table6" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table6" index="2" unique_id=336117561]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table6/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table6/StaticBody3D" index="0" unique_id=1690617402]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table6/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table6/StaticBody3D" index="1" unique_id=2067629880]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row3" index="3" instance=ExtResource("4_8vhcd")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row3" index="3" unique_id=1860171755 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table2" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table2" index="1" unique_id=316686197 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table2" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table2" index="2" unique_id=1367723479]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table2/StaticBody3D" index="0" unique_id=68520433]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table2/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table2/StaticBody3D" index="1" unique_id=1161487233]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row3" index="4" instance=ExtResource("4_8vhcd")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row3" index="4" unique_id=2133189500 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table3" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table3" index="1" unique_id=1173538734 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table3" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table3" index="2" unique_id=996938627]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table3/StaticBody3D" index="0" unique_id=1416803256]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table3/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table3/StaticBody3D" index="1" unique_id=742659112]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row3" index="5" instance=ExtResource("4_8vhcd")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row3" index="5" unique_id=372751556 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table4" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table4" index="1" unique_id=513821099 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table4" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table4" index="2" unique_id=736710110]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table4/StaticBody3D" index="0" unique_id=1644545920]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table4/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row3/table4/StaticBody3D" index="1" unique_id=1400606050]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="Row4" type="Node3D" parent="Furnitures/Tables&Chairs" index="3"]
+[node name="Row4" type="Node3D" parent="Furnitures/Tables&Chairs" index="3" unique_id=1814745373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.3)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row4" index="0" instance=ExtResource("4_8vhcd")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row4" index="0" unique_id=1768011755 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table" index="1" unique_id=1654360806 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table" index="2" unique_id=1056888150]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table/StaticBody3D" index="0" unique_id=934089645]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table/StaticBody3D" index="1" unique_id=1154943739]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row4" index="1" instance=ExtResource("4_8vhcd")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row4" index="1" unique_id=404138711 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table5" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table5" index="1" unique_id=182559570 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table5" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table5" index="2" unique_id=969793172]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table5/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table5/StaticBody3D" index="0" unique_id=580405408]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table5/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table5/StaticBody3D" index="1" unique_id=1325424905]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row4" index="2" instance=ExtResource("4_8vhcd")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row4" index="2" unique_id=2144766034 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table6" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table6" index="1" unique_id=117516639 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table6" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table6" index="2" unique_id=614886998]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table6/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table6/StaticBody3D" index="0" unique_id=1109781179]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table6/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table6/StaticBody3D" index="1" unique_id=962807727]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row4" index="3" instance=ExtResource("4_8vhcd")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row4" index="3" unique_id=1451391441 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table2" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table2" index="1" unique_id=2020210890 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table2" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table2" index="2" unique_id=702494515]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table2/StaticBody3D" index="0" unique_id=1988550380]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table2/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table2/StaticBody3D" index="1" unique_id=1757228611]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row4" index="4" instance=ExtResource("4_8vhcd")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row4" index="4" unique_id=2014022125 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table3" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table3" index="1" unique_id=493434537 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table3" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table3" index="2" unique_id=1557469098]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table3/StaticBody3D" index="0" unique_id=938517272]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table3/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table3/StaticBody3D" index="1" unique_id=187358989]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row4" index="5" instance=ExtResource("4_8vhcd")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row4" index="5" unique_id=1975392232 instance=ExtResource("4_8vhcd")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table4" index="1" instance=ExtResource("5_pchs8")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table4" index="1" unique_id=1029499168 instance=ExtResource("5_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table4" index="2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table4" index="2" unique_id=1070685429]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table4/StaticBody3D" index="0" unique_id=2109055117]
 transform = Transform3D(0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0, 0.6493049, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_5gstl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table4/StaticBody3D" index="1"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/Tables&Chairs/Row4/table4/StaticBody3D" index="1" unique_id=913457407]
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="Shelfs" type="Node3D" parent="Furnitures" index="2"]
+[node name="Shelfs" type="Node3D" parent="Furnitures" index="2" unique_id=1346408315]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.846623, 0.88697135, 5.4315133)
 
-[node name="shelf" parent="Furnitures/Shelfs" index="0" instance=ExtResource("6_7hmym")]
+[node name="shelf" parent="Furnitures/Shelfs" index="0" unique_id=309895340 instance=ExtResource("6_7hmym")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf" index="1" unique_id=892885067]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf/StaticBody3D" index="0" unique_id=22357220]
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf2" parent="Furnitures/Shelfs" index="1" instance=ExtResource("6_7hmym")]
+[node name="shelf2" parent="Furnitures/Shelfs" index="1" unique_id=97718845 instance=ExtResource("6_7hmym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7856226, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf2" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf2" index="1" unique_id=580561057]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf2/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf2/StaticBody3D" index="0" unique_id=925444792]
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf3" parent="Furnitures/Shelfs" index="2" instance=ExtResource("6_7hmym")]
+[node name="shelf3" parent="Furnitures/Shelfs" index="2" unique_id=1000633943 instance=ExtResource("6_7hmym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35163, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf3" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf3" index="1" unique_id=712627216]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf3/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf3/StaticBody3D" index="0" unique_id=2064721015]
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf4" parent="Furnitures/Shelfs" index="3" instance=ExtResource("6_7hmym")]
+[node name="shelf4" parent="Furnitures/Shelfs" index="3" unique_id=56161351 instance=ExtResource("6_7hmym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.137253, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf4" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf4" index="1" unique_id=1267525820]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf4/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/Shelfs/shelf4/StaticBody3D" index="0" unique_id=141238800]
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelfwithwheels" parent="Furnitures" index="3" instance=ExtResource("7_8vhcd")]
+[node name="shelfwithwheels" parent="Furnitures" index="3" unique_id=645821104 instance=ExtResource("7_8vhcd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.022497, 0.22715926, -5.0664463)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/shelfwithwheels" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/shelfwithwheels" index="1" unique_id=1499032609]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/shelfwithwheels/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/shelfwithwheels/StaticBody3D" index="0" unique_id=1481866048]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03878784, 0.49690247, -0.004005432)
 shape = SubResource("BoxShape3D_tefuc")
 
-[node name="desk" parent="Furnitures" index="4" instance=ExtResource("8_pchs8")]
+[node name="desk" parent="Furnitures" index="4" unique_id=1735897932 instance=ExtResource("8_pchs8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.165023, 0.033774447, -4.5173225)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/desk" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/desk" index="1" unique_id=1432637698]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/desk/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/desk/StaticBody3D" index="0" unique_id=1445457899]
 transform = Transform3D(0.38056657, 0, 0, 0, 0.38056657, 0, 0, 0, 0.38056657, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_8vhcd")
 
-[node name="RoomManager" type="Node3D" parent="." index="5" node_paths=PackedStringArray("spawn_points_container", "objects_container")]
+[node name="RoomManager" type="Node3D" parent="." index="5" unique_id=112201242 node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("9_bjbv7")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
-[node name="SpawnPoints" type="Node3D" parent="RoomManager" index="0"]
+[node name="SpawnPoints" type="Node3D" parent="RoomManager" index="0" unique_id=1668118480]
 
-[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" index="0"]
+[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" index="0" unique_id=358436084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.204, 0.821, -2.682)
 
-[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" index="1"]
+[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" index="1" unique_id=882563959]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.143, 0.821, -2.683)
 
-[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" index="2"]
+[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" index="2" unique_id=1826780998]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4178035, 0.82105285, -2.6761773)
 
-[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" index="3"]
+[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" index="3" unique_id=479958623]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.196, 0.821, -0.689)
 
-[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4"]
+[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4" unique_id=1139043108]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.144, 0.821, 1.3)
 
-[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5"]
+[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5" unique_id=1169613344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.983, 0.821, -2.665)
 
-[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6"]
+[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6" unique_id=78431975]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.12, 0.821, 3.295)
 
-[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7"]
+[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7" unique_id=1449862871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.249, 0.821, -0.823)
 
-[node name="Marker3D9" type="Marker3D" parent="RoomManager/SpawnPoints" index="8"]
+[node name="Marker3D9" type="Marker3D" parent="RoomManager/SpawnPoints" index="8" unique_id=1004442414]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.297, 0.821, -0.7)
 
-[node name="Marker3D10" type="Marker3D" parent="RoomManager/SpawnPoints" index="9"]
+[node name="Marker3D10" type="Marker3D" parent="RoomManager/SpawnPoints" index="9" unique_id=1394136704]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21, 0.821, 1.314)
 
-[node name="Marker3D11" type="Marker3D" parent="RoomManager/SpawnPoints" index="10"]
+[node name="Marker3D11" type="Marker3D" parent="RoomManager/SpawnPoints" index="10" unique_id=2014280831]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28, 0.821, -0.63)
 
-[node name="Marker3D12" type="Marker3D" parent="RoomManager/SpawnPoints" index="11"]
+[node name="Marker3D12" type="Marker3D" parent="RoomManager/SpawnPoints" index="11" unique_id=510650304]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.285, 0.821, 1.309)
 
-[node name="Marker3D13" type="Marker3D" parent="RoomManager/SpawnPoints" index="12"]
+[node name="Marker3D13" type="Marker3D" parent="RoomManager/SpawnPoints" index="12" unique_id=535482737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.201, 0.821, 1.298)
 
-[node name="Objects" type="Node3D" parent="RoomManager" index="1"]
+[node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=1228792441]
 
-[node name="Tome" type="Node3D" parent="RoomManager/Objects" index="0"]
+[node name="Tome" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=768231818]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2038888, 0.91210306, -2.6817176)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Tome" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Tome" index="0" unique_id=687943173 instance=ExtResource("10_8lj0s")]
 
-[node name="book_001" parent="RoomManager/Objects/Tome/PickableObject" index="1" instance=ExtResource("9_uxdrn")]
+[node name="book_001" parent="RoomManager/Objects/Tome/PickableObject" index="1" unique_id=380562492 instance=ExtResource("9_uxdrn")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tome/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tome/PickableObject" index="2" unique_id=1567868242]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00591743, 0.00061029196, 0.000109910965)
 shape = SubResource("BoxShape3D_8lj0s")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Tome/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Tome/PickableObject" index="3" unique_id=1479595067]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.29528058, 0)
 billboard = 1
 text = "Tome"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tome/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tome/PickableObject" index="4" unique_id=327318222]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12389743, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Tome" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Tome" index="1" unique_id=1678157739]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Expunger" type="Node3D" parent="RoomManager/Objects" index="1"]
+[node name="Expunger" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=1345161405]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1428833, 0.83613396, -2.68276)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Expunger" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Expunger" index="0" unique_id=1135087907 instance=ExtResource("10_8lj0s")]
 
-[node name="chalkboard_sponge_" parent="RoomManager/Objects/Expunger/PickableObject" index="1" instance=ExtResource("10_5imfm")]
+[node name="chalkboard_sponge_" parent="RoomManager/Objects/Expunger/PickableObject" index="1" unique_id=1510424472 instance=ExtResource("10_5imfm")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Expunger/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Expunger/PickableObject" index="2" unique_id=441856515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00048828125, 0.018829346, 0.0006866455)
 shape = SubResource("BoxShape3D_fq1fv")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Expunger/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Expunger/PickableObject" index="3" unique_id=97662352]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.24060047, 0)
 billboard = 1
 text = "Expunger"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Expunger/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Expunger/PickableObject" index="4" unique_id=1866347753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03311205, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Expunger" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Expunger" index="1" unique_id=778808408]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Stylus" type="Node3D" parent="RoomManager/Objects" index="2"]
+[node name="Stylus" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=1696926212]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4178035, 0.82105285, -2.6761773)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Stylus" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Stylus" index="0" unique_id=1340450775 instance=ExtResource("10_8lj0s")]
 
-[node name="markers" parent="RoomManager/Objects/Stylus/PickableObject" index="1" instance=ExtResource("11_0sj56")]
+[node name="markers" parent="RoomManager/Objects/Stylus/PickableObject" index="1" unique_id=1588621763 instance=ExtResource("11_0sj56")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Stylus/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Stylus/PickableObject" index="2" unique_id=1517852496]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00013327599, 0.0018554926, 0.0046668053)
 shape = SubResource("BoxShape3D_bjbv7")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Stylus/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Stylus/PickableObject" index="3" unique_id=1974958672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017917216, -0.2649436)
 billboard = 1
 text = "Stylus"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Stylus/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Stylus/PickableObject" index="4" unique_id=19334197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.019562006, -0.022494555)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Stylus" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Stylus" index="1" unique_id=1868454666]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Etui" type="Node3D" parent="RoomManager/Objects" index="3"]
+[node name="Etui" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1210100384]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1955845, 0.84909445, -0.6892748)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Etui" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Etui" index="0" unique_id=1679024447 instance=ExtResource("10_8lj0s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.9604645e-08)
 
-[node name="pencilcase" parent="RoomManager/Objects/Etui/PickableObject" index="1" instance=ExtResource("12_1ope8")]
+[node name="pencilcase" parent="RoomManager/Objects/Etui/PickableObject" index="1" unique_id=1354984525 instance=ExtResource("12_1ope8")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Etui/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Etui/PickableObject" index="2" unique_id=98643144]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00019621849, 0.00054746866, 0.00010031462)
 shape = SubResource("BoxShape3D_iogyn")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Etui/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Etui/PickableObject" index="3" unique_id=207737979]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24162811, 0.0113117695, 0)
 billboard = 1
 text = "Etui"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Etui/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Etui/PickableObject" index="4" unique_id=759376514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0468179, -0.0018851757, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Etui" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Etui" index="1" unique_id=1965822549]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Chronometer" type="Node3D" parent="RoomManager/Objects" index="4"]
+[node name="Chronometer" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=1333788941]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1436267, 0.88512367, 1.2995126)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Chronometer" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Chronometer" index="0" unique_id=1933153670 instance=ExtResource("10_8lj0s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03702426, 0)
 
-[node name="watch" parent="RoomManager/Objects/Chronometer/PickableObject" index="1" instance=ExtResource("13_kis5f")]
+[node name="watch" parent="RoomManager/Objects/Chronometer/PickableObject" index="1" unique_id=1746040210 instance=ExtResource("13_kis5f")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="2" unique_id=1471041191]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0017943382, -5.5372715e-05, 0.0013611317)
 shape = SubResource("BoxShape3D_t0vqf")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="3" unique_id=2133651336]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.12455732, 0.01354599)
 billboard = 1
 text = "Chronometer"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="4" unique_id=973762593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.031865954, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Chronometer" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Chronometer" index="1" unique_id=1651588145]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Applicator" type="Node3D" parent="RoomManager/Objects" index="5"]
+[node name="Applicator" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1248970010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9834132, 0.9072821, -2.665233)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Applicator" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Applicator" index="0" unique_id=844016251 instance=ExtResource("10_8lj0s")]
 
-[node name="brush_002" parent="RoomManager/Objects/Applicator/PickableObject" index="1" instance=ExtResource("14_8lj0s")]
+[node name="brush_002" parent="RoomManager/Objects/Applicator/PickableObject" index="1" unique_id=565964217 instance=ExtResource("14_8lj0s")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Applicator/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Applicator/PickableObject" index="2" unique_id=915538422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20652485, -0.06614339, 0.006201029)
 shape = SubResource("BoxShape3D_4mhiq")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Applicator/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Applicator/PickableObject" index="3" unique_id=516125326]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.017319918, 0.13527584, 0)
 billboard = 1
 text = "Applicator"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Applicator/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Applicator/PickableObject" index="4" unique_id=1031969619]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Applicator" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Applicator" index="1" unique_id=1694613460]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Mixing Slab" type="Node3D" parent="RoomManager/Objects" index="6"]
+[node name="Mixing Slab" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=417187625]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1200254, 0.8258663, 3.2954504)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Mixing Slab" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Mixing Slab" index="0" unique_id=1533268347 instance=ExtResource("10_8lj0s")]
 
-[node name="palette" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="1" instance=ExtResource("16_bjbv7")]
+[node name="palette" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="1" unique_id=587198796 instance=ExtResource("16_bjbv7")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="2" unique_id=1405106287]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.0025024414, 0.005273938, -0.0055236816)
 shape = SubResource("BoxShape3D_5lnhf")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="3" unique_id=758441353]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.21877593, -0.031533957)
 billboard = 1
 text = "Mixing Slab"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="4" unique_id=622185825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03621459, -0.02744317)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Mixing Slab" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Mixing Slab" index="1" unique_id=1579939785]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Portfolio" type="Node3D" parent="RoomManager/Objects" index="7"]
+[node name="Portfolio" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1362578124]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2494903, 0.84245694, -0.8228689)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Portfolio" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Portfolio" index="0" unique_id=172587772 instance=ExtResource("10_8lj0s")]
 
-[node name="PRINCIPALOFFICEbinderfolder" parent="RoomManager/Objects/Portfolio/PickableObject" index="1" instance=ExtResource("16_kis5f")]
+[node name="PRINCIPALOFFICEbinderfolder" parent="RoomManager/Objects/Portfolio/PickableObject" index="1" unique_id=1211823144 instance=ExtResource("16_kis5f")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="2" unique_id=1812258435]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00019526482, 0.00020056963, 0.15012002)
 shape = SubResource("BoxShape3D_dvohe")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="3" unique_id=213253758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1764437, 0.013738036)
 billboard = 1
 text = "Portfolio"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="4" unique_id=1581353095]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.13103753, 0.03977406)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Portfolio" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Portfolio" index="1" unique_id=753674708]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Standish" type="Node3D" parent="RoomManager/Objects" index="8"]
+[node name="Standish" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1499809243]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.896955, -0.6997811)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Standish" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Standish" index="0" unique_id=1205510246 instance=ExtResource("10_8lj0s")]
 
-[node name="PRINCIPALOFFICEpenholder" parent="RoomManager/Objects/Standish/PickableObject" index="1" instance=ExtResource("17_8lj0s")]
+[node name="PRINCIPALOFFICEpenholder" parent="RoomManager/Objects/Standish/PickableObject" index="1" unique_id=645488064 instance=ExtResource("17_8lj0s")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Standish/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Standish/PickableObject" index="2" unique_id=1799974743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.939339e-05, 0.0037598014, -0.0015380979)
 shape = SubResource("BoxShape3D_c7htd")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Standish/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Standish/PickableObject" index="3" unique_id=1535791532]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.22803366, 0)
 billboard = 1
 text = "Standish"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Standish/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Standish/PickableObject" index="4" unique_id=1614894278]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082895875, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Standish" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Standish" index="1" unique_id=1700128366]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Receiver" type="Node3D" parent="RoomManager/Objects" index="9"]
+[node name="Receiver" type="Node3D" parent="RoomManager/Objects" index="9" unique_id=911761692]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2095673, 0.8909934, 1.3135229)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Receiver" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Receiver" index="0" unique_id=1571367017 instance=ExtResource("10_8lj0s")]
 
-[node name="PRINCIPALOFFICEtelephone" parent="RoomManager/Objects/Receiver/PickableObject" index="1" instance=ExtResource("18_fq1fv")]
+[node name="PRINCIPALOFFICEtelephone" parent="RoomManager/Objects/Receiver/PickableObject" index="1" unique_id=1914213556 instance=ExtResource("18_fq1fv")]
 transform = Transform3D(-0.7, 0, -6.119594e-08, 0, 0.7, 0, 6.119594e-08, 0, -0.7, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Receiver/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Receiver/PickableObject" index="2" unique_id=1085409544]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.014312744, 0.04054916, 0.0036315918)
 shape = SubResource("BoxShape3D_4gofw")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Receiver/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Receiver/PickableObject" index="3" unique_id=1320740823]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.3170398, 0)
 billboard = 1
 text = "Receiver"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Receiver/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Receiver/PickableObject" index="4" unique_id=2072031083]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.093310535, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Receiver" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Receiver" index="1" unique_id=36437245]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Tin" type="Node3D" parent="RoomManager/Objects" index="10"]
+[node name="Tin" type="Node3D" parent="RoomManager/Objects" index="10" unique_id=475228607]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2799488, 0.909886, -0.6295507)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Tin" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Tin" index="0" unique_id=809462518 instance=ExtResource("10_8lj0s")]
 
-[node name="CAFETERIAcan" parent="RoomManager/Objects/Tin/PickableObject" index="1" instance=ExtResource("19_bjbv7")]
+[node name="CAFETERIAcan" parent="RoomManager/Objects/Tin/PickableObject" index="1" unique_id=2022478114 instance=ExtResource("19_bjbv7")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tin/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tin/PickableObject" index="2" unique_id=752187925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044846535, -0.0009176135, -0.00043946505)
 shape = SubResource("BoxShape3D_556pg")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Tin/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Tin/PickableObject" index="3" unique_id=644357218]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33453768, 0)
 billboard = 1
 text = "Tin"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tin/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tin/PickableObject" index="4" unique_id=1889896273]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12009889, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Tin" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Tin" index="1" unique_id=146264659]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Salver" type="Node3D" parent="RoomManager/Objects" index="11"]
+[node name="Salver" type="Node3D" parent="RoomManager/Objects" index="11" unique_id=280446602]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2854352, 0.819035, 1.3093565)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Salver" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Salver" index="0" unique_id=1935953603 instance=ExtResource("10_8lj0s")]
 
-[node name="CAFETERIAtraycafet" parent="RoomManager/Objects/Salver/PickableObject" index="1" instance=ExtResource("20_iogyn")]
+[node name="CAFETERIAtraycafet" parent="RoomManager/Objects/Salver/PickableObject" index="1" unique_id=994085328 instance=ExtResource("20_iogyn")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Salver/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Salver/PickableObject" index="2" unique_id=1399424341]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018072128, 0.001044929, -0.0006958246)
 shape = SubResource("BoxShape3D_yw4u0")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Salver/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Salver/PickableObject" index="3" unique_id=567500233]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26343995, 0)
 billboard = 1
 text = "Salver"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Salver/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Salver/PickableObject" index="4" unique_id=2144483993]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03437853, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Salver" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Salver" index="1" unique_id=1363499627]
 volume_db = -40.0
 unit_size = 15.0
 
-[node name="Orb" type="Node3D" parent="RoomManager/Objects" index="12"]
+[node name="Orb" type="Node3D" parent="RoomManager/Objects" index="12" unique_id=1762919706]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2011437, 0.8143074, 1.2984499)
 script = ExtResource("9_fq1fv")
 sound_pickup = ExtResource("11_iogyn")
 
-[node name="PickableObject" parent="RoomManager/Objects/Orb" index="0" instance=ExtResource("10_8lj0s")]
+[node name="PickableObject" parent="RoomManager/Objects/Orb" index="0" unique_id=1575304909 instance=ExtResource("10_8lj0s")]
 
-[node name="CHEMISTRYglobe_1" parent="RoomManager/Objects/Orb/PickableObject" index="1" instance=ExtResource("17_iogyn")]
+[node name="CHEMISTRYglobe_1" parent="RoomManager/Objects/Orb/PickableObject" index="1" unique_id=493036712 instance=ExtResource("17_iogyn")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Orb/PickableObject" index="2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Orb/PickableObject" index="2" unique_id=1814563399]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17262208, 0)
 shape = SubResource("BoxShape3D_prs8s")
 
-[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Orb/PickableObject" index="3"]
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Orb/PickableObject" index="3" unique_id=1029573702]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49624234, 0)
 billboard = 1
 text = "Orb"
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Orb/PickableObject" index="4"]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Orb/PickableObject" index="4" unique_id=721432207]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18416011, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Orb" index="1"]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Orb" index="1" unique_id=618800376]
 volume_db = -40.0
 unit_size = 15.0

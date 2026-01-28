@@ -1,34 +1,34 @@
-[gd_scene format=4 uid="uid://do3bcd5mh1v2e"]
+[gd_scene format=4 uid="uid://36o7l2e23sx6"]
 
-[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_hblbk"]
-[ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_c87tt"]
-[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="3_ctbgb"]
-[ext_resource type="PackedScene" uid="uid://vx7r3uyed1m1" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/blackboardbig.fbx" id="3_temky"]
-[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="4_rbmxe"]
-[ext_resource type="PackedScene" uid="uid://bxdcet85ohius" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/table.fbx" id="4_rtwf4"]
-[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="4_u46a0"]
-[ext_resource type="PackedScene" uid="uid://bf4mn2x1a27st" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chair.fbx" id="5_68t4e"]
-[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="5_gxh74"]
-[ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_gxh74"]
-[ext_resource type="PackedScene" uid="uid://k7ejodtr2fq4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelf.fbx" id="6_ijgj4"]
-[ext_resource type="PackedScene" uid="uid://b3f1iovvuu5q7" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelfwithwheels.fbx" id="7_5cefg"]
-[ext_resource type="PackedScene" uid="uid://dgwu0djraaec2" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/desk.fbx" id="8_dk0f3"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="9_c87tt"]
-[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="10_pesty"]
-[ext_resource type="PackedScene" uid="uid://bitnxdsw50fna" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/book_001.fbx" id="11_hs8ij"]
-[ext_resource type="PackedScene" uid="uid://canmfncho52ld" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chalkboard_sponge_.fbx" id="12_6nvao"]
-[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="12_rbmxe"]
-[ext_resource type="PackedScene" uid="uid://b4cu6ae4c40i" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/markers.fbx" id="13_ysa2n"]
-[ext_resource type="PackedScene" uid="uid://bxeyvpup1qfe4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/pencilcase.fbx" id="14_3q8gc"]
-[ext_resource type="PackedScene" uid="uid://dptbvq1y2gtft" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/watch.fbx" id="15_3u0il"]
-[ext_resource type="PackedScene" uid="uid://c7thu2ll66gbt" path="res://assets/StylooClassroomAssetPack GLTF & FBX/ArtRoom/fbx/brush_002.fbx" id="16_ahobw"]
-[ext_resource type="PackedScene" uid="uid://6e51lxdr8g6t" path="res://assets/StylooClassroomAssetPack GLTF & FBX/ArtRoom/fbx/palette.fbx" id="17_lr43q"]
-[ext_resource type="PackedScene" uid="uid://djdgjckl1dpij" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEbinderfolder.fbx" id="18_ejl3s"]
-[ext_resource type="PackedScene" uid="uid://bsxjtlst0w06" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEpenholder.fbx" id="19_p8nvg"]
-[ext_resource type="PackedScene" uid="uid://rshhgw1ssb4i" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEtelephone.fbx" id="20_twiub"]
-[ext_resource type="PackedScene" uid="uid://cx403duixpuo2" path="res://assets/StylooClassroomAssetPack GLTF & FBX/catferia/FBX/CAFETERIAcan.fbx" id="21_g44mx"]
-[ext_resource type="PackedScene" uid="uid://dcsnlowksk0vl" path="res://assets/StylooClassroomAssetPack GLTF & FBX/catferia/FBX/CAFETERIAtraycafet.fbx" id="22_bcfbp"]
-[ext_resource type="PackedScene" uid="uid://dthma3wc0rjqc" path="res://assets/StylooClassroomAssetPack GLTF & FBX/chemestry lab/FBX/CHEMISTRYglobe_1.fbx" id="23_gc2xc"]
+[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_eidgc"]
+[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_5mfna"]
+[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="3_yjsym"]
+[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="4_q4k7h"]
+[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="5_6ojew"]
+[ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_cbfi2"]
+[ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="7_xfcwp"]
+[ext_resource type="PackedScene" uid="uid://vx7r3uyed1m1" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/blackboardbig.fbx" id="8_mjmk3"]
+[ext_resource type="PackedScene" uid="uid://bxdcet85ohius" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/table.fbx" id="9_64vkk"]
+[ext_resource type="PackedScene" uid="uid://bf4mn2x1a27st" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chair.fbx" id="10_as27y"]
+[ext_resource type="PackedScene" uid="uid://k7ejodtr2fq4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelf.fbx" id="11_4fjph"]
+[ext_resource type="PackedScene" uid="uid://b3f1iovvuu5q7" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelfwithwheels.fbx" id="12_h1mv2"]
+[ext_resource type="PackedScene" uid="uid://dgwu0djraaec2" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/desk.fbx" id="13_dmuhn"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="14_gao60"]
+[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="15_2lto8"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="16_odavh"]
+[ext_resource type="PackedScene" uid="uid://bitnxdsw50fna" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/book_001.fbx" id="17_a0h1u"]
+[ext_resource type="PackedScene" uid="uid://canmfncho52ld" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chalkboard_sponge_.fbx" id="18_av8wp"]
+[ext_resource type="PackedScene" uid="uid://b4cu6ae4c40i" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/markers.fbx" id="19_hcqh3"]
+[ext_resource type="PackedScene" uid="uid://bxeyvpup1qfe4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/pencilcase.fbx" id="20_pia7i"]
+[ext_resource type="PackedScene" uid="uid://dptbvq1y2gtft" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/watch.fbx" id="21_yxy08"]
+[ext_resource type="PackedScene" uid="uid://c7thu2ll66gbt" path="res://assets/StylooClassroomAssetPack GLTF & FBX/ArtRoom/fbx/brush_002.fbx" id="22_qnyhn"]
+[ext_resource type="PackedScene" uid="uid://6e51lxdr8g6t" path="res://assets/StylooClassroomAssetPack GLTF & FBX/ArtRoom/fbx/palette.fbx" id="23_f7dl1"]
+[ext_resource type="PackedScene" uid="uid://djdgjckl1dpij" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEbinderfolder.fbx" id="24_h7et1"]
+[ext_resource type="PackedScene" uid="uid://bsxjtlst0w06" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEpenholder.fbx" id="25_e45xv"]
+[ext_resource type="PackedScene" uid="uid://rshhgw1ssb4i" path="res://assets/StylooClassroomAssetPack GLTF & FBX/principal office/FBX/PRINCIPALOFFICEtelephone.fbx" id="26_da56d"]
+[ext_resource type="PackedScene" uid="uid://cx403duixpuo2" path="res://assets/StylooClassroomAssetPack GLTF & FBX/catferia/FBX/CAFETERIAcan.fbx" id="27_see6f"]
+[ext_resource type="PackedScene" uid="uid://dcsnlowksk0vl" path="res://assets/StylooClassroomAssetPack GLTF & FBX/catferia/FBX/CAFETERIAtraycafet.fbx" id="28_jwbrx"]
+[ext_resource type="PackedScene" uid="uid://dthma3wc0rjqc" path="res://assets/StylooClassroomAssetPack GLTF & FBX/chemestry lab/FBX/CHEMISTRYglobe_1.fbx" id="29_xcr2e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v2xd4"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -128,7 +128,7 @@ size = Vector3(0.6497754, 0.031113282, 0.45108888)
 [sub_resource type="BoxShape3D" id="BoxShape3D_prs8s"]
 size = Vector3(0.205, 0.36475587, 0.215)
 
-[node name="ClassLearn" unique_id=1872970581 instance=ExtResource("1_hblbk")]
+[node name="ClassLearn" unique_id=1872970581 instance=ExtResource("1_eidgc")]
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=267852734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 1.3222318, -1.9783258)
@@ -167,14 +167,14 @@ omni_range = 6.5
 
 [node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1759061109 node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.5302567, 2.743, -4.406764)
-script = ExtResource("3_ctbgb")
+script = ExtResource("2_5mfna")
 master_item_list = Array[String](["Tome", "Expunger", "Stylus", "Etui", "Chronometer", "Applicator", "Mixing Slab", "Portfolio", "Standish", "Receiver", "Tin", "Salver", "Orb"])
 objectsNode = NodePath("../../RoomManager/Objects")
-sound_correct = ExtResource("4_u46a0")
-sound_incorrect = ExtResource("5_gxh74")
+sound_correct = ExtResource("3_yjsym")
+sound_incorrect = ExtResource("4_q4k7h")
 room_manager = NodePath("../../RoomManager")
 
-[node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=1288202600 instance=ExtResource("4_rbmxe")]
+[node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=1288202600 instance=ExtResource("5_6ojew")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -1.3242062, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Interior/TaskBoard/PushButton" index="4" unique_id=812471664]
@@ -189,31 +189,33 @@ shape = SubResource("ConvexPolygonShape3D_u46a0")
 [node name="Sprite3D" type="Sprite3D" parent="Interior/TaskBoard" index="1" unique_id=1400575919]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.51555896, 0)
 billboard = 1
-texture = ExtResource("6_gxh74")
+texture = ExtResource("6_cbfi2")
 
-[node name="TeleportArea" parent="Interior" index="3" unique_id=976573398 instance=ExtResource("2_c87tt")]
+[node name="TeleportArea" parent="Interior" index="3" unique_id=976573398 instance=ExtResource("7_xfcwp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.115514)
 visible = false
 collision_mask = 524288
 monitoring = false
-target_scene = "uid://c4asqne3pfcp7"
+target_scene = "uid://bdbwonfjyxqo7"
 
 [node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=138501283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
-text = "Kamar"
+text = "Lobi"
 font_size = 64
 
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1103612696]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.870946, -5.5723557)
-text = "Identifikasi 13 Objek sesuai perintah Target.
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0678668, -5.5723557)
+text = "Saatnya melakukan pengujian untuk melihat berapa banyak kosakata yang berhasil kamu kuasai!
+-
+Identifikasi 13 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
 
 [node name="Furnitures" type="Node3D" parent="." index="4" unique_id=842905509]
 
-[node name="blackboardbig" parent="Furnitures" index="0" unique_id=1729287370 instance=ExtResource("3_temky")]
+[node name="blackboardbig" parent="Furnitures" index="0" unique_id=1729287370 instance=ExtResource("8_mjmk3")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.169, 1.8663328, -5.7)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/blackboardbig" index="1" unique_id=556573723]
@@ -226,10 +228,10 @@ shape = SubResource("ConvexPolygonShape3D_v2xd4")
 [node name="Row" type="Node3D" parent="Furnitures/Tables&Chairs" index="0" unique_id=1485153524]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row" index="0" unique_id=1786590937 instance=ExtResource("4_rtwf4")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row" index="0" unique_id=1786590937 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table" index="1" unique_id=455870418 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table" index="1" unique_id=455870418 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table" index="2" unique_id=778127566]
@@ -242,10 +244,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row" index="1" unique_id=1475982877 instance=ExtResource("4_rtwf4")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row" index="1" unique_id=1475982877 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table5" index="1" unique_id=718953065 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table5" index="1" unique_id=718953065 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table5" index="2" unique_id=1679166007]
@@ -258,10 +260,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row" index="2" unique_id=2104620662 instance=ExtResource("4_rtwf4")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row" index="2" unique_id=2104620662 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table6" index="1" unique_id=1388292535 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table6" index="1" unique_id=1388292535 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table6" index="2" unique_id=2133561792]
@@ -274,10 +276,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row" index="3" unique_id=332635270 instance=ExtResource("4_rtwf4")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row" index="3" unique_id=332635270 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table2" index="1" unique_id=351895808 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table2" index="1" unique_id=351895808 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table2" index="2" unique_id=127076129]
@@ -290,10 +292,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row" index="4" unique_id=2091388601 instance=ExtResource("4_rtwf4")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row" index="4" unique_id=2091388601 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table3" index="1" unique_id=1542047396 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table3" index="1" unique_id=1542047396 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table3" index="2" unique_id=1098073822]
@@ -306,10 +308,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row" index="5" unique_id=1166052518 instance=ExtResource("4_rtwf4")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row" index="5" unique_id=1166052518 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row/table4" index="1" unique_id=951594454 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row/table4" index="1" unique_id=951594454 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row/table4" index="2" unique_id=631512310]
@@ -325,10 +327,10 @@ shape = SubResource("ConvexPolygonShape3D_a33qc")
 [node name="Row2" type="Node3D" parent="Furnitures/Tables&Chairs" index="1" unique_id=2073453816]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.7)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row2" index="0" unique_id=1853320325 instance=ExtResource("4_rtwf4")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row2" index="0" unique_id=1853320325 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table" index="1" unique_id=388422701 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table" index="1" unique_id=388422701 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table" index="2" unique_id=2078802219]
@@ -341,10 +343,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row2" index="1" unique_id=2053968017 instance=ExtResource("4_rtwf4")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row2" index="1" unique_id=2053968017 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table5" index="1" unique_id=394958587 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table5" index="1" unique_id=394958587 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table5" index="2" unique_id=840482662]
@@ -357,10 +359,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row2" index="2" unique_id=1732479260 instance=ExtResource("4_rtwf4")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row2" index="2" unique_id=1732479260 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table6" index="1" unique_id=1046276096 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table6" index="1" unique_id=1046276096 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table6" index="2" unique_id=639458060]
@@ -373,10 +375,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row2" index="3" unique_id=532490744 instance=ExtResource("4_rtwf4")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row2" index="3" unique_id=532490744 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table2" index="1" unique_id=642464950 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table2" index="1" unique_id=642464950 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table2" index="2" unique_id=118767973]
@@ -389,10 +391,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row2" index="4" unique_id=1251614210 instance=ExtResource("4_rtwf4")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row2" index="4" unique_id=1251614210 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table3" index="1" unique_id=1710632294 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table3" index="1" unique_id=1710632294 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table3" index="2" unique_id=191546511]
@@ -405,10 +407,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row2" index="5" unique_id=686122110 instance=ExtResource("4_rtwf4")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row2" index="5" unique_id=686122110 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table4" index="1" unique_id=542182035 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row2/table4" index="1" unique_id=542182035 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row2/table4" index="2" unique_id=1478831602]
@@ -424,10 +426,10 @@ shape = SubResource("ConvexPolygonShape3D_a33qc")
 [node name="Row3" type="Node3D" parent="Furnitures/Tables&Chairs" index="2" unique_id=1023334464]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row3" index="0" unique_id=1205883673 instance=ExtResource("4_rtwf4")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row3" index="0" unique_id=1205883673 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table" index="1" unique_id=1134178237 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table" index="1" unique_id=1134178237 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table" index="2" unique_id=1782050800]
@@ -440,10 +442,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row3" index="1" unique_id=1100126338 instance=ExtResource("4_rtwf4")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row3" index="1" unique_id=1100126338 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table5" index="1" unique_id=2114233774 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table5" index="1" unique_id=2114233774 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table5" index="2" unique_id=1280472090]
@@ -456,10 +458,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row3" index="2" unique_id=1194930802 instance=ExtResource("4_rtwf4")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row3" index="2" unique_id=1194930802 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table6" index="1" unique_id=1862938940 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table6" index="1" unique_id=1862938940 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table6" index="2" unique_id=1132797379]
@@ -472,10 +474,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row3" index="3" unique_id=242425722 instance=ExtResource("4_rtwf4")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row3" index="3" unique_id=242425722 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table2" index="1" unique_id=1518741191 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table2" index="1" unique_id=1518741191 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table2" index="2" unique_id=125358209]
@@ -488,10 +490,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row3" index="4" unique_id=397042225 instance=ExtResource("4_rtwf4")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row3" index="4" unique_id=397042225 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table3" index="1" unique_id=360961150 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table3" index="1" unique_id=360961150 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table3" index="2" unique_id=188547679]
@@ -504,10 +506,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row3" index="5" unique_id=821395920 instance=ExtResource("4_rtwf4")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row3" index="5" unique_id=821395920 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table4" index="1" unique_id=533345515 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row3/table4" index="1" unique_id=533345515 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row3/table4" index="2" unique_id=250126175]
@@ -523,10 +525,10 @@ shape = SubResource("ConvexPolygonShape3D_a33qc")
 [node name="Row4" type="Node3D" parent="Furnitures/Tables&Chairs" index="3" unique_id=33272923]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.3)
 
-[node name="table" parent="Furnitures/Tables&Chairs/Row4" index="0" unique_id=46604609 instance=ExtResource("4_rtwf4")]
+[node name="table" parent="Furnitures/Tables&Chairs/Row4" index="0" unique_id=46604609 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table" index="1" unique_id=443789180 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table" index="1" unique_id=443789180 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table" index="2" unique_id=1404101667]
@@ -539,10 +541,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table5" parent="Furnitures/Tables&Chairs/Row4" index="1" unique_id=1153241483 instance=ExtResource("4_rtwf4")]
+[node name="table5" parent="Furnitures/Tables&Chairs/Row4" index="1" unique_id=1153241483 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table5" index="1" unique_id=2023458116 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table5" index="1" unique_id=2023458116 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table5" index="2" unique_id=1416982203]
@@ -555,10 +557,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table6" parent="Furnitures/Tables&Chairs/Row4" index="2" unique_id=1803442513 instance=ExtResource("4_rtwf4")]
+[node name="table6" parent="Furnitures/Tables&Chairs/Row4" index="2" unique_id=1803442513 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table6" index="1" unique_id=1893187933 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table6" index="1" unique_id=1893187933 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table6" index="2" unique_id=1603831556]
@@ -571,10 +573,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table2" parent="Furnitures/Tables&Chairs/Row4" index="3" unique_id=1092888349 instance=ExtResource("4_rtwf4")]
+[node name="table2" parent="Furnitures/Tables&Chairs/Row4" index="3" unique_id=1092888349 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.3, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table2" index="1" unique_id=834664843 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table2" index="1" unique_id=834664843 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table2" index="2" unique_id=1957442047]
@@ -587,10 +589,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table3" parent="Furnitures/Tables&Chairs/Row4" index="4" unique_id=909478886 instance=ExtResource("4_rtwf4")]
+[node name="table3" parent="Furnitures/Tables&Chairs/Row4" index="4" unique_id=909478886 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.2, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table3" index="1" unique_id=389224329 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table3" index="1" unique_id=389224329 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table3" index="2" unique_id=2142896978]
@@ -603,10 +605,10 @@ shape = SubResource("ConvexPolygonShape3D_5gstl")
 transform = Transform3D(0.16611847, 0, 0, 0, 0.16611847, 0, 0, 0, 0.16611847, 0, -0.499, -0.5)
 shape = SubResource("ConvexPolygonShape3D_a33qc")
 
-[node name="table4" parent="Furnitures/Tables&Chairs/Row4" index="5" unique_id=351004288 instance=ExtResource("4_rtwf4")]
+[node name="table4" parent="Furnitures/Tables&Chairs/Row4" index="5" unique_id=351004288 instance=ExtResource("9_64vkk")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0.68, 0)
 
-[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table4" index="1" unique_id=687058463 instance=ExtResource("5_68t4e")]
+[node name="chair" parent="Furnitures/Tables&Chairs/Row4/table4" index="1" unique_id=687058463 instance=ExtResource("10_as27y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.499, -0.5)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Tables&Chairs/Row4/table4" index="2" unique_id=436584144]
@@ -622,7 +624,7 @@ shape = SubResource("ConvexPolygonShape3D_a33qc")
 [node name="Shelfs" type="Node3D" parent="Furnitures" index="2" unique_id=672888032]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.846623, 0.88697135, 5.4315133)
 
-[node name="shelf" parent="Furnitures/Shelfs" index="0" unique_id=471597467 instance=ExtResource("6_ijgj4")]
+[node name="shelf" parent="Furnitures/Shelfs" index="0" unique_id=471597467 instance=ExtResource("11_4fjph")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf" index="1" unique_id=354291185]
 
@@ -630,7 +632,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.846623, 0.88697135, 5.43151
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf2" parent="Furnitures/Shelfs" index="1" unique_id=1417077018 instance=ExtResource("6_ijgj4")]
+[node name="shelf2" parent="Furnitures/Shelfs" index="1" unique_id=1417077018 instance=ExtResource("11_4fjph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7856226, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf2" index="1" unique_id=1201169587]
@@ -639,7 +641,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7856226, 0, 0)
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf3" parent="Furnitures/Shelfs" index="2" unique_id=1398200111 instance=ExtResource("6_ijgj4")]
+[node name="shelf3" parent="Furnitures/Shelfs" index="2" unique_id=1398200111 instance=ExtResource("11_4fjph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35163, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf3" index="1" unique_id=751036549]
@@ -648,7 +650,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35163, 0, 0)
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelf4" parent="Furnitures/Shelfs" index="3" unique_id=1062241016 instance=ExtResource("6_ijgj4")]
+[node name="shelf4" parent="Furnitures/Shelfs" index="3" unique_id=1062241016 instance=ExtResource("11_4fjph")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.137253, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/Shelfs/shelf4" index="1" unique_id=49986846]
@@ -657,7 +659,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.137253, 0, 0)
 transform = Transform3D(0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0, 0.62168187, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_7hmym")
 
-[node name="shelfwithwheels" parent="Furnitures" index="3" unique_id=707462842 instance=ExtResource("7_5cefg")]
+[node name="shelfwithwheels" parent="Furnitures" index="3" unique_id=707462842 instance=ExtResource("12_h1mv2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.022497, 0.22715926, -5.0664463)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/shelfwithwheels" index="1" unique_id=936165790]
@@ -666,7 +668,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.022497, 0.22715926, -5.066
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03878784, 0.49690247, -0.004005432)
 shape = SubResource("BoxShape3D_tefuc")
 
-[node name="desk" parent="Furnitures" index="4" unique_id=1658834209 instance=ExtResource("8_dk0f3")]
+[node name="desk" parent="Furnitures" index="4" unique_id=1658834209 instance=ExtResource("13_dmuhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.165023, 0.033774447, -4.5173225)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/desk" index="1" unique_id=1645047127]
@@ -676,7 +678,7 @@ transform = Transform3D(0.38056657, 0, 0, 0, 0.38056657, 0, 0, 0, 0.38056657, 0,
 shape = SubResource("ConvexPolygonShape3D_8vhcd")
 
 [node name="RoomManager" type="Node3D" parent="." index="5" unique_id=1116614745 node_paths=PackedStringArray("spawn_points_container", "objects_container")]
-script = ExtResource("9_c87tt")
+script = ExtResource("14_gao60")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
@@ -725,13 +727,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.201, 0.821, 1.298)
 
 [node name="Tome" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=327579945 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2038888, 0.91210306, -2.6817176)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Tome"
 
-[node name="PickableObject" parent="RoomManager/Objects/Tome" index="0" unique_id=12106715 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Tome" index="0" unique_id=12106715 instance=ExtResource("16_odavh")]
 
-[node name="book_001" parent="RoomManager/Objects/Tome/PickableObject" index="1" unique_id=396307358 instance=ExtResource("11_hs8ij")]
+[node name="book_001" parent="RoomManager/Objects/Tome/PickableObject" index="1" unique_id=396307358 instance=ExtResource("17_a0h1u")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tome/PickableObject" index="2" unique_id=1962303842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00591743, 0.00061029196, 0.000109910965)
@@ -744,13 +746,13 @@ omni_range = 0.8
 
 [node name="Expunger" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=619368893 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1428833, 0.83613396, -2.68276)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Expunger"
 
-[node name="PickableObject" parent="RoomManager/Objects/Expunger" index="0" unique_id=515496746 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Expunger" index="0" unique_id=515496746 instance=ExtResource("16_odavh")]
 
-[node name="chalkboard_sponge_" parent="RoomManager/Objects/Expunger/PickableObject" index="1" unique_id=1085624757 instance=ExtResource("12_6nvao")]
+[node name="chalkboard_sponge_" parent="RoomManager/Objects/Expunger/PickableObject" index="1" unique_id=1085624757 instance=ExtResource("18_av8wp")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Expunger/PickableObject" index="2" unique_id=357173927]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00048828125, 0.018829346, 0.0006866455)
@@ -763,13 +765,13 @@ omni_range = 0.8
 
 [node name="Stylus" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=106597870 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4178035, 0.82105285, -2.6761773)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Stylus"
 
-[node name="PickableObject" parent="RoomManager/Objects/Stylus" index="0" unique_id=1475713785 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Stylus" index="0" unique_id=1475713785 instance=ExtResource("16_odavh")]
 
-[node name="markers" parent="RoomManager/Objects/Stylus/PickableObject" index="1" unique_id=651884024 instance=ExtResource("13_ysa2n")]
+[node name="markers" parent="RoomManager/Objects/Stylus/PickableObject" index="1" unique_id=651884024 instance=ExtResource("19_hcqh3")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Stylus/PickableObject" index="2" unique_id=1132303272]
@@ -783,14 +785,14 @@ omni_range = 0.8
 
 [node name="Etui" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=886275082 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1955845, 0.84909445, -0.6892748)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Etui"
 
-[node name="PickableObject" parent="RoomManager/Objects/Etui" index="0" unique_id=1176075943 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Etui" index="0" unique_id=1176075943 instance=ExtResource("16_odavh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.9604645e-08)
 
-[node name="pencilcase" parent="RoomManager/Objects/Etui/PickableObject" index="1" unique_id=282225989 instance=ExtResource("14_3q8gc")]
+[node name="pencilcase" parent="RoomManager/Objects/Etui/PickableObject" index="1" unique_id=282225989 instance=ExtResource("20_pia7i")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Etui/PickableObject" index="2" unique_id=1863333401]
@@ -804,13 +806,13 @@ omni_range = 0.8
 
 [node name="Chronometer" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=4292974 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 3.1436267, 0.8399615, 1.2995126)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Chronometer"
 
-[node name="PickableObject" parent="RoomManager/Objects/Chronometer" index="0" unique_id=240529497 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Chronometer" index="0" unique_id=240529497 instance=ExtResource("16_odavh")]
 
-[node name="watch" parent="RoomManager/Objects/Chronometer/PickableObject" index="1" unique_id=468990810 instance=ExtResource("15_3u0il")]
+[node name="watch" parent="RoomManager/Objects/Chronometer/PickableObject" index="1" unique_id=468990810 instance=ExtResource("21_yxy08")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Chronometer/PickableObject" index="2" unique_id=1098662513]
@@ -824,13 +826,13 @@ omni_range = 0.8
 
 [node name="Applicator" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=191906920 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9834132, 0.9072821, -2.665233)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Applicator"
 
-[node name="PickableObject" parent="RoomManager/Objects/Applicator" index="0" unique_id=1574369640 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Applicator" index="0" unique_id=1574369640 instance=ExtResource("16_odavh")]
 
-[node name="brush_002" parent="RoomManager/Objects/Applicator/PickableObject" index="1" unique_id=733996219 instance=ExtResource("16_ahobw")]
+[node name="brush_002" parent="RoomManager/Objects/Applicator/PickableObject" index="1" unique_id=733996219 instance=ExtResource("22_qnyhn")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Applicator/PickableObject" index="2" unique_id=959973666]
@@ -844,13 +846,13 @@ omni_range = 0.8
 
 [node name="Mixing Slab" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=1562416431 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1200254, 0.8258663, 3.2954504)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Mixing Slab"
 
-[node name="PickableObject" parent="RoomManager/Objects/Mixing Slab" index="0" unique_id=1460270318 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Mixing Slab" index="0" unique_id=1460270318 instance=ExtResource("16_odavh")]
 
-[node name="palette" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="1" unique_id=843267531 instance=ExtResource("17_lr43q")]
+[node name="palette" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="1" unique_id=843267531 instance=ExtResource("23_f7dl1")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Mixing Slab/PickableObject" index="2" unique_id=852823495]
@@ -864,13 +866,13 @@ omni_range = 0.8
 
 [node name="Portfolio" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=117763585 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2494903, 0.84245694, -0.8228689)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Portfolio"
 
-[node name="PickableObject" parent="RoomManager/Objects/Portfolio" index="0" unique_id=1940852141 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Portfolio" index="0" unique_id=1940852141 instance=ExtResource("16_odavh")]
 
-[node name="PRINCIPALOFFICEbinderfolder" parent="RoomManager/Objects/Portfolio/PickableObject" index="1" unique_id=1812431839 instance=ExtResource("18_ejl3s")]
+[node name="PRINCIPALOFFICEbinderfolder" parent="RoomManager/Objects/Portfolio/PickableObject" index="1" unique_id=1812431839 instance=ExtResource("24_h7et1")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portfolio/PickableObject" index="2" unique_id=1554404619]
@@ -884,13 +886,13 @@ omni_range = 0.8
 
 [node name="Standish" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1127139314 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.896955, -0.6997811)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Standish"
 
-[node name="PickableObject" parent="RoomManager/Objects/Standish" index="0" unique_id=858036079 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Standish" index="0" unique_id=858036079 instance=ExtResource("16_odavh")]
 
-[node name="PRINCIPALOFFICEpenholder" parent="RoomManager/Objects/Standish/PickableObject" index="1" unique_id=1007331108 instance=ExtResource("19_p8nvg")]
+[node name="PRINCIPALOFFICEpenholder" parent="RoomManager/Objects/Standish/PickableObject" index="1" unique_id=1007331108 instance=ExtResource("25_e45xv")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Standish/PickableObject" index="2" unique_id=1502006499]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.939339e-05, 0.0037598014, -0.0015380979)
@@ -903,13 +905,13 @@ omni_range = 0.8
 
 [node name="Receiver" type="Node3D" parent="RoomManager/Objects" index="9" unique_id=1072048866 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2095673, 0.8909934, 1.3135229)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Receiver"
 
-[node name="PickableObject" parent="RoomManager/Objects/Receiver" index="0" unique_id=1020129704 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Receiver" index="0" unique_id=1020129704 instance=ExtResource("16_odavh")]
 
-[node name="PRINCIPALOFFICEtelephone" parent="RoomManager/Objects/Receiver/PickableObject" index="1" unique_id=1778830460 instance=ExtResource("20_twiub")]
+[node name="PRINCIPALOFFICEtelephone" parent="RoomManager/Objects/Receiver/PickableObject" index="1" unique_id=1778830460 instance=ExtResource("26_da56d")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Receiver/PickableObject" index="2" unique_id=1056902733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014312744, 0.055755615, 0.0036315918)
@@ -922,13 +924,13 @@ omni_range = 0.8
 
 [node name="Tin" type="Node3D" parent="RoomManager/Objects" index="10" unique_id=1863250907 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2799488, 0.909886, -0.6295507)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Tin"
 
-[node name="PickableObject" parent="RoomManager/Objects/Tin" index="0" unique_id=468007860 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Tin" index="0" unique_id=468007860 instance=ExtResource("16_odavh")]
 
-[node name="CAFETERIAcan" parent="RoomManager/Objects/Tin/PickableObject" index="1" unique_id=625458938 instance=ExtResource("21_g44mx")]
+[node name="CAFETERIAcan" parent="RoomManager/Objects/Tin/PickableObject" index="1" unique_id=625458938 instance=ExtResource("27_see6f")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Tin/PickableObject" index="2" unique_id=1151022068]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00044846535, -0.0009176135, -0.00043946505)
@@ -941,13 +943,13 @@ omni_range = 0.8
 
 [node name="Salver" type="Node3D" parent="RoomManager/Objects" index="11" unique_id=212455273 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2854352, 0.819035, 1.3093565)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Salver"
 
-[node name="PickableObject" parent="RoomManager/Objects/Salver" index="0" unique_id=907279252 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Salver" index="0" unique_id=907279252 instance=ExtResource("16_odavh")]
 
-[node name="CAFETERIAtraycafet" parent="RoomManager/Objects/Salver/PickableObject" index="1" unique_id=2052798389 instance=ExtResource("22_bcfbp")]
+[node name="CAFETERIAtraycafet" parent="RoomManager/Objects/Salver/PickableObject" index="1" unique_id=2052798389 instance=ExtResource("28_jwbrx")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Salver/PickableObject" index="2" unique_id=1087606454]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00018072128, 0.001044929, -0.0006958246)
@@ -960,13 +962,13 @@ omni_range = 0.8
 
 [node name="Orb" type="Node3D" parent="RoomManager/Objects" index="12" unique_id=860161688 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2011437, 0.8143074, 1.2984499)
-script = ExtResource("12_rbmxe")
+script = ExtResource("15_2lto8")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Orb"
 
-[node name="PickableObject" parent="RoomManager/Objects/Orb" index="0" unique_id=1798104490 instance=ExtResource("10_pesty")]
+[node name="PickableObject" parent="RoomManager/Objects/Orb" index="0" unique_id=1798104490 instance=ExtResource("16_odavh")]
 
-[node name="CHEMISTRYglobe_1" parent="RoomManager/Objects/Orb/PickableObject" index="1" unique_id=4913442 instance=ExtResource("23_gc2xc")]
+[node name="CHEMISTRYglobe_1" parent="RoomManager/Objects/Orb/PickableObject" index="1" unique_id=4913442 instance=ExtResource("29_xcr2e")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Orb/PickableObject" index="2" unique_id=1679009263]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17262208, 0)

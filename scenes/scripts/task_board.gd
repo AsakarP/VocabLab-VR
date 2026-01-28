@@ -5,7 +5,6 @@ extends Node3D
 @onready var sprite_3d: Sprite3D = $Sprite3D
 @onready var teleport_area: Area3D = $"../TeleportArea"
 
-
 @export var master_item_list: Array[String] = []
 @export var objectsNode: Node3D
 @export var sound_correct: AudioStream
@@ -80,13 +79,30 @@ func update_board_disp():
 	
 	if current_idx < current_queue.size():
 		var target = current_queue[current_idx]
-		label_3d.text = "Cari: %s\nObjek: %d/%d\nPoin: %d\nSisa Waktu: %s" % [target, obj, obj_total, score, time_str]
+		label_3d.text = "Cari: %s\nObjek: %d/%d\nPoin: %d\nSisa Waktu: %s" % \
+		[target, obj, obj_total, score, time_str]
 
 func end_game_timeout():
 	game_active = false
-	
-	label_3d.text = "Waktu Habis!\nPoin Akhir: %d" % score
-	label_3d.modulate = Color.RED
+	#\nTekan tombol merah jika ingin mencoba ulang.
+	if error_log == "":
+		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d \
+		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
+		[obj, obj_total, score]
+		label_3d.modulate = Color.RED
+		
+		print("*** Summary ***")
+		print("Poin Akhir: ",score)
+	else:
+		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d\nKesalahan:\n%s \
+		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
+		[obj, obj_total, score, error_log]
+		label_3d.modulate = Color.ORANGE
+		
+		print("*** Summary ***")
+		print("Poin Akhir: ",score)
+		print("*** Mistakes ***")
+		print(error_log)
 	
 	sprite_3d.visible = true
 	teleport_area.monitoring = true
@@ -110,20 +126,20 @@ func end_game_win():
 	var time_left_str = format_seconds(visible_time_left_sec)
 	
 	if error_log == "":
+		label_3d.text = "Semua Objek Teridentifikasi! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
+		Sisa Waktu: %s\nTidak ada Kesalahan, Hebat!\nSilakan berjalan menuju portal di sudut ruangan\
+		\nuntuk melanjutkan ke tahap berikutnya." % [obj, obj_total, score, time_taken_str, time_left_str]
 		label_3d.modulate = Color.GREEN
-		label_3d.text = "Semua Objek Ditemukan! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
-		Sisa Waktu: %s\nTidak ada Kesalahan, Hebat!\nTekan tombol merah jika ingin mencoba ulang." % \
-		[obj, obj_total, score, time_taken_str, time_left_str]
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
 		print("Time Taken: ",time_taken_str)
 		print("Time Left: ",time_left_str)
 	else:
+		label_3d.text = "Semua Objek Teridentifikasi! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
+		Sisa Waktu: %s\nKesalahan:\n%s\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan \
+		ke tahap berikutnya." % [obj, obj_total, score, time_taken_str, time_left_str, error_log]
 		label_3d.modulate = Color.ORANGE
-		label_3d.text = "Semua Objek Ditemukan! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
-		Sisa Waktu: %s\nKesalahan:\n%s\n\nTekan tombol merah jika ingin mencoba ulang." % \
-		[obj, obj_total, score, time_taken_str, time_left_str, error_log]
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)

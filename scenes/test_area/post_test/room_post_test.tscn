@@ -1,32 +1,32 @@
-[gd_scene format=4 uid="uid://blai5di7hgds8"]
+[gd_scene format=4 uid="uid://bhpacxjspcacg"]
 
-[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6ub8i"]
-[ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="2_7diqi"]
-[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_i6qwn"]
-[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="3_8mfpk"]
-[ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="3_iurof"]
-[ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="3_m6e51"]
-[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="4_ct6pl"]
-[ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="4_uka4f"]
-[ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="5_537hs"]
-[ext_resource type="PackedScene" uid="uid://ckncxv78vvsya" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_medium_long.fbx" id="6_a3w43"]
-[ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_ct6pl"]
-[ext_resource type="PackedScene" uid="uid://caixodf0p62gb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_C.fbx" id="7_q7r7u"]
-[ext_resource type="PackedScene" uid="uid://cocfpk5yrpbl6" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch.fbx" id="8_4ukh1"]
-[ext_resource type="PackedScene" uid="uid://b7o8edu2qk0th" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_oval_A.fbx" id="9_nldxb"]
-[ext_resource type="PackedScene" uid="uid://duwlrpbjikkyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_rectangle_stripes_A.fbx" id="10_4l40p"]
-[ext_resource type="PackedScene" uid="uid://c4rg6fpw3w75k" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_big.fbx" id="11_voaw8"]
-[ext_resource type="PackedScene" uid="uid://ckndyjtsicxbs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_small.fbx" id="12_s5etu"]
-[ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="13_dik1j"]
-[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="14_gf72i"]
-[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="15_jx7oo"]
-[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="15_rofia"]
-[ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="16_1qfaj"]
-[ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="17_f206w"]
-[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="17_gap2k"]
-[ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="18_gwj6w"]
-[ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="19_mfx57"]
-[ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="20_8gy4o"]
+[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_qr5tt"]
+[ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_ko37q"]
+[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="3_lp0qn"]
+[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="4_xfvu8"]
+[ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="5_poi12"]
+[ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_ekfoj"]
+[ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="7_qsfae"]
+[ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="8_i0ux1"]
+[ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="9_4ce0f"]
+[ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="10_j3sck"]
+[ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="11_u7edb"]
+[ext_resource type="PackedScene" uid="uid://ckncxv78vvsya" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_medium_long.fbx" id="12_le1jh"]
+[ext_resource type="PackedScene" uid="uid://caixodf0p62gb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_C.fbx" id="13_sowcc"]
+[ext_resource type="PackedScene" uid="uid://cocfpk5yrpbl6" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch.fbx" id="14_7744v"]
+[ext_resource type="PackedScene" uid="uid://b7o8edu2qk0th" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_oval_A.fbx" id="15_es78f"]
+[ext_resource type="PackedScene" uid="uid://duwlrpbjikkyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_rectangle_stripes_A.fbx" id="16_mayby"]
+[ext_resource type="PackedScene" uid="uid://c4rg6fpw3w75k" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_big.fbx" id="17_poqa6"]
+[ext_resource type="PackedScene" uid="uid://ckndyjtsicxbs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_small.fbx" id="18_18h7u"]
+[ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="19_furv0"]
+[ext_resource type="Script" uid="uid://dmwly7t0v63xo" path="res://scenes/scripts/room_manager.gd" id="20_5gwu2"]
+[ext_resource type="Script" uid="uid://rtg6sdcsli1h" path="res://scenes/scripts/test_item.gd" id="21_4unco"]
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="22_ii2qe"]
+[ext_resource type="PackedScene" uid="uid://bikrhq7cgx5rs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_table.fbx" id="23_rn6sj"]
+[ext_resource type="PackedScene" uid="uid://peuws266e8y4" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pictureframe_standing_A.fbx" id="24_m42ur"]
+[ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="25_8q0gf"]
+[ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="26_f10bp"]
+[ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="27_mlo3c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_acf2o"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -116,7 +116,7 @@ size = Vector3(0.628, 0.2, 0.493)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f81wx"]
 size = Vector3(0.75372314, 0.5, 0.7529999)
 
-[node name="RoomTest" unique_id=655237994 instance=ExtResource("1_6ub8i")]
+[node name="RoomTest" unique_id=655237994 instance=ExtResource("1_qr5tt")]
 
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
@@ -161,14 +161,14 @@ omni_range = 6.5
 
 [node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1916446411 node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
-script = ExtResource("2_i6qwn")
+script = ExtResource("2_ko37q")
 master_item_list = Array[String](["Luminary", "Portrait", "Succulent", "Cushion", "Footrest"])
 objectsNode = NodePath("../../RoomManager/Objects")
-sound_correct = ExtResource("3_8mfpk")
-sound_incorrect = ExtResource("4_ct6pl")
+sound_correct = ExtResource("3_lp0qn")
+sound_incorrect = ExtResource("4_xfvu8")
 room_manager = NodePath("../../RoomManager")
 
-[node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=261049739 instance=ExtResource("15_jx7oo")]
+[node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=261049739 instance=ExtResource("5_poi12")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -1.3242062, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Interior/TaskBoard/PushButton" index="4" unique_id=2043082355]
@@ -183,14 +183,14 @@ shape = SubResource("ConvexPolygonShape3D_m6e51")
 [node name="Sprite3D" type="Sprite3D" parent="Interior/TaskBoard" index="1" unique_id=380733254]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.51555896, 0)
 billboard = 1
-texture = ExtResource("6_ct6pl")
+texture = ExtResource("6_ekfoj")
 
-[node name="TeleportArea" parent="Interior" index="3" unique_id=1045051944 instance=ExtResource("3_m6e51")]
+[node name="TeleportArea" parent="Interior" index="3" unique_id=1045051944 instance=ExtResource("7_qsfae")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.115514)
 visible = false
 collision_mask = 524288
 monitoring = false
-target_scene = "uid://cpm173umy42e2"
+target_scene = "uid://b5nu8kaietly"
 
 [node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=951211235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
@@ -200,14 +200,16 @@ font_size = 64
 
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1559500882]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
-text = "Identifikasi 5 Objek sesuai perintah Target.
+text = "Saatnya melakukan pengujian untuk melihat berapa banyak kosakata yang berhasil kamu kuasai!
+-
+Identifikasi 5 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
 
 [node name="Furnitures" type="Node3D" parent="." index="4" unique_id=969014415]
 
-[node name="cabinet_medium" parent="Furnitures" index="0" unique_id=238933285 instance=ExtResource("2_7diqi")]
+[node name="cabinet_medium" parent="Furnitures" index="0" unique_id=238933285 instance=ExtResource("8_i0ux1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -5.2)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_medium" index="1" unique_id=1681690554]
@@ -217,7 +219,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 5.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7012818, 0.51755536, -5.2)
 shape = SubResource("BoxShape3D_n20u5")
 
-[node name="cabinet_small" parent="Furnitures" index="1" unique_id=1181464631 instance=ExtResource("3_iurof")]
+[node name="cabinet_small" parent="Furnitures" index="1" unique_id=1181464631 instance=ExtResource("9_4ce0f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -5.2)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_small" index="1" unique_id=1741552806]
@@ -226,7 +228,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -5.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5126734, 0)
 shape = SubResource("BoxShape3D_588f6")
 
-[node name="bed_double_A" parent="Furnitures" index="2" unique_id=1011064683 instance=ExtResource("4_uka4f")]
+[node name="bed_double_A" parent="Furnitures" index="2" unique_id=1011064683 instance=ExtResource("10_j3sck")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.2)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/bed_double_A" index="1" unique_id=656228627]
@@ -235,7 +237,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004348755, 0, 0.006234169)
 shape = SubResource("BoxShape3D_m6e51")
 
-[node name="lamp_standing" parent="Furnitures" index="3" unique_id=656765602 instance=ExtResource("5_537hs")]
+[node name="lamp_standing" parent="Furnitures" index="3" unique_id=656765602 instance=ExtResource("11_u7edb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4419847, 0, -5.1198235)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing" index="1" unique_id=1029147224]
@@ -251,7 +253,7 @@ omni_range = 3.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75201416, 0)
 shape = SubResource("CylinderShape3D_m6e51")
 
-[node name="table_medium_long" parent="Furnitures" index="4" unique_id=608802906 instance=ExtResource("6_a3w43")]
+[node name="table_medium_long" parent="Furnitures" index="4" unique_id=608802906 instance=ExtResource("12_le1jh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9742148)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/table_medium_long" index="1" unique_id=1942175964]
@@ -260,7 +262,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9742148)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008773804, 0.52978516, 0.00048828125)
 shape = SubResource("BoxShape3D_i6qwn")
 
-[node name="chair_C" parent="Furnitures" index="5" unique_id=1635011576 instance=ExtResource("7_q7r7u")]
+[node name="chair_C" parent="Furnitures" index="5" unique_id=1635011576 instance=ExtResource("13_sowcc")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4.3714414)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/chair_C" index="1" unique_id=1297688738]
@@ -269,7 +271,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0076599177, 0.24560547, -0.008300781)
 shape = SubResource("BoxShape3D_gap2k")
 
-[node name="couch" parent="Furnitures" index="6" unique_id=584075345 instance=ExtResource("8_4ukh1")]
+[node name="couch" parent="Furnitures" index="6" unique_id=584075345 instance=ExtResource("14_7744v")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.85, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/couch" index="1" unique_id=1960033566]
@@ -290,19 +292,19 @@ shape = SubResource("BoxShape3D_p3dl8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0043106275, 0.35938036, -0.4472208)
 shape = SubResource("BoxShape3D_n53bi")
 
-[node name="rug_oval_A" parent="Furnitures" index="7" unique_id=1947742142 instance=ExtResource("9_nldxb")]
+[node name="rug_oval_A" parent="Furnitures" index="7" unique_id=1947742142 instance=ExtResource("15_es78f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 
-[node name="rug_rectangle_stripes_A" parent="Furnitures" index="8" unique_id=1454068696 instance=ExtResource("10_4l40p")]
+[node name="rug_rectangle_stripes_A" parent="Furnitures" index="8" unique_id=1454068696 instance=ExtResource("16_mayby")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 0)
 
-[node name="shelf_A_big" parent="Furnitures" index="9" unique_id=1420605378 instance=ExtResource("11_voaw8")]
+[node name="shelf_A_big" parent="Furnitures" index="9" unique_id=1420605378 instance=ExtResource("17_poqa6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.793, 2.5, -5.75)
 
-[node name="shelf_A_small" parent="Furnitures" index="10" unique_id=495960551 instance=ExtResource("12_s5etu")]
+[node name="shelf_A_small" parent="Furnitures" index="10" unique_id=495960551 instance=ExtResource("18_18h7u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.181, 2.5, -5.75)
 
-[node name="armchair" parent="Furnitures" index="11" unique_id=1364192705 instance=ExtResource("13_dik1j")]
+[node name="armchair" parent="Furnitures" index="11" unique_id=1364192705 instance=ExtResource("19_furv0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/armchair" index="1" unique_id=1920028915]
@@ -312,7 +314,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2895832e-05, 0, 0.05296325
 shape = SubResource("BoxShape3D_8mfpk")
 
 [node name="RoomManager" type="Node3D" parent="." index="5" unique_id=6280539 node_paths=PackedStringArray("spawn_points_container", "objects_container")]
-script = ExtResource("17_gap2k")
+script = ExtResource("20_5gwu2")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
@@ -337,14 +339,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 
 [node name="Luminary" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=828736725 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
-script = ExtResource("14_gf72i")
+script = ExtResource("21_4unco")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Luminary"
 
-[node name="PickableObject" parent="RoomManager/Objects/Luminary" index="0" unique_id=509506617 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Luminary" index="0" unique_id=509506617 instance=ExtResource("22_ii2qe")]
 collision_layer = 1048580
 
-[node name="lamp_table" parent="RoomManager/Objects/Luminary/PickableObject" index="0" unique_id=620475445 instance=ExtResource("16_1qfaj")]
+[node name="lamp_table" parent="RoomManager/Objects/Luminary/PickableObject" index="0" unique_id=620475445 instance=ExtResource("23_rn6sj")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Luminary/PickableObject" index="2" unique_id=1310021249]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5063404, 0)
@@ -357,14 +359,14 @@ omni_range = 0.8
 
 [node name="Portrait" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=361376913 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
-script = ExtResource("14_gf72i")
+script = ExtResource("21_4unco")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Portrait"
 
-[node name="PickableObject" parent="RoomManager/Objects/Portrait" index="0" unique_id=551447423 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Portrait" index="0" unique_id=551447423 instance=ExtResource("22_ii2qe")]
 collision_layer = 1048580
 
-[node name="pictureframe_standing_A" parent="RoomManager/Objects/Portrait/PickableObject" index="1" unique_id=467514845 instance=ExtResource("17_f206w")]
+[node name="pictureframe_standing_A" parent="RoomManager/Objects/Portrait/PickableObject" index="1" unique_id=467514845 instance=ExtResource("24_m42ur")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portrait/PickableObject" index="2" unique_id=1743830308]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30682206, 0)
@@ -377,14 +379,14 @@ omni_range = 0.8
 
 [node name="Succulent" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=777619524 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063334, 0.0028970242, -2.291012)
-script = ExtResource("14_gf72i")
+script = ExtResource("21_4unco")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Succulent"
 
-[node name="PickableObject" parent="RoomManager/Objects/Succulent" index="0" unique_id=530857556 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Succulent" index="0" unique_id=530857556 instance=ExtResource("22_ii2qe")]
 collision_layer = 1048580
 
-[node name="cactus_medium_A" parent="RoomManager/Objects/Succulent/PickableObject" index="1" unique_id=291687530 instance=ExtResource("18_gwj6w")]
+[node name="cactus_medium_A" parent="RoomManager/Objects/Succulent/PickableObject" index="1" unique_id=291687530 instance=ExtResource("25_8q0gf")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Succulent/PickableObject" index="2" unique_id=1374341009]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39108643, 0)
@@ -397,14 +399,14 @@ omni_range = 0.8
 
 [node name="Cushion" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1830955597 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
-script = ExtResource("14_gf72i")
+script = ExtResource("21_4unco")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cushion"
 
-[node name="PickableObject" parent="RoomManager/Objects/Cushion" index="0" unique_id=702168018 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Cushion" index="0" unique_id=702168018 instance=ExtResource("22_ii2qe")]
 collision_layer = 1048580
 
-[node name="pillow_A" parent="RoomManager/Objects/Cushion/PickableObject" index="1" unique_id=732187480 instance=ExtResource("19_mfx57")]
+[node name="pillow_A" parent="RoomManager/Objects/Cushion/PickableObject" index="1" unique_id=732187480 instance=ExtResource("26_f10bp")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cushion/PickableObject" index="2" unique_id=227567642]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032980442, 0.004047394, -0.0014641285)
@@ -417,14 +419,14 @@ omni_range = 0.8
 
 [node name="Footrest" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=1543628279 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 0.0063424334, 3.037981)
-script = ExtResource("14_gf72i")
+script = ExtResource("21_4unco")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Footrest"
 
-[node name="PickableObject" parent="RoomManager/Objects/Footrest" index="0" unique_id=2023092729 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Footrest" index="0" unique_id=2023092729 instance=ExtResource("22_ii2qe")]
 collision_layer = 1048580
 
-[node name="chair_stool" parent="RoomManager/Objects/Footrest/PickableObject" index="1" unique_id=19005133 instance=ExtResource("20_8gy4o")]
+[node name="chair_stool" parent="RoomManager/Objects/Footrest/PickableObject" index="1" unique_id=19005133 instance=ExtResource("27_mlo3c")]
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Footrest/PickableObject" index="2" unique_id=1964685484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00088500977, 0.25024414, 0.0008985996)

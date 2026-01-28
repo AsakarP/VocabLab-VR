@@ -69,14 +69,14 @@ colors = PackedColorArray(0.14117648, 0.14117648, 0.14117648, 0.9607843, 1, 1, 1
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wpcbs"]
 gradient = SubResource("Gradient_iwv4c")
-width = 600
-height = 150
+width = 650
+height = 120
 fill_from = Vector2(1, 0)
 
 [node name="Lobby" unique_id=1245540180 instance=ExtResource("1_o1atq")]
 
 [node name="XROrigin3D" parent="." index="0"]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -4.9578)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
 suppress_radius = 0.0
@@ -534,7 +534,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 [node name="RoomTestTeleporter" parent="LobbyArea/TestPortals" index="0" unique_id=1430380932 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
-target_scene = "uid://blai5di7hgds8"
+target_scene = "uid://bhpacxjspcacg"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter" index="3" unique_id=1599874531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
@@ -556,7 +556,7 @@ text = "5 Objek"
 [node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" unique_id=1944524922 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 collision_mask = 524288
-target_scene = "uid://cpm173umy42e2"
+target_scene = "uid://b5nu8kaietly"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3" unique_id=327115139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
@@ -578,7 +578,7 @@ text = "10 Objek"
 [node name="ClassTestTeleporter" parent="LobbyArea/TestPortals" index="2" unique_id=1548683105 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
-target_scene = "uid://do3bcd5mh1v2e"
+target_scene = "uid://36o7l2e23sx6"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter" index="3" unique_id=626017041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
@@ -598,20 +598,23 @@ billboard = 1
 text = "13 Objek"
 
 [node name="Guide" type="Node3D" parent="LobbyArea" index="6" unique_id=2096924341]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -2.5006783)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 2.8906033)
 
 [node name="Sprite3D" type="Sprite3D" parent="LobbyArea/Guide" index="0" unique_id=279799597]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7100916e-07, 1.8, -2.0061176)
 cast_shadow = 0
 visibility_range_begin = 0.1
 visibility_range_end = 6.0
 texture = SubResource("GradientTexture2D_wpcbs")
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/Guide/Sprite3D" index="0" unique_id=190922457]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049999952)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.842171e-14, 0.0065960884, 0.05000019)
 visibility_range_begin = 0.1
 visibility_range_end = 6.0
-text = "Freemode"
+text = "Selamat! 
+Anda telah menyelesaikan seluruh rangkaian permainan VocabLab VR.
+Sekarang Anda bebas memasuki portal mana saja di lobi ini untuk mengulang level 
+atau materi tertentu yang ingin Anda pelajari kembali."
 
 [node name="TerrainAssets" type="Node3D" parent="." index="6" unique_id=653591596]
 
