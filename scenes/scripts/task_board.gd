@@ -84,7 +84,6 @@ func update_board_disp():
 
 func end_game_timeout():
 	game_active = false
-	#\nTekan tombol merah jika ingin mencoba ulang.
 	if error_log == "":
 		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d \
 		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
