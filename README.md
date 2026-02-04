@@ -63,9 +63,10 @@ This project is built on the hypothesis that **VR creates a safe space for learn
 
 | Learning Room | Testing Room |
 |:---:|:---:|
-| *![LearningRoom](https://github.com/user-attachments/assets/c5f15e8a-60e9-49a3-8252-89a4ac2589ae)* | *![TestingRoom](https://github.com/user-attachments/assets/ab5b1445-0af5-4504-91cc-cea2f12504af)* |
+| *![LearningRoomGithub](https://github.com/user-attachments/assets/325470a9-4cea-4393-bbfd-1226afe6305a)* | 
+*![TestingRoomGithub](https://github.com/user-attachments/assets/cb9432a1-f41d-43a4-be7c-5220ca2b18d4)* |
 
-> *![HoldingObject](https://github.com/user-attachments/assets/3c73e5c9-adb1-4a8f-a1eb-4b4a08807123)*
+> *![HoldingObjectGithub](https://github.com/user-attachments/assets/b1db833d-381e-47a2-a540-459b35993662)*
 
 ---
 
