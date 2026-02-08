@@ -3,7 +3,7 @@
 ![Godot Engine](https://img.shields.io/badge/Godot-v4.x-478cbf?logo=godot-engine&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-VR%20%2F%20XR-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 **An immersive VR application built with Godot 4 designed to enhance English vocabulary acquisition through contextual interaction and gamification.**
 
