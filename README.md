@@ -32,7 +32,7 @@ The core philosophy of this project addresses two major hurdles in language lear
     * **Time Attack:** A 10-minute countdown to find specific items.
     * **Score System:** Instant feedback (+1 for correct, -1 for incorrect) to reinforce learning.
     * **Performance Tracking:** Displays time taken and errors made for analysis.
-* **Audio-Visual Feedback:** Cues like "poof" effects, color changes, and sound effects to reward correct answers.
+* **Audio-Visual Feedback:** Cues like color changes and sound effects to reward correct answers.
 
 ---
 
