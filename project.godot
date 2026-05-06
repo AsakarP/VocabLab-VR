@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="VocabLab VR"
-config/tags=PackedStringArray("object_finding_game", "vr")
+config/tags=PackedStringArray("object_finding_game", "virtual_reality")
 run/main_scene="uid://d0upy347c6awm"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://cqotd4d3v610j"
