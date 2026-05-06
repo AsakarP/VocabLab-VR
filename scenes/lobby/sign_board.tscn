@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d4kmemqiritpk"]
+[gd_scene format=3 uid="uid://d4kmemqiritpk"]
 
 [ext_resource type="Texture2D" uid="uid://c8df1nrgnk1g8" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_Color.jpg" id="1_v4cu8"]
 [ext_resource type="Texture2D" uid="uid://xx7tc0lmtu76" path="res://textures/Tiles071_4K-JPG/Tiles071_4K-JPG_Roughness.jpg" id="2_7vnpc"]
@@ -34,22 +34,23 @@ uv1_triplanar = true
 [sub_resource type="TextMesh" id="TextMesh_417c5"]
 material = SubResource("StandardMaterial3D_og1vs")
 add_uv2 = true
-text = "VocabLab VR"
-font_size = 100
+text = "VocabLab VR
+Spanish App 1"
+font_size = 70
 depth = 0.1
 
-[node name="SignBoard" type="StaticBody3D"]
+[node name="SignBoard" type="StaticBody3D" unique_id=1867192792]
 
-[node name="TextBoard" type="MeshInstance3D" parent="."]
+[node name="TextBoard" type="MeshInstance3D" parent="." unique_id=1791155404]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049247622)
 mesh = SubResource("BoxMesh_78rk6")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=125084852]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.049247622)
 shape = SubResource("ConvexPolygonShape3D_lk211")
 
-[node name="TextSign" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.004999995, -0.038585782)
+[node name="TextSign" type="MeshInstance3D" parent="." unique_id=2076661095]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.07849091, -0.038585782)
 mesh = SubResource("TextMesh_417c5")
 skeleton = NodePath("../..")
