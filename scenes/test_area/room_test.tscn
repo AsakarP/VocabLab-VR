@@ -27,6 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="18_gwj6w"]
 [ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="19_mfx57"]
 [ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="20_8gy4o"]
+[ext_resource type="PackedScene" uid="uid://cdclhtqtd3gy3" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/camera_001.fbx" id="28_7o0dq"]
+[ext_resource type="PackedScene" uid="uid://c5xj4m85rdwvp" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/dumbbell_001.fbx" id="29_kmpym"]
+[ext_resource type="PackedScene" uid="uid://bylsbqdntq2lo" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/clothes_001.fbx" id="30_io3ku"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_acf2o"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -113,8 +116,17 @@ radius = 0.42333984
 [sub_resource type="BoxShape3D" id="BoxShape3D_krvcu"]
 size = Vector3(0.628, 0.2, 0.493)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_f81wx"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_io3ku"]
 size = Vector3(0.75372314, 0.5, 0.7529999)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f81wx"]
+size = Vector3(0.39625674, 0.22803783, 0.22989601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmpym"]
+size = Vector3(0.3183785, 0.20511627, 0.28162277)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4h0xn"]
+size = Vector3(0.577821, 0.19050026, 0.91834664)
 
 [node name="RoomTest" unique_id=655237994 instance=ExtResource("1_6ub8i")]
 
@@ -162,7 +174,7 @@ omni_range = 6.5
 [node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1916446411 node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
 script = ExtResource("2_i6qwn")
-master_item_list = Array[String](["Lámpara", "Marco", "Cacto", "Almohadón", "Taburete"])
+master_item_list = Array[String](["Lámpara", "Marco", "Cacto", "Almohadón", "Taburete", "Pesa", "Cámara", "Ropa"])
 objectsNode = NodePath("../../RoomManager/Objects")
 sound_correct = ExtResource("3_8mfpk")
 sound_incorrect = ExtResource("4_ct6pl")
@@ -333,6 +345,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.605, -0.768)
 [node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4" unique_id=1086210708]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 
+[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5" unique_id=102200837]
+transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
+
+[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6" unique_id=176420300]
+transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
+
+[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7" unique_id=2076456352]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
+
 [node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=2002535687]
 
 [node name="Lámpara" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=828736725 node_paths=PackedStringArray("task_board")]
@@ -426,14 +447,77 @@ collision_layer = 1048580
 
 [node name="chair_stool" parent="RoomManager/Objects/Taburete/PickableObject" index="1" unique_id=19005133 instance=ExtResource("20_8gy4o")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Taburete/PickableObject" index="2" unique_id=1964685484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00088500977, 0.25024414, 0.0008985996)
-shape = SubResource("BoxShape3D_f81wx")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Taburete/PickableObject" index="3" unique_id=2055459491]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Taburete/PickableObject" index="2" unique_id=2055459491]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.37451923, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RoomManager/Objects/Taburete/PickableObject" index="3" unique_id=1319412553]
+transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000002, 0, 0.25131613, 0)
+shape = SubResource("BoxShape3D_io3ku")
+
+[node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1421183435 node_paths=PackedStringArray("task_board")]
+transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
+script = ExtResource("14_gf72i")
+task_board = NodePath("../../../Interior/TaskBoard")
+item_name = "Pesa"
+
+[node name="PickableObject" parent="RoomManager/Objects/Pesa" index="0" unique_id=1486499558 instance=ExtResource("15_rofia")]
+collision_layer = 1048580
+
+[node name="dumbbell_001" parent="RoomManager/Objects/Pesa/PickableObject" index="0" unique_id=1329212711 instance=ExtResource("29_kmpym")]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.12, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Pesa/PickableObject" index="2" unique_id=1911317743]
+transform = Transform3D(1.0000008, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 1.0000008, -0.0014030933, 0.11985732, 0.00063943863)
+shape = SubResource("BoxShape3D_f81wx")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Pesa/PickableObject" index="3" unique_id=1262418649]
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.0979378, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.23023522
+
+[node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=11840054 node_paths=PackedStringArray("task_board")]
+transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
+script = ExtResource("14_gf72i")
+task_board = NodePath("../../../Interior/TaskBoard")
+item_name = "Cámara"
+
+[node name="PickableObject" parent="RoomManager/Objects/Cámara" index="0" unique_id=1312129972 instance=ExtResource("15_rofia")]
+collision_layer = 1048580
+
+[node name="camera_001" parent="RoomManager/Objects/Cámara/PickableObject" index="1" unique_id=1294617334 instance=ExtResource("28_7o0dq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cámara/PickableObject" index="2" unique_id=1792233543]
+transform = Transform3D(1.000001, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1.000001, 0.014095068, 0.10309982, 0.0814929)
+shape = SubResource("BoxShape3D_kmpym")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cámara/PickableObject" index="3" unique_id=104864605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028288662, 0.14929593, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.3718828
+
+[node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1455751708 node_paths=PackedStringArray("task_board")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
+script = ExtResource("14_gf72i")
+task_board = NodePath("../../../Interior/TaskBoard")
+item_name = "Ropa"
+
+[node name="PickableObject" parent="RoomManager/Objects/Ropa" index="0" unique_id=1802677834 instance=ExtResource("15_rofia")]
+collision_layer = 1048580
+
+[node name="clothes_001" parent="RoomManager/Objects/Ropa/PickableObject" index="1" unique_id=2120651656 instance=ExtResource("30_io3ku")]
+transform = Transform3D(-0.9999999, -1.5099579e-07, -6.600236e-15, 0, -4.3711385e-08, 1, -1.5099579e-07, 0.9999999, 4.371139e-08, 0, 0.079, 0.524)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Ropa/PickableObject" index="2" unique_id=799069501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025423422, 0.09000301, 0.07640338)
+shape = SubResource("BoxShape3D_4h0xn")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Ropa/PickableObject" index="3" unique_id=1399933886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02828866, 0.13063216, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.5017134
 
 [connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
