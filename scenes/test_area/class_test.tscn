@@ -128,7 +128,7 @@ size = Vector3(0.6497754, 0.031113282, 0.45108888)
 [sub_resource type="BoxShape3D" id="BoxShape3D_prs8s"]
 size = Vector3(0.205, 0.36475587, 0.215)
 
-[node name="ClassLearn" unique_id=1872970581 instance=ExtResource("1_hblbk")]
+[node name="ClassTest" unique_id=1872970581 instance=ExtResource("1_hblbk")]
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=267852734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 1.3222318, -1.9783258)
