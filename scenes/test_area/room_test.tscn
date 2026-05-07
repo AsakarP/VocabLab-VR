@@ -356,11 +356,12 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 
 
 [node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=2002535687]
 
-[node name="Lámpara" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=828736725 node_paths=PackedStringArray("task_board")]
+[node name="Lámpara" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=828736725 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95941, 1.0391959, -5.158051)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Lámpara"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Lámpara" index="0" unique_id=509506617 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -377,11 +378,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.5882474
 
-[node name="Marco" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=361376913 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Lámpara" index="1" unique_id=2079878197]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.395373, 0)
+billboard = 1
+text = "Test"
+
+[node name="Marco" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=361376913 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Marco"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Marco" index="0" unique_id=551447423 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -398,11 +405,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.55695003
 
-[node name="Cacto" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=777619524 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Marco" index="1" unique_id=1417379136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9265795, 0)
+billboard = 1
+text = "Test"
+
+[node name="Cacto" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=777619524 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063334, 0.0028970242, -2.291012)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cacto"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Cacto" index="0" unique_id=530857556 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -419,11 +432,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.58079666
 
-[node name="Almohadón" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1830955597 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Cacto" index="1" unique_id=171596376]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1723797, 0)
+billboard = 1
+text = "Test"
+
+[node name="Almohadón" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1830955597 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Almohadón"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Almohadón" index="0" unique_id=702168018 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -440,11 +459,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.5712981
 
-[node name="Taburete" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=1543628279 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Almohadón" index="1" unique_id=2077369121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5130461, 0)
+billboard = 1
+text = "Test"
+
+[node name="Taburete" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=1543628279 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 0.0063424334, 3.037981)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Taburete"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Taburete" index="0" unique_id=2023092729 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -461,11 +486,17 @@ omni_range = 0.8
 transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000002, 0, 0.25131613, 0)
 shape = SubResource("BoxShape3D_io3ku")
 
-[node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1421183435 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Taburete" index="1" unique_id=1124050893]
+transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, 0.99963284, 0)
+billboard = 1
+text = "Test"
+
+[node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1421183435 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Pesa"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Pesa" index="0" unique_id=1486499558 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -483,11 +514,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.28238937
 
-[node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=11840054 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Pesa" index="1" unique_id=1398126960]
+transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000002, 0, 0.513046, 0)
+billboard = 1
+text = "Test"
+
+[node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=11840054 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cámara"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Cámara" index="0" unique_id=1312129972 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -505,11 +542,17 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.3718828
 
-[node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1455751708 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Cámara" index="1" unique_id=356080758]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513046, 0)
+billboard = 1
+text = "Test"
+
+[node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1455751708 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Ropa"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Ropa" index="0" unique_id=1802677834 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
@@ -526,6 +569,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02828866, 0.13063216, 0)
 visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.6762432
+
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Ropa" index="1" unique_id=2033354187]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.513046, 0)
+billboard = 1
+text = "Test"
 
 [connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
