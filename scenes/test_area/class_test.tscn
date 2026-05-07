@@ -760,6 +760,7 @@ shape = SubResource("BoxShape3D_8lj0s")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Libro/PickableObject" index="3" unique_id=435784152]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014761686, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.24163777
 
@@ -780,6 +781,7 @@ shape = SubResource("BoxShape3D_fq1fv")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Borrador/PickableObject" index="3" unique_id=1547451761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.048912466, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.216555
 
@@ -800,6 +802,7 @@ shape = SubResource("BoxShape3D_bjbv7")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Bolígrafo/PickableObject" index="3" unique_id=76091640]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030537367, -0.022494555)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.16966708
 
@@ -820,6 +823,7 @@ shape = SubResource("BoxShape3D_iogyn")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Estuche/PickableObject" index="3" unique_id=1120956352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008281469, 0.028490603, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.1888515
 
@@ -840,6 +844,7 @@ shape = SubResource("BoxShape3D_t0vqf")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Reloj/PickableObject" index="3" unique_id=608984351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.018669844, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.36937463
 
@@ -860,6 +865,7 @@ shape = SubResource("BoxShape3D_4mhiq")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Pincel/PickableObject" index="3" unique_id=1538803590]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02715528, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.19031319
 
@@ -880,6 +886,7 @@ shape = SubResource("BoxShape3D_5lnhf")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Paleta/PickableObject" index="3" unique_id=459461139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.031059802, -0.02744317)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.3952658
 
@@ -899,6 +906,7 @@ shape = SubResource("BoxShape3D_dvohe")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="3" unique_id=798097084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04920447, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.2541826
 
@@ -918,6 +926,7 @@ shape = SubResource("BoxShape3D_c7htd")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Portalápices/PickableObject" index="3" unique_id=1472730207]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03211212, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.21925382
 
@@ -937,6 +946,7 @@ shape = SubResource("BoxShape3D_4gofw")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Teléfono/PickableObject" index="3" unique_id=665964968]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.008660555, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.39454266
 
@@ -956,6 +966,7 @@ shape = SubResource("BoxShape3D_556pg")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Lata/PickableObject" index="3" unique_id=2105466591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01313293, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.19070052
 
@@ -976,6 +987,7 @@ shape = SubResource("BoxShape3D_yw4u0")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Bandeja/PickableObject" index="3" unique_id=1528699321]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.073236346, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.36044323
 
@@ -995,6 +1007,7 @@ shape = SubResource("BoxShape3D_prs8s")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Globo/PickableObject" index="3" unique_id=1509695071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004559517, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.31457242
 
@@ -1014,6 +1027,7 @@ shape = SubResource("BoxShape3D_a3i5r")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Papelera/PickableObject" index="3" unique_id=1896873329]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.057734013, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.23764175
 
@@ -1033,6 +1047,7 @@ shape = SubResource("BoxShape3D_itrvd")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Calendario/PickableObject" index="3" unique_id=1678732006]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08433825, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.2559043
 
@@ -1052,6 +1067,7 @@ shape = SubResource("BoxShape3D_1kt1r")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Regla/PickableObject" index="3" unique_id=780251497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012747407, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.23567045
 

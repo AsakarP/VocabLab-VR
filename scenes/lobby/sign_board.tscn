@@ -35,7 +35,7 @@ uv1_triplanar = true
 material = SubResource("StandardMaterial3D_og1vs")
 add_uv2 = true
 text = "VocabLab VR
-Spanish V1"
+Spanish V2"
 font_size = 70
 depth = 0.1
 

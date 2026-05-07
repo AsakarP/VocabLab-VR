@@ -374,6 +374,7 @@ item_name = "Escurridor"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Escurridor/PickableObject" index="2" unique_id=1762663709]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.31907952, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.9270531
 
@@ -393,6 +394,7 @@ item_name = "Platos"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Platos/PickableObject" index="2" unique_id=1323592730]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.058961034, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.6168995
 
@@ -412,6 +414,7 @@ item_name = "Tabla de cortar"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tabla de cortar/PickableObject" index="2" unique_id=584547295]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16852951, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8214483
 
@@ -431,6 +434,7 @@ item_name = "Toalla de papel"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Toalla de papel/PickableObject" index="2" unique_id=962596559]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1269244, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.552273
 
@@ -450,6 +454,7 @@ item_name = "Bol"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Bol/PickableObject" index="2" unique_id=1799542100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07203889, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.68843955
 
@@ -469,6 +474,7 @@ item_name = "Tapa"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Tapa/PickableObject" index="2" unique_id=2009659565]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21374512, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.68838215
 
@@ -488,6 +494,7 @@ item_name = "Sartén"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Sartén/PickableObject" index="2" unique_id=1366781301]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.088097334, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.6277012
 
@@ -507,6 +514,7 @@ item_name = "Olla de cocina"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Olla de cocina/PickableObject" index="2" unique_id=744823682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21642435, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.79004234
 
@@ -526,6 +534,7 @@ item_name = "Frasco"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Frasco/PickableObject" index="2" unique_id=688863903]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25583148, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.53138757
 
@@ -546,6 +555,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cuchillo/PickableObject" index="2" unique_id=1428224939]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.061753035, 0.08141148, -0.43746686)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.3988177
 
@@ -566,6 +576,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cafetera/PickableObject" index="2" unique_id=62166159]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19832897, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.5822109
 
@@ -585,6 +596,7 @@ item_name = "Refresco"
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Refresco/PickableObject" index="2" unique_id=1193256997]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.16013241, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.27895027
 
@@ -605,6 +617,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Kétchup/PickableObject" index="2" unique_id=467612380]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09109688, 0)
+visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.21392623
 

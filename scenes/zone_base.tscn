@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dnqhu0d47ltdw"]
+[gd_scene format=3 uid="uid://dnqhu0d47ltdw"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_bdkev"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tsn8l"]
@@ -10,39 +10,39 @@
 [ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="8_y7b8f"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="9_s5ncw"]
 
-[node name="ZoneBase" instance=ExtResource("1_bdkev")]
+[node name="ZoneBase" unique_id=990135641 instance=ExtResource("1_bdkev")]
 
-[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" instance=ExtResource("2_tsn8l")]
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" unique_id=242333019 instance=ExtResource("2_tsn8l")]
 
-[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" index="0" instance=ExtResource("5_yv0hm")]
+[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" index="0" unique_id=1117146125 instance=ExtResource("5_yv0hm")]
 
-[node name="MovementDirect" parent="XROrigin3D/LeftHand" index="1" instance=ExtResource("4_doaw0")]
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" index="1" unique_id=2132965410 instance=ExtResource("4_doaw0")]
 strafe = true
 
-[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("3_vuhx1")]
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand" index="2" unique_id=185459401 instance=ExtResource("3_vuhx1")]
 ranged_distance = 15.0
 
-[node name="FunctionPointer" parent="XROrigin3D/LeftHand" index="3" instance=ExtResource("7_67eko")]
+[node name="FunctionPointer" parent="XROrigin3D/LeftHand" index="3" unique_id=1537395179 instance=ExtResource("7_67eko")]
 distance = 20.0
 show_laser = 2
 laser_length = 1
 show_target = true
 collision_mask = 5242884
 
-[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" index="0" instance=ExtResource("8_y7b8f")]
+[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" index="0" unique_id=1758652608 instance=ExtResource("8_y7b8f")]
 
-[node name="MovementTurn" parent="XROrigin3D/RightHand" index="1" instance=ExtResource("6_0f4u5")]
+[node name="MovementTurn" parent="XROrigin3D/RightHand" index="1" unique_id=830249316 instance=ExtResource("6_0f4u5")]
 turn_mode = 1
 step_turn_angle = 30.0
 
-[node name="FunctionPickup" parent="XROrigin3D/RightHand" index="2" instance=ExtResource("3_vuhx1")]
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" index="2" unique_id=2080981615 instance=ExtResource("3_vuhx1")]
 ranged_distance = 15.0
 
-[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" instance=ExtResource("7_67eko")]
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" unique_id=1191378969 instance=ExtResource("7_67eko")]
 distance = 20.0
 show_laser = 2
 laser_length = 1
 show_target = true
 collision_mask = 5242884
 
-[node name="PlayerBody" parent="XROrigin3D" index="3" instance=ExtResource("9_s5ncw")]
+[node name="PlayerBody" parent="XROrigin3D" index="3" unique_id=798521013 instance=ExtResource("9_s5ncw")]

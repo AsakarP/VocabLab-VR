@@ -19,8 +19,8 @@ func _ready():
 	# Connect signals
 	pickable_object.connect("picked_up", _on_picked_up)
 	
-	if pickable_object.has_signal("highlight_updated"):
-		pickable_object.connect("highlight_updated", _on_highlight_updated)
+	#if pickable_object.has_signal("highlight_updated"):
+		#pickable_object.connect("highlight_updated", _on_highlight_updated)
 
 func _on_picked_up(_pickable):
 	if task_board:
@@ -32,12 +32,12 @@ func _on_picked_up(_pickable):
 			# Reset position if wrong
 			reset_position()
 
-func _on_highlight_updated(_pickable, enable: bool):
-	if enable:
-		if highlight_light: highlight_light.visible = true
-	else:
-		if not pickable_object.is_picked_up():
-			if highlight_light: highlight_light.visible = false
+#func _on_highlight_updated(_pickable, enable: bool):
+	#if enable:
+		#if highlight_light: highlight_light.visible = true
+	#else:
+		#if not pickable_object.is_picked_up():
+			#if highlight_light: highlight_light.visible = false
 
 func collect_success():
 	if pickable_object.has_method("drop") and pickable_object.is_picked_up():

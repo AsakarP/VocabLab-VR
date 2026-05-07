@@ -31,8 +31,8 @@ func _ready():
 	pickable_object.connect("picked_up", _on_picked_up)
 	pickable_object.connect("dropped", _on_dropped)
 	
-	if pickable_object.has_signal("highlight_updated"):
-		pickable_object.connect("highlight_updated", _on_highlight_updated)
+	#if pickable_object.has_signal("highlight_updated"):
+		#pickable_object.connect("highlight_updated", _on_highlight_updated)
 
 func _on_picked_up(_pickable):
 	# If picked up, cancel any pending respawn
@@ -53,12 +53,12 @@ func play_sfx(stream: AudioStream):
 		sound_player.stream = stream
 		sound_player.play()
 
-func _on_highlight_updated(_pickable, enable: bool):
-	if enable:
-		if highlight_light: highlight_light.visible = true
-	else:
-		if not pickable_object.is_picked_up():
-			if highlight_light: highlight_light.visible = false
+#func _on_highlight_updated(_pickable, enable: bool):
+	#if enable:
+		#if highlight_light: highlight_light.visible = true
+	#else:
+		#if not pickable_object.is_picked_up():
+			#if highlight_light: highlight_light.visible = false
 
 func start_respawn_timer():
 	# Kill existing timer if one is running

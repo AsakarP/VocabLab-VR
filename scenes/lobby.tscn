@@ -78,7 +78,7 @@ fill_from = Vector2(1, 0)
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" unique_id=1191378969]
 suppress_radius = 0.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1" unique_id=104259210]

@@ -88,7 +88,7 @@ func end_game_timeout():
 		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d \
 		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
 		[obj, obj_total, score]
-		label_3d.modulate = Color.RED
+		#label_3d.modulate = Color.RED
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
@@ -96,7 +96,7 @@ func end_game_timeout():
 		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d\nKesalahan:\n%s \
 		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
 		[obj, obj_total, score, error_log]
-		label_3d.modulate = Color.ORANGE
+		#label_3d.modulate = Color.ORANGE
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
@@ -128,7 +128,7 @@ func end_game_win():
 		label_3d.text = "Semua Objek Teridentifikasi! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
 		Sisa Waktu: %s\nTidak ada Kesalahan, Hebat!\nSilakan berjalan menuju portal di sudut ruangan\
 		\nuntuk melanjutkan ke tahap berikutnya." % [obj, obj_total, score, time_taken_str, time_left_str]
-		label_3d.modulate = Color.GREEN
+		#label_3d.modulate = Color.GREEN
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
@@ -138,7 +138,7 @@ func end_game_win():
 		label_3d.text = "Semua Objek Teridentifikasi! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
 		Sisa Waktu: %s\nKesalahan:\n%s\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan \
 		ke tahap berikutnya." % [obj, obj_total, score, time_taken_str, time_left_str, error_log]
-		label_3d.modulate = Color.ORANGE
+		#label_3d.modulate = Color.ORANGE
 		
 		print("*** Summary ***")
 		print("Poin Akhir: ",score)
@@ -164,7 +164,7 @@ func check_submission(submitted_item_name: String) -> bool:
 		current_idx += 1
 		play_sfx(sound_correct)
 		
-		label_3d.modulate = Color.GREEN
+		#label_3d.modulate = Color.GREEN
 		
 		if current_idx >= current_queue.size():
 			end_game_win()
@@ -184,7 +184,7 @@ func check_submission(submitted_item_name: String) -> bool:
 		
 		update_board_disp()
 		
-		label_3d.modulate = Color.RED
+		#label_3d.modulate = Color.RED
 		var tween = create_tween()
 		tween.tween_property(label_3d, "modulate", Color.WHITE, 1.0)
 		
