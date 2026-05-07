@@ -318,10 +318,10 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="lamp_table" parent="RoomManager/Objects/Lámpara/PickableObject" index="0" unique_id=738126246 instance=ExtResource("18_0tpjx")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.016122699, -0.04569769)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="2" unique_id=793092587]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.35287452, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.36899722, -0.04569769)
 shape = SubResource("CylinderShape3D_n53bi")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="3" unique_id=1489145678]
@@ -520,7 +520,7 @@ volume_db = -40.0
 unit_size = 15.0
 
 [node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=357192478]
-transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 3.033077)
 script = ExtResource("16_ljqa2")
 sound_pickup = ExtResource("17_884qo")
 
@@ -528,19 +528,19 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="clothes_001" parent="RoomManager/Objects/Ropa/PickableObject" index="1" unique_id=2120651656 instance=ExtResource("26_yon3o")]
-transform = Transform3D(-0.9999999, -1.5099579e-07, -6.600236e-15, 0, -4.3711385e-08, 1, -1.5099579e-07, 0.9999999, 4.371139e-08, 0, 0.079, 0.524)
+transform = Transform3D(0.9999995, 0, 0, 0, -4.3711378e-08, 1, 0, -0.9999995, -4.3711374e-08, 0, 0.078999996, -0.7927816)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Ropa/PickableObject" index="2" unique_id=1539036262]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025423422, 0.09000301, 0.07640338)
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, -0.025423408, 0.09000301, -0.33657217)
 shape = SubResource("BoxShape3D_m66we")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Ropa/PickableObject" index="3" unique_id=1271211330]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02828866, 0.13063216, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028288662, 0.13063216, -0.27187395)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.6762432
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Ropa/PickableObject" index="4" unique_id=249599942]
-transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.367836, 0)
+transform = Transform3D(1, 0, -2.980232e-08, 0, 1, 0, 2.980232e-08, 0, 1, 0, 0.367836, -0.27187395)
 billboard = 1
 text = "Ropa"
 font_size = 25

@@ -482,7 +482,7 @@ text = "Level 1"
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/RoomLearnTeleporter/Label3D/Label3D" index="0" unique_id=1402703266]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "5 Objek"
+text = "8 Objek"
 
 [node name="KitchenLearnTeleporter" parent="LobbyArea/LearnPortals" index="1" unique_id=890329117 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
@@ -504,7 +504,7 @@ text = "Level 2"
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/KitchenLearnTeleporter/Label3D/Label3D" index="0" unique_id=595866842]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "10 Objek"
+text = "13 Objek"
 
 [node name="ClassLearnTeleporter" parent="LobbyArea/LearnPortals" index="2" unique_id=1581185617 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
@@ -526,7 +526,7 @@ text = "Level 3"
 [node name="Label3D" type="Label3D" parent="LobbyArea/LearnPortals/ClassLearnTeleporter/Label3D/Label3D" index="0" unique_id=193786696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "13 Objek"
+text = "16 Objek"
 
 [node name="TestPortals" type="Node3D" parent="LobbyArea" index="5" unique_id=1281844185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
@@ -551,7 +551,7 @@ text = "Level 1"
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter/Label3D/Label3D" index="0" unique_id=1323156921]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "5 Objek"
+text = "8 Objek"
 
 [node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" unique_id=1944524922 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
@@ -573,7 +573,7 @@ text = "Level 2"
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter/Label3D/Label3D" index="0" unique_id=727179894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "10 Objek"
+text = "13 Objek"
 
 [node name="ClassTestTeleporter" parent="LobbyArea/TestPortals" index="2" unique_id=1548683105 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
@@ -595,7 +595,7 @@ text = "Level 3"
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter/Label3D/Label3D" index="0" unique_id=1576317870]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.33307362, 0)
 billboard = 1
-text = "13 Objek"
+text = "16 Objek"
 
 [node name="Guide" type="Node3D" parent="LobbyArea" index="6" unique_id=2096924341]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 2.8906033)
