@@ -212,7 +212,7 @@ font_size = 64
 
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1559500882]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
-text = "Identifikasi 5 Objek sesuai perintah Target.
+text = "Identifikasi 8 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "

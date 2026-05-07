@@ -219,7 +219,7 @@ font_size = 64
 
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1103612696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.870946, -5.5723557)
-text = "Identifikasi 13 Objek sesuai perintah Target.
+text = "Identifikasi 16 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
@@ -900,9 +900,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00019526482, 0.00020056963,
 shape = SubResource("BoxShape3D_dvohe")
 
 [node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="3" unique_id=798097084]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335204, 0.03977406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335204, 0.1292153)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.31764466
 
 [node name="Portalápices" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1127139314 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.896955, -0.6997811)

@@ -182,7 +182,7 @@ omni_range = 6.5
 [node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=2051705725 node_paths=PackedStringArray("objectsNode", "room_manager")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.072, 2.743, -3.991)
 script = ExtResource("3_yvw6u")
-master_item_list = Array[String](["Escurridor", "Platos", "Tabla de cortar", "Toalla de papel Sheet", "Bol", "Tapa", "Sartén", "Olla de cocina", "Frasco", "Cuchillo", "Cafetera", "Refresco", "Kétchup"])
+master_item_list = Array[String](["Escurridor", "Platos", "Tabla de cortar", "Toalla de papel", "Bol", "Tapa", "Sartén", "Olla de cocina", "Frasco", "Cuchillo", "Cafetera", "Refresco", "Kétchup"])
 objectsNode = NodePath("../../RoomManager/Objects")
 sound_correct = ExtResource("4_5i8e8")
 sound_incorrect = ExtResource("5_qwpxf")
@@ -220,7 +220,7 @@ font_size = 64
 
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=324800958]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
-text = "Identifikasi 10 Objek sesuai perintah Target.
+text = "Identifikasi 13 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "

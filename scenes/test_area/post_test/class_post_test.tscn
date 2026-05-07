@@ -221,7 +221,7 @@ font_size = 64
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0678668, -5.5723557)
 text = "Saatnya melakukan pengujian untuk melihat berapa banyak kosakata yang berhasil kamu kuasai!
 -
-Identifikasi 13 Objek sesuai perintah Target.
+Identifikasi 16 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
@@ -901,10 +901,10 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00019526482, 0.00020056963, 0.15012002)
 shape = SubResource("BoxShape3D_rlmvi")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="3" unique_id=1938744004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335204, 0.03977406)
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="3" unique_id=2133970454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0335204, 0.1292153)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.31764466
 
 [node name="Portalápices" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1173659321 node_paths=PackedStringArray("task_board")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.896955, -0.6997811)

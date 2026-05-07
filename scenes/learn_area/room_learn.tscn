@@ -23,6 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://der8quviy7aht" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cactus_medium_A.fbx" id="20_g5edx"]
 [ext_resource type="PackedScene" uid="uid://bl7n6f3qwcpyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/pillow_A.fbx" id="21_m3ior"]
 [ext_resource type="PackedScene" uid="uid://cfcddbdj8csrx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_stool.fbx" id="22_6whty"]
+[ext_resource type="PackedScene" uid="uid://c5xj4m85rdwvp" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/dumbbell_001.fbx" id="24_etg7n"]
+[ext_resource type="PackedScene" uid="uid://cdclhtqtd3gy3" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/camera_001.fbx" id="25_aq4d0"]
+[ext_resource type="PackedScene" uid="uid://bylsbqdntq2lo" path="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/clothes_001.fbx" id="26_yon3o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_acf2o"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -105,6 +108,15 @@ size = Vector3(0.628, 0.2, 0.493)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f81wx"]
 size = Vector3(0.75372314, 0.5, 0.7529999)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ji7nu"]
+size = Vector3(0.39625674, 0.22803783, 0.22989601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1q66u"]
+size = Vector3(0.3183785, 0.20511627, 0.28162277)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m66we"]
+size = Vector3(0.577821, 0.19050026, 0.91834664)
+
 [node name="RoomLearn" unique_id=939330479 instance=ExtResource("1_g6duw")]
 
 [node name="XROrigin3D" parent="." index="0"]
@@ -153,7 +165,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7,
 text = "Arahkan tanganmu ke objek yang ingin dipelajari, lalu tekan tombol Grip (genggam).
 Objek akan otomatis berpindah ke tanganmu dan nama Bahasa Inggrisnya akan muncul di atasnya.
 -
-Ada 5 Objek di level ini.
+Ada 8 Objek di level ini.
 -
 Pelajari objek sebanyak yang kamu butuhkan.
 Jika sudah merasa cukup dan siap, silakan masuk ke portal di sudut ruangan untuk melanjutkan."
@@ -286,6 +298,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.605, -0.768)
 [node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4" unique_id=1169022851]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0, 3.038)
 
+[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5" unique_id=1856330331]
+transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
+
+[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6" unique_id=1354157319]
+transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
+
+[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7" unique_id=1802465415]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
+
 [node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=1035439700]
 
 [node name="Lámpara" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=1975992089]
@@ -307,11 +328,12 @@ shape = SubResource("CylinderShape3D_n53bi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9912499, 0)
 billboard = 1
 text = "Lámpara"
+font_size = 25
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="4" unique_id=89088181]
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="4" unique_id=1875041793]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.5882474
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Lámpara" index="1" unique_id=2011293845]
 volume_db = -40.0
@@ -336,11 +358,12 @@ shape = SubResource("BoxShape3D_3m6p8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5762874, 0)
 billboard = 1
 text = "Marco"
+font_size = 25
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Marco/PickableObject" index="4" unique_id=701305322]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20707905, 0)
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Marco/PickableObject" index="4" unique_id=1347298493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09244919, 0)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.55695003
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Marco" index="1" unique_id=781099164]
 volume_db = -40.0
@@ -365,11 +388,12 @@ shape = SubResource("CylinderShape3D_3m6p8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.71156394, 0)
 billboard = 1
 text = "Cacto"
+font_size = 25
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cacto/PickableObject" index="4" unique_id=1624228247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17923033, 0)
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cacto/PickableObject" index="4" unique_id=1857974594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06970227, 0)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.58079666
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Cacto" index="1" unique_id=1105551609]
 volume_db = -40.0
@@ -394,11 +418,12 @@ shape = SubResource("BoxShape3D_krvcu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21504098, 0)
 billboard = 1
 text = "Almohadón"
+font_size = 25
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Almohadón/PickableObject" index="4" unique_id=1969705512]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07867062, 0)
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Almohadón/PickableObject" index="4" unique_id=1566136396]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.035140455, 0)
 light_color = Color(0, 1, 1, 1)
-omni_range = 0.8
+omni_range = 0.5712981
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Almohadón" index="1" unique_id=1002546250]
 volume_db = -40.0
@@ -423,12 +448,103 @@ shape = SubResource("BoxShape3D_f81wx")
 transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.54029435, 0)
 billboard = 1
 text = "Taburete"
+font_size = 25
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Taburete/PickableObject" index="4" unique_id=983806094]
-transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.36916503, 0)
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Taburete/PickableObject" index="4" unique_id=349583495]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, 0.37451923, 0)
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.8
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Taburete" index="1" unique_id=939006728]
+volume_db = -40.0
+unit_size = 15.0
+
+[node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1891487937]
+transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
+script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
+
+[node name="PickableObject" parent="RoomManager/Objects/Pesa" index="0" unique_id=1657999623 instance=ExtResource("17_al810")]
+collision_layer = 1048580
+
+[node name="dumbbell_001" parent="RoomManager/Objects/Pesa/PickableObject" index="0" unique_id=1329212711 instance=ExtResource("24_etg7n")]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.12, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Pesa/PickableObject" index="2" unique_id=6441465]
+transform = Transform3D(1.0000008, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 1.0000008, -0.0014030933, 0.11985732, 0.00063943863)
+shape = SubResource("BoxShape3D_ji7nu")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Pesa/PickableObject" index="3" unique_id=1581337737]
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.1294505, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.28238937
+
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Pesa/PickableObject" index="4" unique_id=738351048]
+transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000002, 0, 0.4155515, 0)
+billboard = 1
+text = "Pesa"
+font_size = 25
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Pesa" index="1" unique_id=110740619]
+volume_db = -40.0
+unit_size = 15.0
+
+[node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=969234436]
+transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
+script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
+
+[node name="PickableObject" parent="RoomManager/Objects/Cámara" index="0" unique_id=1582694634 instance=ExtResource("17_al810")]
+collision_layer = 1048580
+
+[node name="camera_001" parent="RoomManager/Objects/Cámara/PickableObject" index="1" unique_id=1294617334 instance=ExtResource("25_aq4d0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cámara/PickableObject" index="2" unique_id=111211425]
+transform = Transform3D(1.000001, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1.000001, 0.014095068, 0.10309982, 0.0814929)
+shape = SubResource("BoxShape3D_1q66u")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Cámara/PickableObject" index="3" unique_id=348587483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028288662, 0.14929593, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.3718828
+
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Cámara/PickableObject" index="4" unique_id=321476184]
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.367836, 0)
+billboard = 1
+text = "Cámara"
+font_size = 25
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Cámara" index="1" unique_id=1045899157]
+volume_db = -40.0
+unit_size = 15.0
+
+[node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=357192478]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
+script = ExtResource("16_ljqa2")
+sound_pickup = ExtResource("17_884qo")
+
+[node name="PickableObject" parent="RoomManager/Objects/Ropa" index="0" unique_id=825326137 instance=ExtResource("17_al810")]
+collision_layer = 1048580
+
+[node name="clothes_001" parent="RoomManager/Objects/Ropa/PickableObject" index="1" unique_id=2120651656 instance=ExtResource("26_yon3o")]
+transform = Transform3D(-0.9999999, -1.5099579e-07, -6.600236e-15, 0, -4.3711385e-08, 1, -1.5099579e-07, 0.9999999, 4.371139e-08, 0, 0.079, 0.524)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Ropa/PickableObject" index="2" unique_id=1539036262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025423422, 0.09000301, 0.07640338)
+shape = SubResource("BoxShape3D_m66we")
+
+[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Ropa/PickableObject" index="3" unique_id=1271211330]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02828866, 0.13063216, 0)
+light_color = Color(0, 1, 1, 1)
+omni_range = 0.6762432
+
+[node name="Label3D" type="Label3D" parent="RoomManager/Objects/Ropa/PickableObject" index="4" unique_id=249599942]
+transform = Transform3D(1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000001, 0, 0.367836, 0)
+billboard = 1
+text = "Ropa"
+font_size = 25
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Ropa" index="1" unique_id=1954317589]
 volume_db = -40.0
 unit_size = 15.0
