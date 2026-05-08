@@ -717,12 +717,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0049141645, -0.00010454655
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Libro/PickableObject" index="3" unique_id=1204507549]
 shape = SubResource("BoxShape3D_gh6hb")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Libro/PickableObject" index="4" unique_id=1190059728]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.014761686, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.24163777
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Libro" index="1" unique_id=1678157739]
 volume_db = -40.0
 unit_size = 15.0
@@ -747,12 +741,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.034733236, 0)
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Borrador/PickableObject" index="3" unique_id=1469200369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00048828125, 0.05269283, 0.0006866455)
 shape = SubResource("BoxShape3D_8dat1")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Borrador/PickableObject" index="4" unique_id=2059419637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.048912466, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.216555
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Borrador" index="1" unique_id=778808408]
 volume_db = -40.0
@@ -779,12 +767,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00039076805, 0, -0.069833755)
 shape = SubResource("BoxShape3D_8lj0s")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Bolígrafo/PickableObject" index="4" unique_id=468568484]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030537367, -0.09139109)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.16966708
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Bolígrafo" index="1" unique_id=1868454666]
 volume_db = -40.0
 unit_size = 15.0
@@ -809,12 +791,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Estuche/PickableObject" index="3" unique_id=884642972]
 shape = SubResource("BoxShape3D_fq1fv")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Estuche/PickableObject" index="4" unique_id=11226122]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008281469, 0.028490603, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.1888515
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Estuche" index="1" unique_id=1965822549]
 volume_db = -40.0
@@ -842,12 +818,6 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04851389, 0)
 shape = SubResource("BoxShape3D_bjbv7")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Reloj/PickableObject" index="4" unique_id=285506241]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06255424, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.36937463
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Reloj" index="1" unique_id=1651588145]
 volume_db = -40.0
 unit_size = 15.0
@@ -872,12 +842,6 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0.20
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Pincel/PickableObject" index="3" unique_id=1776638135]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0041576624, 0.0012414455)
 shape = SubResource("BoxShape3D_iogyn")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Pincel/PickableObject" index="4" unique_id=1533818396]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02715528, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.19031319
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Pincel" index="1" unique_id=1694613460]
 volume_db = -40.0
@@ -904,12 +868,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.022753835, -0.041671753)
 shape = SubResource("BoxShape3D_4mhiq")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Paleta/PickableObject" index="4" unique_id=599972026]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.053813636, -0.06911492)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.3952658
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Paleta" index="1" unique_id=1579939785]
 volume_db = -40.0
 unit_size = 15.0
@@ -934,12 +892,6 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="3" unique_id=149684336]
 shape = SubResource("BoxShape3D_dvohe")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="4" unique_id=1894472343]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04920447, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.2541826
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Carpeta" index="1" unique_id=753674708]
 volume_db = -40.0
 unit_size = 15.0
@@ -963,12 +915,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0019262433, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Portalápices/PickableObject" index="3" unique_id=585536865]
 shape = SubResource("BoxShape3D_c7htd")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Portalápices/PickableObject" index="4" unique_id=726844818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03211212, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.21925382
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Portalápices" index="1" unique_id=1700128366]
 volume_db = -40.0
@@ -995,12 +941,6 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017213106, -0.06973028)
 shape = SubResource("BoxShape3D_4gofw")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Teléfono/PickableObject" index="4" unique_id=352972540]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008552551, -0.06973028)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.39454266
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Teléfono" index="1" unique_id=36437245]
 volume_db = -40.0
 unit_size = 15.0
@@ -1024,12 +964,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6358833e-05, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Lata/PickableObject" index="3" unique_id=723037166]
 shape = SubResource("BoxShape3D_yw4u0")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Lata/PickableObject" index="4" unique_id=1158941665]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01313293, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.19070052
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Lata" index="1" unique_id=146264659]
 volume_db = -40.0
@@ -1056,12 +990,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004166782, -0.10547149)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002554953, -0.10547149)
 shape = SubResource("BoxShape3D_prs8s")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Bandeja/PickableObject" index="4" unique_id=1462730270]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.073236346, -0.10547149)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.36044323
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Bandeja" index="1" unique_id=1363499627]
 volume_db = -40.0
 unit_size = 15.0
@@ -1086,12 +1014,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.16590768, 0)
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Globo/PickableObject" index="3" unique_id=875917065]
 shape = SubResource("BoxShape3D_556pg")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Globo/PickableObject" index="4" unique_id=481977281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.004559517, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.31457242
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Globo" index="1" unique_id=618800376]
 volume_db = -40.0
 unit_size = 15.0
@@ -1115,12 +1037,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.15008068, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Papelera/PickableObject" index="3" unique_id=1435958642]
 shape = SubResource("BoxShape3D_t0vqf")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Papelera/PickableObject" index="4" unique_id=1345231127]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.057734013, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.23764175
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Papelera" index="1" unique_id=622584619]
 volume_db = -40.0
@@ -1147,12 +1063,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.0786702, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.023254752, 0)
 shape = SubResource("BoxShape3D_5lnhf")
 
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Calendario/PickableObject" index="4" unique_id=1567432962]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10759294, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.2559043
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Calendario" index="1" unique_id=1460569630]
 volume_db = -40.0
 unit_size = 15.0
@@ -1176,12 +1086,6 @@ transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Regla/PickableObject" index="3" unique_id=1006932303]
 shape = SubResource("BoxShape3D_jtmdl")
-
-[node name="HighlightLight" type="OmniLight3D" parent="RoomManager/Objects/Regla/PickableObject" index="4" unique_id=160164639]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012747407, 0)
-visible = false
-light_color = Color(0, 1, 1, 1)
-omni_range = 0.23567045
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RoomManager/Objects/Regla" index="1" unique_id=1508638981]
 volume_db = -40.0
