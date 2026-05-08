@@ -157,7 +157,7 @@ omni_range = 6.5
 [node name="TeleportArea" parent="Interior" index="2" unique_id=842567914 instance=ExtResource("2_7hmym")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.115514)
 collision_mask = 524288
-target_scene = "uid://bhpacxjspcacg"
+target_scene = "uid://blai5di7hgds8"
 
 [node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=1589992874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
@@ -168,7 +168,8 @@ font_size = 64
 [node name="Guide" type="Label3D" parent="Interior" index="3" unique_id=179855133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1922765, -5.6)
 text = "Arahkan tanganmu ke objek yang ingin dipelajari, lalu tekan tombol Grip (genggam).
-Objek akan otomatis berpindah ke tanganmu dan nama Bahasa Inggrisnya akan muncul di atasnya.
+Objek akan otomatis berpindah ke tanganmu dan nama objek tersebut 
+dalam Bahasa Spanyol akan muncul di atasnya.
 -
 Ada 16 Objek di level ini.
 -

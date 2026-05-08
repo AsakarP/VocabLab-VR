@@ -7,8 +7,6 @@ extends Node3D
 
 @export var master_item_list: Array[String] = []
 @export var objectsNode: Node3D
-@export var sound_correct: AudioStream
-@export var sound_incorrect: AudioStream
 @export var room_manager: Node3D
 
 var current_queue: Array[String] = []
@@ -162,7 +160,6 @@ func check_submission(submitted_item_name: String) -> bool:
 		score += 1
 		obj += 1
 		current_idx += 1
-		play_sfx(sound_correct)
 		
 		#label_3d.modulate = Color.GREEN
 		
@@ -177,7 +174,6 @@ func check_submission(submitted_item_name: String) -> bool:
 	else:
 		# Incorrect object
 		score -= 1
-		play_sfx(sound_incorrect)
 		
 		var mistake_text = "Target: %s | Player memilih: %s" % [current_target, submitted_item_name]
 		error_log += mistake_text + "\n"

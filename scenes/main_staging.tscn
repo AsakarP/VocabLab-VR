@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqotd4d3v610j" path="res://images/VocabLabVR.png" id="2_k1qkh"]
 
 [node name="MainStaging" unique_id=1155410745 instance=ExtResource("1_vok4l")]
-main_scene = "uid://blai5di7hgds8"
+main_scene = "uid://c4asqne3pfcp7"
 
 [node name="LoadingScreen" parent="." index="2"]
 splash_screen = ExtResource("2_k1qkh")

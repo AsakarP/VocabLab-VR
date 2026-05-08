@@ -6,9 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vx7r3uyed1m1" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/blackboardbig.fbx" id="3_temky"]
 [ext_resource type="PackedScene" uid="uid://bj45jb82b52t8" path="res://scenes/push_button.tscn" id="4_rbmxe"]
 [ext_resource type="PackedScene" uid="uid://bxdcet85ohius" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/table.fbx" id="4_rtwf4"]
-[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="4_u46a0"]
 [ext_resource type="PackedScene" uid="uid://bf4mn2x1a27st" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/chair.fbx" id="5_68t4e"]
-[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="5_gxh74"]
 [ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_gxh74"]
 [ext_resource type="PackedScene" uid="uid://k7ejodtr2fq4" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelf.fbx" id="6_ijgj4"]
 [ext_resource type="PackedScene" uid="uid://b3f1iovvuu5q7" path="res://assets/StylooClassroomAssetPack GLTF & FBX/classroom/FBX/shelfwithwheels.fbx" id="7_5cefg"]
@@ -182,8 +180,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.53
 script = ExtResource("3_ctbgb")
 master_item_list = Array[String](["Libro", "Borrador", "Bolígrafo", "Estuche", "Reloj", "Pincel", "Paleta", "Carpeta", "Portalápices", "Teléfono", "Lata", "Bandeja", "Globo", "Papelera", "Calendario", "Regla"])
 objectsNode = NodePath("../../RoomManager/Objects")
-sound_correct = ExtResource("4_u46a0")
-sound_incorrect = ExtResource("5_gxh74")
 room_manager = NodePath("../../RoomManager")
 
 [node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=1288202600 instance=ExtResource("4_rbmxe")]
@@ -208,7 +204,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.
 visible = false
 collision_mask = 524288
 monitoring = false
-target_scene = "uid://c4asqne3pfcp7"
+target_scene = "uid://bdbwonfjyxqo7"
 
 [node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=138501283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
@@ -219,7 +215,7 @@ font_size = 64
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1103612696]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.870946, -5.5723557)
 text = "Identifikasi 16 Objek sesuai perintah Target.
-Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
+Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) dua kali pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
 
@@ -744,11 +740,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2296786, 0.823, 3.305603)
 
 [node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=1669865270]
 
-[node name="Libro" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=327579945 node_paths=PackedStringArray("task_board")]
+[node name="Libro" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=327579945 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2038888, 0.92547417, -2.6817176)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Libro"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Libro" index="0" unique_id=12106715 instance=ExtResource("10_pesty")]
 
@@ -764,11 +761,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.24163777
 
-[node name="Borrador" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=619368893 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Libro" index="1" unique_id=945058524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734892, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Borrador" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=619368893 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1428833, 0.823, -2.68276)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Borrador"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Borrador" index="0" unique_id=515496746 instance=ExtResource("10_pesty")]
 
@@ -785,11 +790,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.216555
 
-[node name="Bolígrafo" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=106597870 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Borrador" index="1" unique_id=1417768611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3573491, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Bolígrafo" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=106597870 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4178035, 0.8264908, -2.6761773)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Bolígrafo"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Bolígrafo" index="0" unique_id=1475713785 instance=ExtResource("10_pesty")]
 
@@ -806,11 +819,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.16966708
 
-[node name="Estuche" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=886275082 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Bolígrafo" index="1" unique_id=7445815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734898, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Estuche" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=886275082 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1955845, 0.8568489, -0.6892748)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Estuche"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Estuche" index="0" unique_id=1176075943 instance=ExtResource("10_pesty")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.9604645e-08)
@@ -827,11 +848,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.1888515
 
-[node name="Reloj" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=4292974 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Estuche" index="1" unique_id=1807232957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734898, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Reloj" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=4292974 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1436267, 0.84753907, 1.2995126)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Reloj"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Reloj" index="0" unique_id=240529497 instance=ExtResource("10_pesty")]
 
@@ -848,11 +877,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.36937463
 
-[node name="Pincel" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=191906920 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Reloj" index="1" unique_id=820913880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734904, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Pincel" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=191906920 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1777778, 0.8417317, -2.665233)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Pincel"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Pincel" index="0" unique_id=1574369640 instance=ExtResource("10_pesty")]
 
@@ -869,11 +906,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.19031319
 
-[node name="Paleta" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=1562416431 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Pincel" index="1" unique_id=1030327638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734898, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Paleta" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=1562416431 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1200254, 0.82797533, 3.2954504)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Paleta"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Paleta" index="0" unique_id=1460270318 instance=ExtResource("10_pesty")]
 
@@ -890,11 +935,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.3952658
 
-[node name="Carpeta" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=117763585 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Paleta" index="1" unique_id=1267066113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3573491, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Carpeta" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=117763585 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2494903, 0.84289753, -0.6988538)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Carpeta"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Carpeta" index="0" unique_id=1940852141 instance=ExtResource("10_pesty")]
 
@@ -910,11 +963,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.2541826
 
-[node name="Portalápices" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1127139314 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Carpeta" index="1" unique_id=1866851468]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734904, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Portalápices" type="Node3D" parent="RoomManager/Objects" index="8" unique_id=1127139314 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.9023409, -0.6997811)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Portalápices"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Portalápices" index="0" unique_id=858036079 instance=ExtResource("10_pesty")]
 
@@ -930,11 +991,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.21925382
 
-[node name="Teléfono" type="Node3D" parent="RoomManager/Objects" index="9" unique_id=1072048866 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Portalápices" index="1" unique_id=331727565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734892, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Teléfono" type="Node3D" parent="RoomManager/Objects" index="9" unique_id=1072048866 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2095673, 0.9898201, 1.3135229)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Teléfono"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Teléfono" index="0" unique_id=1020129704 instance=ExtResource("10_pesty")]
 
@@ -950,11 +1019,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.39454266
 
-[node name="Lata" type="Node3D" parent="RoomManager/Objects" index="10" unique_id=1863250907 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Teléfono" index="1" unique_id=447502914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734904, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Lata" type="Node3D" parent="RoomManager/Objects" index="10" unique_id=1863250907 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2799488, 0.91224897, -0.6295507)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Lata"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Lata" index="0" unique_id=468007860 instance=ExtResource("10_pesty")]
 
@@ -970,11 +1047,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.19070052
 
-[node name="Bandeja" type="Node3D" parent="RoomManager/Objects" index="11" unique_id=212455273 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Lata" index="1" unique_id=667801526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734904, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Bandeja" type="Node3D" parent="RoomManager/Objects" index="11" unique_id=212455273 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2854352, 0.83864576, 1.3093565)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Bandeja"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Bandeja" index="0" unique_id=907279252 instance=ExtResource("10_pesty")]
 
@@ -991,11 +1076,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.36044323
 
-[node name="Globo" type="Node3D" parent="RoomManager/Objects" index="12" unique_id=860161688 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Bandeja" index="1" unique_id=2082755276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3573491, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Globo" type="Node3D" parent="RoomManager/Objects" index="12" unique_id=860161688 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2011437, 0.99425817, 1.2984499)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Globo"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Globo" index="0" unique_id=1798104490 instance=ExtResource("10_pesty")]
 
@@ -1011,11 +1104,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.31457242
 
-[node name="Papelera" type="Node3D" parent="RoomManager/Objects" index="13" unique_id=683608160 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Globo" index="1" unique_id=664187994]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734916, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Papelera" type="Node3D" parent="RoomManager/Objects" index="13" unique_id=683608160 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2967947, 0.9542352, 3.3054764)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Papelera"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Papelera" index="0" unique_id=1174729125 instance=ExtResource("10_pesty")]
 
@@ -1031,11 +1132,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.23764175
 
-[node name="Calendario" type="Node3D" parent="RoomManager/Objects" index="14" unique_id=1555432054 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Papelera" index="1" unique_id=798445759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35734904, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Calendario" type="Node3D" parent="RoomManager/Objects" index="14" unique_id=1555432054 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.301564, 0.91540223, 3.305603)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Calendario"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Calendario" index="0" unique_id=822448621 instance=ExtResource("10_pesty")]
 
@@ -1051,11 +1160,19 @@ visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.2559043
 
-[node name="Regla" type="Node3D" parent="RoomManager/Objects" index="15" unique_id=1084342908 node_paths=PackedStringArray("task_board")]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Calendario" index="1" unique_id=289964149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3573491, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
+
+[node name="Regla" type="Node3D" parent="RoomManager/Objects" index="15" unique_id=1084342908 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2296786, 0.823, 3.305603)
 script = ExtResource("12_rbmxe")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Regla"
+confirmation_label = NodePath("ConfirmationLabel")
 
 [node name="PickableObject" parent="RoomManager/Objects/Regla" index="0" unique_id=826443105 instance=ExtResource("10_pesty")]
 
@@ -1070,6 +1187,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.012747407, 0)
 visible = false
 light_color = Color(0, 1, 1, 1)
 omni_range = 0.23567045
+
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Regla" index="1" unique_id=458565962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3573491, 0)
+pixel_size = 0.003
+billboard = 1
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 

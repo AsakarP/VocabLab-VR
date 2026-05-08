@@ -174,7 +174,8 @@ font_size = 64
 [node name="Guide" type="Label3D" parent="Interior" index="3" unique_id=254698261]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
 text = "Arahkan tanganmu ke objek yang ingin dipelajari, lalu tekan tombol Grip (genggam).
-Objek akan otomatis berpindah ke tanganmu dan nama Bahasa Inggrisnya akan muncul di atasnya.
+Objek akan otomatis berpindah ke tanganmu dan nama objek tersebut 
+dalam Bahasa Spanyol akan muncul di atasnya.
 -
 Ada 13 Objek di level ini.
 -

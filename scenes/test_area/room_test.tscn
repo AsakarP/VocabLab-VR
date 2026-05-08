@@ -3,10 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6ub8i"]
 [ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="2_7diqi"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_i6qwn"]
-[ext_resource type="AudioStream" uid="uid://da57pw67klg1s" path="res://audio/correct.mp3" id="3_8mfpk"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="3_iurof"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="3_m6e51"]
-[ext_resource type="AudioStream" uid="uid://brnnfxtea7mhs" path="res://audio/buzzer.mp3" id="4_ct6pl"]
 [ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="4_uka4f"]
 [ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="5_537hs"]
 [ext_resource type="PackedScene" uid="uid://ckncxv78vvsya" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_medium_long.fbx" id="6_a3w43"]
@@ -134,13 +132,13 @@ size = Vector3(0.577821, 0.19050026, 0.91834664)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=1954903452]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 1.3222318, -1.9783258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 0.7145877, -1.9783258)
 billboard = 1
 no_depth_test = true
 font_size = 24
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="XROrigin3D/XRCamera3D" index="2" unique_id=632813812]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4373541, -1.978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17029, -1.978)
 volume_db = -40.0
 unit_size = 20.0
 
@@ -176,8 +174,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.07
 script = ExtResource("2_i6qwn")
 master_item_list = Array[String](["Lámpara", "Marco", "Cacto", "Almohadón", "Taburete", "Pesa", "Cámara", "Ropa"])
 objectsNode = NodePath("../../RoomManager/Objects")
-sound_correct = ExtResource("3_8mfpk")
-sound_incorrect = ExtResource("4_ct6pl")
 room_manager = NodePath("../../RoomManager")
 
 [node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=261049739 instance=ExtResource("15_jx7oo")]
@@ -213,7 +209,7 @@ font_size = 64
 [node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1559500882]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
 text = "Identifikasi 8 Objek sesuai perintah Target.
-Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) pada controller 
+Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) dua kali pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
 
@@ -381,7 +377,8 @@ omni_range = 0.5882474
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Lámpara" index="1" unique_id=2079878197]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.395373, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Marco" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=361376913 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
@@ -408,7 +405,8 @@ omni_range = 0.55695003
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Marco" index="1" unique_id=1417379136]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9265795, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Cacto" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=777619524 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0063334, 0.0028970242, -2.291012)
@@ -435,7 +433,8 @@ omni_range = 0.58079666
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Cacto" index="1" unique_id=171596376]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1723797, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Almohadón" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1830955597 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, 0.67944133, 4.5309114, 0.6052355, -0.76844394)
@@ -462,7 +461,8 @@ omni_range = 0.5712981
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Almohadón" index="1" unique_id=2077369121]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5130461, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Taburete" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=1543628279 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, 4.4862957, 0.0063424334, 3.037981)
@@ -487,9 +487,10 @@ transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0,
 shape = SubResource("BoxShape3D_io3ku")
 
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Taburete" index="1" unique_id=1124050893]
-transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, 0.99963284, 0)
+transform = Transform3D(1.0000005, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000005, 0, 0.9125291, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=1421183435 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
@@ -515,9 +516,10 @@ light_color = Color(0, 1, 1, 1)
 omni_range = 0.28238937
 
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Pesa" index="1" unique_id=1398126960]
-transform = Transform3D(1.0000002, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1.0000002, 0, 0.513046, 0)
+transform = Transform3D(1.0000004, 0, 0, 0, 1, 0, 0, 0, 1.0000004, 0, 0.61702764, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=11840054 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
@@ -543,9 +545,10 @@ light_color = Color(0, 1, 1, 1)
 omni_range = 0.3718828
 
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Cámara" index="1" unique_id=356080758]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.513046, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5625807, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1455751708 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 2.4626055)
@@ -571,9 +574,10 @@ light_color = Color(0, 1, 1, 1)
 omni_range = 0.6762432
 
 [node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Ropa" index="1" unique_id=2033354187]
-transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.513046, 0)
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0.5446141, 0)
 billboard = 1
-text = "Test"
+text = "Pilih objek?
+[A] Pilih | [B] Batal"
 
 [connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
