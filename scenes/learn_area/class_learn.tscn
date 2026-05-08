@@ -705,7 +705,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Libro" index="0" unique_id=687943173 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Libro/PickableObject" index="1" unique_id=1479595067]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2939024, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26813912, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Libro"
 font_size = 25
@@ -735,6 +736,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Borrador/PickableObject" index="1" unique_id=97662352]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.20318401, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Borrador"
 font_size = 25
@@ -764,7 +766,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Bolígrafo" index="0" unique_id=1340450775 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Bolígrafo/PickableObject" index="1" unique_id=1974958672]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.043284237, -0.33384013)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21084827, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Bolígrafo"
 font_size = 25
@@ -795,7 +798,8 @@ sound_pickup = ExtResource("11_iogyn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.9604645e-08)
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Estuche/PickableObject" index="1" unique_id=207737979]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24162817, 0.03667879, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18686336, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Estuche"
 font_size = 25
@@ -826,6 +830,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03702426, 0)
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Reloj/PickableObject" index="1" unique_id=2133651336]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.21618062, 0.01354599)
+pixel_size = 0.003
 billboard = 1
 text = "Reloj"
 font_size = 25
@@ -855,7 +860,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Pincel" index="0" unique_id=844016251 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Pincel/PickableObject" index="1" unique_id=516125326]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.017319918, 0.10424894, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.017319918, 0.14348537, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Pincel"
 font_size = 25
@@ -886,6 +892,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Paleta/PickableObject" index="1" unique_id=758441353]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.26689678, -0.07320571)
+pixel_size = 0.003
 billboard = 1
 text = "Paleta"
 font_size = 25
@@ -916,6 +923,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Carpeta/PickableObject" index="1" unique_id=213253758]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20181072, 0.013738036)
+pixel_size = 0.003
 billboard = 1
 text = "Carpeta"
 font_size = 25
@@ -945,6 +953,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Portalápices/PickableObject" index="1" unique_id=1535791532]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.25340068, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Portalápices"
 font_size = 25
@@ -974,6 +983,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Teléfono/PickableObject" index="1" unique_id=1320740823]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.33018488, -0.06973028)
+pixel_size = 0.003
 billboard = 1
 text = "Teléfono"
 font_size = 25
@@ -1004,6 +1014,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Lata/PickableObject" index="1" unique_id=644357218]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26746297, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Lata"
 font_size = 25
@@ -1033,6 +1044,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Bandeja/PickableObject" index="1" unique_id=567500233]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.28880697, -0.10547149)
+pixel_size = 0.003
 billboard = 1
 text = "Bandeja"
 font_size = 25
@@ -1062,7 +1074,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Globo" index="0" unique_id=1575304909 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Globo/PickableObject" index="1" unique_id=1029573702]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52160937, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32830316, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Globo"
 font_size = 25
@@ -1091,7 +1104,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Papelera" index="0" unique_id=1216496374 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Papelera/PickableObject" index="1" unique_id=1269978276]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45768034, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35213768, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Papelera"
 font_size = 25
@@ -1120,7 +1134,8 @@ sound_pickup = ExtResource("11_iogyn")
 [node name="PickableObject" parent="RoomManager/Objects/Calendario" index="0" unique_id=192387157 instance=ExtResource("10_8lj0s")]
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Calendario/PickableObject" index="1" unique_id=302993359]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39699316, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3105545, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Calendario"
 font_size = 25
@@ -1151,6 +1166,7 @@ sound_pickup = ExtResource("11_iogyn")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Regla/PickableObject" index="1" unique_id=428125836]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21643752, 0)
+pixel_size = 0.003
 billboard = 1
 text = "Regla"
 font_size = 25

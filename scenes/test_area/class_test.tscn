@@ -141,15 +141,10 @@ size = Vector3(0.8019484, 0.016351737, 0.10034683)
 [node name="ClassTest" unique_id=1872970581 instance=ExtResource("1_hblbk")]
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=267852734]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 1.3222318, -1.9783258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.978)
 billboard = 1
 no_depth_test = true
 font_size = 24
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="XROrigin3D/XRCamera3D" index="2" unique_id=1042778098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4373541, -1.978)
-volume_db = -40.0
-unit_size = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1" unique_id=564908448]
 environment = SubResource("Environment_tefuc")

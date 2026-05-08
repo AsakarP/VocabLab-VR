@@ -1,7 +1,6 @@
 class_name CollectibleItem extends Node3D
 
 @onready var pickable_object = $PickableObject
-@onready var highlight_light: OmniLight3D = $PickableObject/HighlightLight
 
 @export var task_board: Node3D
 @export var item_name: String
@@ -19,8 +18,7 @@ var time_since_last_click: float = 0.0
 var double_click_window: float = 0.5 # Seconds allowed between "grabs"
 
 func _ready():
-	# Highlight light and label off
-	highlight_light.visible = false
+	# Label off
 	if confirmation_label:
 		confirmation_label.visible = false
 	
@@ -111,8 +109,6 @@ func _accept_object():
 func collect_success():
 	if pickable_object.has_method("drop") and pickable_object.is_picked_up():
 		pickable_object.drop()
-	if highlight_light: 
-		highlight_light.visible = false
 	
 	visible = false
 	

@@ -142,15 +142,10 @@ radius = 0.084472656
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=1729481222]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0001329511, 1.3222318, -1.9783258)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.978)
 billboard = 1
 no_depth_test = true
 font_size = 24
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="XROrigin3D/XRCamera3D" index="2" unique_id=1409233581]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4373541, -1.978)
-volume_db = -40.0
-unit_size = 20.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1" unique_id=1197187562]
 environment = SubResource("Environment_55o7t")
