@@ -5,6 +5,9 @@ extends Node3D
 @onready var sprite_3d: Sprite3D = $Sprite3D
 @onready var teleport_area: Area3D = $"../TeleportArea"
 
+@export var tracked_controller: XRController3D 
+@export var scene_name_override: String = "Scene 1" # Easy way to label rows in Excel
+
 @export var master_item_list: Array[String] = []
 @export var objectsNode: Node3D
 @export var sound_correct: AudioStream
@@ -22,10 +25,24 @@ var time_limit: float = 600.0
 
 var error_log: String = ""
 
+# --- NEW ANALYTICS: Tracking Variables ---
+var wrong_picks: int = 0
+var raycast_hits: int = 0
+var controller_distance: float = 0.0
+var last_controller_pos: Vector3 = Vector3.ZERO
+
 # Runs every single frame
 func _process(delta):
 	if game_active:
 		time -= delta
+		
+		if tracked_controller and tracked_controller.is_inside_tree():
+			var current_pos = tracked_controller.global_position
+			if last_controller_pos != Vector3.ZERO:
+				# Add the distance moved since the last frame (in meters)
+				controller_distance += last_controller_pos.distance_to(current_pos)
+			last_controller_pos = current_pos
+		
 		if time <= 0:
 			time = 0
 			end_game_timeout()
@@ -65,6 +82,15 @@ func start_new_round():
 	current_idx = 0
 	error_log = ""
 	
+	# --- NEW ANALYTICS: Reset all counters for the new round ---
+	wrong_picks = 0
+	raycast_hits = 0
+	controller_distance = 0.0
+	if tracked_controller and tracked_controller.is_inside_tree():
+		last_controller_pos = tracked_controller.global_position
+	else:
+		last_controller_pos = Vector3.ZERO
+	
 	time = time_limit
 	game_active = true
 	
@@ -82,8 +108,19 @@ func update_board_disp():
 		label_3d.text = "Cari: %s\nObjek: %d/%d\nPoin: %d\nSisa Waktu: %s" % \
 		[target, obj, obj_total, score, time_str]
 
+# --- NEW ANALYTICS: Public function for your Raycast/Laser to call ---
+func register_raycast_hit():
+	if game_active:
+		raycast_hits += 1
+
 func end_game_timeout():
 	game_active = false
+	
+	# --- NEW ANALYTICS: Process final time and save ---
+	var time_taken_seconds = time_limit - int(time)
+	var time_taken_str = format_seconds(time_taken_seconds)
+	save_analytics_to_csv(time_taken_str, "TIMEOUT")
+	
 	if error_log == "":
 		label_3d.text = "Waktu Habis!\nObjek yang teridentifikasi: %d/%d\nPoin Akhir: %d \
 		\nSilakan berjalan menuju portal di sudut ruangan\nuntuk melanjutkan ke tahap berikutnya." % \
@@ -123,6 +160,9 @@ func end_game_win():
 	# Format strings
 	var time_taken_str = format_seconds(time_taken_seconds)
 	var time_left_str = format_seconds(visible_time_left_sec)
+	
+	# Save to CSV when the player wins
+	save_analytics_to_csv(time_taken_str, "WIN")
 	
 	if error_log == "":
 		label_3d.text = "Semua Objek Teridentifikasi! (%d/%d)\nPoin Akhir: %d\nDiselesaikan dalam: %s\n \
@@ -177,6 +217,7 @@ func check_submission(submitted_item_name: String) -> bool:
 	else:
 		# Incorrect object
 		score -= 1
+		wrong_picks += 1 # --- NEW ANALYTICS ---
 		play_sfx(sound_incorrect)
 		
 		var mistake_text = "Target: %s | Player memilih: %s" % [current_target, submitted_item_name]
@@ -201,6 +242,44 @@ func format_seconds(amount: float) -> String:
 	var seconds = int(clean_time) % 60
 	
 	return "%02d:%02d" % [minutes,seconds]
+
+# --- NEW ANALYTICS: Permanent CSV/Excel Export Logic ---
+func save_analytics_to_csv(time_taken: String, outcome: String):
+	# user:// saves to the OS app data folder safely on PC, Quest, or Android
+	var file_path = "user://vr_session_analytics.csv"
+	var file_exists = FileAccess.file_exists(file_path)
+	
+	# Open file in READ_WRITE to append without overwriting past sessions
+	var file = FileAccess.open(file_path, FileAccess.READ_WRITE)
+	if not file:
+		# If file didn't exist at all, create it
+		file = FileAccess.open(file_path, FileAccess.WRITE)
+		
+	if file:
+		file.seek_end() # Move cursor to the very end of the file to append a new row
+		
+		# If the file is brand new, write the Excel Header row first
+		if not file_exists or file.get_position() == 0:
+			file.store_line("Scene Label,Outcome,Time Taken,Right Picks,Wrong Picks,Controller Distance (Meters),Raycast Hits")
+			
+		# Compile this round's telemetry into a comma-separated row
+		var csv_row = "%s,%s,%s,%d,%d,%.2f,%d" % [
+			scene_name_override,
+			outcome,
+			time_taken,
+			score,
+			wrong_picks,
+			controller_distance,
+			raycast_hits
+		]
+		
+		file.store_line(csv_row)
+		file.close()
+		
+		# Print the absolute OS file path so you know exactly where to find the spreadsheet
+		print("\n>>> ANALYTICS SAVED TO EXCEL/CSV <<<")
+		print("Path: ", ProjectSettings.globalize_path(file_path))
+		print("Row Data: ", csv_row, "\n")
 
 # If button pressed start new round
 func _on_interactable_area_button_button_pressed(_button):
