@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://ce5gxxsbpeoen" path="res://scenes/magnetic_aim.gd" id="9_tsn8l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_oy5cl"]
-size = Vector3(0.7, 0.7, 9.955)
+size = Vector3(0.5, 0.5, 9.955)
 
 [node name="ZoneBase" unique_id=1729843451 instance=ExtResource("1_bdkev")]
 

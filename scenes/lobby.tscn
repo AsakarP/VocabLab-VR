@@ -78,7 +78,7 @@ fill_from = Vector2(1, 0)
 [node name="XROrigin3D" parent="." index="0"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
-[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3"]
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" unique_id=993613275]
 suppress_radius = 0.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1" unique_id=104259210]
@@ -534,7 +534,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 [node name="RoomTestTeleporter" parent="LobbyArea/TestPortals" index="0" unique_id=1430380932 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 collision_mask = 524288
-target_scene = "uid://bhpacxjspcacg"
+target_scene = "uid://blai5di7hgds8"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/RoomTestTeleporter" index="3" unique_id=1599874531]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
@@ -556,7 +556,7 @@ text = "8 Objek"
 [node name="KitchenTestTeleporter" parent="LobbyArea/TestPortals" index="1" unique_id=1944524922 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 collision_mask = 524288
-target_scene = "uid://b5nu8kaietly"
+target_scene = "uid://cpm173umy42e2"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/KitchenTestTeleporter" index="3" unique_id=327115139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
@@ -578,7 +578,7 @@ text = "13 Objek"
 [node name="ClassTestTeleporter" parent="LobbyArea/TestPortals" index="2" unique_id=1548683105 instance=ExtResource("18_o2i1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 collision_mask = 524288
-target_scene = "uid://36o7l2e23sx6"
+target_scene = "uid://do3bcd5mh1v2e"
 
 [node name="Label3D" type="Label3D" parent="LobbyArea/TestPortals/ClassTestTeleporter" index="3" unique_id=626017041]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.081604, 0)
