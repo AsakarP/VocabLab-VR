@@ -319,14 +319,14 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="lamp_table" parent="RoomManager/Objects/Lámpara/PickableObject" index="0" unique_id=738126246 instance=ExtResource("18_0tpjx")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.015193105, -0.15788126)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.0042352676, -0.15788126)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="2" unique_id=793092587]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.3376814, -0.15788126)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.34863925, -0.15788126)
 shape = SubResource("CylinderShape3D_n53bi")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="3" unique_id=1489145678]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9599341, -0.15818357)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.97089183, -0.15818357)
 billboard = 1
 text = "Lámpara"
 font_size = 25
@@ -344,14 +344,14 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="pictureframe_standing_A" parent="RoomManager/Objects/Marco/PickableObject" index="1" unique_id=1203265420 instance=ExtResource("19_g6mcy")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.039371252, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Marco/PickableObject" index="2" unique_id=1063279485]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.21472454, 0)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.2540958, 0)
 shape = SubResource("BoxShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Marco/PickableObject" index="3" unique_id=393806346]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5762874, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61565864, 0)
 billboard = 1
 text = "Marco"
 font_size = 25
@@ -369,14 +369,14 @@ sound_pickup = ExtResource("17_884qo")
 collision_layer = 1048580
 
 [node name="cactus_medium_A" parent="RoomManager/Objects/Cacto/PickableObject" index="1" unique_id=1632873175 instance=ExtResource("20_g5edx")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.009715974, -0.19209313)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.021421377, -0.19209313)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cacto/PickableObject" index="2" unique_id=1531013023]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.28669414, -0.19209313)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.29839954, -0.19209313)
 shape = SubResource("CylinderShape3D_3m6p8")
 
 [node name="Label3D" type="Label3D" parent="RoomManager/Objects/Cacto/PickableObject" index="3" unique_id=207398465]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7212799, -0.19209313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7329853, -0.19209313)
 billboard = 1
 text = "Cacto"
 font_size = 25
