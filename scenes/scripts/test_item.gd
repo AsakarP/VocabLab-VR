@@ -133,3 +133,21 @@ func reset_position():
 	if pickable_object is RigidBody3D:
 		pickable_object.linear_velocity = Vector3.ZERO
 		pickable_object.angular_velocity = Vector3.ZERO
+
+func pointer_event(event: XRToolsPointerEvent) -> void:
+	# 1. FIRST: Count the hit the exact millisecond the laser sweeps over the object
+	if event.event_type == XRToolsPointerEvent.Type.ENTERED:
+		
+		# Search the entire game world for any node in the "analytics" group
+		var managers = get_tree().get_nodes_in_group("analytics")
+		
+		# If it found at least one node, tell the first one it found to count the hit!
+		if managers.size() > 0:
+			var game_manager = managers[0]
+			if game_manager.has_method("register_raycast_hit"):
+				game_manager.register_raycast_hit()
+			
+	# 2. SECOND: Forward the event up to the parent to handle your double-click grab prompt
+	var parent = get_parent()
+	if parent.has_method("pointer_event"):
+		parent.pointer_event(event)

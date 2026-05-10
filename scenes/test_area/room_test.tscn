@@ -164,9 +164,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1916446411 node_paths=PackedStringArray("objectsNode", "room_manager")]
+[node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1916446411 node_paths=PackedStringArray("tracked_controller", "objectsNode", "room_manager") groups=["analytics"]]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
 script = ExtResource("2_i6qwn")
+tracked_controller = NodePath("../../XROrigin3D/RightHand")
+scene_name_override = "Kamar"
 master_item_list = Array[String](["Lámpara", "Marco", "Cacto", "Almohadón", "Taburete", "Pesa", "Cámara", "Ropa"])
 objectsNode = NodePath("../../RoomManager/Objects")
 room_manager = NodePath("../../RoomManager")

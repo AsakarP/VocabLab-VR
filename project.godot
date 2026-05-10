@@ -30,6 +30,10 @@ Bgm="*res://scenes/bgm.tscn"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/infinite_heightmap_terrain/plugin.cfg")
 
+[global_group]
+
+analytics=""
+
 [input]
 
 left_trigger={
