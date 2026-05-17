@@ -32,6 +32,9 @@ var raycast_hits: int = 0
 var controller_distance: float = 0.0
 var last_controller_pos: Vector3 = Vector3.ZERO
 
+func _ready():
+	print("Checking Autoload: ", SessionData)
+
 # Runs every single frame
 func _process(delta):
 	if game_active:
