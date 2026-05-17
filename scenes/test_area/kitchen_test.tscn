@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6vy488ituvpu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_hpybt"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_abqhv"]
-[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/xr_origin_3d.gd" id="2_mj12i"]
+[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/scripts/xr_origin_3d.gd" id="2_mj12i"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="3_lwjek"]
 [ext_resource type="PackedScene" uid="uid://cf2ijkr5ne4lt" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet.fbx" id="3_ye0jd"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="3_yvw6u"]

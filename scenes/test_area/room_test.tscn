@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://6vy488ituvpu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_xyv5v"]
 [ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="2_7diqi"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_i6qwn"]
-[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/xr_origin_3d.gd" id="2_umf04"]
+[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/scripts/xr_origin_3d.gd" id="2_umf04"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="3_iurof"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="3_m6e51"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="3_uygro"]

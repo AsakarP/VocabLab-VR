@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://do3bcd5mh1v2e"]
 
 [ext_resource type="Script" uid="uid://6vy488ituvpu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_h3hc3"]
-[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/xr_origin_3d.gd" id="2_1l1i2"]
+[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/scripts/xr_origin_3d.gd" id="2_1l1i2"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_c87tt"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="3_2lhrc"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="3_ctbgb"]
