@@ -25,6 +25,7 @@ config/icon="uid://cqotd4d3v610j"
 XRToolsUserSettings="*uid://d0p6q2nhwi5e1"
 XRToolsRumbleManager="*uid://dklgvbkg3m0j0"
 Bgm="*res://scenes/bgm.tscn"
+SessionData="*uid://buw2j72bp13mx"
 
 [editor_plugins]
 

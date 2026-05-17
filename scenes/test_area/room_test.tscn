@@ -1,18 +1,27 @@
 [gd_scene format=4 uid="uid://blai5di7hgds8"]
 
-[ext_resource type="PackedScene" uid="uid://dnqhu0d47ltdw" path="res://scenes/zone_base.tscn" id="1_6ub8i"]
+[ext_resource type="Script" uid="uid://6vy488ituvpu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_xyv5v"]
 [ext_resource type="PackedScene" uid="uid://dh1pc17jcd5ig" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_medium.fbx" id="2_7diqi"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="2_i6qwn"]
+[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/xr_origin_3d.gd" id="2_umf04"]
 [ext_resource type="PackedScene" uid="uid://r0lcss186h3" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/cabinet_small.fbx" id="3_iurof"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="3_m6e51"]
+[ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="3_uygro"]
+[ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="4_d5ctp"]
 [ext_resource type="PackedScene" uid="uid://bdtm2uxf37ovp" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/bed_double_A.fbx" id="4_uka4f"]
+[ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="5_3xr38"]
 [ext_resource type="PackedScene" uid="uid://cfxc2v5bmnsu8" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/lamp_standing.fbx" id="5_537hs"]
 [ext_resource type="PackedScene" uid="uid://ckncxv78vvsya" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/table_medium_long.fbx" id="6_a3w43"]
 [ext_resource type="Texture2D" uid="uid://cwu4u1vs12r8e" path="res://images/Arrow_Down.png" id="6_ct6pl"]
+[ext_resource type="PackedScene" uid="uid://btf05hjpw6k05" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_physics_hand_low.tscn" id="6_yd3qm"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="7_08g68"]
 [ext_resource type="PackedScene" uid="uid://caixodf0p62gb" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/chair_C.fbx" id="7_q7r7u"]
 [ext_resource type="PackedScene" uid="uid://cocfpk5yrpbl6" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/couch.fbx" id="8_4ukh1"]
+[ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="8_fd4it"]
 [ext_resource type="PackedScene" uid="uid://b7o8edu2qk0th" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_oval_A.fbx" id="9_nldxb"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="9_pq5kb"]
 [ext_resource type="PackedScene" uid="uid://duwlrpbjikkyx" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/rug_rectangle_stripes_A.fbx" id="10_4l40p"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="10_c21le"]
 [ext_resource type="PackedScene" uid="uid://c4rg6fpw3w75k" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_big.fbx" id="11_voaw8"]
 [ext_resource type="PackedScene" uid="uid://ckndyjtsicxbs" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/shelf_A_small.fbx" id="12_s5etu"]
 [ext_resource type="PackedScene" uid="uid://cp1xksrjromde" path="res://assets/KayKit_Furniture_Bits_1.0_FREE/Assets/fbx/armchair.fbx" id="13_dik1j"]
@@ -126,45 +135,84 @@ size = Vector3(0.3183785, 0.20511627, 0.28162277)
 [sub_resource type="BoxShape3D" id="BoxShape3D_umf04"]
 size = Vector3(0.577821, 0.19050026, 0.91834664)
 
-[node name="RoomTest" unique_id=655237994 instance=ExtResource("1_6ub8i")]
+[node name="RoomTest" type="Node3D" unique_id=655237994]
+script = ExtResource("1_xyv5v")
 
-[node name="XROrigin3D" parent="." index="0"]
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=1110700710]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("2_umf04")
 
-[node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=1954903452]
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=934614713]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+far = 300.0
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" unique_id=242333019 instance=ExtResource("3_uygro")]
+
+[node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D" unique_id=1954903452]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.978)
 billboard = 1
 no_depth_test = true
 font_size = 24
 
-[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="3" unique_id=1191378969]
+[node name="LeftHand" type="XRController3D" parent="XROrigin3D" unique_id=1169130369]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, -0.5)
+tracker = &"left_hand"
+pose = &"aim"
+
+[node name="LeftPhysicsHand" parent="XROrigin3D/LeftHand" unique_id=1117146125 instance=ExtResource("4_d5ctp")]
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand" unique_id=2132965410 instance=ExtResource("5_3xr38")]
+strafe = true
+
+[node name="RightHand" type="XRController3D" parent="XROrigin3D" unique_id=2050350447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -0.5)
+tracker = &"right_hand"
+pose = &"aim"
+
+[node name="RightPhysicsHand" parent="XROrigin3D/RightHand" unique_id=1758652608 instance=ExtResource("6_yd3qm")]
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand" unique_id=830249316 instance=ExtResource("7_08g68")]
+turn_mode = 1
+step_turn_angle = 50.0
+
+[node name="FunctionPickup" parent="XROrigin3D/RightHand" unique_id=2080981615 instance=ExtResource("8_fd4it")]
+ranged_distance = 15.0
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" unique_id=1191378969 instance=ExtResource("9_pq5kb")]
+distance = 20.0
+show_laser = 2
+laser_length = 1
+show_target = true
+collision_mask = 5242884
 suppress_radius = 0.0
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1" unique_id=570952888]
+[node name="PlayerBody" parent="XROrigin3D" unique_id=798521013 instance=ExtResource("10_c21le")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=570952888]
 environment = SubResource("Environment_lwoln")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="2" unique_id=1083410544]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1083410544]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Interior" type="Node3D" parent="." index="3" unique_id=1504569604]
+[node name="Interior" type="Node3D" parent="." unique_id=1504569604]
 
-[node name="Room" type="StaticBody3D" parent="Interior" index="0" unique_id=1451908403]
+[node name="Room" type="StaticBody3D" parent="Interior" unique_id=1451908403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
 
-[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room" index="0" unique_id=1708127257]
+[node name="RoomMesh" type="MeshInstance3D" parent="Interior/Room" unique_id=1708127257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003952265, 0, 0.0051785707)
 mesh = SubResource("ArrayMesh_m6e51")
 
-[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room" index="1" unique_id=1421662997]
+[node name="RoomCollision" type="CollisionShape3D" parent="Interior/Room" unique_id=1421662997]
 shape = SubResource("ConcavePolygonShape3D_n20u5")
 
-[node name="CeilingLight" type="OmniLight3D" parent="Interior" index="1" unique_id=622213787]
+[node name="CeilingLight" type="OmniLight3D" parent="Interior" unique_id=622213787]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2901597, 0)
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="TaskBoard" type="Node3D" parent="Interior" index="2" unique_id=1916446411 node_paths=PackedStringArray("tracked_controller", "objectsNode", "room_manager") groups=["analytics"]]
+[node name="TaskBoard" type="Node3D" parent="Interior" unique_id=1916446411 node_paths=PackedStringArray("tracked_controller", "objectsNode", "room_manager") groups=["analytics"]]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.072, 2.743, -3.991)
 script = ExtResource("2_i6qwn")
 tracked_controller = NodePath("../../XROrigin3D/RightHand")
@@ -173,361 +221,361 @@ master_item_list = Array[String](["Lámpara", "Marco", "Cacto", "Almohadón", "T
 objectsNode = NodePath("../../RoomManager/Objects")
 room_manager = NodePath("../../RoomManager")
 
-[node name="PushButton" parent="Interior/TaskBoard" index="0" unique_id=261049739 instance=ExtResource("15_jx7oo")]
+[node name="PushButton" parent="Interior/TaskBoard" unique_id=261049739 instance=ExtResource("15_jx7oo")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -1.3242062, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Interior/TaskBoard/PushButton" index="4" unique_id=2043082355]
+[node name="StaticBody3D" type="StaticBody3D" parent="Interior/TaskBoard/PushButton" unique_id=2043082355]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72503334, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="0" unique_id=1620307227]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" unique_id=1620307227]
 mesh = SubResource("CylinderMesh_m6e51")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" index="1" unique_id=1342467890]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/TaskBoard/PushButton/StaticBody3D" unique_id=1342467890]
 shape = SubResource("ConvexPolygonShape3D_m6e51")
 
-[node name="Sprite3D" type="Sprite3D" parent="Interior/TaskBoard" index="1" unique_id=380733254]
+[node name="Sprite3D" type="Sprite3D" parent="Interior/TaskBoard" unique_id=380733254]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.51555896, 0)
 billboard = 1
 texture = ExtResource("6_ct6pl")
 
-[node name="TeleportArea" parent="Interior" index="3" unique_id=1045051944 instance=ExtResource("3_m6e51")]
+[node name="TeleportArea" parent="Interior" unique_id=1045051944 instance=ExtResource("3_m6e51")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.122627, -1.1920929e-07, 5.115514)
 visible = false
 collision_mask = 524288
 monitoring = false
 target_scene = "uid://cpm173umy42e2"
 
-[node name="Label3D" type="Label3D" parent="Interior/TeleportArea" index="3" unique_id=951211235]
+[node name="Label3D" type="Label3D" parent="Interior/TeleportArea" unique_id=951211235]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.7, 0)
 billboard = 1
 text = "Dapur"
 font_size = 64
 
-[node name="Guide" type="Label3D" parent="Interior" index="4" unique_id=1559500882]
+[node name="Guide" type="Label3D" parent="Interior" unique_id=1559500882]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.7, 2.5, 0)
 text = "Identifikasi 8 Objek sesuai perintah Target.
 Arahkan tangan anda kepada objek lalu tekan tombol Grip (genggam) dua kali pada controller 
 untuk memilih objek tersebut.
 Tekan tombol merah yang ditunjuk panah untuk memulai! "
 
-[node name="Furnitures" type="Node3D" parent="." index="4" unique_id=969014415]
+[node name="Furnitures" type="Node3D" parent="." unique_id=969014415]
 
-[node name="cabinet_medium" parent="Furnitures" index="0" unique_id=238933285 instance=ExtResource("2_7diqi")]
+[node name="cabinet_medium" parent="Furnitures" unique_id=238933285 instance=ExtResource("2_7diqi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7, 0, -5.2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_medium" index="1" unique_id=1681690554]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_medium" unique_id=1681690554]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 5.2)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/cabinet_medium/StaticBody3D" index="0" unique_id=1017765340]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/cabinet_medium/StaticBody3D" unique_id=1017765340]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7012818, 0.51755536, -5.2)
 shape = SubResource("BoxShape3D_n20u5")
 
-[node name="cabinet_small" parent="Furnitures" index="1" unique_id=1181464631 instance=ExtResource("3_iurof")]
+[node name="cabinet_small" parent="Furnitures" unique_id=1181464631 instance=ExtResource("3_iurof")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0, -5.2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_small" index="1" unique_id=1741552806]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/cabinet_small" unique_id=1741552806]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/cabinet_small/StaticBody3D" index="0" unique_id=916295141]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/cabinet_small/StaticBody3D" unique_id=916295141]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5126734, 0)
 shape = SubResource("BoxShape3D_588f6")
 
-[node name="bed_double_A" parent="Furnitures" index="2" unique_id=1011064683 instance=ExtResource("4_uka4f")]
+[node name="bed_double_A" parent="Furnitures" unique_id=1011064683 instance=ExtResource("4_uka4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.2)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/bed_double_A" index="1" unique_id=656228627]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/bed_double_A" unique_id=656228627]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/bed_double_A/StaticBody3D" index="0" unique_id=140973487]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/bed_double_A/StaticBody3D" unique_id=140973487]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0004348755, 0, 0.006234169)
 shape = SubResource("BoxShape3D_m6e51")
 
-[node name="lamp_standing" parent="Furnitures" index="3" unique_id=656765602 instance=ExtResource("5_537hs")]
+[node name="lamp_standing" parent="Furnitures" unique_id=656765602 instance=ExtResource("5_537hs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4419847, 0, -5.1198235)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing" index="1" unique_id=1029147224]
+[node name="OmniLight3D" type="OmniLight3D" parent="Furnitures/lamp_standing" unique_id=1029147224]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0916617, 0)
 light_energy = 0.5
 shadow_enabled = true
 shadow_blur = 10.0
 omni_range = 3.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/lamp_standing" index="2" unique_id=1194550377]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/lamp_standing" unique_id=1194550377]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/lamp_standing/StaticBody3D" index="0" unique_id=2130842103]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/lamp_standing/StaticBody3D" unique_id=2130842103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75201416, 0)
 shape = SubResource("CylinderShape3D_m6e51")
 
-[node name="table_medium_long" parent="Furnitures" index="4" unique_id=608802906 instance=ExtResource("6_a3w43")]
+[node name="table_medium_long" parent="Furnitures" unique_id=608802906 instance=ExtResource("6_a3w43")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9742148)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/table_medium_long" index="1" unique_id=1942175964]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/table_medium_long" unique_id=1942175964]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/table_medium_long/StaticBody3D" index="0" unique_id=923131410]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/table_medium_long/StaticBody3D" unique_id=923131410]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008773804, 0.52978516, 0.00048828125)
 shape = SubResource("BoxShape3D_i6qwn")
 
-[node name="chair_C" parent="Furnitures" index="5" unique_id=1635011576 instance=ExtResource("7_q7r7u")]
+[node name="chair_C" parent="Furnitures" unique_id=1635011576 instance=ExtResource("7_q7r7u")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4.3714414)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/chair_C" index="1" unique_id=1297688738]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/chair_C" unique_id=1297688738]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/chair_C/StaticBody3D" index="0" unique_id=298838846]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/chair_C/StaticBody3D" unique_id=298838846]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0076599177, 0.24560547, -0.008300781)
 shape = SubResource("BoxShape3D_gap2k")
 
-[node name="couch" parent="Furnitures" index="6" unique_id=584075345 instance=ExtResource("8_4ukh1")]
+[node name="couch" parent="Furnitures" unique_id=584075345 instance=ExtResource("8_4ukh1")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.85, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/couch" index="1" unique_id=1960033566]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/couch" unique_id=1960033566]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" index="0" unique_id=1466324096]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" unique_id=1466324096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008651741, 0, 0.17089844)
 shape = SubResource("BoxShape3D_8hio3")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" index="1" unique_id=1615261712]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" unique_id=1615261712]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3487041, 0.24980164, 0.0027770996)
 shape = SubResource("BoxShape3D_p3dl8")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" index="2" unique_id=945506872]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" unique_id=945506872]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.349, 0.25, 0.003)
 shape = SubResource("BoxShape3D_p3dl8")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" index="3" unique_id=1732506926]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Furnitures/couch/StaticBody3D" unique_id=1732506926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0043106275, 0.35938036, -0.4472208)
 shape = SubResource("BoxShape3D_n53bi")
 
-[node name="rug_oval_A" parent="Furnitures" index="7" unique_id=1947742142 instance=ExtResource("9_nldxb")]
+[node name="rug_oval_A" parent="Furnitures" unique_id=1947742142 instance=ExtResource("9_nldxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 
-[node name="rug_rectangle_stripes_A" parent="Furnitures" index="8" unique_id=1454068696 instance=ExtResource("10_4l40p")]
+[node name="rug_rectangle_stripes_A" parent="Furnitures" unique_id=1454068696 instance=ExtResource("10_4l40p")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 0)
 
-[node name="shelf_A_big" parent="Furnitures" index="9" unique_id=1420605378 instance=ExtResource("11_voaw8")]
+[node name="shelf_A_big" parent="Furnitures" unique_id=1420605378 instance=ExtResource("11_voaw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.793, 2.5, -5.75)
 
-[node name="shelf_A_small" parent="Furnitures" index="10" unique_id=495960551 instance=ExtResource("12_s5etu")]
+[node name="shelf_A_small" parent="Furnitures" unique_id=495960551 instance=ExtResource("12_s5etu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.181, 2.5, -5.75)
 
-[node name="armchair" parent="Furnitures" index="11" unique_id=1364192705 instance=ExtResource("13_dik1j")]
+[node name="armchair" parent="Furnitures" unique_id=1364192705 instance=ExtResource("13_dik1j")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/armchair" index="1" unique_id=1920028915]
+[node name="StaticBody3D" type="StaticBody3D" parent="Furnitures/armchair" unique_id=1920028915]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/armchair/StaticBody3D" index="0" unique_id=283675951]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Furnitures/armchair/StaticBody3D" unique_id=283675951]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2895832e-05, 0, 0.052963257)
 shape = SubResource("BoxShape3D_8mfpk")
 
-[node name="RoomManager" type="Node3D" parent="." index="5" unique_id=6280539 node_paths=PackedStringArray("spawn_points_container", "objects_container")]
+[node name="RoomManager" type="Node3D" parent="." unique_id=6280539 node_paths=PackedStringArray("spawn_points_container", "objects_container")]
 script = ExtResource("17_gap2k")
 spawn_points_container = NodePath("SpawnPoints")
 objects_container = NodePath("Objects")
 
-[node name="SpawnPoints" type="Node3D" parent="RoomManager" index="0" unique_id=1055799439]
+[node name="SpawnPoints" type="Node3D" parent="RoomManager" unique_id=1055799439]
 
-[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" index="0" unique_id=1339958774]
+[node name="Marker3D" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=1339958774]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.959, 1.0738902, -5.158)
 
-[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" index="1" unique_id=801849302]
+[node name="Marker3D2" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=801849302]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.222, 1.0458902, -5.13)
 
-[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" index="2" unique_id=2035872849]
+[node name="Marker3D3" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=2035872849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.037890166, -2.291)
 
-[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" index="3" unique_id=2021233741]
+[node name="Marker3D4" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=2021233741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.6398902, -0.768)
 
-[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" index="4" unique_id=1362474626]
+[node name="Marker3D5" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=1362474626]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.486, 0.034890175, 3.038)
 
-[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" index="5" unique_id=454743803]
+[node name="Marker3D6" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=454743803]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.041232616, -3.2654462)
 
-[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" index="6" unique_id=979537994]
+[node name="Marker3D7" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=979537994]
 transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0478197, 2.4626055)
 
-[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" index="7" unique_id=576076412]
+[node name="Marker3D8" type="Marker3D" parent="RoomManager/SpawnPoints" unique_id=576076412]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0525355, 2.4626055)
 
-[node name="Objects" type="Node3D" parent="RoomManager" index="1" unique_id=2002535687]
+[node name="Objects" type="Node3D" parent="RoomManager" unique_id=2002535687]
 
-[node name="Lámpara" type="Node3D" parent="RoomManager/Objects" index="0" unique_id=348687095 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Lámpara" type="Node3D" parent="RoomManager/Objects" unique_id=348687095 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.959, 1.074, -5.158)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Lámpara"
 confirmation_label = NodePath("ConfirmationLabel")
 
-[node name="PickableObject" parent="RoomManager/Objects/Lámpara" index="0" unique_id=43600168 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Lámpara" unique_id=43600168 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="lamp_table" parent="RoomManager/Objects/Lámpara/PickableObject" index="0" unique_id=1239053047 instance=ExtResource("16_1qfaj")]
+[node name="lamp_table" parent="RoomManager/Objects/Lámpara/PickableObject" unique_id=1239053047 instance=ExtResource("16_1qfaj")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, -0.015193105, -0.15788126)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Lámpara/PickableObject" index="2" unique_id=1544964279]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Lámpara/PickableObject" unique_id=1544964279]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.3376814, -0.15788126)
 shape = SubResource("CylinderShape3D_4h0xn")
 
-[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Lámpara" index="1" unique_id=1032805207]
+[node name="ConfirmationLabel" type="Label3D" parent="RoomManager/Objects/Lámpara" unique_id=1032805207]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0777315, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Marco" type="Node3D" parent="RoomManager/Objects" index="1" unique_id=2007277965 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Marco" type="Node3D" parent="RoomManager/Objects" unique_id=2007277965 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2216792, 1.0107766, -5.1301403)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Marco"
 confirmation_label = NodePath("ConfirmationLabel2")
 
-[node name="PickableObject" parent="RoomManager/Objects/Marco" index="0" unique_id=577754685 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Marco" unique_id=577754685 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="pictureframe_standing_A" parent="RoomManager/Objects/Marco/PickableObject" index="1" unique_id=1571569262 instance=ExtResource("17_f206w")]
+[node name="pictureframe_standing_A" parent="RoomManager/Objects/Marco/PickableObject" unique_id=1571569262 instance=ExtResource("17_f206w")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Marco/PickableObject" index="2" unique_id=1668139452]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Marco/PickableObject" unique_id=1668139452]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.21472454, 0)
 shape = SubResource("BoxShape3D_kmtyc")
 
-[node name="ConfirmationLabel2" type="Label3D" parent="RoomManager/Objects/Marco" index="1" unique_id=810295737]
+[node name="ConfirmationLabel2" type="Label3D" parent="RoomManager/Objects/Marco" unique_id=810295737]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8020536, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Cacto" type="Node3D" parent="RoomManager/Objects" index="2" unique_id=766889075 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Cacto" type="Node3D" parent="RoomManager/Objects" unique_id=766889075 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.006, 0.038, -2.291)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cacto"
 confirmation_label = NodePath("ConfirmationLabel3")
 
-[node name="PickableObject" parent="RoomManager/Objects/Cacto" index="0" unique_id=1847025942 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Cacto" unique_id=1847025942 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="cactus_medium_A" parent="RoomManager/Objects/Cacto/PickableObject" index="1" unique_id=1298924132 instance=ExtResource("18_gwj6w")]
+[node name="cactus_medium_A" parent="RoomManager/Objects/Cacto/PickableObject" unique_id=1298924132 instance=ExtResource("18_gwj6w")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.009715974, -0.19209313)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cacto/PickableObject" index="2" unique_id=2100937233]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cacto/PickableObject" unique_id=2100937233]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.28669414, -0.19209313)
 shape = SubResource("CylinderShape3D_n7opy")
 
-[node name="ConfirmationLabel3" type="Label3D" parent="RoomManager/Objects/Cacto" index="1" unique_id=166157956]
+[node name="ConfirmationLabel3" type="Label3D" parent="RoomManager/Objects/Cacto" unique_id=166157956]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88187444, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Almohadón" type="Node3D" parent="RoomManager/Objects" index="3" unique_id=1610590994 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Almohadón" type="Node3D" parent="RoomManager/Objects" unique_id=1610590994 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.64, -0.768)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Almohadón"
 confirmation_label = NodePath("ConfirmationLabel4")
 
-[node name="PickableObject" parent="RoomManager/Objects/Almohadón" index="0" unique_id=616834042 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Almohadón" unique_id=616834042 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="pillow_A" parent="RoomManager/Objects/Almohadón/PickableObject" index="1" unique_id=772862273 instance=ExtResource("19_mfx57")]
+[node name="pillow_A" parent="RoomManager/Objects/Almohadón/PickableObject" unique_id=772862273 instance=ExtResource("19_mfx57")]
 transform = Transform3D(0.70000005, 0, -2.9802322e-08, 0, 0.7, 0, 2.9802322e-08, 0, 0.70000005, 0, 0.07769847, -0.117365)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Almohadón/PickableObject" index="2" unique_id=40944718]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Almohadón/PickableObject" unique_id=40944718]
 transform = Transform3D(0.70000005, 0, -2.9802322e-08, 0, 0.7, 0, 2.9802322e-08, 0, 0.70000005, -0.0032978058, 0.08174586, -0.11882937)
 shape = SubResource("BoxShape3D_52s8r")
 
-[node name="ConfirmationLabel4" type="Label3D" parent="RoomManager/Objects/Almohadón" index="1" unique_id=1119388573]
+[node name="ConfirmationLabel4" type="Label3D" parent="RoomManager/Objects/Almohadón" unique_id=1119388573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5452453, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Taburete" type="Node3D" parent="RoomManager/Objects" index="4" unique_id=838047443 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Taburete" type="Node3D" parent="RoomManager/Objects" unique_id=838047443 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 4.486, 0.035, 3.038)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Taburete"
 confirmation_label = NodePath("ConfirmationLabel5")
 
-[node name="PickableObject" parent="RoomManager/Objects/Taburete" index="0" unique_id=696679862 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Taburete" unique_id=696679862 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="chair_stool" parent="RoomManager/Objects/Taburete/PickableObject" index="1" unique_id=1302600501 instance=ExtResource("20_8gy4o")]
+[node name="chair_stool" parent="RoomManager/Objects/Taburete/PickableObject" unique_id=1302600501 instance=ExtResource("20_8gy4o")]
 transform = Transform3D(0.70000005, 0, 0, 0, 0.7, 0, 0, 0, 0.70000005, 0, 0.009296238, -0.1635406)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Taburete/PickableObject" index="2" unique_id=552469327]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Taburete/PickableObject" unique_id=552469327]
 transform = Transform3D(0.7000001, 0, 0, 0, 0.7, 0, 0, 0, 0.7000001, 0.00088500977, 0.18256626, -0.16264176)
 shape = SubResource("BoxShape3D_5alc2")
 
-[node name="ConfirmationLabel5" type="Label3D" parent="RoomManager/Objects/Taburete" index="1" unique_id=1394727722]
+[node name="ConfirmationLabel5" type="Label3D" parent="RoomManager/Objects/Taburete" unique_id=1394727722]
 transform = Transform3D(1.0000002, 0, 2.9802319e-08, 0, 1, 0, -2.9802319e-08, 0, 1.0000002, 0, 0.7693047, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Pesa" type="Node3D" parent="RoomManager/Objects" index="5" unique_id=276584920 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Pesa" type="Node3D" parent="RoomManager/Objects" unique_id=276584920 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.27899113, 0, -0.96029365, 0, 1, 0, 0.96029365, 0, -0.27899113, -3.7536986, 0.0063424334, -3.2654462)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Pesa"
 confirmation_label = NodePath("ConfirmationLabel6")
 
-[node name="PickableObject" parent="RoomManager/Objects/Pesa" index="0" unique_id=808612902 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Pesa" unique_id=808612902 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="dumbbell_001" parent="RoomManager/Objects/Pesa/PickableObject" index="0" unique_id=1329212711 instance=ExtResource("29_kmpym")]
+[node name="dumbbell_001" parent="RoomManager/Objects/Pesa/PickableObject" unique_id=1329212711 instance=ExtResource("29_kmpym")]
 transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 0, 0.12, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Pesa/PickableObject" index="2" unique_id=727000548]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Pesa/PickableObject" unique_id=727000548]
 transform = Transform3D(1.0000008, 0, 1.7881393e-07, 0, 1, 0, -1.7881393e-07, 0, 1.0000008, -0.0014030933, 0.11985732, 0.00063943863)
 shape = SubResource("BoxShape3D_g5pdl")
 
-[node name="ConfirmationLabel6" type="Label3D" parent="RoomManager/Objects/Pesa" index="1" unique_id=1717647849]
+[node name="ConfirmationLabel6" type="Label3D" parent="RoomManager/Objects/Pesa" unique_id=1717647849]
 transform = Transform3D(-0.27899122, 0, 0.96029425, 0, 1, 0, -0.96029425, 0, -0.27899122, 0, 0.6700556, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Cámara" type="Node3D" parent="RoomManager/Objects" index="6" unique_id=1775821609 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Cámara" type="Node3D" parent="RoomManager/Objects" unique_id=1775821609 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(-0.93969256, 0, -0.34202018, 0, 1, 0, 0.34202018, 0, -0.93969256, -0.95332855, 1.0129296, 2.4626055)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Cámara"
 confirmation_label = NodePath("ConfirmationLabel7")
 
-[node name="PickableObject" parent="RoomManager/Objects/Cámara" index="0" unique_id=325423707 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Cámara" unique_id=325423707 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="camera_001" parent="RoomManager/Objects/Cámara/PickableObject" index="1" unique_id=1294617334 instance=ExtResource("28_7o0dq")]
+[node name="camera_001" parent="RoomManager/Objects/Cámara/PickableObject" unique_id=1294617334 instance=ExtResource("28_7o0dq")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cámara/PickableObject" index="2" unique_id=1714338954]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Cámara/PickableObject" unique_id=1714338954]
 transform = Transform3D(1.000001, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1.000001, 0.014095068, 0.10309982, 0.0814929)
 shape = SubResource("BoxShape3D_xyv5v")
 
-[node name="ConfirmationLabel7" type="Label3D" parent="RoomManager/Objects/Cámara" index="1" unique_id=169525444]
+[node name="ConfirmationLabel7" type="Label3D" parent="RoomManager/Objects/Cámara" unique_id=169525444]
 transform = Transform3D(-0.9396927, 0, 0.3420202, 0, 1, 0, -0.3420202, 0, -0.9396927, 0, 0.5850328, 0)
 billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
-[node name="Ropa" type="Node3D" parent="RoomManager/Objects" index="7" unique_id=1785016896 node_paths=PackedStringArray("task_board", "confirmation_label")]
+[node name="Ropa" type="Node3D" parent="RoomManager/Objects" unique_id=1785016896 node_paths=PackedStringArray("task_board", "confirmation_label")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.8229479, 1.0176454, 3.033077)
 script = ExtResource("14_gf72i")
 task_board = NodePath("../../../Interior/TaskBoard")
 item_name = "Ropa"
 confirmation_label = NodePath("ConfirmationLabel8")
 
-[node name="PickableObject" parent="RoomManager/Objects/Ropa" index="0" unique_id=25995415 instance=ExtResource("15_rofia")]
+[node name="PickableObject" parent="RoomManager/Objects/Ropa" unique_id=25995415 instance=ExtResource("15_rofia")]
 collision_layer = 1048580
 
-[node name="clothes_001" parent="RoomManager/Objects/Ropa/PickableObject" index="1" unique_id=2120651656 instance=ExtResource("30_io3ku")]
+[node name="clothes_001" parent="RoomManager/Objects/Ropa/PickableObject" unique_id=2120651656 instance=ExtResource("30_io3ku")]
 transform = Transform3D(0.9999995, 0, 0, 0, -4.3711378e-08, 1, 0, -0.9999995, -4.3711374e-08, 0, 0.078999996, -0.7927816)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Ropa/PickableObject" index="2" unique_id=8649334]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RoomManager/Objects/Ropa/PickableObject" unique_id=8649334]
 transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, -0.025423408, 0.09000301, -0.33657217)
 shape = SubResource("BoxShape3D_umf04")
 
-[node name="ConfirmationLabel8" type="Label3D" parent="RoomManager/Objects/Ropa" index="1" unique_id=601047001]
+[node name="ConfirmationLabel8" type="Label3D" parent="RoomManager/Objects/Ropa" unique_id=601047001]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, 0, 0.5876548, 0)
 billboard = 1
 text = "Pilih objek?
