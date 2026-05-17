@@ -15,7 +15,6 @@ func _find_xr_pointer():
 	for child in controller.get_children():
 		if "FunctionPointer" in child.name or child.has_method("pointer_event"):
 			xr_pointer = child
-			print("[AimAssist] Successfully linked to: ", xr_pointer.name)
 			break
 
 func _process(_delta):
@@ -32,12 +31,10 @@ func _on_target_body_entered(body: Node3D):
 	# Since your Mask strictly filters for Layer 3, anything entering is guaranteed to be a target
 	if body not in nearby_targets:
 		nearby_targets.append(body)
-		print("[AimAssist] Magnetic target locked: ", body.name)
 
 func _on_target_body_exited(body: Node3D):
 	if body in nearby_targets:
 		nearby_targets.erase(body)
-		print("[AimAssist] Target left cone.")
 	
 	# If we just left the last object, reset the pointer rotation to straight forward
 	if nearby_targets.is_empty() and xr_pointer:

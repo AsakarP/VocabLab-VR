@@ -4,6 +4,7 @@ extends Node3D
 @onready var sound_player: AudioStreamPlayer3D = $"../../XROrigin3D/XRCamera3D/AudioStreamPlayer3D"
 @onready var sprite_3d: Sprite3D = $Sprite3D
 @onready var teleport_area: Area3D = $"../TeleportArea"
+@onready var push_button: Node3D = $PushButton
 
 @export var tracked_controller: XRController3D 
 @export var scene_name_override: String = "Scene 1" # Easy way to label rows in Excel
@@ -86,6 +87,7 @@ func start_new_round():
 	wrong_picks = 0
 	raycast_hits = 0
 	controller_distance = 0.0
+	
 	if tracked_controller and tracked_controller.is_inside_tree():
 		last_controller_pos = tracked_controller.global_position
 	else:
@@ -109,7 +111,7 @@ func update_board_disp():
 		[target, obj, obj_total, score, time_str]
 
 # --- NEW ANALYTICS: Public function for your Raycast/Laser to call ---
-func register_raycast_hit():
+func register_object_detected():
 	if game_active:
 		raycast_hits += 1
 
@@ -140,7 +142,9 @@ func end_game_timeout():
 		print("*** Mistakes ***")
 		print(error_log)
 	
-	sprite_3d.visible = true
+	push_button.visible = false
+	push_button.process_mode = Node.PROCESS_MODE_DISABLED
+	sprite_3d.visible = false
 	teleport_area.monitoring = true
 	teleport_area.visible = true
 
@@ -187,7 +191,9 @@ func end_game_win():
 		print("*** Mistakes ***")
 		print(error_log)
 	
-	sprite_3d.visible = true
+	push_button.visible = false
+	push_button.process_mode = Node.PROCESS_MODE_DISABLED
+	sprite_3d.visible = false
 	teleport_area.monitoring = true
 	teleport_area.visible = true
 
@@ -260,10 +266,13 @@ func save_analytics_to_csv(time_taken: String, outcome: String):
 		
 		# If the file is brand new, write the Excel Header row first
 		if not file_exists or file.get_position() == 0:
-			file.store_line("Scene Label,Outcome,Time Taken,Right Picks,Wrong Picks,Controller Distance (Meters),Raycast Hits")
+			# Tambahkan "Subject ID" di paling depan
+			file.store_line("Subject ID,Scene Label,Outcome,Time Taken,Score,Wrong Picks,Controller Distance (Meters),Raycast Hits")
 			
 		# Compile this round's telemetry into a comma-separated row
-		var csv_row = "%s,%s,%s,%d,%d,%.2f,%d" % [
+		# Tambahkan %s di paling depan untuk Subject ID
+		var csv_row = "%s,%s,%s,%s,%d,%d,%.2f,%d" % [
+			SessionData.subject_id,
 			scene_name_override,
 			outcome,
 			time_taken,
@@ -272,6 +281,9 @@ func save_analytics_to_csv(time_taken: String, outcome: String):
 			controller_distance,
 			raycast_hits
 		]
+		
+		file.store_line(csv_row)
+		file.close()
 		
 		file.store_line(csv_row)
 		file.close()

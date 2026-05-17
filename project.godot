@@ -25,10 +25,15 @@ config/icon="uid://cqotd4d3v610j"
 XRToolsUserSettings="*uid://d0p6q2nhwi5e1"
 XRToolsRumbleManager="*uid://dklgvbkg3m0j0"
 Bgm="*res://scenes/bgm.tscn"
+SessionData="*uid://bx1w76cu0ottf"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/infinite_heightmap_terrain/plugin.cfg")
+
+[global_group]
+
+analytics=""
 
 [input]
 

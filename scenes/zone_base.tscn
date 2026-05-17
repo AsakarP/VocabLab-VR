@@ -36,7 +36,7 @@ collision_mask = 5242884
 
 [node name="MovementTurn" parent="XROrigin3D/RightHand" index="1" unique_id=1901843213 instance=ExtResource("6_0f4u5")]
 turn_mode = 1
-step_turn_angle = 30.0
+step_turn_angle = 50.0
 
 [node name="FunctionPickup" parent="XROrigin3D/RightHand" index="2" unique_id=2114075820 instance=ExtResource("3_vuhx1")]
 ranged_distance = 15.0
