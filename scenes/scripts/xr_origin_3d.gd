@@ -20,6 +20,7 @@ func _on_pointer_event(event: Variant):
 			
 		# Check if the object we hit lives on Layer 3 (Pickable Objects)
 		if target is CollisionObject3D and target.get_collision_layer_value(3):
+			print("Pickable object detected")
 			# Look for the TaskBoard in the current room
 			var managers = get_tree().get_nodes_in_group("analytics")
 			

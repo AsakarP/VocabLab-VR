@@ -153,7 +153,7 @@ size = Vector3(0.19969726, 0.20733765, 0.08968018)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ycxqu"]
 size = Vector3(0.8019484, 0.016351737, 0.10034683)
 
-[node name="ClassTest" type="Node3D" unique_id=1872970581 groups=["analytics"]]
+[node name="ClassTest" type="Node3D" unique_id=1872970581]
 script = ExtResource("1_2lhrc")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=271678509]

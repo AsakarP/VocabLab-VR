@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://6vy488ituvpu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_lwjek"]
 [ext_resource type="PackedScene" uid="uid://cmpfx8obapc1r" path="res://scenes/teleport_area.tscn" id="2_abqhv"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_imchb"]
-[ext_resource type="Script" uid="uid://cgivcirqvjyqt" path="res://scenes/scripts/xr_origin_3d.gd" id="2_j6fom"]
+[ext_resource type="Script" uid="uid://dxq5vsfe8t8a8" path="res://scenes/scripts/xr_origin_3d.gd" id="2_j6fom"]
 [ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="3_j6fom"]
 [ext_resource type="PackedScene" uid="uid://cf2ijkr5ne4lt" path="res://assets/KayKit_Restaurant_Bits_1.0_FREE/Assets/fbx/kitchencabinet.fbx" id="3_ye0jd"]
 [ext_resource type="Script" uid="uid://2b4dsm00opr5" path="res://scenes/scripts/task_board.gd" id="3_yvw6u"]
@@ -243,7 +243,7 @@ light_energy = 1.5
 shadow_enabled = true
 omni_range = 6.5
 
-[node name="TaskBoard" type="Node3D" parent="Interior" unique_id=2051705725 node_paths=PackedStringArray("tracked_controller", "objectsNode", "room_manager")]
+[node name="TaskBoard" type="Node3D" parent="Interior" unique_id=2051705725 node_paths=PackedStringArray("tracked_controller", "objectsNode", "room_manager") groups=["analytics"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.072, 2.743, -3.991)
 script = ExtResource("3_yvw6u")
 tracked_controller = NodePath("../../XROrigin3D/RightHand")

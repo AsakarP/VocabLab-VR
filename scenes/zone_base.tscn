@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_bdkev"]
 [ext_resource type="PackedScene" uid="uid://btknduttnmoxf" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="2_tsn8l"]
+[ext_resource type="Script" uid="uid://cgivcirqvjyqt" path="res://scenes/scripts/xr_origin_3d.gd" id="2_vuhx1"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_vuhx1"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="4_doaw0"]
 [ext_resource type="PackedScene" uid="uid://bdwmserhqai5h" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_physics_hand_low.tscn" id="5_yv0hm"]
@@ -15,6 +16,9 @@
 size = Vector3(0.5, 0.5, 9.955)
 
 [node name="ZoneBase" unique_id=1729843451 instance=ExtResource("1_bdkev")]
+
+[node name="XROrigin3D" parent="." index="0"]
+script = ExtResource("2_vuhx1")
 
 [node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" index="0" unique_id=431532656 instance=ExtResource("2_tsn8l")]
 
