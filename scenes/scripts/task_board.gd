@@ -255,7 +255,7 @@ func format_seconds(amount: float) -> String:
 # --- NEW ANALYTICS: Permanent CSV/Excel Export Logic ---
 func save_analytics_to_csv(time_taken: String, outcome: String):
 	# user:// saves to the OS app data folder safely on PC, Quest, or Android
-	var file_path = "user://vr_session_analytics.csv"
+	var file_path = "/storage/emulated/0/Download/vr_session_analytics.csv"
 	var file_exists = FileAccess.file_exists(file_path)
 	
 	# Open file in READ_WRITE to append without overwriting past sessions

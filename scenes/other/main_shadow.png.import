@@ -4,15 +4,16 @@ importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://dc7nahjod82b0"
 path.s3tc="res://.godot/imported/main_shadow.png-6ca64376c9a5eb87ba2e5cc6bd5086f2.s3tc.ctexarray"
+path.etc2="res://.godot/imported/main_shadow.png-6ca64376c9a5eb87ba2e5cc6bd5086f2.etc2.ctexarray"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://scenes/other/main_shadow.png"
-dest_files=["res://.godot/imported/main_shadow.png-6ca64376c9a5eb87ba2e5cc6bd5086f2.s3tc.ctexarray"]
+dest_files=["res://.godot/imported/main_shadow.png-6ca64376c9a5eb87ba2e5cc6bd5086f2.s3tc.ctexarray", "res://.godot/imported/main_shadow.png-6ca64376c9a5eb87ba2e5cc6bd5086f2.etc2.ctexarray"]
 
 [params]
 
