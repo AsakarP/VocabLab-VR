@@ -1159,6 +1159,7 @@ billboard = 1
 text = "Pilih objek?
 [A] Pilih | [B] Batal"
 
+[connection signal="button_pressed" from="XROrigin3D/RightHand" to="Interior/TaskBoard" method="_on_right_hand_button_pressed"]
 [connection signal="button_pressed" from="Interior/TaskBoard/PushButton/InteractableAreaButton" to="Interior/TaskBoard" method="_on_interactable_area_button_button_pressed"]
 
 [editable path="Interior/TaskBoard/PushButton"]

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b80rsxuk7l5lh"
 path.s3tc="res://.godot/imported/Textures.png-5c28d976f3396408d4b021f46a4d6be8.s3tc.ctex"
+path.etc2="res://.godot/imported/Textures.png-5c28d976f3396408d4b021f46a4d6be8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Furniture_FREE_-_Low_Poly_3D_Models_Pack/fbx/Textures.png"
-dest_files=["res://.godot/imported/Textures.png-5c28d976f3396408d4b021f46a4d6be8.s3tc.ctex"]
+dest_files=["res://.godot/imported/Textures.png-5c28d976f3396408d4b021f46a4d6be8.s3tc.ctex", "res://.godot/imported/Textures.png-5c28d976f3396408d4b021f46a4d6be8.etc2.ctex"]
 
 [params]
 
