@@ -31,10 +31,21 @@ var wrong_picks: int = 0
 var raycast_hits: int = 0
 var controller_distance: float = 0.0
 var last_controller_pos: Vector3 = Vector3.ZERO
+var start_time : int = 0
+var reaction_time : float = 0.0
+var is_timing : bool = false
+var successful_clicks: int = 0
+var missclicks: int = 0
 
 func _ready():
 	print("Checking Autoload: ", SessionData)
-
+	
+	if objectsNode != null:
+		for object in objectsNode.get_children():
+			if not object.picked_up.is_connected(_on_any_object_picked_up):
+				object.picked_up.connect(_on_any_object_picked_up)
+	else:
+		print("WARNING: objectsNode is not assigned in the TaskBoard inspector!")
 # Runs every single frame
 func _process(delta):
 	if game_active:
@@ -90,6 +101,8 @@ func start_new_round():
 	wrong_picks = 0
 	raycast_hits = 0
 	controller_distance = 0.0
+	successful_clicks = 0
+	missclicks = 0
 	
 	if tracked_controller and tracked_controller.is_inside_tree():
 		last_controller_pos = tracked_controller.global_position
@@ -252,6 +265,32 @@ func format_seconds(amount: float) -> String:
 	
 	return "%02d:%02d" % [minutes,seconds]
 
+func start_reaction_timer():
+	start_time = Time.get_ticks_msec()
+	is_timing = true
+	print("Timer started!")
+
+func _on_any_object_picked_up(pickable):
+	print("User picked up: ", pickable.name) 
+	
+	# Fix the counts: They successfully grabbed something!
+	missclicks -= 1 
+	if missclicks < 0: 
+		missclicks = 0 
+	successful_clicks += 1
+	
+	if is_timing == false:
+		start_reaction_timer()
+	else:
+		stop_reaction_timer()
+		save_analytics_to_csv("N/A", "OBJECT_INTERACTION")
+
+func stop_reaction_timer():
+	if is_timing:
+		var end_time = Time.get_ticks_msec()
+		reaction_time = (end_time - start_time) / 1000.0
+		is_timing = false
+
 # --- NEW ANALYTICS: Permanent CSV/Excel Export Logic ---
 func save_analytics_to_csv(time_taken: String, outcome: String):
 	# user:// saves to the OS app data folder safely on PC, Quest, or Android
@@ -270,11 +309,11 @@ func save_analytics_to_csv(time_taken: String, outcome: String):
 		# If the file is brand new, write the Excel Header row first
 		if not file_exists or file.get_position() == 0:
 			# Tambahkan "Subject ID" di paling depan
-			file.store_line("Subject ID,Scene Label,Outcome,Time Taken,Score,Wrong Picks,Controller Distance (Meters),Raycast Hits")
+			file.store_line("Subject ID,Scene Label,Outcome,Time Taken,Score,Wrong Picks,Controller Distance (Meters),Raycast Hits,Reaction Time,Successful Clicks,Missclicks")
 			
 		# Compile this round's telemetry into a comma-separated row
 		# Tambahkan %s di paling depan untuk Subject ID
-		var csv_row = "%s,%s,%s,%s,%d,%d,%.2f,%d" % [
+		var csv_row = "%s,%s,%s,%s,%d,%d,%.2f,%d,%.3f,%d,%d" % [
 			SessionData.subject_id,
 			scene_name_override,
 			outcome,
@@ -282,11 +321,11 @@ func save_analytics_to_csv(time_taken: String, outcome: String):
 			score,
 			wrong_picks,
 			controller_distance,
-			raycast_hits
+			raycast_hits,
+			reaction_time,
+			successful_clicks,
+			missclicks
 		]
-		
-		file.store_line(csv_row)
-		file.close()
 		
 		file.store_line(csv_row)
 		file.close()
@@ -299,3 +338,10 @@ func save_analytics_to_csv(time_taken: String, outcome: String):
 # If button pressed start new round
 func _on_interactable_area_button_button_pressed(_button):
 	start_new_round()
+
+
+func _on_right_hand_button_pressed(button_name: String):
+	if button_name == "grip_click":
+		# Assume they grabbed empty air until proven otherwise
+		missclicks += 1
+		print("Grip clicked! Total missclicks so far: ", missclicks)
