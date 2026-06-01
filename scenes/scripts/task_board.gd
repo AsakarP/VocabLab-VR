@@ -202,12 +202,6 @@ func check_submission(submitted_item_name: String) -> bool:
 	
 	var current_target = current_queue[current_idx]
 	
-	missclicks -= 1
-	if missclicks < 0:
-		missclicks = 0
-	successful_clicks += 1
-	
-	stop_reaction_timer()
 	start_reaction_timer()
 	
 	if submitted_item_name == current_queue[current_idx]:
@@ -259,8 +253,10 @@ func stop_reaction_timer():
 
 # --- NEW ANALYTICS: Permanent CSV/Excel Export Logic ---
 func save_analytics_to_csv(time_taken: String, outcome: String):
-	# user:// saves to the OS app data folder safely on PC, Quest, or Android
+	# Safe file to Android
 	var file_path = "/storage/emulated/0/Download/vr_session_analytics2.csv"
+	# Safe file to PC
+	#var file_path = "user://vr_session_analytics2.csv"
 	var file_exists = FileAccess.file_exists(file_path)
 	
 	# Open file in READ_WRITE to append without overwriting past sessions
@@ -312,8 +308,8 @@ func _on_interactable_area_button_button_pressed(_button):
 	start_new_round()
 
 
-func _on_right_hand_button_pressed(name: String):
-	if name == "grip_click":
+func _on_right_hand_button_pressed(btn_name: String):
+	if btn_name == "grip_click":
 		# Assume they grabbed empty air until proven otherwise
 		missclicks += 1
 		print("Grip clicked! Total missclicks so far: ", missclicks)

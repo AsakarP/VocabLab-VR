@@ -70,6 +70,13 @@ func _show_prompt():
 		confirmation_label.text = "Pilih objek?\n[A] Pilih | [B] Batal"
 		confirmation_label.visible = true
 	
+	if task_board:
+		task_board.missclicks -= 2
+		if task_board.missclicks < 0:
+			task_board.missclicks = 0
+		task_board.successful_clicks += 1
+		task_board.stop_reaction_timer()
+	
 	# Listen to the controller that triggered the prompt for A/B presses
 	if active_controller and not active_controller.button_pressed.is_connected(_on_button_pressed):
 		active_controller.button_pressed.connect(_on_button_pressed)
@@ -86,7 +93,10 @@ func _cancel_prompt():
 	click_count = 0
 	if confirmation_label:
 		confirmation_label.visible = false
-	
+		
+	if task_board:
+		task_board.start_reaction_timer()
+		
 	# Stop listening to the buttons
 	if active_controller and active_controller.button_pressed.is_connected(_on_button_pressed):
 		active_controller.button_pressed.disconnect(_on_button_pressed)
